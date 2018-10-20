@@ -1,0 +1,14 @@
+#!/bin/csh -f
+
+set es = ( evl evc s1e )
+set i = 459
+while ( $i <= 500 )
+set j = 0
+while ( $j <= 2 )
+foreach e ( $es )
+readdump ../gaussian/${i}_$j.rwf ../gaussian/${i}_$j.$e $e
+end
+@ j++
+end
+@ i++
+end

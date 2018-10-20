@@ -1,0 +1,7 @@
+COMPND    SnS Herzenbergite (B16/B29)
+CRYST1   11.200    3.987    4.334  90.00  90.00  90.00 Pnma
+HETATM    1 Sn                  1.3373  0.9968  0.5192
+HETATM    1 S                   9.5290  0.9968  2.0773
+
+REMARK  Sn (4c)  .1194  1/4  .1198
+REMARK  S  (4c)  .8508  1/4  .4793

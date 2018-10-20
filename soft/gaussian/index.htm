@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Gaussian</title>
+<style type="text/css">
+a.h         { color: white; font-family: monospace; text-decoration: none }
+a.h:hover   { color: yellow }
+</style>
+</head>
+<body>
+<p><span style="background-color: lightgray">
+ <a class="h" href="./">F</a>
+ <a class="h" href="../../../Lib/MS/Methods/_soft/Gaussian/">L</a>
+ <a class="h" href="C:/Sci/G09W/">P</a>
+ <a class="h" href="../../../Sys/Software/Gaussian/">R</a>
+ <a class="h" href="../../../Sci/MS/_comp/Gaussian/">S</a>
+ </span>
+ &nbsp;
+ <a href="http://www.gaussian.com">website</a>,
+ discussed versions: G09 D.01, G16 A.03</p>
+
+<h2>Installation: Linux</h2>
+<ul>
+<li>...</li>
+<li>Locate executables, edit your user initialization file, create <code>gaussian</code> directory, and learn how to submit a job.</li>
+<li>Example of Gaussian job submission using <a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a>:
+<ol>
+<li>Submission script: <a href="_pbs09">example for G09</a>, <a href="_pbs16">example for G16</a>, <a href="_pbs_SLURM">example for SLURM</a></li>
+<li>Submission command: <code>qsub gaussian/_pbs -l nodes=1:ppn=8:mpi -N example</code></li>
+<li><a href="example.gau">Gaussian input file</a></li>
+</ol></li>
+<li>Example of Gaussian run script without PBS: <a href="_run">example</a></li>
+</ul>
+
+<h2>Installation: Windows</h2>
+<ul>
+<li>Install. Do not use special symbols in path to executables. Properly allocate <a href="C:/tmp/G09W/Scratch/">Scratch folder</a>.</li>
+<li>Set environment variable <code>GAUSS_EXEDIR</code>.</li>
+<li>Run Gaussian as follows: <code>%GAUSS_EXEDIR%\g09 inputfile outputfile</code> (output filename is optional).</li>
+<li><strong>Edit</strong> and copy <a href="gaussian.bat">gaussian.bat</a> to the program folder (or any other location).</li>
+<li>Associate gau-files with <code>gaussian.bat</code>. For this purpose you can <strong>edit</strong> and use <a href="FileAssoc.zip">these file associations</a>.</li>
+</ul>
+
+<h2>Usage</h2>
+<ul>
+<li>Sample input files: <a href="test1.gau">test1.gau</a>.</li>
+<li>Gaussian requires explicit setting of <code>nproc</code> and <code>mem</code>.</li>
+<li><a href="readdump.f90">Fortran code</a> for extracting individual records from Gaussian chk- and rwf-files.
+ You may use <a href="readdump_test.chk">this test file</a>.
+ See also <a href="readdumpbatch">sample batch script</a>.</li>
+<li>Python utilities for reading transition density matrices from record 633:
+ <a href="ReadTransitionDensity.zip">zip</a>.</li>
+<li>Examples of how to produce natural orbitals and natural transition orbitals readable by Jmol directly from the Gaussian output,
+ including Jmol scripts for making jpeg-images of these orbitals: <a href="NOandNTO.zip">zip</a>.</li>
+<li>Less convenient but more universal is to generate a cube file:
+ <code>cubegen 0 mo=homo in.fchk out.cube -2 h</code>, and then read it by Jmol.</li>
+</ul>
+
+<h2>Help</h2>
+<ul>
+<li><a href="http://gaussian.com/help">Technical Support</a></li>
+<li><a href="http://gaussian.com/man">Reference</a>, <a href="http://gaussian.com/keywords">Keywords</a>, <a href="http://gaussian.com/iops">IOps</a></li>
+<li><a href="http://gaussian.com/progdev">Program Development Features</a> (in particular RWF numbers), there is also printed Gaussian 09 Programmer's Reference</li>
+<li><a href="http://gaussian.com/g16wutilities">Utilities</a></li>
+<li><a href="http://gaussian.com/white">White Papers and Technical Notes</a></li>
+<li><a href="../../../Lib/MS/Methods/_soft/Gaussian/Lec_Tomberg09.pdf">Tutorial by Anna Tomberg</a></li>
+</ul>
+
+<h2>Notes</h2>
+<ul>
+<li>Windows version requires nonempty title in input file.</li>
+</ul>
+
+</body>
+</html>

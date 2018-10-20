@@ -1,0 +1,1 @@
+java -Duser.language=en -Xmx1024m -jar C:\Sci\Jmol\Jmol.jar -L -t -i %1

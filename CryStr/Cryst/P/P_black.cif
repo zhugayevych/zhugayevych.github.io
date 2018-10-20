@@ -1,0 +1,73 @@
+#------------------------------------------------------------------------------
+#$Date: 2014-07-12 08:06:43 +0000 (Sat, 12 Jul 2014) $
+#$Revision: 120115 $
+#$URL: file:///home/coder/svn-repositories/cod/cif/9/01/24/9012486.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided the American Mineralogist Crystal Structure Database,
+# http://rruff.geo.arizona.edu/AMS/amcsd.php
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_9012486
+loop_
+_publ_author_name
+'Cartz, L.'
+'Srinivasa, S. R.'
+'Riedner, R. J.'
+'Jorgensen, J. D.'
+'Worlton, T. G.'
+_publ_section_title
+;
+ Effect of pressure on bonding in black phosphorus
+ Locality: synthetic
+ Note: pressures calculated from the measured unit cell volume
+;
+_journal_name_full               'Journal of Chemical Physics'
+_journal_page_first              1718
+_journal_page_last               1721
+_journal_volume                  71
+_journal_year                    1979
+_chemical_formula_sum            P
+_chemical_name_common            Phosphorus
+_space_group_IT_number           64
+_symmetry_space_group_name_Hall  '-C 2ac 2'
+_symmetry_space_group_name_H-M   'C m c a'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_length_a                   3.3133
+_cell_length_b                   10.473
+_cell_length_c                   4.374
+_cell_volume                     151.779
+_exptl_crystal_density_diffrn    2.711
+_cod_database_code               9012486
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+1/2+x,1/2+y,z
+x,1/2-y,1/2+z
+1/2+x,-y,1/2+z
+-x,1/2+y,1/2-z
+1/2-x,+y,1/2-z
+-x,y,z
+1/2-x,1/2+y,z
+x,-y,-z
+1/2+x,1/2-y,-z
+x,1/2+y,1/2-z
+1/2+x,+y,1/2-z
+-x,1/2-y,1/2+z
+1/2-x,-y,1/2+z
+-x,-y,-z
+1/2-x,1/2-y,-z
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+P 0.00000 0.10340 0.08060
+_journal_paper_doi 10.1063/1.438523

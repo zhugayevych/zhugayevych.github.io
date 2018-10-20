@@ -1,0 +1,10 @@
+TITLE   [5by] trigonal bipyramid, symmetry=D3h, orbit=[[1, 0, 0], [0, 0, 1]]
+HETATM    1 O                    0.000   0.000   0.000
+HETATM    2 C                    3.000   0.000   0.000
+HETATM    3 C                   -1.500  -2.598   0.000
+HETATM    4 C                   -1.500   2.598   0.000
+HETATM    5 N                    0.000   0.000   3.000
+HETATM    6 N                    0.000   0.000  -3.000
+CONECT    2    3    4    5    6
+CONECT    3    4    5    6
+CONECT    4    5    6

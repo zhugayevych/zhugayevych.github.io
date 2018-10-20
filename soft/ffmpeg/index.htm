@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>FFmpeg</title>
+<style type="text/css">
+a.h         { color: white; font-family: monospace; text-decoration: none }
+a.h:hover   { color: yellow }
+</style>
+</head>
+<body>
+<p><span style="background-color: lightgray">
+ <a class="h" href="./">F</a>
+ <a class="h" href="file:///C:/Sys/ffmpeg/">P</a></span>
+ &nbsp;
+ <a href="https://www.ffmpeg.org">website</a>,
+ discussed version: 2015-12-27, installed version: 3.4.2</p>
+
+<h2>Installation</h2>
+<ul>
+<li>Just unzip.</li>
+<li>Edit <code>ffmpeg_*.bat</code> files and use them to automate conversion.
+ Copy them to <a href="file:///C:/Sys/ffmpeg/">C:/Sys/ffmpeg</a> or any other folder in <code>PATH</code>.
+ Use <code>FileMenuTools</code> for right-click access.
+ Here are <a href="scripts.zip">my scripts</a> converting to MP4(H264/AAC):
+ <ul>
+ <li><code>info</code> &ndash; no conversion, append file-info to <code>_tmp_ffmpeg.log</code></li>
+ <li><code>mp4_slow</code> &ndash; default "veryslow" conversion</li>
+ <li><code>mp4_def&nbsp;</code> &ndash; default conversion</li>
+ <li><code>mp4_tiny</code> &ndash; for the smallest size (optimized for Sony DSC-WX80)</li>
+ <li><code>mp4_q28&nbsp;</code> &ndash; compress to CRF28</li>
+ <li><code>mp4_s2&nbsp;&nbsp;</code> &ndash; downscale by a factor of 2</li>
+ <li><code>mp4_i*</code> &ndash; the same as above but with deinterlacing (-vf yadif)</li>
+ </ul>
+</ul>
+
+<h2>Help</h2>
+<ul>
+<li>Example: <code>C:\Sys\ffmpeg\bin\ffmpeg.exe -i in.mts -ss 3 -t 10 -vf yadif,transpose=dir=clock -preset veryslow out.mp4</code></li>
+<li>Commonly used options: <code>-ss 3 -t 10 -vf transpose=dir=clock</code></li>
+<li><a href="http://www.ffmpeg.org/ffmpeg.html">ffmpeg</a>, <a href="http://ffmpeg.org/ffmpeg-filters.html">filters</a></li>
+<li><a href="http://trac.ffmpeg.org/wiki/Encode/H.264">H.264 Encoding Guide</a></li>
+</ul>
+
+</body>
+</html>

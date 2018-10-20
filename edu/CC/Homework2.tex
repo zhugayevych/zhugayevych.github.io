@@ -1,0 +1,48 @@
+% created 18.02.2014  modified 19.10.2018
+
+\documentclass{homework}
+\newcounter{tmp}
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\rmi}{\mathrm{i}}
+\newcommand{\dif}{\,\mathrm{d}}
+\newcommand{\op}[1]{\mathsf{\hat{#1}}}
+
+\begin{document}
+\title{Homework 2, due date is set in Canvas LMS \\ Topic: basics of quantum chemistry with semiempirics and tight-binding}
+\maketitle
+
+\textbf{1. Lab}. Take a molecule with at least 10 atoms. Using semiempirical Hamiltonian of your choice:
+\begin{itemize}\setlength{\itemsep}{0ex}
+\item Optimize ground state geometry. Check its stability. Determine if it is the global minimum.
+\item Plot frontier orbitals (HOMO-LUMO). Calculate the energy gap.
+\item Calculate localized molecular orbitals and explain electronic structure and geometry.
+\item Optimize geometry of the lowest energy triplet state (or cation, or anion, if more appropriate for your project). Calculate the relative energy of the triplet state. Plot unpaired molecular orbitals. Explain changes in electronic structure and geometry relative to the singlet state.
+\end{itemize}
+The solution should be prepared in the form of a written report supplemented by the required technical files: xyz-geometries, mgf-orbitals, program run log-files, figures not inserted into the report etc. Be prepared to give a 5 min presentation of everything that you consider nontrivial in your work.
+
+\bigskip
+
+\textbf{2. Exercise}. Which of the following is NOT a correct aspect of the Born-Oppenheimer approximation:
+\begin{list}{(\Alph{tmp})}{\usecounter{tmp}}\setlength{\itemsep}{0ex}
+\item The electrons in a molecule move much faster than the nuclei.
+\item Excited electronic states have the same equilibrium internuclear distance as the ground electronic state.
+\item The electronic and vibrational motions of a molecule are approximately separable.
+\item Electronic energy curves serve as potential energy functions for nuclear vibrational motion.
+\item The typical amplitude of nuclear vibration is much smaller than that characterizing the motion of electrons.
+\end{list}
+
+\bigskip
+
+\textbf{3. Exercise}. Which of the following is an eigenfunction of the operator
+$\op{p}_r=-\rmi\hbar r^{-1}\frac{\dif}{\dif r}$: \\ (A) $\rme^{\rmi kr}$, (B) $\sin kr$, (C) $r^{-1}\rme^{\rmi kr}$, (D) $r\rme^{\rmi kr}$, (E) $\rme^{\rmi kr^2}$.
+
+\bigskip
+
+\textbf{4. Exercise}. Show that the wave-functions mentioned in p.13 of Lecture~2 are indeed singlet and triplet ones. Calculate Coulomb matrix elements $\langle\Psi|r_{12}^{-1}|\Psi\rangle$ for these functions using the following notations: $\langle aa|bb\rangle=J_{ab}$ and $\langle ab|ab\rangle=K_{ab}$, where
+$$ \langle aa'|bb'\rangle=\int\int\varphi_a(r_1)\varphi_{a'}(r_1)\varphi_b(r_2)\varphi_{b'}(r_2)r_{12}^{-1}\dif r_1\dif r_2.$$
+
+\bigskip
+
+\textbf{5. Exercise}. Calculate $\pi$-conjugated MOs and MO energies of the benzene molecule in the tight-binding approximation (Huckel Hamiltonian) taking 4~eV for the nearest neighbor $pp\pi$ couplings. Compare with PM7 calculations. Determine the best values of the parameters of the Huckel Hamiltonian. \emph{Optional:} calculate other occupied MOs in tight-binding approximation.
+
+\end{document}

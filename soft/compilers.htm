@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Compilers</title>
+</head>
+<body>
+
+<h2>GCC</h2>
+<p><a href="http://gcc.gnu.org">GCC</a>, the GNU Compiler Collection is probably best for compiling small programs.</p>
+<p>For Windows use <a href="http://sourceforge.net/projects/mingw-w64/">mingw-w64</a> distribution, use the link provided here!
+ Alternatives are <a href="http://tdm-gcc.tdragon.net">TDM-GCC</a> and <a href="http://www.mingw.org">MinGW</a>.
+ Install version 5.2 or later because some previuos versions have
+ <a href="http://sourceforge.net/p/mingw-w64/bugs/487/">severe bugs</a>.
+ Add <code>bin</code> subfolder to system <code>PATH</code>.</p>
+<p>To compile a Fortran code run <code>gfortran codefile -o binaryfile</code>.</p>
+<p>For debugging use <a href="http://sourceware.org/gdb/current/onlinedocs/gdb/">GDB</a>.
+ Instructions: compile your code using <code>-g</code> option and then run
+ <code>gdb --args binaryfile arguments</code>,
+ start debugging with <code>break main</code> followed by <code>run</code>,
+ then use <code>s</code> to go through your program step by step,
+ use <code>print variablename</code> for variables and <code>q</code> to exit.</p>
+<p>Help for Fortran see <a href="../Lib/Math/CompMath/Fortran/index.htm">here</a>.</p>
+
+</body>
+</html>

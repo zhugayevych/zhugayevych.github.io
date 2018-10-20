@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Default HTML Editor]
+"Description"="PSPad editor"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Default HTML Editor\shell]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Default HTML Editor\shell\edit]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Default HTML Editor\shell\edit\command]
+@="C:\\Sci\\PSPad\\PSPad.exe %1"
+
+
+
+[HKEY_CLASSES_ROOT\.htm\OpenWithList\PSPad editor]
+
+[HKEY_CLASSES_ROOT\.htm\OpenWithList\PSPad editor\shell]
+
+[HKEY_CLASSES_ROOT\.htm\OpenWithList\PSPad editor\shell\edit]
+
+[HKEY_CLASSES_ROOT\.htm\OpenWithList\PSPad editor\shell\edit\command]
+@="C:\\Sci\\PSPad\\PSPad.exe %1"

@@ -1,0 +1,55 @@
+# CIF template
+data_nolabel
+loop_
+_publ_author_name
+'B L Ellis'
+'T N Ramesh'
+'L J M Davis'
+'G R Goward'
+'L F Nazar'
+_publ_section_title
+;
+ Structure and Electrochemistry of Two-Electron Redox Couples
+ in Lithium Metal Fluorophosphates Based on the Tavorite Structure
+;
+_journal_name_full               'Chem Mater'
+_journal_volume                  23
+_journal_page_first              5138
+_journal_year                    2011
+_journal_paper_doi               10.1021/cm201773n
+_chemical_formula_sum            LiVPO4F
+_chemical_name_common            'write name here'
+_cell_length_a                   5.30941(1)
+_cell_length_b                   7.49936(2)
+_cell_length_c                   5.16888(1)
+_cell_angle_alpha                112.933
+_cell_angle_beta                 81.664
+_cell_angle_gamma                113.125
+_cell_formula_units_Z            2      # useful but optional 
+_symmetry_space_group_name_H-M   'P-1'
+_space_group_IT_number           2      # optional
+_diffrn_ambient_temperature      300    # K
+_diffrn_ambient_pressure         100    # kPa
+loop_
+_symmetry_equiv_pos_as_xyz              # needed only for nonstandard settings
+x,y,z
+-x,-y,-z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_B_iso_or_equiv
+Li1  Li  2i  .389(2)   .334(1)   .659(2)   .18   2.2
+Li2  Li  2i  .373(2)   .236(1)   .517(2)   .82   2.2
+V1   V   1a   0         0         0        1     1.2
+V2   V   1b   0        .5        .5        1     1.2
+P1   P   2i  .3524(2)  .7485(2)  .0719(2)  1     1.2
+O1   O   2i  .2109(4)  .9064(3)  .1701(4)  1     1.2
+O2   O   2i  .6580(4)  .8625(3)  .1705(4)  1     1.2
+O3   O   2i  .2373(4)  .5900(3)  .2163(4)  1     1.2
+O4   O   2i  .3305(4)  .6403(3)  .7497(4)  1     1.2
+F1   F   2i  .0875(3)  .2450(2)  .3585(4)  1     1.2

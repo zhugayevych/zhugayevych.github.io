@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="150.000" height="150.000" xmlns="http://www.w3.org/2000/svg">
+<rect width="100%" height="100%" fill="white" stroke="black" stroke-width="1" />
+<circle cx="109.149" cy="75.000" r="60" fill="none" stroke="black" stroke-width="0.5" stroke-dasharray="3,5" />
+<circle cx="109.109" cy="75.204" r="6.240" fill="black" stroke="white" stroke-width="0.5" />
+<circle cx="117.703" cy="65.317" r="4.320" fill="black" stroke="white" stroke-width="0.5" />
+<circle cx="38.868" cy="116.514" r="2.925" fill="black" stroke="white" stroke-width="0.5" />
+<circle cx="20.000" cy="49.653" r="2.200" fill="black" stroke="white" stroke-width="0.5" />
+<text x="99.838" y="86.013" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  A</tspan></text>
+<text x="125.787" y="56.021" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  B</tspan></text>
+<text x="31.994" y="125.004" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  E</tspan></text>
+<text x="13.665" y="41.659" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  I</tspan></text>
+<text x="140.000" y="140.000" font-family="sans-serif" font-size="8" text-anchor="end"><tspan dy="0em">eta Cas</tspan></text>
+</svg>

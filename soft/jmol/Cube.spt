@@ -1,0 +1,6 @@
+isosurface pos  0.02 ""
+isosurface mesh nofill
+color isosurface red
+isosurface neg -0.02 ""
+isosurface mesh nofill
+color isosurface blue

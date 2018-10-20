@@ -1,0 +1,8 @@
+COMPND    SnS to B1 step 1b
+CRYST1    3.987    4.334    5.600  90.00  90.00  90.00 Pmmn
+HETATM    1 Sn                   0.997   1.084   1.337
+HETATM    1 S                    0.997   1.084   3.929
+
+REMARK  rotate and scale to  b  c  a/2
+REMARK  Sn (2a)  1/4  1/4  .2388
+REMARK  S  (2a)  1/4  1/4  .7016

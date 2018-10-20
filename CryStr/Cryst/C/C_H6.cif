@@ -1,0 +1,27 @@
+data_global
+loop_
+_publ_author_name
+'Rignanese G'
+'Charlier J'
+_journal_name_full               'Phys Rev B'
+_journal_volume                  78
+_journal_page_first              125415
+_journal_year                    2008
+_chemical_name_common            'H-6 carbon'
+_chemical_formula_sum            C
+_cell_length_a                   2.604
+_cell_length_b                   2.604
+_cell_length_c                   6.283
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                120
+_symmetry_cell_setting           hexagonal
+_symmetry_space_group_name_H-M   'P 62 2 2'
+_symmetry_int_tables_number      180
+loop_
+_atom_site_label
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+C 6f 0.5 0 0.1141

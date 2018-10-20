@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>TINKER</title>
+<style type="text/css">
+a.h         { color: white; font-family: monospace; text-decoration: none }
+a.h:hover   { color: yellow }
+</style>
+</head>
+<body>
+<p><span style="background-color: lightgray">
+ <a class="h" href="./">F</a>
+ <a class="h" href="file:///C:/Sci/tinker/">P</a>
+ <a class="h" href="../../../Sys/Software/tinker/">R</a>
+ <a class="h" href="../../../Sci/MS/_comp/tinker/">S</a></span>
+ &nbsp;
+ <a href="http://dasher.wustl.edu/tinker">website</a>,
+ discussed version: 8.2</p>
+
+<h2>Installation: Windows</h2>
+<ul>
+<li>Unzip the downloaded "Complete Distribution" to a desired program folder, I use <code>C:/Sci/tinker</code>.</li>
+<li>Unzip "Executables" to, let say, <code>C:/Sci/tinker/bin</code> subfolder.</li>
+<li><strong>Edit</strong> and copy <a href="tinker.bat">tinker.bat</a> to the program folder (or any other location).</li>
+<li>Associate tin-files with <code>tinker.bat</code>. For this purpose you can <strong>edit</strong> and use <a href="FileAssoc.zip">these file associations</a>.</li>
+<li>Optionally create <code>task,task1,task2,...</code> folders where you will run TINKER jobs (one per physical core).</li>
+<li>Sample input files: <a href="test1.tin">tin</a>, <a href="test1.inp">inp</a>, <a href="test1.key">key</a> (modify path to force field parameter files).</li>
+</ul>
+
+<h2>Installation: Linux</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission script: <a href="_pbs_primitive">primitive</a>, <a href="_pbs">advanced</a>.
+ To submit a job run <code>qsub tinker/_pbs -N test1</code></li>
+<li>Keep force field parameter files in a common directory, e.g. <code>~/lammps/_prm</code>.</li>
+</ul>
+
+<h2>Help</h2>
+<ul>
+<li><a href="http://dasher.wustl.edu/tinkerwiki/index.php/Main_Page">wiki</a></li>
+<li>Command line parameters:<code>
+  <ul>
+  <li>analyze xyz&key-filename code(E=energy,...)</li>
+	<li>dynamic xyz&key-filename nsteps timestep(fs, default is 1) snapshotstep(ps) ensemble(1=NVE,2=NVT,3=NPH,4=NPT) temperature(K) pressure(atm)</li>
+  <li>newton xyz&key-filename method(A=Auto) precondition(A=Auto) RMSgradient(default is 0.01 kcalmol/Ao)</li>
+  <li>minimize xyz&key-filename RMSgradient</li>
+  <li>xtalmin xyz&key-filename RMSgradient</li>
+  <li>saddle xyz1-filename xyz2&key-filename RMSgradient option(Y/N?Synchronous)</li>
+  <li>path xyz1-filename xyz2&key-filename npoints RMSgradient</li>
+  </ul></code></li>
+</ul>
+
+<h2>Tips and tricks</h2>
+<ul>
+<li>Common force fields modified by me: <a href="_res/mm3.prm">MM3</a></li>
+</ul>
+
+</body>
+</html>

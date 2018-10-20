@@ -1,0 +1,20 @@
+TITLE     trigonal antiprism [6ap]
+HETATM    1 C                    7.213   0.000   6.926
+HETATM    2 C                   -3.607   6.247   6.926
+HETATM    3 C                   -3.607  -6.247   6.926
+HETATM    4 C                   -7.213   0.000  -6.926
+HETATM    5 C                    3.607  -6.247  -6.926
+HETATM    6 C                    3.607   6.247  -6.926
+HETATM    7 S                    0.000   0.000   0.000
+CONECT    1    2
+CONECT    2    3
+CONECT    3    1
+CONECT    4    5
+CONECT    5    6
+CONECT    6    4
+CONECT    1    5
+CONECT    1    6
+CONECT    2    6
+CONECT    2    4
+CONECT    3    4
+CONECT    3    5

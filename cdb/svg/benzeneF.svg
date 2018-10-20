@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='135px' height='76px' viewBox='0 0 135 76' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.F { fill:rgb(0,255,0); stroke:rgb(0,255,0) }
+</style>
+<title>benzeneF/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='82.7' y1='38.1' x2='108.6' y2='38.1' />
+<line x1='23.2' y1='3.3' x2='63.4' y2='3.0' />
+<line x1='29.2' y1='10.4' x2='57.5' y2='10.2' />
+<line x1='63.4' y1='3.0' x2='82.7' y2='38.1' />
+<line x1='82.7' y1='38.1' x2='63.4' y2='73.2' />
+<line x1='73.5' y1='39.9' x2='60.0' y2='64.4' />
+<line x1='63.4' y1='73.2' x2='23.2' y2='72.9' />
+<line x1='23.2' y1='72.9' x2='3.0' y2='38.1' />
+<line x1='26.4' y1='64.1' x2='12.2' y2='39.7' />
+<line x1='3.0' y1='38.1' x2='23.2' y2='3.3' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='115.6' y='46.1' font-size='16' stroke-width='1.0' class="F">F</text>
+</g>
+</svg>

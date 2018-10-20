@@ -1,0 +1,14 @@
+TITLE   [8cb] cube, symmetry=Oh, orbit=[[1, 1, 1]]
+HETATM    1 O                    0.000   0.000   0.000
+HETATM    2 C                    1.732   1.732   1.732
+HETATM    3 C                    1.732  -1.732  -1.732
+HETATM    4 C                   -1.732  -1.732   1.732
+HETATM    5 C                   -1.732   1.732  -1.732
+HETATM    6 C                    1.732  -1.732   1.732
+HETATM    7 C                   -1.732  -1.732  -1.732
+HETATM    8 C                   -1.732   1.732   1.732
+HETATM    9 C                    1.732   1.732  -1.732
+CONECT    2    6    8    9
+CONECT    3    6    7    9
+CONECT    4    6    7    8
+CONECT    5    7    8    9

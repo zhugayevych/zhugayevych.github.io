@@ -1,0 +1,20 @@
+data_1
+_chemical_formula_sum            'Y Cl3'
+_symmetry_cell_setting           monoclinic
+_symmetry_space_group_name_H-M   'C 2/m'
+_symmetry_Int_Tables_number      12
+_cell_length_a                   6.922
+_cell_length_b                   11.944
+_cell_length_c                   6.442
+_cell_angle_alpha                90
+_cell_angle_beta                 111.0
+_cell_angle_gamma                90
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Y1  Y  0      0.1661 0
+Cl1 Cl 0.2113 0      0.2474
+Cl2 Cl 0.2293 0.1792 0.7604

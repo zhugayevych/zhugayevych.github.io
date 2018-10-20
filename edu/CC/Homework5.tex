@@ -1,0 +1,44 @@
+% created 26.11.2015  modified 19.10.2018
+
+\documentclass{homework}
+\begin{document}
+\title{Homework 5, due date is set in Canvas LMS\\ Topic: Classical molecular dynamics of molecules and solids}
+\maketitle
+
+\textbf{1. Lab} ``Geometry optimization and molecular dynamics''. For a given molecule determine the lowest energy geometry and the room temperature dynamics using an appropriate force field. Follow the algorithm given below. Part 1 (geometry optimization):
+\begin{itemize}\setlength{\itemsep}{0ex}
+\item Create initial geometry. Save that geometry as xyz-file.
+\item Optimize the geometry. Save the optimized geometry as xyz-file. Create a picture of the molecule. Explain the choice of the force field.
+\item Compare with experiment or other method.
+\item Determine and check symmetry. Determine a set of independent geometrical parameters, fundamental domain and generators.
+\item Check alternative conformations. If there is a low lying metastable state, study it.
+\item Explain the molecular structure.
+\end{itemize}
+Part 2 (molecular dynamics):
+\begin{itemize}\setlength{\itemsep}{0ex}
+\item Start with optimized geometry or other geometry of interest.
+\item Run MD at 300 K for the minimal time to obtain a reasonably accurate sampling.
+\item Save 100 snapshots to xyz-file (``movie'').
+\item Determine all the conformations accessible by the MD and estimate transition rates between them.
+\item Extrapolate to a laboratory time (hours).
+\item Explain the observed dynamics.
+\end{itemize}
+The solution should be prepared in the form of a written report supplemented by the required technical files: xyz-geometries, program run log-files, figures not inserted into the report etc. Be prepared to give a 5 min presentation of everything that you consider nontrivial in your work.
+
+\medskip
+
+\textit{List of molecules (one per student):}
+\begin{itemize}\setlength{\itemsep}{0ex}
+\item any flexible molecule of your choice;
+\item any min-3-units oligomer of conjugated polymers: polyyne, polyacetylene, poly(p-phenylene), poly(p-phenylene vinylene), polypyrrole, polythiophene, polyaniline, PEDOT etc.;
+\item any ``multi-flexible'' part of branching alkane (e.g. isooctane) or other polymer (e.g. polybutadiene), can be cyclic;
+\item any ``multi-flexible'' part of DNA, protein, or other biomolecule;
+\item azobenzene, aspirine, nicotine, beta-carotene.
+\end{itemize}
+
+\bigskip
+
+\textbf{2. Exercise} on molecular mechanics and statistical physics. Estimate the relative concentration of cis and trans conformers of butadiene molecule at the room temperature.
+
+
+\end{document}

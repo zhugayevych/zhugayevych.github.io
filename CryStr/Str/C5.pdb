@@ -1,0 +1,4 @@
+TITLE    ideal ionic C5 anatase (maximum Madelung constant)
+CRYST1  10.0000  10.0000  28.0000  90.00  90.00  90.00 I41/amd
+HETATM    1 C                   0.0000  7.5000  3.5000
+HETATM    2 S                   0.0000  2.5000  1.7857

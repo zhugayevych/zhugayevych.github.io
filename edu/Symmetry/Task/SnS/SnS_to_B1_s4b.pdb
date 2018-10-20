@@ -1,0 +1,8 @@
+COMPND    SnS to B1 step 4b (final)
+CRYST1    5.600    5.600    5.600  90.00  90.00  90.00 Fm-3m
+HETATM    1 Sn                   0.000   0.000   0.000
+HETATM    1 S                    2.800   2.800   2.800
+
+REMARK  rotate and scale
+REMARK  Sn (4a)   0    0    0
+REMARK  S  (4b)  1/2  1/2  1/2

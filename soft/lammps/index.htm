@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>LAMMPS</title>
+<style type="text/css">
+a.h         { color: white; font-family: monospace; text-decoration: none }
+a.h:hover   { color: yellow }
+</style>
+</head>
+<body>
+<p><span style="background-color: lightgray">
+ <a class="h" href="./">F</a>
+ <a class="h" href="file:///C:/Sci/lammps/">P</a>
+ <a class="h" href="../../../Sys/Software/lammps/">R</a>
+ <a class="h" href="../../../Sci/MS/_comp/lammps/">S</a></span>
+ &nbsp;
+ <a href="http://lammps.sandia.gov">website</a>,
+ discussed version: 20151215</p>
+
+<p><dfn>Credits</dfn>: Sergey Matveev (installation)</p>
+
+<h2>Installation: Linux</h2>
+<ul>
+<li>Unzip source tarball to a desired directory.</li>
+<li>Run <code>make serial</code> and <code>make mpi</code> from <code>src</code> directory.
+ Here are my Makefiles: <a href="Makefile_for_serial">for serial run</a>.</li></li>
+<li>Alternatively you may use compiled binaries from <a href="http://rpm.lammps.org">RPM Repository</a>.</li>
+<li>Keep potentials in a common directory, e.g. <code>~/lammps/_res</code>.</li>
+<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission script: <a href="_pbs">here</a>.
+ To submit a job run <code>qsub lammps/_pbs -l nodes=1:ppn=4 -N test1</code></li>
+<li>Sample input files: <a href="test1.lam">lam</a>, <a href="test1.inp">inp</a> (modify path to potential parameter files).</li>
+</ul>
+
+<h2>Installation: Windows</h2>
+<ul>
+<li>Install to a desired program folder, I use <code>C:/Sci/lammps</code>.</li>
+<li>Set environment variable <code>LAMMPS_POTENTIALS</code> to the folder where potentials are stored (you can do it in lammps.bat file),
+ I use <code>C:\Users\azh\homepage\soft\lammps\_res</code>.
+ Note that folder lists are not supported.</li>
+<li><strong>Edit</strong> and copy <a href="lammps.bat">lammps.bat</a> to the program folder (or any other location).</li>
+<li>Associate tin-files with <code>lammps.bat</code>. For this purpose you can <strong>edit</strong> and use <a href="FileAssoc.zip">these file associations</a>.</li>
+</ul>
+
+<h2>Help</h2>
+<ul>
+<li><a href="http://lammps.sandia.gov/doc/Manual.html">Manual</a> (<a href="C:/Sci/lammps/Doc/LAMMPS-Manual.pdf">local</a>)</li>
+</ul>
+
+</body>
+</html>

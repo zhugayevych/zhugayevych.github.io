@@ -1,0 +1,16 @@
+TITLE     trigonal bipyramid [5by]
+HETATM    1 C                   10.000   0.000   0.000
+HETATM    2 C                   -5.000   8.660   0.000
+HETATM    3 C                   -5.000  -8.660   0.000
+HETATM    4 C                    0.000   0.000  10.000
+HETATM    5 C                    0.000   0.000 -10.000
+HETATM    6 S                    0.000   0.000   0.000
+CONECT    1    2
+CONECT    2    3
+CONECT    3    1
+CONECT    4    1
+CONECT    4    2
+CONECT    4    3
+CONECT    5    1
+CONECT    5    2
+CONECT    5    3

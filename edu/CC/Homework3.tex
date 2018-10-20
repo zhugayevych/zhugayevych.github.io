@@ -1,0 +1,46 @@
+% created 25.02.2014  modified 19.10.2018
+
+\documentclass{homework}
+\begin{document}
+\title{Homework 3, due date is set in Canvas LMS\\ Topic: computational chemistry of molecules with DFT}
+\maketitle
+
+\textbf{1. Lab}. Take a molecule consisting of 10-100 atoms and having a singlet ground state. Using ab initio DFT in vacuo and in dichloromethane:
+\begin{itemize}\setlength{\itemsep}{0ex}
+\item Optimize ground state geometry. Plot frontier orbitals and determine their energies. Calculate the HOMO-LUMO gap.
+\item Calculate 10-20 singlet excited states and plot the UV-Vis absorption spectrum. Explain the oscillator strength and nature of the lowest excited states in terms of MOs.
+\item If technically feasible, optimize geometry of $S_1$ state (lowest excited singlet) and calculate the fluorescence energy and Stokes shift. Estimate the radiative lifetime of $S_1$ state.
+\item Optimize geometry of $T_1$ state (lowest energy triplet). Calculate the phosphorescence energy using both $\Delta$SCF and TDDFT approaches. Explain the nature of the $T_1$ state in terms of MOs. 
+\item Optimize geometry of cation/anion. Calculate IP/EA for both vertical and ``slow'' electron detachment/attachment.  
+\item Explain geometry changes of the relaxed $S_1$, $T_1$, cation/anion relative to the ground state. Calculate the corresponding vibrational relaxation energies and solvation energies.
+\item Compare HOMO-LUMO gap, singlet and triplet excitation energies in vacuo and in the solvent.
+\item Compare vertical and relaxed IP/EA in vacuo and in the solvent.
+\item Calculate IR and Raman spectra.
+\end{itemize}
+The solution should be prepared in the form of a written report supplemented by the required technical files: xyz-geometries, mgf/out-orbitals, program run log-files, figures not inserted into the report etc. Be prepared to give a 5 min presentation of everything that you consider nontrivial in your work.
+
+\bigskip\bigskip
+
+\textit{Comments to all the exercises: 1) ``method'' means determination of both electronic structure level and basis set, e.g. CCSD(T)/6-31G*, B3LYP/aug-cc-pVQZ, MP2/LANL2DZ; 2) Briefly explain your answers.}
+
+\bigskip
+
+\textbf{2. Exercise}. Which method(s) you would likely use to study dispersive interactions in a naphthalene dimer?
+
+\bigskip
+
+\textbf{3. Exercise}. To mimic experimental data in solution, when you would like to add solvent effects (e.g. PCM model) to your calculations of (A) Neutral singlet ground state, (B) Neutral singlet excited state, (C) Neutral triplet state, (D) Anion/cation ground state?
+
+\bigskip
+
+\textbf{4. Exercise}. The calculations of vibrational normal modes of some molecule gave the following frequencies (cm$^{-1}$, negative means imaginary): -50.6, -15.1, -3.2, 4.5, 106.7. How do you interpret these results?
+
+\bigskip
+
+\textbf{5. Exercise}. In vibrational spectroscopy of organic molecules, what is typical highest energy vibrational band active in IR spectra? Explain your answer.
+
+\bigskip
+
+\textbf{6. Exercise}. Which nuclei of paracetamol molecule produce no strong NMR signal for their most abundant isotope?
+
+\end{document}

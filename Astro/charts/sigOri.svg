@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="150.000" height="150.000" xmlns="http://www.w3.org/2000/svg">
+<rect width="100%" height="100%" fill="white" stroke="black" stroke-width="1" />
+<circle cx="75.000" cy="75.000" r="60" fill="none" stroke="black" stroke-width="0.5" stroke-dasharray="3,5" />
+<circle cx="78.626" cy="76.593" r="6.120" fill="black" stroke="white" stroke-width="0.5" />
+<circle cx="88.293" cy="82.634" r="3.605" fill="black" stroke="white" stroke-width="0.5" />
+<circle cx="66.691" cy="75.338" r="4.720" fill="black" stroke="white" stroke-width="0.5" />
+<circle cx="41.365" cy="56.781" r="4.830" fill="black" stroke="white" stroke-width="0.5" />
+<text x="83.765" y="63.441" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  AB</tspan></text>
+<text x="97.297" y="89.955" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  C</tspan></text>
+<text x="54.861" y="80.013" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  D</tspan></text>
+<text x="32.553" y="47.456" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  E</tspan></text>
+<text x="140.000" y="10.000" font-family="sans-serif" font-size="8" text-anchor="end"><tspan dy="0.5em">sig Ori</tspan></text>
+</svg>

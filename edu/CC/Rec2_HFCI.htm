@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Do it after Lecture on HF and post-HF</title>
+</head>
+<body>
+
+<p>Topic: HF, post-HF, CI, static and dynamic correlations, MOPAC, scripting in Maple</p>
+
+<p style="font-size: smaller">Download <a href="Rec2_HFCI.zip">these files</a>.
+ Be prepared: MOPAC and Gaussian are needed (see <a href="Software.htm">here</a>,
+ get account for cluster use, reserve one day for registrations)</p>
+
+<h2>Practice</h2>
+<ul>
+<li>Lab <a href="Labs.htm">MO</a> for benzene (MOPAC)</li>
+<li>The simplest model of chemical bond (2c2e model):
+ <ul>
+ <li>Calculate dissociation curve using RHF, UHF, and CASSCF with the minimal basis set</li>
+ <li>Discuss the results in terms of generic 2c2e model</li>
+ </ul></li>
+<li>Static correlations in O2 molecule:
+ <ul>
+ <li>Run RHF for singlet and check for stability</li>
+ <li>Correct the singlet by <code>stable(opt)</code> and look for spin contamination</li>
+ <li>Show that the triplet is ground state</li>
+ <li>Do CASSCF for singlet and triplet and analyze the wavefunction</li>
+ <li>Do CASSCF for excited singlet and observe better MOs for ground state singlet</li>
+ </ul></li>
+<li>Static correlations: Explain the electronic structure of the twisted ethylene and understand the rotation around C-C bond:
+ <ul>
+ <li>Optimize geometry of twisted ethylene using CI method (<code>OPEN(2,2) SINGLET SYMMETRY</code>)</li>
+ <li>Is it a saddle point?</li>
+ <li>Explain the electronic structure</li>
+ <li>Compare with RHF and UHF calculations (single point) and explain the results (e.g. why UHF gives lower energy than CI)</li>
+ <li>Is there a spin contamination in UHF calculations?</li>
+ <li>Compare with <code>C.I.=2</code> calculations and explain the difference</li>
+ <li>Look into nonsinglet states</li>
+ <li>Compare differences </li>
+ <li>Optimize geometry of planar ethylene using CI method (<code>C.I.=2 SINGLET SYMMETRY</code>)</li>
+ <li>Compare with <code>OPEN(2,2)</code> calculations (single point) and explain the difference</li>
+ <li>Compare rotation barrier for CI, RHF, and UHF</li>
+ <li>Rationalize bond lengths for planar and twisted conformations</li>
+ <li>Build relaxed PES for rotation imposing D2 symmetry</li>
+ <li>Build the same PES for triplet and excited singlet and discuss photoisomerization</li>
+ <li>Optimize geometry for triplet and excited singlet states</li>
+ <li>Compare S0 and S1 states at S1 geometry and discuss internal conversion</li>
+ <li>Look for NO occupancies in planar conformation (<code>C.I.=7 AUX</code>)</li>
+ <li>For planar conformation, which energy is a priori more accurate in semiempirical approaches RHF or CI?</li>
+ </ul></li>
+<li>Orbital relaxation: Explain Hund's rule [<a href="res/Oyamada10.pdf">Oyamada2010</a>]</li>
+</ul>
+
+<h2>Reading</h2>
+<ul>
+<li>Jensen 4.1-4.10</li>
+<li>Cramer 7.1-7.5, 10</li>
+<li>Szabo chapters 4-6</li>
+</ul>
+
+</body>
+</html>

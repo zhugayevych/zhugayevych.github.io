@@ -1,0 +1,75 @@
+COMPND    ICE III
+CRYST1    6.730    6.730    6.830  90.00  90.00  90.00 P41 21 2
+HETATM    1  O1          1       4.103   1.335   3.160
+HETATM    2  H1          2       3.345   1.198   3.654
+HETATM    3  H2          3       4.085   2.275   3.155
+HETATM    4  O2          4       4.084   4.084   3.415
+HETATM    5  H3          5       4.738   4.348   4.064
+HETATM    6  H3          6       4.348   4.738   2.766
+HETATM    7  H1          7      -0.020   2.167   1.468
+HETATM    8  H2          8       0.720   1.090   1.967
+HETATM    9  O1          9       0.738   2.030   1.962
+HETATM   10  H1         10       6.750   4.563   4.883
+HETATM   11  O1         11       5.992   4.700   5.377
+HETATM   12  H2         12       6.010   5.640   5.382
+HETATM   13  H1         13       1.198   3.345   3.176
+HETATM   14  O1         14       1.335   4.103   3.670
+HETATM   15  H2         15       2.275   4.085   3.675
+HETATM   16  H1         16       4.563   6.750   1.947
+HETATM   17  H2         17       5.640   6.010   1.448
+HETATM   18  O1         18       4.700   5.992   1.453
+HETATM   19  H1         19       2.167  -0.020   5.362
+HETATM   20  H2         20       1.090   0.720   4.863
+HETATM   21  O1         21       2.030   0.738   4.868
+HETATM   22  H1         22       3.385   5.532   6.969
+HETATM   23  O1         23       2.627   5.395   6.575
+HETATM   24  H2         24       2.645   4.455   6.570
+HETATM   25  H3         25       0.983   5.357   2.356
+HETATM   26  O2         26       0.719   6.011   1.707
+HETATM   27  H3         27       1.373   5.747   1.059
+HETATM   28  H3         28       5.357   0.983   4.474
+HETATM   29  O2         29       6.011   0.719   5.122
+HETATM   30  H3         30       5.747   1.373   5.771
+HETATM   31  O2         31       2.646   2.646   6.830
+HETATM   32  H3         32       2.382   1.992   6.181
+HETATM   33  H3         33       1.992   2.382   7.379
+HETATM   34  O1         34       5.395   2.627   6.985
+HETATM   35  H2         35       4.455   2.645   6.990
+HETATM   36  H1         36       5.532   3.385   6.591
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+CONECT    4    5    6
+CONECT    5    4
+CONECT    6    4
+CONECT    7    9
+CONECT    8    9
+CONECT    9    8    7
+CONECT   10   11
+CONECT   11   12   10
+CONECT   12   11
+CONECT   13   14
+CONECT   14   13   15
+CONECT   15   14
+CONECT   16   18
+CONECT   17   18
+CONECT   18   17   16
+CONECT   19   21
+CONECT   20   21
+CONECT   21   20   19
+CONECT   22   23
+CONECT   23   24   22
+CONECT   24   23
+CONECT   25   26
+CONECT   26   25   27
+CONECT   27   26
+CONECT   28   29
+CONECT   29   28   30
+CONECT   30   29
+CONECT   31   32   33
+CONECT   32   31
+CONECT   33   31
+CONECT   34   35   36
+CONECT   35   34
+CONECT   36   34
+END

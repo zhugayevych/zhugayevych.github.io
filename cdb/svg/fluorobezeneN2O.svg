@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='94px' height='189px' viewBox='0 0 94 189' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.F { fill:rgb(0,255,0); stroke:rgb(0,255,0) }
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+text.O { fill:rgb(255,0,0); stroke:rgb(255,0,0) }
+</style>
+<title>fluorobezeneN2O/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='75.0' y1='165.8' x2='64.4' y2='142.1' />
+<line x1='59.7' y1='22.6' x2='70.7' y2='30.5' />
+<line x1='76.8' y1='49.9' x2='67.6' y2='73.8' />
+<line x1='69.3' y1='49.3' x2='63.0' y2='65.6' />
+<line x1='67.6' y1='73.8' x2='26.0' y2='72.0' />
+<line x1='26.0' y1='72.0' x2='18.9' y2='47.4' />
+<line x1='31.3' y1='64.3' x2='26.4' y2='47.5' />
+<line x1='26.6' y1='28.6' x2='38.0' y2='21.7' />
+<line x1='64.4' y1='142.1' x2='22.5' y2='141.0' />
+<line x1='22.5' y1='141.0' x2='3.0' y2='106.7' />
+<line x1='25.8' y1='132.3' x2='12.2' y2='108.3' />
+<line x1='3.0' y1='106.7' x2='26.0' y2='72.0' />
+<line x1='67.6' y1='73.8' x2='87.6' y2='110.2' />
+<line x1='87.6' y1='110.2' x2='64.4' y2='142.1' />
+<line x1='78.2' y1='110.8' x2='62.1' y2='133.0' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='43.1' y='23.0' font-size='16' stroke-width='1.0' class="O">O</text>
+<text x='74.3' y='185.7' font-size='16' stroke-width='1.0' class="F">F</text>
+<text x='9.4' y='43.3' font-size='16' stroke-width='1.0' class="N">N</text>
+<text x='75.3' y='46.1' font-size='16' stroke-width='1.0' class="N">N</text>
+</g>
+</svg>

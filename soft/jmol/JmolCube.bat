@@ -1,0 +1,1 @@
+java -Duser.language=en -Xmx512m -jar C:\Sci\Jmol\Jmol.jar -L -t -i -sC:\Sci\Jmol\Cube.spt %1

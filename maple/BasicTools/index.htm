@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Description of BasicTools package</title>
+</head>
+<body>
+
+<h1>Description of BasicTools package</h1>
+
+<p>by <a href="http://zhugayevych.me">Andriy Zhugayevych</a></p>
+<p>BasicTools package provides miscellaneous routines lacking in standard Maple distribution.</p>
+<p>If you have comments, suggestions, or have found a bug, please <a href="mailto:azh@ukr.net">email me</a>.</p>
+<p>My system is Maple 14 on Windows 7. Tested for Maple 17.</p>
+
+<h2>Installation</h2>
+<ul>
+<li>Download source files <a href="BasicTools.zip">BasicTools.zip</a>, unzip to any location, open <code>install.mw</code> and follow the instructions.</li>
+<li>Windows users: If failed to install or you don't need the source, download <a href="BasicTools_lib.zip">BasicTools_lib.zip</a> and unzip to Maple library folder <code>MapleXX/lib</code>.</li>
+<li>Experienced users: the package can be initialized by reading <a href="BasicTools.ini">BasicTools.ini</a> with Maple "read" command.</li>
+<li>To change default settings use <code>BasicTools[Setup]</code> command or make changes directly to <code>BasicTools.ini</code>.</li>
+<li>The documentation is built into the Maple Help system. Individual help pages are also available as individual mw-files.</li>
+</ul>
+
+<h2>Credits</h2>
+<ul>
+<li>Dennis Isbister &ndash; Wigner3j and Wigner6j routines.</li>
+<li>L. F. Shampine and H. A. Watts &ndash; code from SLATEC package is used in FZERO routine.</li>
+</ul>
+
+<h2>Requires implementation</h2>
+<ul>
+<li>At the end of BasicTools.mw create an execution group checking if BasicTools, MolMod and other packages were installed correctly</li>
+<li>Enhance <code>BasicTools:-ReadLines</code> procedure so that it can read specific line numbers including reverse numbering from the end (modify input parameters as follows <code>number::{integer,list(integer)}:=1</code>). Then update <code>PrintFile</code> appropriately.</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Labs</title>
+</head>
+<body>
+
+<h2>GO. Geometry optimization (molecule, force field, Avogadro or Spartan)</h2>
+<ul>
+<li>Create initial geometry. Save that geometry as xyz-file.</li>
+<li>Optimize the geometry. Explain the choice of the force field.</li>
+<li>Save the optimized geometry as xyz-file. Create a picture of the molecule.</li>
+<li>Compare with experiment or other method.</li>
+<li>Determine and check symmetry. Determine a set of independent geometrical parameters, fundamental domain and generators.</li>
+<li>Check alternative conformations. If there is a low-energy metastable state, determine its energy and transition path.</li>
+<li>Explain the molecular structure.</li>
+</ul>
+
+<h2>GO. Geometry optimization (crystal, empirical potential, LAMMPS)</h2>
+<ul>
+<li>Create initial geometry. Save that geometry as cif-file.</li>
+<li>Optimize the geometry. Explain the choice of the empirical potential.</li>
+<li>Save the optimized geometry as cif-file. Create a picture of the crystal.</li>
+<li>Compare with experiment or other method.</li>
+<li>Determine and check symmetry. Determine a set of independent geometrical parameters, fundamental domain and generators.</li>
+<li>Study the lowest energy polymorphs: determine energy, specific volume, and transition path.</li>
+<li>Explain the crystal structure.</li>
+</ul>
+
+<h2>MD. Molecular dynamics (molecule, force field, TINKER)</h2>
+<ul>
+<li>Start with optimized geometry or other geometry of interest.</li>
+<li>Run MD at 300 K for the minimal time to obtain a reasonably accurate sampling.</li>
+<li>Save 100 snapshots to xyz-file ("movie").</li>
+<li>Determine all the conformations accessable by the MD and estimate transition rates between them.</li>
+<li>Extrapolate to a laboratory time (hours).</li>
+<li>Explain the observed dynamics.</li>
+</ul>
+
+<h2>AS. Amorphous solid (crystal and its amorphous phase, empirical potential, LAMMPS)</h2>
+<ul>
+<li>Start with optimized geometry or other geometry of interest (another polymorph).</li>
+<li>Melt the crystal and equilibrate. Save as xyz- or cif-file.</li>
+<li>Quench the melted structure to get an amorphous state. Save as xyz- or cif-file.</li>
+<li>Slowly cool the melted structure to get a mono- or polycrystal. Save as xyz- or cif-file.</li>
+<li>Explain the observed dynamics: plot V/t and V/T diagrams, study dependence on cooling rate.</li>
+<li>Analyze the obtained structures: calculate radial distribution function.</li>
+</ul>
+
+<h2>MO. Molecular orbitals (molecule, semiempirical, MOPAC or Avogadro or Spartan)</h2>
+<ul>
+<li>Optimize geometry. Save the optimized geometry as xyz-file.</li>
+<li>Calculate MOs. Create a picture of HOMO and LUMO.</li>
+<li>Calculate localized MOs. Explain the molecular and electronic structure.</li>
+</ul>
+
+<h2>PBC. Periodic boundary conditions (polymer/layer/crystal, semiempirical, MOPAC)</h2>
+<ul>
+<li>Select a proper supercell size and optimize geometry. Save the optimized geometry as xyz-file and cif-file.</li>
+<li>Calculate MOs and save them as mgf-file. Create a picture of HOMO and LUMO.</li>
+<li>Estimate the electron dispersion.</li>
+<li>Explain the molecular and electronic structure.</li>
+</ul>
+
+<h2>SE. Basic semiempirical calculations (molecule, semiempirical, MOPAC)</h2>
+<ul>
+<li>Optimize ground state geometry. Plot frontier orbitals (HOMO-LUMO). Calculate the energy gap. Explain electronic structure and geometry.</li>
+<li>Optimize geometry of the lowest energy triplet state. Calculate the relative energy of the triplet state. Plot unpaired molecular orbitals. Explain changes in electronic structure and geometry relative to the singlet state.</li>
+<li>Make a scan of the PES by rotating a flexible bond. In particular evaluate the rotational barrier and differential energies (0 vs 180, relax geometry if possible).</li>
+<li>Plot frontier orbitals for 90 and 180 degree of rotation. Compare with those at 0 degree. Explain the results.</li>
+</ul>
+
+<h2>QC. Basic quantum chemistry calculations (molecule in a solvent, DFT, Gaussian or Firefly or Spartan)</h2>
+<ul>
+<li>Optimize geometry. Save the optimized geometry as xyz-file.</li>
+<li>Calculate MOs and vibrations, UV/Vis and IR spectra, atomic charges and bond orders.</li>
+<li>Calculate IP, EA, and Stokes shift.</li>
+<li>Explain the obtained results.</li>
+</ul>
+
+<h2>BS. Band structure (semiconducting crystal, DFT, Abinit or VASP)</h2>
+<ul>
+<li>Optimize unit cell.</li>
+<li>Calculate and plot the band structure and DOS.</li>
+<li>Calculate effective masses.</li>
+<li>Visualize charge density.</li>
+</ul>
+
+<h2>II. Intermolecular interactions (cluster or crystal, force-field + DFT, Firefly)</h2>
+<ul>
+<li>Optimize geometry.</li>
+<li>Determine the binding energy.</li>
+<li>Estimate charge and exciton transfer rates and mobility.</li>
+</ul>
+
+</body>
+</html>

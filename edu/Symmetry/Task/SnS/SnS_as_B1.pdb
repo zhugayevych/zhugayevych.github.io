@@ -1,0 +1,10 @@
+COMPND    idealized SnS (as B1)
+CRYST1   11.314    4.000    4.000  90.00  90.00  90.00 Pnma
+HETATM    1 Sn                   1.414   1.000   1.000
+HETATM    1 S                    9.899   1.000   1.000
+
+
+REMARK  b=c=a/sqrt(8)
+REMARK  Sn (4c)  1/8  1/4  1/4   (cf. .119  1/4  .120 in real SnS)
+REMARK  S  (4c)  7/8  1/4  1/4   (cf. .851  1/4  .479)
+

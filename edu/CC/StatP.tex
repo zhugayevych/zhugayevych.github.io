@@ -1,0 +1,29 @@
+% Andriy Zhugayevych  azh@ukr.net
+% created 24.01.2014  modified 3.02.2014
+
+\documentclass[11pt]{Aarticle}
+
+\parskip=2ex
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Some formulas and concepts of statistical physics} \\ \smallskip
+\small (Computational Chemistry and Materials Modeling, Skoltech 2014)
+\end{center}
+
+Ergodicity: $\lim_{T\to\infty}\int_{0}^{T}A(t)\dif t$ does not depend on starting point.
+
+Ensemble average: $\langle A\rangle=\int A(p,q)\rho(p,q)\dif\Gamma$, where $\dif\Gamma=\frac{\dif p\dif q}{(2\pi\hbar)^N}$.
+
+Thermodynamic ensembles and energies: NVE (microcanonical, energy $E$ or entropy $S$), NVT (canonical, free energy $F$), NPT (Gibbs free energy $G$), NPE (enthalpy $H$).
+
+Fundamental thermodynamic relation: $T\dif S\geq\delta Q=\dif E+p\dif V+\sum a\dif A-\mu\dif N$.
+
+Heat capacity: $C=\frac{\delta Q}{\delta T}=T\frac{\dif S}{\dif T}$.
+
+Canonical ensemble: $\rho(p,q)=\exp\left(\frac{F-H(p,q)}{kT}\right)$, $F=kT\ln Z$, $Z=\int\rme^{-H(p,q)/kT}\dif\Gamma$.
+
+Quantum oscillator: $E_n=\hbar\omega\left(n+\frac{1}{2}\right)$, $Z=\left(2\sinh\frac{\hbar\omega}{2kT}\right)^{-1}$, $E=\frac{\hbar\omega}{2}\coth\frac{\hbar\omega}{2kT}$, $C/k=\left(\frac{\hbar\omega}{2kT}\left/\sinh\frac{\hbar\omega}{2kT}\right.\right)^2$.
+
+\end{document}

@@ -1,0 +1,7 @@
+COMPND    beta-Sn  white tin
+CRYST1    5.832    5.832    3.181  90.00  90.00  90.00 I41/amd
+HETATM    1 Sn                   0.000   4.374   0.398
+
+
+REMARK  141 I41/amd tI4 A5
+REMARK    1 Sn (4a)  0  3/4  1/8  {origin is at the inversion point}

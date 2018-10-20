@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Do it after Lecture on Computational chemistry of crystals</title>
+</head>
+<body>
+
+<p>Topic: computational chemistry of translationally invariant systems</p>
+
+<p style="font-size: smaller">Download <a href="Rec6_CCC.zip">these files</a>. Be prepared: VASP or Abinit is needed (see <a href="Software.htm">here</a>, get account for cluster use)</p>
+
+<p style="font-size: smaller">To submit a job, run: <code>qsub vasp/_pbs -l nodes=1:ppn=16 -N foldername</code>. For visualization use p4vasp and VESTA</p>
+
+<h2>Practice</h2>
+<ul>
+<li>[Si] Lab <a href="Labs.htm">BS</a> for silicon.</li>
+<li>[Si_methods] Dependence on k-grid/supercell and on plane-wave cutoff.</li>
+<li>VASP 2012 hands-on sessions: <a href="res/handsonI.pdf">Bulk systems (p.33)</a>, <a href="res/handsonII.pdf">Surfaces</a></li>
+<li>[C_mop,C_vas] Carbon allotropes: compare diamond, graphite, graphene, and buckyball using PM7 and PBE.</li>
+<li>[graphene_mop] Calculate bandgap and density of states for graphene using PM7.</li>
+<li>[SiO2_lam] With COMB potential, which form of quartz is more stable at 0/0 conditions, alpha or beta?</li>
+<li>[Si_freq] Phonons in silicon.</li>
+<li>[SiO2_IR-Raman] IR and Raman spectra for quartz.</li>
+<li>Reconstruction of Si surface.</li>
+<li>Structure of Si/SiO2 interface.</li>
+<li>[Si_mop] Silicon crystal by MOPAC.</li>
+</ul>
+
+<h2>Reading</h2>
+<ul>
+<li>Background on crystal symmetry (use as handbook, not as textbook): Evarestov chapters 2-3, see also <a href="../Materials/index.htm">Survey of Materials</a> course</li>
+<li>Evarestov 4.1, 7.2, 8.1, 8.2</li>
+<li><a href="http://www.vasp.at/index.php/documentation">VASP documentation</a>:
+ <a href="http://www.vasp.at/vasp-workshop/slides/comput_mat.pdf">Introduction</a>,
+ <a href="http://www.vasp.at/vasp-workshop/slides/pseudopp1.pdf">Pseudopotentials</a>,
+ <a href="http://www.vasp.at/vasp-workshop/slides/k-points.pdf">k-grids</a>,
+ <a href="http://www.vasp.at/mmars/day2.pdf">Dielectric function</a></li>
+</ul>
+
+</body>
+</html>

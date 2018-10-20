@@ -1,0 +1,7 @@
+COMPND    alpha-Ga
+CRYST1    4.520    7.660    4.526  90.00  90.00  90.00 Cmca
+HETATM    1 Ga                   0.000   1.187   0.367
+
+
+REMARK  A11 oC8,  64 Cmca D_2h^18
+REMARK    1 Ga (8f)  0  0.1549  0.0810    

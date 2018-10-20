@@ -1,0 +1,19 @@
+# beta-AgI, Iodargyrite (B4)
+# z(I) is chosen ideal 3/8
+data_nolabel
+_chemical_formula_sum     'AgI'
+_cell_length_a     4.580
+_cell_length_b     4.580
+_cell_length_c     7.494
+_cell_angle_alpha  90
+_cell_angle_beta   90
+_cell_angle_gamma  120
+_symmetry_space_group_name_H-M  'P63mc'
+loop_
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_Wyckoff_symbol
+ Ag   .333333  .666667  0      2b
+ I    .333333  .666667  .375   2b

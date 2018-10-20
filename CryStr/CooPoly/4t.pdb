@@ -1,0 +1,9 @@
+TITLE   [4t] tetrahedron, symmetry=Td, orbit=[[1, 1, 1]]
+HETATM    1 O                    0.000   0.000   0.000
+HETATM    2 C                    1.732   1.732   1.732
+HETATM    3 C                    1.732  -1.732  -1.732
+HETATM    4 C                   -1.732  -1.732   1.732
+HETATM    5 C                   -1.732   1.732  -1.732
+CONECT    2    3    4    5
+CONECT    3    4    5
+CONECT    4    5

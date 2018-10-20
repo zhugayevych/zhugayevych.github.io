@@ -1,0 +1,48 @@
+#!/bin/bash
+#PBS -jeo
+#PBS -r n
+#PBS -l nodes=1:ppn=16
+#PBS -l walltime=96:00:00
+
+module load PBS/tools Compilers/Intel/psxe_2017.4  QCh/VASP/5.4.4/psxe2017.4
+
+export RUN_DIR=${HOME}/vasp/$PBS_JOBNAME
+cd ${RUN_DIR}
+pdcp -r * ${TMPDIR}
+cd ${TMPDIR}
+
+echo $PBS_JOBNAME
+hostname
+echo "PBS_NP = " ${PBS_NP}
+echo "TMPDIR = " ${TMPDIR}
+echo "VASP = " ${VASP}
+date
+echo ""
+
+if [ -e "INCAR" ]; then
+ mpirun -np ${PBS_NP} ${VASP}/bin/vasp_std
+else
+ n=$(\ls INCAR* -afq | wc -l)
+ echo "number of INCARs = " $n
+ for ((i=1; i <= $n; i++))
+ do
+  if [ -e "INCAR"$i ]; then
+    echo ""
+    echo "INCAR"$i " exists"
+    cp INCAR$i INCAR
+    mpirun -np ${PBS_NP} ${VASP}/bin/vasp_std
+    cp OUTCAR OUTCAR$i
+    rm INCAR OUTCAR
+    echo ""
+  else
+    echo "Wrong format of INCAR* files. Use INCAR1, INCAR2,..."
+  fi
+ done
+fi
+
+echo ""
+date
+
+cp * ${RUN_DIR}
+
+echo "done"

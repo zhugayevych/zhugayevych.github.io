@@ -1,0 +1,7 @@
+COMPND    SnS to B1 step 1a
+CRYST1   11.200    3.987    4.334  90.00  90.00  90.00 Pnma
+HETATM    1 Sn                   1.337   0.997   1.084
+HETATM    1 S                    9.529   0.997   1.084
+
+REMARK  Sn (4c)  .1194  1/4  1/4  (zeta=1/4 vs .1198)
+REMARK  S  (4c)  .8508  1/4  1/4  (zeta=1/4 vs .4793)

@@ -1,0 +1,8 @@
+COMPND    SnS as B1
+CRYST1   12.000    4.000    4.000  90.00  90.00  90.00 Pnma
+HETATM    1 Sn                   2.000   1.000   0.500
+HETATM    1 S                   10.000   1.000   1.500
+
+
+REMARK  Sn (4c)   xi   1/4   zeta   (cf. .119  1/4  .120 in real SnS)
+REMARK  S  (4c)  1-xi  1/4  1-zeta  (cf. .851  1/4  .479)

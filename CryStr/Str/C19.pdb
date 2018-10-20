@@ -1,0 +1,5 @@
+COMPND    idealized C19 with voids marked by N
+CRYST1    5.000    5.000   24.495  90.00  90.00 120.00 R-3m
+HETATM    1 C                    0.000   0.000   0.000
+HETATM    2 S                    0.000   0.000   6.124
+HETATM    3 N                    0.000   0.000  12.247

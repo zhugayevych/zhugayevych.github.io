@@ -1,0 +1,4 @@
+TITLE     C32 hexagonal omega (c/a=1, d=5)
+CRYST1    6.547    6.547    6.547  90.00  90.00 120.00 P6/mmm
+HETATM    1 C                    0.000   0.000   0.000
+HETATM    2 S                    0.000   3.780   3.273

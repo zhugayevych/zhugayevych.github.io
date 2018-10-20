@@ -1,0 +1,110 @@
+#------------------------------------------------------------------------------
+#$Date: 2014-07-12 08:06:43 +0000 (Sat, 12 Jul 2014) $
+#$Revision: 120115 $
+#$URL: file:///home/coder/svn-repositories/cod/cif/9/01/21/9012138.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided the American Mineralogist Crystal Structure Database,
+# http://rruff.geo.arizona.edu/AMS/amcsd.php
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_9012138
+loop_
+_publ_author_name
+'Vlasse, M.'
+'Naslain, R.'
+'Kasper, J. S.'
+'Ploog, K.'
+_publ_section_title
+;
+ Crystal structure of tetragonal boron related to alpha AlB12
+ Locality: synthetic
+;
+_journal_name_full               'Journal of Solid State Chemistry'
+_journal_page_first              289
+_journal_page_last               301
+_journal_volume                  28
+_journal_year                    1979
+_chemical_formula_sum            B
+_chemical_name_common            Boron
+_chemical_name_mineral           Boron
+_space_group_IT_number           78
+_symmetry_space_group_name_Hall  'P 4cw'
+_symmetry_space_group_name_H-M   'P 43'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_length_a                   10.14
+_cell_length_b                   10.14
+_cell_length_c                   14.17
+_cell_volume                     1456.954
+_exptl_crystal_density_diffrn    2.340
+_cod_database_code               9012138
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-y,x,3/4+z
+-x,-y,1/2+z
+y,-x,1/4+z
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_U_iso_or_equiv
+B1 -0.12300 0.74200 0.12800 1.00000 0.00540
+B1p 0.23800 0.37700 0.87100 1.00000 0.00120
+B2 -0.04000 0.62800 0.20800 1.00000 0.00790
+B2p 0.13100 0.46100 0.79000 1.00000 0.00290
+B3 -0.04400 0.80900 0.22500 1.00000 0.00040
+B3p 0.31300 0.45900 0.77000 1.00000 0.00140
+B4 -0.04400 0.89300 0.11600 1.00000 0.00040
+B4p 0.39400 0.46000 0.88300 1.00000 0.00340
+B5 -0.03300 0.60600 0.07800 1.00000 0.00270
+B5P 0.10600 0.47000 0.92000 1.00000 0.00530
+B6 -0.03700 0.77600 0.02800 1.00000 0.01190
+B6P 0.27100 0.46800 0.96900 1.00000 0.01550
+B7 0.10900 0.72100 0.24400 1.00000 0.00580
+B7p 0.22000 0.60700 0.75400 1.00000 0.01250
+B8 0.10500 0.88600 0.19100 1.00000 0.02040
+B8p 0.38800 0.60800 0.80600 1.00000 0.00600
+B9 0.11800 0.60000 0.15500 1.00000 0.00650
+B9p 0.09800 0.62200 0.84500 1.00000 0.01790
+B10 0.11300 0.68700 0.04700 1.00000 0.01540
+B10p 0.19400 0.61600 0.93200 1.00000 0.00340
+B11 0.11200 0.86400 0.06500 1.00000 0.00710
+B11p 0.36500 0.61300 0.93400 1.00000 0.01390
+B12 0.20400 0.75800 0.14400 1.00000 0.00250
+B12p 0.26000 0.70200 0.86000 1.00000 0.01910
+B13 0.31700 0.55400 0.36200 1.00000 0.00290
+B13p 0.05600 0.81400 0.63200 1.00000 0.01150
+B14 0.38900 0.69800 0.32500 1.00000 0.02760
+B14p 0.19700 0.88600 0.67500 1.00000 0.03520
+B15 0.20300 0.69600 0.34000 1.00000 0.00620
+B15p 0.19300 0.70600 0.65500 1.00000 0.00300
+B16 0.46800 0.61400 0.41300 1.00000 0.00420
+B16P 0.11300 0.96400 0.58900 1.00000 0.00390
+B17 0.46700 0.79200 0.42000 1.00000 0.01070
+B17p 0.29200 0.95500 0.57400 1.00000 0.01230
+B18 0.18700 0.58900 0.44900 1.00000 0.01210
+B18p 0.09100 0.68800 0.55200 1.00000 0.00290
+B19 0.26500 0.67500 0.54700 1.00000 0.00390
+B19p 0.17100 0.76700 0.45500 1.00000 0.00700
+B20 0.34600 0.53600 0.49600 1.00000 0.00580
+B20p 0.04000 0.84900 0.50300 1.00000 0.00520
+B21 0.43900 0.68500 0.52400 1.00000 0.00720
+B21p 0.18200 0.94000 0.47600 1.00000 0.00110
+B22 0.33400 0.83500 0.49700 1.00000 0.00620
+B23 0.03900 0.53400 0.49700 1.00000 0.00850
+B24 0.29000 0.83900 0.38400 1.00000 0.02870
+B24p 0.33200 0.80100 0.62900 1.00000 0.02500
+B25 0.14500 0.43300 0.46600 0.50000 0.02020
+B25p 0.06100 0.36000 0.03500 0.50000 0.00600
+B26 0.22500 0.24400 0.73200 0.47000 0.05830
+_journal_paper_doi 10.1016/0022-4596(79)90080-X

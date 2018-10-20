@@ -1,0 +1,4 @@
+COMPND    ZnS  sphalerite  (B3)
+CRYST1   5.4093   5.4093   5.4093  90.00  90.00  90.00 F-43m
+HETATM    1 Zn                   0.000   0.000   0.000
+HETATM    1 S                    1.352   1.352   1.352

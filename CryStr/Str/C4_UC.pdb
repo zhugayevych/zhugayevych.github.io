@@ -1,0 +1,27 @@
+TITLE     rutile unit cell
+CRYST1    8.000    8.000    5.200  90.00  90.00  90.00 P1
+HETATM    1 C                    4.000   4.000   2.600
+HETATM    2 C                    0.000   0.000   0.000
+HETATM    3 C                    8.000   0.000   0.000
+HETATM    4 C                    0.000   8.000   0.000
+HETATM    5 C                    0.000   0.000   5.200
+HETATM    6 C                    8.000   8.000   0.000
+HETATM    7 C                    0.000   8.000   5.200
+HETATM    8 C                    8.000   0.000   5.200
+HETATM    9 C                    8.000   8.000   5.200
+HETATM   10 S                    2.440   2.440   0.000
+HETATM   11 S                    5.560   5.560   0.000
+HETATM   12 S                    2.440   2.440   5.200
+HETATM   13 S                    5.560   5.560   5.200
+HETATM   14 S                    1.560   6.440   2.600
+HETATM   15 S                    6.440   1.560   2.600
+CONECT    1   10   11   12   13
+CONECT    1   14   15
+CONECT    2   10
+CONECT    3   15
+CONECT    4   14
+CONECT    5   12
+CONECT    6   11
+CONECT    7   14
+CONECT    8   15
+CONECT    9   13

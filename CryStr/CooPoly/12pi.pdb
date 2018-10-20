@@ -1,0 +1,27 @@
+TITLE   [12pi] pseudoicosahedron, symmetry=Th, orbit=[[2, 1, 0]]
+HETATM    1 O                    0.000   0.000   0.000
+HETATM    2 C                    2.683   1.342   0.000
+HETATM    3 C                    0.000  -2.683  -1.342
+HETATM    4 C                    1.342   0.000   2.683
+HETATM    5 C                   -2.683  -1.342   0.000
+HETATM    6 C                    0.000   2.683   1.342
+HETATM    7 C                   -1.342   0.000  -2.683
+HETATM    8 C                   -2.683   1.342   0.000
+HETATM    9 C                    0.000   2.683  -1.342
+HETATM   10 C                    1.342   0.000  -2.683
+HETATM   11 C                    2.683  -1.342   0.000
+HETATM   12 C                    0.000  -2.683   1.342
+HETATM   13 C                   -1.342   0.000   2.683
+CONECT    2    4    6    9   10
+CONECT    2   11
+CONECT    3    5    7   10   11
+CONECT    3   12
+CONECT    4    6   11   12   13
+CONECT    5    7    8   12   13
+CONECT    6    8    9   13
+CONECT    7    8    9   10
+CONECT    8    9   13
+CONECT    9   10
+CONECT   10   11
+CONECT   11   12
+CONECT   12   13

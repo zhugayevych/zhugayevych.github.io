@@ -1,0 +1,83 @@
+#------------------------------------------------------------------------------
+#$Date: 2014-07-15 08:40:17 +0000 (Tue, 15 Jul 2014) $
+#$Revision: 120386 $
+#$URL: file:///home/coder/svn-repositories/cod/cif/9/00/03/9000366.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided the American Mineralogist Crystal Structure Database,
+# http://rruff.geo.arizona.edu/AMS/amcsd.php
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_9000366
+loop_
+_publ_author_name
+'Peacor, D. R.'
+_publ_section_title
+;
+ High temperature, single-crystal X-Ray study of natrolite
+ T = 198 C
+;
+_journal_name_full               'American Mineralogist'
+_journal_page_first              676
+_journal_page_last               680
+_journal_volume                  58
+_journal_year                    1973
+_chemical_formula_sum            'Al2 H4 Na2 O12 Si3'
+_chemical_name_mineral           Natrolite
+_space_group_IT_number           43
+_symmetry_space_group_name_Hall  'F 2 -2d'
+_symmetry_space_group_name_H-M   'F d d 2'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            8
+_cell_length_a                   18.43
+_cell_length_b                   18.71
+_cell_length_c                   6.52
+_cell_volume                     2248.261
+_diffrn_ambient_temperature      471.15
+_exptl_crystal_density_diffrn    2.247
+_[local]_cod_chemical_formula_sum_orig 'Si3 Al2 Na2 O12 H4'
+_cod_database_code               9000366
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+x,1/2+y,1/2+z
+1/2+x,y,1/2+z
+1/2+x,1/2+y,z
+1/4+x,1/4-y,1/4+z
+1/4+x,3/4-y,3/4+z
+3/4+x,1/4-y,3/4+z
+3/4+x,3/4-y,1/4+z
+1/4-x,1/4+y,1/4+z
+1/4-x,3/4+y,3/4+z
+3/4-x,1/4+y,3/4+z
+3/4-x,3/4+y,1/4+z
+-x,1/2-y,1/2+z
+-x,-y,+z
+1/2-x,1/2-y,+z
+1/2-x,-y,1/2+z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_attached_hydrogens
+Si1 Si 0.00000 0.00000 0.00000 0.01039 .
+Si2 Si 0.15361 0.21116 0.62266 0.00925 .
+Al Al 0.03772 0.09329 0.61584 0.00937 .
+Na Na 0.22090 0.03110 0.61700 0.03014 .
+O1 O 0.02300 0.06790 0.86590 0.02191 .
+O2 O 0.07080 0.18120 0.60930 0.01330 .
+O3 O 0.09860 0.03490 0.50020 0.02001 .
+O4 O 0.20680 0.15310 0.72780 0.01950 .
+O5 O 0.18080 0.22720 0.39090 0.02204 .
+Wat O 0.05740 0.18910 0.10980 0.04002 2
+_database_code_amcsd             0000375

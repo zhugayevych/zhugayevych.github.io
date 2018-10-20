@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+
+
+[HKEY_CURRENT_USER\Software\Classes\.ipynb]
+@="azh.ipynb"
+
+[HKEY_CURRENT_USER\Software\Classes\azh.ipynb]
+
+[HKEY_CURRENT_USER\Software\Classes\azh.ipynb\DefaultIcon]
+@="C:\\Sys\\ico\\ipynb.ico"
+
+[HKEY_CURRENT_USER\Software\Classes\azh.ipynb\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\azh.ipynb\shell\open]
+
+[HKEY_CURRENT_USER\Software\Classes\azh.ipynb\shell\open\command]
+@="C:\\Sys\\ipy %1 iexplore"

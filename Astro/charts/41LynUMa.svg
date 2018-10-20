@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="150.000" height="150.000" xmlns="http://www.w3.org/2000/svg">
+<rect width="100%" height="100%" fill="white" stroke="black" stroke-width="1" />
+<circle cx="97.274" cy="68.612" r="60.000" fill="none" stroke="black" stroke-width="0.5" stroke-dasharray="3,5" />
+<circle cx="101.234" cy="61.828" r="5.250" fill="black" stroke="white" stroke-width="0.5" />
+<circle cx="77.761" cy="130.000" r="4.100" fill="black" stroke="white" stroke-width="0.5" />
+<circle cx="20.000" cy="40.061" r="3.150" fill="black" stroke="white" stroke-width="0.5" />
+<text x="111.434" y="53.370" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  A</tspan></text>
+<text x="74.658" y="141.695" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  B</tspan></text>
+<text x="9.917" y="35.301" font-family="sans-serif" font-size="8" text-anchor="middle"><tspan dy="0.5em">
+  C</tspan></text>
+<text x="10.000" y="140.000" font-family="sans-serif" font-size="8" text-anchor="start"><tspan dy="0em">41Lyn UMa</tspan></text>
+</svg>

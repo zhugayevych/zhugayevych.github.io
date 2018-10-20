@@ -1,0 +1,13 @@
+TITLE     S-S coordination in SnS
+CRYST1   11.200    3.987    4.334  90.00  90.00  90.00 P1
+HETATM    1 S                    9.529   0.997   2.077
+HETATM    2 S                    9.529   4.984   2.077
+HETATM    3 S                    9.529  -2.990   2.077
+HETATM    4 S                    9.529   0.997   6.411
+HETATM    5 S                    9.529   0.997  -2.257
+HETATM    6 S                    7.271   2.990   4.244
+HETATM    7 S                    7.271  -0.997   4.244
+HETATM    8 S                    7.271   2.990  -0.090
+HETATM    9 S                    7.271  -0.997  -0.090
+HETATM   10 S                   12.871   2.990   2.257
+HETATM   11 S                   12.871  -0.997   2.257

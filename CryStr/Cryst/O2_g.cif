@@ -1,0 +1,50 @@
+# gamma-O
+# The model is statistical that is actually O_2 molecules move around (2a) <0,0,0> and (6d) <0,1/4,1/2> sites
+data_cod9011647
+loop_
+_publ_author_name
+'Cox, D. E.'
+'Samuelsen, E. J.'
+'Ceckurts, K. H.'
+_publ_section_title
+;
+ Neutron-Diffraction determination of the crystal structure and magnetic form
+ factor of gamma-oxygen
+ Locality: synthetic
+ Sample: at T = 46 K
+ Note: gamma phase, stable between 44 K & 55 K
+;
+_journal_name_full               'Physical Review B'
+_journal_volume                  7
+_journal_page_first              3102
+_journal_year                    1973
+_journal_paper_doi               10.1103/PhysRevB.7.3102
+_chemical_formula_sum            O2
+_space_group_IT_number           223
+_symmetry_space_group_name_H-M   Pm-3n
+_cell_length_a                   6.78
+_cell_length_b                   6.78
+_cell_length_c                   6.78
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_diffrn_ambient_temperature      46
+_exptl_crystal_density_diffrn    1.364
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+O1 0.04360 0.04360 0.04360 0.25000
+O2 0.03400 0.25160 0.41510 0.25000
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+O1 0.13110 0.13110 0.13110 -0.01800 -0.01800 -0.01800
+O2 0.05860 0.10630 0.09260 -0.00380 -0.00790 -0.01580

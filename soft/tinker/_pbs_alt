@@ -1,0 +1,24 @@
+#!/bin/bash
+#PBS -jeo
+#PBS -r n
+#PBS -l nodes=1:ppn=1
+
+date
+hostname
+echo $PBS_JOBNAME
+
+if [ -d ~/tinker/$PBS_JOBNAME ]; then
+
+ export RUN_DIR=~/tinker/$PBS_JOBNAME
+ cd ${RUN_DIR}
+ eval "/home/Andriy.Zhugayevych/local/tinker/bin/$(<new.tin)" >new.out
+
+else
+
+ export RUN_DIR=~/tinker
+ cd ${RUN_DIR}
+ eval "/home/Andriy.Zhugayevych/local/tinker/bin/$(<$PBS_JOBNAME.tin)" >$PBS_JOBNAME.out
+
+fi
+
+date

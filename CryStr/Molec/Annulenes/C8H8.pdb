@@ -1,0 +1,33 @@
+COMPND    Cyclooctatetraene by NIST Chemistry WebBook
+HETATM    1  C                   1.764   1.218   3.696
+HETATM    2  C                   0.843   1.917   2.807
+HETATM    3  C                   3.095   1.230   3.590
+HETATM    4  C                   0.741   1.714   1.492
+HETATM    5  C                   3.849   1.947   2.568
+HETATM    6  C                   1.532   0.757   0.726
+HETATM    7  C                   3.746   1.743   1.252
+HETATM    8  C                   2.863   0.770   0.620
+HETATM    9  H                   1.280   0.670   4.514
+HETATM   10  H                   0.188   2.641   3.307
+HETATM   11  H                   3.712   0.694   4.321
+HETATM   12  H                   0.000   2.269   0.902
+HETATM   13  H                   4.560   2.685   2.959
+HETATM   14  H                   0.942   0.000   0.194
+HETATM   15  H                   4.373   2.312   0.554
+HETATM   16  H                   3.375   0.023   0.000
+CONECT    1    2    3    9                                            
+CONECT    2    1    4   10                                            
+CONECT    3    1    5   11                                            
+CONECT    4    2    6   12                                            
+CONECT    5    3    7   13                                            
+CONECT    6    4    8   14                                            
+CONECT    7    5    8   15                                            
+CONECT    8    6    7   16                                            
+CONECT    9    1                                                      
+CONECT   10    2                                                      
+CONECT   11    3                                                      
+CONECT   12    4                                                      
+CONECT   13    5                                                      
+CONECT   14    6                                                      
+CONECT   15    7                                                      
+CONECT   16    8                                                      

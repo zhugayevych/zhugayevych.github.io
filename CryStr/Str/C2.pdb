@@ -1,0 +1,4 @@
+TITLE     C2  pyrite (in ideal tetrahedral coordination of S)
+CRYST1   10.000   10.000   10.000  90.00  90.00  90.00 Pa-3
+HETATM    1 C                    0.000   0.000   0.000
+HETATM    2 S                    3.799   3.799   3.799

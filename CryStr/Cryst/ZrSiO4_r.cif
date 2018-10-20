@@ -1,0 +1,35 @@
+data_nolabel
+loop_
+_publ_author_name
+'K Kusaba'
+'T Yagi'
+'M Kikuchi'
+'Y Syono'
+_publ_section_title
+;
+ Structural considerations on the mechanism of the shock-induced
+ zircon-scheelite transition in ZrSiO4
+;
+_journal_name_full               'J Phys Chem Solids'
+_journal_volume                  47
+_journal_page_first              675
+_journal_year                    1986
+_journal_paper_doi               10.1016/0022-3697(86)90082-X
+_chemical_formula_sum            ZrSiO4
+_chemical_name_common            reidite
+_symmetry_space_group_name_H-M   'I41/a'
+_cell_length_a                   4.734
+_cell_length_b                   4.734
+_cell_length_c                   10.51
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_Wyckoff_symbol
+Zr   0   .25  .625  4b
+Si   0   .25  .125  4a
+O   .28  .39  .055  16f

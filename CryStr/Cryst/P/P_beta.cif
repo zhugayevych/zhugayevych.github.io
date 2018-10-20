@@ -1,0 +1,91 @@
+#------------------------------------------------------------------------------
+#$Date: 2013-05-05 14:21:46 +0000 (Sun, 05 May 2013) $
+#$Revision: 85285 $
+#$URL: file:///home/coder/svn-repositories/cod/cif/9/01/31/9013110.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided the American Mineralogist Crystal Structure Database,
+# http://rruff.geo.arizona.edu/AMS/amcsd.php
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_9013110
+loop_
+_publ_author_name
+'Simon, A.'
+'Borrmann, H.'
+'Craubner, H.'
+_publ_section_title
+;
+ Crystal structure of ordered white phosphorus (beta-P)
+ Locality: synthetic
+ Sample: at T = 158.15 K
+ Note: beta phase; transforms from alpha phase at T = 196.75 K
+;
+_journal_name_full
+'Phosphorus and Sulfur and the Related Elements'
+_journal_page_first              507
+_journal_page_last               510
+_journal_volume                  30
+_journal_year                    1987
+_chemical_formula_sum            P4
+_chemical_name_common            Phosphorus
+_space_group_IT_number           2
+_symmetry_space_group_name_Hall  '-P 1'
+_symmetry_space_group_name_H-M   'P -1'
+_cell_angle_alpha                71.84
+_cell_angle_beta                 90.37
+_cell_angle_gamma                71.56
+_cell_length_a                   11.450
+_cell_length_b                   5.503
+_cell_length_c                   11.261
+_cell_volume                     635.231
+_diffrn_ambient_temperature      158.15
+_exptl_crystal_density_diffrn    1.943
+_cod_database_code               9013110
+loop_
+_symmetry_equiv_pos_as_xyz
+x,y,z
+-x,-y,-z
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+P1 0.03600 0.04960 0.05870 0.00050 -0.00480 -0.01960
+P2 0.06390 0.05280 0.03050 -0.02180 -0.00450 0.00030
+P3 0.06600 0.04450 0.04850 -0.01150 -0.00470 -0.02940
+P4 0.06400 0.04720 0.04620 -0.01510 -0.00020 -0.02890
+P5 0.03920 0.06270 0.05010 -0.01800 -0.00930 -0.02220
+P6 0.05100 0.04860 0.06280 -0.03030 0.00510 -0.01910
+P7 0.04090 0.04720 0.07090 0.00260 0.00060 -0.02510
+P8 0.05340 0.04670 0.05670 -0.02910 -0.00170 -0.00760
+P9 0.05980 0.03530 0.05760 -0.02160 0.00570 -0.02160
+P10 0.06440 0.04810 0.03230 -0.01480 -0.00080 -0.00010
+P11 0.05950 0.04650 0.03050 -0.01630 -0.00040 -0.00400
+P12 0.04390 0.05230 0.05150 -0.00410 0.01350 -0.02390
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+P1 0.67802 0.39370 0.00247 0.05150
+P2 0.52922 0.88513 0.17722 0.05200
+P3 0.18938 0.92202 0.05123 0.05130
+P4 0.55505 0.84909 0.37360 0.05010
+P5 0.02641 0.34671 0.31490 0.04960
+P6 0.87186 0.35722 0.01126 0.05060
+P7 0.67157 0.53535 0.30808 0.05600
+P8 0.47750 0.58127 0.31956 0.05160
+P9 0.13526 0.55621 0.37416 0.04800
+P10 0.81346 0.05347 0.14518 0.05260
+P11 0.14244 0.15713 0.49419 0.04800
+P12 0.22608 0.20514 0.31893 0.05050

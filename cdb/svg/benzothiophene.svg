@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='137px' height='106px' viewBox='0 0 137 106' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.S { fill:rgb(255,229,22); stroke:rgb(255,229,22) }
+</style>
+<title>benzothiophene/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='113.5' y1='85.5' x2='133.5' y2='54.6' />
+<line x1='110.7' y1='76.5' x2='124.2' y2='55.7' />
+<line x1='133.5' y1='54.6' x2='114.4' y2='25.8' />
+<line x1='96.2' y1='22.0' x2='67.0' y2='40.8' />
+<line x1='67.0' y1='40.8' x2='74.7' y2='78.5' />
+<line x1='75.3' y1='45.3' x2='80.6' y2='71.1' />
+<line x1='74.7' y1='78.5' x2='113.5' y2='85.5' />
+<line x1='74.7' y1='78.5' x2='45.6' y2='103.3' />
+<line x1='45.6' y1='103.3' x2='10.2' y2='90.5' />
+<line x1='42.5' y1='94.5' x2='18.3' y2='85.8' />
+<line x1='10.2' y1='90.5' x2='3.0' y2='52.9' />
+<line x1='3.0' y1='52.9' x2='31.2' y2='27.8' />
+<line x1='12.3' y1='54.3' x2='31.5' y2='37.2' />
+<line x1='31.2' y1='27.8' x2='67.0' y2='40.8' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='101.1' y='23.0' font-size='16' stroke-width='1.0' class="S">S</text>
+</g>
+</svg>

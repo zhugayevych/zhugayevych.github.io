@@ -1,0 +1,6 @@
+COMPND    g-N_2
+CRYST1    3.957    3.957    5.109  90.00  90.00  90.00 P42/mnm
+HETATM    1 N                    0.388   0.388   0.000
+HETATM    2 N                   -0.388  -0.388   0.000
+REMARK  it is not necessary to include the second atom explicitely
+

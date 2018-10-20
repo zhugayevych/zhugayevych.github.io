@@ -1,0 +1,8 @@
+COMPND    SnS to B1 step 3b
+CRYST1    3.987    3.987    5.600  90.00  90.00  90.00 I4/mmm
+HETATM    1 Sn                   0.000   0.000   0.000
+HETATM    1 S                    0.000   0.000   2.800
+
+REMARK  move origin to Sn
+REMARK  Sn (2a)  0  0   0
+REMARK  S  (2b)  0  0  1/2

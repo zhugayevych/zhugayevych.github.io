@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="17" minor="2"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false" autoexpanding_sections="true">
+</View-Properties>
+<MapleNet-Properties elisiondigitsbefore="100" labelling="true" indentamount="4" elisiontermsthreshold="10000" ansi="false" errorbreak="1" useclientjvm="true" echo="1" imaginaryunit="I" labelwidth="20" contextmenusize="automatic" plotdriver="opengl" elisiondigitsafter="100" plotoutput="terminal" helpbrowser="standard" rtablesize="16" elisiontermsbefore="100" elisiondigitsthreshold="10000" typesetting="standard" plotdevice="inline" verboseproc="1" showassumed="1" errorcursor="false" longdelim="true" plotoptions="" quiet="false" elisiontermsafter="100" screenwidth="79" preplot="" prettyprint="3" displayprecision="6" screenpixelheight="1200" warnlevel="3" screenheight="25" latexwidth="8.0" postplot="" prompt="&gt; " ShowLabels="false"/>
+<Styles>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Maple Name" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[104,64,92]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Bold" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Menus" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Italic" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Fixed Width" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Plot Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="8" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Nonterminal" background="[255,255,255]" bold="true" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Heading" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Italic" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Variable" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Italic Bold" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Default" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Underlined Italic" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="2D Math Bold Small" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="1" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Small" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="1" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Page Number" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Output Labels" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="8" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Plot Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Emphasized" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Symbol 2" background="[255,255,255]" bold="false" executable="false" family="SymbolPi" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Comment" background="[255,255,255]" bold="true" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="9" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math Italic Small" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="1" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Comment" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Underlined Bold" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Copyright" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Underlined" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Prompt" background="[255,255,255]" bold="true" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Bold" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Notes" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="LaTeX" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Atomic Variable" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[175,0,175]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Popup" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,128,128]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Left Justified Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Help Fixed" background="[255,255,255]" bold="false" executable="false" family="Monospaced" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Fixed Width" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Help" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Left Justified Maple Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.5" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+</Styles>
+<Task-table>
+    <Task-category name="&lt;default&gt;"/>
+</Task-table>
+<Task/>
+<Group labelreference="L41" drawlabel="true">
+<Input>
+<Text-field style="Title" layout="Title">SSH package: documentation</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Help Bold">Description</Font>: SSH package provides SSH network protocol support via <Hyperlink linktarget="http://www.chiark.greenend.org.uk/~sgtatham/putty/" hyperlink="true"><Font style="Normal" underline="true" foreground="[0,128,128]">PuTTY</Font></Hyperlink> or similar client.</Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Help Bold">Installation</Font>: you can install SSH module as a package or read SSH.ini file at the beginning of your worksheet. When the package is being loaded, user configuration is read from <Font style="Code">cat(UserConfigurationFolder,&quot;SSH_Setup.ini&quot;)</Font> file.</Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Help Bold">Requirements</Font>: tested for Windows,<Hyperlink linktarget="http://www.chiark.greenend.org.uk/~sgtatham/putty/" hyperlink="true"></Hyperlink> PuTTY-like SSH client, md5 checksum program (e.g. <Hyperlink linktarget="http://support.microsoft.com/kb/841290" hyperlink="true"><Font style="Normal" underline="true" foreground="[0,128,128]">FCIV</Font></Hyperlink>), untar/ungz utilities (e.g. 7za). For convenience put all executables into one folder included in PATH environment variable.</Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Help Bold">List of commands</Font> (for their usage see the examples below, SSH.ini, and PuTTY documentation):</Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">Setup -</Font> configure the package and the connection (provide host and ppk-file at least), see SSH_Setup.ini</Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">opentunnel -</Font> open a tunnel using port forwarding</Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">login  -</Font> run interactive SSH client using <Font style="Help Fixed">putty</Font> program (interactive SSH-client)</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">run    -</Font> run a command on a remote machine using <Font style="Help Fixed">plink</Font> program (command SSH-client)</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">runftp -</Font> run a command using <Font style="Help Fixed">psftp</Font> program (ftp SSH-client)</Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">pwd -</Font> return active remote directory</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">dir -</Font> list the remote directory</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">put -</Font> upload files</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">get -</Font> download files</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">sget -</Font> download files and folders securely</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">FileExists -</Font> check if the remote file exists</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">FileStatus -</Font> check file status: 0 - does not exist, 1 - directory, 2 - executable, 3 - other</Text-field>
+<Text-field style="Normal" layout="Normal"></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">qsub -</Font> submit job</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">qdel -</Font> delete job</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">qstat -</Font> run qstat command on a remote machine</Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">pbsnodes -</Font> print information on nodes managed by <Hyperlink linktarget="http://en.wikipedia.org/wiki/Portable_Batch_System" hyperlink="true"><Font style="Normal" underline="true" foreground="[0,128,128]">PBS</Font></Hyperlink> such as <Hyperlink linktarget="http://www.adaptivecomputing.com/resources/docs/torque/2-5-9/index.php" hyperlink="true"><Font style="Normal" underline="true" foreground="[0,128,128]">TORQUE</Font></Hyperlink></Text-field>
+<Text-field style="Normal" layout="Normal"><Font style="Code">pbsreports -</Font> print list of PBS report files</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L32" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Load package</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">try with(SSH) catch:  read &quot;SSH.ini&quot;;  with(SSH) end;</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NzRJK0ZpbGVFeGlzdHNHNiJJK0ZpbGVTdGF0dXNHRiRJK01vZHVsZUxvYWRHRiRJJlNldHVwR0YkSSRkaXJHRiRJJGdldEdGJEkmbG9naW5HRiRJK29wZW50dW5uZWxHRiRJKXBic25vZGVzR0YkSStwYnNyZXBvcnRzR0YkSSRwdXRHRiRJJHB3ZEdGJEklcWRlbEdGJEkmcXN0YXRHRiRJJXFzdWJHRiRJJHJ1bkdGJEkncnVuZnRwR0YkSSVzZ2V0R0Yk</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L235" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Setup connection </Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;skoltech&quot;,printout);</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">int=putty</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">com=plink
+ftp=psftp
+md5=fciv
+untar=7za x -aou
+ungz=7za x
+tmp=C:/tmp/_tmpssh
+host=Andriy.Zhugayevych@pardus.skoltech.ru, ppk=C:/Users/azh/Sys/Internet/SSH/skoltech/key.ppk, port=, nnp=node, pbs=MOAB
+cnames=[cee,mazaleva,fedotov,msu,nano,naumov,skoltech]</Text-field>
+</Output>
+</Group>
+<Group labelreference="L146" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Section collapsed="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title>
+<Text-field style="Heading 1" layout="Heading 1">Install as package</Text-field></Title>
+<Group labelreference="L164" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal">Set the source</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">source:=&quot;SSH.ini&quot;;
+<Font encoding="UTF-8">for i from 1 to 3 do printf(&quot;%s\134n&quot;,FileTools[Text][ReadLine](source)) end;
+</Font>fclose(source);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEnc291cmNlRicvJSdpdGFsaWNHUSV0cnVlRicvJSxtYXRodmFyaWFudEdRJ2l0YWxpY0YnLUkjbW9HRiQ2LVEjOj1GJy9GM1Enbm9ybWFsRicvJSZmZW5jZUdRJmZhbHNlRicvJSpzZXBhcmF0b3JHRj0vJSlzdHJldGNoeUdGPS8lKnN5bW1ldHJpY0dGPS8lKGxhcmdlb3BHRj0vJS5tb3ZhYmxlbGltaXRzR0Y9LyUnYWNjZW50R0Y9LyUnbHNwYWNlR1EsMC4yNzc3Nzc4ZW1GJy8lJ3JzcGFjZUdGTC1JI21zR0YkNiNRKFNTSC5pbmlGJy8lK2ZvcmVncm91bmRHUShbMCwwLDBdRicvJSlyZWFkb25seUdGPUY5">UShTU0guaW5pNiI=</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output"># Andriy Zhugayevych  azh@ukr.net
+# SSH network protocol support via PuTTY client
+# created 25.12.2010, modified - see version below</Text-field>
+</Output>
+</Group>
+<Group labelreference="L165" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal">Check the destination folder</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">libname;</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NiRRM0M6XFNjaVxNYXBsZTE3XGxpYjYiUSIuRiQ=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L167" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal">Create or recreate the library</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">savelibname:=cat([libname][1],&quot;/SSH.mla&quot;);
+if FileTools[Exists](savelibname) then FileTools[Remove](savelibname) end;
+march(create,savelibname,1);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEsc2F2ZWxpYm5hbWVGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUkjbXNHRiQ2I1E7QzpcU2NpXE1hcGxlMTdcbGliL1NTSC5tbGFGJy8lK2ZvcmVncm91bmRHUShbMCwwLDBdRicvJSlyZWFkb25seUdGPUY5">UTtDOlxTY2lcTWFwbGUxN1xsaWIvU1NILm1sYTYi</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L162" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal">Read the source</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">read source;
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L163" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal">Save it to the library</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">savelib('SSH');
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L161" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal">Build the help</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">makehelp(&quot;SSH&quot;,&quot;SSH.mw&quot;,cat([libname][1],&quot;/SSH.hdb&quot;),browser=[&quot;External Packages/SSH&quot;]):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L166" drawlabel="true">
+<Input>
+<Text-field style="Normal" layout="Normal">Check the result</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart;
+with(SSH);
+SSH:-Setup('version');</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NzRJK0ZpbGVFeGlzdHNHNiJJK0ZpbGVTdGF0dXNHRiRJK01vZHVsZUxvYWRHRiRJJlNldHVwR0YkSSRkaXJHRiRJJGdldEdGJEkmbG9naW5HRiRJK29wZW50dW5uZWxHRiRJKXBic25vZGVzR0YkSStwYnNyZXBvcnRzR0YkSSRwdXRHRiRJJHB3ZEdGJEklcWRlbEdGJEkmcXN0YXRHRiRJJXFzdWJHRiRJJHJ1bkdGJEkncnVuZnRwR0YkSSVzZ2V0R0Yk</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">Iik8MD0/</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L158" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title>
+<Text-field style="Heading 1" layout="Heading 1">Setup and test connection</Text-field></Title>
+<Text-field style="Text" layout="Normal">The best way to configure a connection is to prepare a table of predefined connections in the user &quot;SSH_Setup.ini&quot; (<Font style="Code">ctable</Font>)</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Group labelreference="L152" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Manual setup</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup]( 'host'=&quot;user@host&quot;, 'ppk'=&quot;key.ppk&quot;, 'md5'=&quot;checksum utility&quot;, printout);</Text-field>
+</Input>
+<Output>
+<Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20key.ppk%20does%20not%20exist.%20Provide%20the%20correct%20path%20to%20private%20key." hyperlink="true"><Font style="HyperlinkWarning">Warning, key.ppk does not exist. Provide the correct path to private key.</Font></Hyperlink></Text-field>
+</Output>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">int=C:/Sys/putty/putty
+com=C:/Sys/putty/plink
+ftp=C:/Sys/putty/psftp
+md5=checksum utility
+untar=7za x
+ungz=7za x
+tmp=C:/Sys/putty/_tmpssh
+host=user@host, ppk=key.ppk, port=, nnp=node, pbs=TORQUE
+cnames=[msu,skoltech,fedotov,nano]</Text-field>
+</Output>
+</Group>
+<Group labelreference="L219" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Recommended setup</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;skoltech&quot;);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L253" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup]('host','pbs');</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NiRRR0FuZHJpeS5aaHVnYXlldnljaEBjbHVzdGVyLnNrb2x0ZWNoLnJ1NiJRJ1RPUlFVRUYk</Equation></Text-field>
+</Output>
+</Group>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Text-field style="Heading 3" layout="Heading 3">Test connection</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Group labelreference="L150" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Try interactive SSH-client: login and type &quot;exit&quot; to close the connection</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">login();</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">Type &quot;exit&quot; to logout</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiVHNg==</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L157" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Try command SSH-client</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">run(&quot;echo Hello world&quot;);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">USxIZWxsb353b3JsZDYi</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L155" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Try ftp SSH-client</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pwd();
+runftp([&quot;pwd&quot;]);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UTkvaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2g2Ig==</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UVxxUmVtb3Rlfndvcmtpbmd+ZGlyZWN0b3J5fmlzfi9ob21lL0FuZHJpeS5aaHVnYXlldnljaHwrUmVtb3RlfmRpcmVjdG9yeX5pc34vaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2g2Ig==</Equation></Text-field>
+</Output>
+</Group>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Text-field style="Heading 3" layout="Heading 3">Port forwarding</Text-field>
+<Text-field style="Text" layout="Normal"></Text-field>
+<Group labelreference="L156" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Setup primary connection</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup]('host'=&quot;azh@localhost&quot;,'ppk'=&quot;C:/Users/azh/Local/nano/key.ppk&quot;,'port'=10022);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L153" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Open a tunnel and keep it running:</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">opentunnel(&quot;nano.lanl.gov:22&quot;,&quot;azh@74.95.16.42&quot;,&quot;C:/Users/azh/Local/velizhan/key.ppk&quot;,printout);</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">C:/Sys/putty/putty -ssh -i C:/Users/azh/Local/velizhan/key.ppk -L 10022:nano.lanl.gov:22 -N azh@74.95.16.42</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">To close the tunnel close the opened window/process</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiUpMyI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L154" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Try to login</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">login();</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">Type &quot;exit&quot; to logout</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiUnNCI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L147" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title>
+<Text-field style="Heading 1" layout="Heading 1">File operations</Text-field></Title>
+<Group labelreference="L55" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Check active directory</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">pwd();</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UTkvaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2g2Ig==</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L58" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Create new directory on a remote machine</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">runftp([&quot;mkdir sshtest&quot;]);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UWpwUmVtb3Rlfndvcmtpbmd+ZGlyZWN0b3J5fmlzfi9ob21lL0FuZHJpeS5aaHVnYXlldnljaHwrbWtkaXJ+L2hvbWUvQW5kcml5LlpodWdheWV2eWNoL3NzaHRlc3Q6fk9LNiI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L144" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Select the pathname for the local test folder</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">folder:=&quot;sshtest/&quot;;
+mkdir(folder);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEnZm9sZGVyRicvJSdpdGFsaWNHUSV0cnVlRicvJSxtYXRodmFyaWFudEdRJ2l0YWxpY0YnLUkjbW9HRiQ2LVEjOj1GJy9GM1Enbm9ybWFsRicvJSZmZW5jZUdRJmZhbHNlRicvJSpzZXBhcmF0b3JHRj0vJSlzdHJldGNoeUdGPS8lKnN5bW1ldHJpY0dGPS8lKGxhcmdlb3BHRj0vJS5tb3ZhYmxlbGltaXRzR0Y9LyUnYWNjZW50R0Y9LyUnbHNwYWNlR1EsMC4yNzc3Nzc4ZW1GJy8lJ3JzcGFjZUdGTC1JI21zR0YkNiNRKXNzaHRlc3QvRicvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXUYnLyUpcmVhZG9ubHlHRj1GOQ==">USlzc2h0ZXN0LzYi</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L53" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Upload some files to the remote directory</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">FileTools[Copy](&quot;SSH.ini&quot;,cat(folder,&quot;test1.txt&quot;));
+FileTools[Copy](&quot;SSH.ini&quot;,cat(folder,&quot;test2.txt&quot;));
+put(&quot;test1.txt test2.txt&quot;,&quot;sshtest&quot;,'lcd'=folder);
+run(&quot;chmod 0755 sshtest/test1.txt&quot;);
+printf(dir(&quot;sshtest&quot;));</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiY1WiI=</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiY1WiI=</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UWpebFJlbW90ZX53b3JraW5nfmRpcmVjdG9yeX5pc34vaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2h8K1JlbW90ZX5kaXJlY3Rvcnl+aXN+bm93fi9ob21lL0FuZHJpeS5aaHVnYXlldnljaC9zc2h0ZXN0fCtOZXd+bG9jYWx+ZGlyZWN0b3J5fmlzfkM6XFVzZXJzXGF6aFxTY2lcTWF0aFxDb21wTWF0aFxNYXBsZVxTU0hcc3NodGVzdHwrbG9jYWw6dGVzdDEudHh0fj0+fnJlbW90ZTovaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2gvc3NodGVzdC90ZXN0MS50eHR8K2xvY2FsOnRlc3QyLnR4dH49Pn5yZW1vdGU6L2hvbWUvQW5kcml5LlpodWdheWV2eWNoL3NzaHRlc3QvdGVzdDIudHh0NiI=</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">USE2Ig==</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">Listing directory /home/Andriy.Zhugayevych/sshtest
+drwxr-xr-x    2 Andriy.Zhugayevych g_amg        4096 Jan 31 13:25 .
+drwxr-xr--   20 Andriy.Zhugayevych g_amg       98304 Jan 31 13:25 ..
+-rwxr-xr-x    1 Andriy.Zhugayevych g_amg       14710 Jan 31 13:25 test1.txt
+-rw-r--r--    1 Andriy.Zhugayevych g_amg       14710 Jan 31 13:25 test2.txt</Text-field>
+</Output>
+</Group>
+<Group labelreference="L230" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Check files</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">FileExists(&quot;sshtest&quot;);
+FileStatus(&quot;abc&quot;);                # 0=does not exists
+FileStatus(&quot;sshtest&quot;);            # 1=directory
+FileStatus(&quot;sshtest/test1.txt&quot;);  # 2=executable file
+FileStatus(&quot;sshtest/test2.txt&quot;);  # 3=nonexecutable file
+FileStatus(&quot;sshtest/*.txt&quot;);      # 8=list of files</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">SSV0cnVlRyUqcHJvdGVjdGVkRw==</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiIh</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiIi</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiIj</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiIk</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiIp</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L62" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Download those files (in fact the files will be overwritten)</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">get(&quot;test1.txt test2.txt&quot;,&quot;sshtest&quot;,'lcd'=folder);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UWpebFJlbW90ZX53b3JraW5nfmRpcmVjdG9yeX5pc34vaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2h8K1JlbW90ZX5kaXJlY3Rvcnl+aXN+bm93fi9ob21lL0FuZHJpeS5aaHVnYXlldnljaC9zc2h0ZXN0fCtOZXd+bG9jYWx+ZGlyZWN0b3J5fmlzfkM6XFVzZXJzXGF6aFxTY2lcTWF0aFxDb21wTWF0aFxNYXBsZVxTU0hcc3NodGVzdHwrcmVtb3RlOi9ob21lL0FuZHJpeS5aaHVnYXlldnljaC9zc2h0ZXN0L3Rlc3QxLnR4dH49Pn5sb2NhbDp0ZXN0MS50eHR8K3JlbW90ZTovaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2gvc3NodGVzdC90ZXN0Mi50eHR+PT5+bG9jYWw6dGVzdDIudHh0NiI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L68" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Secure get</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">sget(&quot;sshtest/test1.txt&quot;,'lcd'=folder);
+sget(&quot;sshtest/test1.txt&quot;,'lcd'=folder,'overwrite');
+sget(&quot;sshtest/test1.txt&quot;,'lcd'=folder,'compress','overwrite');
+fremove(cat(folder,&quot;test1.txt&quot;));
+sget(&quot;sshtest/test1.txt&quot;,'lcd'=folder,'compress');
+sget(&quot;sshtest/test9.txt&quot;,'lcd'=folder);</Text-field>
+</Input>
+<Output>
+<Text-field style="HyperlinkError" layout="HyperlinkError"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Error,%20(in%20SSH%3A-sget)%20Target%20file%20exists,%20sshtest%2Ftest1.txt" hyperlink="true"><Font style="HyperlinkError">Error, (in SSH:-sget) Target file exists, sshtest/test1.txt</Font></Hyperlink></Text-field>
+</Output>
+<Output>
+<Text-field style="HyperlinkError" layout="HyperlinkError"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Error,%20(in%20SSH%3A-sget)%20Target%20file%20exists%20(overwrite%20option%20is%20ignored%20for%20compressed%20transfer),%20sshtest%2Ftest1.txt" hyperlink="true"><Font style="HyperlinkError">Error, (in SSH:-sget) Target file exists (overwrite option is ignored for compressed transfer), sshtest/test1.txt</Font></Hyperlink></Text-field>
+</Output>
+<Output>
+<Text-field style="HyperlinkError" layout="HyperlinkError"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Error,%20(in%20SSH%3A-sget)%20Source%20file%20does%20not%20exist,%20sshtest%2Ftest9.txt" hyperlink="true"><Font style="HyperlinkError">Error, (in SSH:-sget) Source file does not exist, sshtest/test9.txt</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group labelreference="L269" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Secure sget by mask</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">FileTools[ListDirectory](folder);
+sget(&quot;sshtest/*.txt&quot;,'lcd'=folder);
+FileTools[ListDirectory](folder);
+sget(&quot;sshtest/*.txt&quot;,'lcd'=folder);
+FileTools[ListDirectory](folder);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NyRRKnRlc3QxLnR4dDYiUSp0ZXN0Mi50eHRGJA==</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20Target%20files%20exist%20for%20mask%20sshtest%2F*.txt,%20conflicts%20will%20be%20resolved%20according%20to%20untar%3D7za%20x%20-aou" hyperlink="true"><Font style="HyperlinkWarning">Warning, Target files exist for mask sshtest/*.txt, conflicts will be resolved according to untar=7za x -aou</Font></Hyperlink></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NyZRKnRlc3QxLnR4dDYiUSx0ZXN0MV8xLnR4dEYkUSp0ZXN0Mi50eHRGJFEsdGVzdDJfMS50eHRGJA==</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20Target%20files%20exist%20for%20mask%20sshtest%2F*.txt,%20conflicts%20will%20be%20resolved%20according%20to%20untar%3D7za%20x%20-aou" hyperlink="true"><Font style="HyperlinkWarning">Warning, Target files exist for mask sshtest/*.txt, conflicts will be resolved according to untar=7za x -aou</Font></Hyperlink></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NyhRKnRlc3QxLnR4dDYiUSx0ZXN0MV8xLnR4dEYkUSx0ZXN0MV8yLnR4dEYkUSp0ZXN0Mi50eHRGJFEsdGVzdDJfMS50eHRGJFEsdGVzdDJfMi50eHRGJA==</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L263" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Conversion</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">run(&quot;dos2unix sshtest/*.txt&quot;);
+sget(&quot;sshtest/test1.txt&quot;,'lcd'=folder,'overwrite');
+convert2dos(cat(folder,&quot;test1.txt&quot;));
+sget(&quot;sshtest/test1.txt&quot;,'lcd'=folder,'overwrite','unix2dos');
+convert2dos(cat(folder,&quot;test1.txt&quot;));</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">USE2Ig==</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">SSV0cnVlRyUqcHJvdGVjdGVkRw==</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">SSZmYWxzZUclKnByb3RlY3RlZEc=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L233" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Download directory</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for v in [&quot;1&quot;,&quot;2&quot;,&quot;1_1&quot;,&quot;2_1&quot;,&quot;1_2&quot;,&quot;2_2&quot;] do try fremove(cat(folder,&quot;test&quot;,v,&quot;.txt&quot;)) catch: end end;
+rmdir(folder);
+sget(&quot;sshtest&quot;);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L61" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Remove all test files and directories</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">for v in [&quot;1&quot;,&quot;2&quot;,&quot;1_1&quot;,&quot;2_1&quot;,&quot;1_2&quot;,&quot;2_2&quot;] do try fremove(cat(folder,&quot;test&quot;,v,&quot;.txt&quot;)) catch: end end;
+rmdir(folder);
+runftp([&quot;rm sshtest/test1.txt sshtest/test2.txt&quot;,&quot;rmdir sshtest&quot;]);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UV53UmVtb3Rlfndvcmtpbmd+ZGlyZWN0b3J5fmlzfi9ob21lL0FuZHJpeS5aaHVnYXlldnljaHwrcm1+L2hvbWUvQW5kcml5LlpodWdheWV2eWNoL3NzaHRlc3QvdGVzdDEudHh0On5PS3wrcm1+L2hvbWUvQW5kcml5LlpodWdheWV2eWNoL3NzaHRlc3QvdGVzdDIudHh0On5PS3wrcm1kaXJ+L2hvbWUvQW5kcml5LlpodWdheWV2eWNoL3NzaHRlc3Q6fk9LNiI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L52" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title>
+<Text-field style="Heading 1" layout="Heading 1">PBS routines</Text-field></Title>
+<Group labelreference="L262" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qstat]():
+SSH[qstat]('user'=&quot;Andriy.Zhugayevych&quot;);
+SSH[qstat]('user'=&quot;&quot;):</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">927639   BDOPV-F4_cryst_PBE-D3paw900_cg3   Andriy.Zhugayevych   16   R   batch    node8    1:01:10:07   </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">932214   HMTTF_cryst_PBE-D3paw600_cg3      Andriy.Zhugayevych   8    R   fastio   node24   10:55        </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">927639   BDOPV-F4_cryst_PBE-D3paw900_cg3   Andriy.Zhugayevych   16   R   batch    node8    1:01:10:07   
+932214   HMTTF_cryst_PBE-D3paw600_cg3      Andriy.Zhugayevych   8    R   fastio   node24   10:55        </Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NyQ3KlEnOTI3NjM5NiJRQEJET1BWLUY0X2NyeXN0X1BCRS1EM3BhdzkwMF9jZzNGJVEzQW5kcml5LlpodWdheWV2eWNoRiVRIzE2RiVRIlJGJVEmYmF0Y2hGJVEmbm9kZThGJVErMTowMToxMDowN0YlNypRJzkzMjIxNEYlUT1ITVRURl9jcnlzdF9QQkUtRDNwYXc2MDBfY2czRiVGJ1EiOEYlRilRJ2Zhc3Rpb0YlUSdub2RlMjRGJVEmMTA6NTVGJQ==</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">931194   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node26   19:02        
+931222   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node1    13:49        
+931512   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node15   3:43         
+931585   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node9    2:23         
+931613   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    51:30        
+931659   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node12   1:28:47      
+931680   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node6    2:23         
+931732   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    1:44         
+931756   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node16   1:10         
+931757   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    36           
+931829   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931833   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node13   58:59        
+931880   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931881   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931908   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931909   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931951   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    37:37        
+931952   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node21   37:34        
+931989   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931990   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931991   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931992   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932027   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932028   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932029   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932030   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932032   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node10   30:59        
+932034   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node23   30:59        
+932071   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node11   21:03        
+932072   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932106   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932107   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932108   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932109   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932144   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932145   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932146   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932147   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932187   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932188   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932189   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932190   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932217   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932218   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932219   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932220   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932221   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932222   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932223   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932224   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932249   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932250   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932251   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+928760   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node27   20:17:24     
+931871   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node25   56:10        
+927639   BDOPV-F4_cryst_PBE-D3paw900_cg3       Andriy.Zhugayevych   16   R   batch    node8    1:01:10:07   
+932214   HMTTF_cryst_PBE-D3paw600_cg3          Andriy.Zhugayevych   8    R   fastio   node24   10:55        
+931218   USPEX24                               Artem.Samtsevich     8    R   batch    node5    52:14        
+931234   USPEX19                               Artem.Samtsevich     8    R   batch    node16   41:45        
+931235   USPEX25                               Artem.Samtsevich     8    R   batch    node24   52:14        
+931236   USPEX26                               Artem.Samtsevich     8    R   batch    node18   52:06        
+931431   USPEX26                               Artem.Samtsevich     8    R   batch    node17   40:23        
+931444   USPEX11                               Artem.Samtsevich     8    R   batch    node26   36:52        
+931470   USPEX17                               Artem.Samtsevich     8    Q   batch                          
+931471   USPEX23                               Artem.Samtsevich     8    Q   batch                          
+931523   USPEX12                               Artem.Samtsevich     8    R   batch    node7    21:03        
+931524   USPEX13                               Artem.Samtsevich     8    R   batch    node14   19:36        
+931525   USPEX27                               Artem.Samtsevich     8    Q   batch                          
+931600   USPEX6                                Artem.Samtsevich     8    Q   batch                          
+931644   USPEX22                               Artem.Samtsevich     8    Q   batch                          
+931645   USPEX18                               Artem.Samtsevich     8    R   batch    node18   1:22:50      
+931755   USPEX3                                Artem.Samtsevich     8    R   batch    node21   1:13:10      
+931794   USPEX6                                Artem.Samtsevich     8    R   batch    node19   1:13:10      
+931852   USPEX4                                Artem.Samtsevich     8    R   batch    node21   52:37        
+931941   USPEX23                               Artem.Samtsevich     8    Q   batch                          
+932026   USPEX9                                Artem.Samtsevich     8    Q   batch                          
+932070   USPEX8                                Artem.Samtsevich     8    R   batch    node15   25:38        
+932104   USPEX1                                Artem.Samtsevich     8    R   batch    node14   25:04        
+932143   USPEX21                               Artem.Samtsevich     8    Q   batch                          
+932186   USPEX33                               Artem.Samtsevich     8    R   batch    node17   5:22         
+932216   USPEX34                               Artem.Samtsevich     8    R   batch    node12   3:35         
+932271   USPEX1                                Artem.Samtsevich     8    Q   batch                          
+925882   LTP_sb4_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node27   1:15:23:18   
+929222   LTP_sa1_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node22   17:28:31     
+931779   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:16:47      
+931817   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:11:27      
+931828   HZ                                    Dong.Baojuan         8    R   batch    node7    1:01:22      
+931982   USPEX                                 Dong.Baojuan         8    R   batch    node19   43:22        
+925709   doSWsampling89.sh                     Maksim.Beketov       8    R   batch    node22   1:16:55:36   
+925714   doSWfibosampling89.sh                 Maksim.Beketov       8    R   batch    node27   1:16:53:17   
+931488   USPEX                                 Nikita.Rybin         8    R   batch    node27   2:15:41      
+931489   USPEX                                 Nikita.Rybin         8    R   batch    node26   2:15:41      
+931491   USPEX                                 Nikita.Rybin         8    R   batch    node25   2:15:41      
+931492   USPEX                                 Nikita.Rybin         8    R   batch    node22   2:15:41      
+931495   USPEX                                 Nikita.Rybin         8    R   batch    node21   2:15:41      
+931497   USPEX                                 Nikita.Rybin         8    R   batch    node20   2:15:41      
+931500   USPEX                                 Nikita.Rybin         8    R   batch    node19   2:14:31      
+923183   _pbs                                  Nikita.Tukachev      8    R   batch    node19   2:22:47:50   
+925160   _pbs                                  Nikita.Tukachev      8    R   batch    node3    1:20:47:26   
+927786   _pbs                                  Nikita.Tukachev      8    R   batch    node26   1:00:16:50   
+923537   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node19   2:17:43:24   
+923538   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:08:30   
+923539   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:08:30   
+923540   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:08:30   
+923541   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:08:29   
+923542   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:00   
+923543   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:00   </Text-field>
+</Output>
+</Group>
+<Group labelreference="L259" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nodes:=SSH[pbsnodes]();
+<Font encoding="UTF-8">printf(&quot;%s\134n&quot;,StringTools[FormatTime](&quot;%Y-%m-%d  %T&quot;));</Font>
+<Font encoding="UTF-8">for e in nodes do printf(&quot;%-8s%4s%4s  %s\134n&quot;,op(1..3,e),StringTools[Join](e[4],&quot;,&quot;)) end;</Font></Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">27 nodes, 628 cores: 0 down, 463 busy, 165 free</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">free-core statistics: (down)=11, (busy)=0,  (1)=3, (8)=6, (9)=2, (16)=1, (17)=2, (21)=1, (25)=1
+List of nodes (nodeXX): (1)=[&quot;19&quot;,&quot;20&quot;,&quot;21&quot;], (8)=[&quot;1&quot;,&quot;10&quot;,&quot;11&quot;,&quot;3&quot;,&quot;5&quot;,&quot;9&quot;], (9)=[&quot;25&quot;,&quot;26&quot;], (16)=[&quot;6&quot;], (17)=[&quot;22&quot;,&quot;27&quot;], (21)=[&quot;24&quot;], (25)=[&quot;23&quot;]</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEmbm9kZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUkobWZlbmNlZEdGJDYmLUYjNlotRlA2Ji1GIzYsLUkjbXNHRiQ2I1Embm9kZTFGJy1GNjYtUSIsRidGOUY7L0Y/RjFGQEZCRkRGRkZIL0ZLUSYwLjBlbUYnL0ZOUSwwLjMzMzMzMzNlbUYnLUZZNiNRJWZyZWVGJ0Zmbi1GWTYjUSMxNkYnRmZuLUZQNiYtRiM2Ji1GWTYjUT04LTE1LzkzMTIyMi5tZ210LnNrb2x0ZWNoLnJ1RicvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXUYnLyUpcmVhZG9ubHlHRj1GOUY5LyUlb3BlbkdRIltGJy8lJmNsb3NlR1EiXUYnRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Embm9kZTJGJ0Zmbi1GWTYjUS5qb2ItZXhjbHVzaXZlRidGZm5GYW9GZm4tRlA2Ji1GIzYoLUZZNiNRPTgtMTUvOTMxNjEzLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTcvOTMyMTA2Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSZub2RlM0YnRmZuRl5vRmZuRmFvRmZuLUZQNiYtRiM2Ji1GWTYjUT04LTE1LzkyNTE2MC5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Embm9kZTRGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNigtRlk2I1E9OC0xNS85MzE5NTEubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPDAtNy85MzE3MzIubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJm5vZGU1RidGZm5GXm9GZm5GYW9GZm4tRlA2Ji1GIzYmLUZZNiNRPTQtMTEvOTMxMjE4Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSZub2RlNkYnRmZuRl5vRmZuRmFvRmZuLUZQNiYtRiM2Ji1GWTYjUSFGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSZub2RlN0YnRmZuRl1xRmZuRmFvRmZuLUZQNiYtRiM2KC1GWTYjUT04LTE1LzkzMTgyOC5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E8MC03LzkzMTUyMy5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Embm9kZThGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNiYtRlk2I1E9MC0xNS85Mjc2MzkubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJm5vZGU5RidGZm5GXm9GZm5GYW9GZm4tRlA2Ji1GIzYmLUZZNiNRPDAtNy85MzE1ODUubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUxMEYnRmZuRl5vRmZuRmFvRmZuLUZQNiYtRiM2Ji1GWTYjUT04LTE1LzkzMjAzMi5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Enbm9kZTExRidGZm5GXm9GZm5GYW9GZm4tRlA2Ji1GIzYmLUZZNiNRPTgtMTUvOTMyMDcxLm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMTJGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNigtRlk2I1E8MC03LzkzMTY1OS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E9OC0xNS85MzIyMTYubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUxM0YnRmZuRl1xRmZuRmFvRmZuLUZQNiYtRiM2KC1GWTYjUT04LTE1LzkzMTgzMy5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E8MC03LzkzMjEwNy5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Enbm9kZTE0RidGZm5GXXFGZm5GYW9GZm4tRlA2Ji1GIzYoLUZZNiNRPDAtNy85MzIxMDQubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPTgtMTUvOTMxNTI0Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMTVGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNigtRlk2I1E8MC03LzkzMjA3MC5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E9OC0xNS85MzE1MTIubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUxNkYnRmZuRl1xRmZuRmFvRmZuLUZQNiYtRiM2KC1GWTYjUT04LTE1LzkzMTIzNC5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E8MC03LzkzMTc1Ni5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Enbm9kZTE3RidGZm5GXXFGZm5GYW9GZm4tRlA2Ji1GIzYoLUZZNiNRPTgtMTUvOTMxNDMxLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTcvOTMyMTg2Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMThGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNigtRlk2I1E9OC0xNS85MzE2NDUubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPDAtNy85MzEyMzYubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUxOUYnRmZuRl5vRmZuLUZZNiNRIzM2RidGZm4tRlA2Ji1GIzYwLUZZNiNRPDAtNy85MjMxODMubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNROzM0LzkyMzUzNy5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E+MTYtMjAvOTMxNDk3Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4yOS0zMy85MzE1MDAubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPTgtMTUvOTMxNzk0Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4yMS0yOC85MzE5ODIubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUyMEYnRmZuRl5vRmZuRlxibEZmbi1GUDYmLUYjNjQtRlk2I1ElOC0xNUYnRmZuLUZZNiNROzI0LzkyOTIyMi5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E8MC02LzkzMTQ5NS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E+MzItMzQvOTMxNDk3Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUSMyM0YnRmZuLUZZNiNRPjI1LTMxLzkzMTc3OS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1EiN0YnRmZuLUZZNiNRPjE2LTIyLzkzMTgxNy5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Enbm9kZTIxRidGZm5GXm9GZm5GXGJsRmZuLUZQNiYtRiM2MC1GWTYjUT4zMi0zNC85MjkyMjIubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPTgtMTQvOTMxNDkyLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTszMS85MzE0OTUubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPDAtNy85MzE3NTUubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPjE1LTIyLzkzMTg1Mi5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E+MjMtMzAvOTMxOTUyLm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMjJGJ0ZmbkZeb0ZmbkZcYmxGZm4tRlA2Ji1GIzY4LUZZNiNROzI5LzkyMzUzOC5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E7MzAvOTIzNTM5Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTszMS85MjM1NDAubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNROzMyLzkyMzU0MS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E6MC85MjM1NDIubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNROjEvOTIzNTQzLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4xOS0yNi85MjU3MDkubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRJjI3LTI4RidGZm4tRlk2I1E+MzMtMzQvOTI5MjIyLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTsxOC85MzE0OTIubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUyM0YnRmZuRl5vRmZuRlxibEZmbi1GUDYmLUYjNigtRlk2I1E+MTYtMTgvOTMxNTAwLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTcvOTMyMDM0Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMjRGJ0ZmbkZeb0Zmbi1GWTYjUSM0MEYnRmZuLUZQNiYtRiM2Ki1GWTYjUTwwLTIvOTMxNDkxLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT0zLTEwLzkzMTIzNS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E+MTEtMTgvOTMyMjE0Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMjVGJ0ZmbkZeb0ZmbkZmW21GZm4tRlA2Ji1GIzYyLUZZNiNRJjEyLTE1RidGZm4tRlk2I1E+MjYtMzMvOTI1ODgyLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTUvOTMxNDg5Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUSYxOC0xOUYnRmZuLUZZNiNRPjM2LTM4LzkzMTQ5MS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1EmMjAtMjVGJ0Zmbi1GWTYjUT4zNC0zNS85MzE4NzEubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUyNkYnRmZuRl5vRmZuRmZbbUZmbi1GUDYmLUYjNi4tRlk2I1E+MTYtMjMvOTI3Nzg2Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4zMi0zNi85MzE0ODgubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPjM3LTM4LzkzMTQ4OS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E9OC0xNS85MzE0NDQubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPDAtNy85MzExOTQubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUyN0YnRmZuRl5vRmZuRmZbbUZmbi1GUDYmLUYjNi4tRlk2I1EkNC03RidGZm4tRlk2I1E+MTYtMTkvOTI1NzE0Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTMvOTI1ODgyLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4yMC0yNy85Mjg3NjAubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPjM2LTM4LzkzMTQ4OC5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOQ==">Nz03JlEmbm9kZTE2IlElZnJlZUYlUSMxNkYlNyNRPTgtMTUvOTMxMjIyLm1nbXQuc2tvbHRlY2gucnVGJTcmUSZub2RlMkYlUS5qb2ItZXhjbHVzaXZlRiVGJzckUT04LTE1LzkzMTYxMy5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtNy85MzIxMDYubWdtdC5za29sdGVjaC5ydUYlNyZRJm5vZGUzRiVGJkYnNyNRPTgtMTUvOTI1MTYwLm1nbXQuc2tvbHRlY2gucnVGJTcmUSZub2RlNEYlRixGJzckUT04LTE1LzkzMTk1MS5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtNy85MzE3MzIubWdtdC5za29sdGVjaC5ydUYlNyZRJm5vZGU1RiVGJkYnNyNRPTQtMTEvOTMxMjE4Lm1nbXQuc2tvbHRlY2gucnVGJTcmUSZub2RlNkYlRiZGJzcjUSFGJTcmUSZub2RlN0YlRixGJzckUT04LTE1LzkzMTgyOC5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtNy85MzE1MjMubWdtdC5za29sdGVjaC5ydUYlNyZRJm5vZGU4RiVGLEYnNyNRPTAtMTUvOTI3NjM5Lm1nbXQuc2tvbHRlY2gucnVGJTcmUSZub2RlOUYlRiZGJzcjUTwwLTcvOTMxNTg1Lm1nbXQuc2tvbHRlY2gucnVGJTcmUSdub2RlMTBGJUYmRic3I1E9OC0xNS85MzIwMzIubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUxMUYlRiZGJzcjUT04LTE1LzkzMjA3MS5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTEyRiVGLEYnNyRRPDAtNy85MzE2NTkubWdtdC5za29sdGVjaC5ydUYlUT04LTE1LzkzMjIxNi5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTEzRiVGLEYnNyRRPTgtMTUvOTMxODMzLm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMjEwNy5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE0RiVGLEYnNyRRPDAtNy85MzIxMDQubWdtdC5za29sdGVjaC5ydUYlUT04LTE1LzkzMTUyNC5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE1RiVGLEYnNyRRPDAtNy85MzIwNzAubWdtdC5za29sdGVjaC5ydUYlUT04LTE1LzkzMTUxMi5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE2RiVGLEYnNyRRPTgtMTUvOTMxMjM0Lm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMTc1Ni5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE3RiVGLEYnNyRRPTgtMTUvOTMxNDMxLm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMjE4Ni5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE4RiVGLEYnNyRRPTgtMTUvOTMxNjQ1Lm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMTIzNi5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE5RiVGJlEjMzZGJTcoUTwwLTcvOTIzMTgzLm1nbXQuc2tvbHRlY2gucnVGJVE7MzQvOTIzNTM3Lm1nbXQuc2tvbHRlY2gucnVGJVE+MTYtMjAvOTMxNDk3Lm1nbXQuc2tvbHRlY2gucnVGJVE+MjktMzMvOTMxNTAwLm1nbXQuc2tvbHRlY2gucnVGJVE9OC0xNS85MzE3OTQubWdtdC5za29sdGVjaC5ydUYlUT4yMS0yOC85MzE5ODIubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyMEYlRiZGZXA3KlElOC0xNUYlUTsyNC85MjkyMjIubWdtdC5za29sdGVjaC5ydUYlUTwwLTYvOTMxNDk1Lm1nbXQuc2tvbHRlY2gucnVGJVE+MzItMzQvOTMxNDk3Lm1nbXQuc2tvbHRlY2gucnVGJVEjMjNGJVE+MjUtMzEvOTMxNzc5Lm1nbXQuc2tvbHRlY2gucnVGJVEiN0YlUT4xNi0yMi85MzE4MTcubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyMUYlRiZGZXA3KFE+MzItMzQvOTI5MjIyLm1nbXQuc2tvbHRlY2gucnVGJVE9OC0xNC85MzE0OTIubWdtdC5za29sdGVjaC5ydUYlUTszMS85MzE0OTUubWdtdC5za29sdGVjaC5ydUYlUTwwLTcvOTMxNzU1Lm1nbXQuc2tvbHRlY2gucnVGJVE+MTUtMjIvOTMxODUyLm1nbXQuc2tvbHRlY2gucnVGJVE+MjMtMzAvOTMxOTUyLm1nbXQuc2tvbHRlY2gucnVGJTcmUSdub2RlMjJGJUYmRmVwNyxROzI5LzkyMzUzOC5tZ210LnNrb2x0ZWNoLnJ1RiVROzMwLzkyMzUzOS5tZ210LnNrb2x0ZWNoLnJ1RiVROzMxLzkyMzU0MC5tZ210LnNrb2x0ZWNoLnJ1RiVROzMyLzkyMzU0MS5tZ210LnNrb2x0ZWNoLnJ1RiVROjAvOTIzNTQyLm1nbXQuc2tvbHRlY2gucnVGJVE6MS85MjM1NDMubWdtdC5za29sdGVjaC5ydUYlUT4xOS0yNi85MjU3MDkubWdtdC5za29sdGVjaC5ydUYlUSYyNy0yOEYlUT4zMy0zNC85MjkyMjIubWdtdC5za29sdGVjaC5ydUYlUTsxOC85MzE0OTIubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyM0YlRiZGZXA3JFE+MTYtMTgvOTMxNTAwLm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMjAzNC5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTI0RiVGJlEjNDBGJTclUTwwLTIvOTMxNDkxLm1nbXQuc2tvbHRlY2gucnVGJVE9My0xMC85MzEyMzUubWdtdC5za29sdGVjaC5ydUYlUT4xMS0xOC85MzIyMTQubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyNUYlRiZGZXM3KVEmMTItMTVGJVE+MjYtMzMvOTI1ODgyLm1nbXQuc2tvbHRlY2gucnVGJVE8MC01LzkzMTQ4OS5tZ210LnNrb2x0ZWNoLnJ1RiVRJjE4LTE5RiVRPjM2LTM4LzkzMTQ5MS5tZ210LnNrb2x0ZWNoLnJ1RiVRJjIwLTI1RiVRPjM0LTM1LzkzMTg3MS5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTI2RiVGJkZlczcnUT4xNi0yMy85Mjc3ODYubWdtdC5za29sdGVjaC5ydUYlUT4zMi0zNi85MzE0ODgubWdtdC5za29sdGVjaC5ydUYlUT4zNy0zOC85MzE0ODkubWdtdC5za29sdGVjaC5ydUYlUT04LTE1LzkzMTQ0NC5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtNy85MzExOTQubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyN0YlRiZGZXM3J1EkNC03RiVRPjE2LTE5LzkyNTcxNC5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtMy85MjU4ODIubWdtdC5za29sdGVjaC5ydUYlUT4yMC0yNy85Mjg3NjAubWdtdC5za29sdGVjaC5ydUYlUT4zNi0zOC85MzE0ODgubWdtdC5za29sdGVjaC5ydUYl</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">2018-05-17  10:28:59
+node1   free  16  8-15/931222.mgmt.skoltech.ru
+node2   job-exclusive  16  8-15/931613.mgmt.skoltech.ru,0-7/932106.mgmt.skoltech.ru
+node3   free  16  8-15/925160.mgmt.skoltech.ru
+node4   job-exclusive  16  8-15/931951.mgmt.skoltech.ru,0-7/931732.mgmt.skoltech.ru
+node5   free  16  4-11/931218.mgmt.skoltech.ru
+node6   free  16  
+node7   job-exclusive  16  8-15/931828.mgmt.skoltech.ru,0-7/931523.mgmt.skoltech.ru
+node8   job-exclusive  16  0-15/927639.mgmt.skoltech.ru
+node9   free  16  0-7/931585.mgmt.skoltech.ru
+node10  free  16  8-15/932032.mgmt.skoltech.ru
+node11  free  16  8-15/932071.mgmt.skoltech.ru
+node12  job-exclusive  16  0-7/931659.mgmt.skoltech.ru,8-15/932216.mgmt.skoltech.ru
+node13  job-exclusive  16  8-15/931833.mgmt.skoltech.ru,0-7/932107.mgmt.skoltech.ru
+node14  job-exclusive  16  0-7/932104.mgmt.skoltech.ru,8-15/931524.mgmt.skoltech.ru
+node15  job-exclusive  16  0-7/932070.mgmt.skoltech.ru,8-15/931512.mgmt.skoltech.ru
+node16  job-exclusive  16  8-15/931234.mgmt.skoltech.ru,0-7/931756.mgmt.skoltech.ru
+node17  job-exclusive  16  8-15/931431.mgmt.skoltech.ru,0-7/932186.mgmt.skoltech.ru
+node18  job-exclusive  16  8-15/931645.mgmt.skoltech.ru,0-7/931236.mgmt.skoltech.ru
+node19  free  36  0-7/923183.mgmt.skoltech.ru,34/923537.mgmt.skoltech.ru,16-20/931497.mgmt.skoltech.ru,29-33/931500.mgmt.skoltech.ru,8-15/931794.mgmt.skoltech.ru,21-28/931982.mgmt.skoltech.ru
+node20  free  36  8-15,24/929222.mgmt.skoltech.ru,0-6/931495.mgmt.skoltech.ru,32-34/931497.mgmt.skoltech.ru,23,25-31/931779.mgmt.skoltech.ru,7,16-22/931817.mgmt.skoltech.ru
+node21  free  36  32-34/929222.mgmt.skoltech.ru,8-14/931492.mgmt.skoltech.ru,31/931495.mgmt.skoltech.ru,0-7/931755.mgmt.skoltech.ru,15-22/931852.mgmt.skoltech.ru,23-30/931952.mgmt.skoltech.ru
+node22  free  36  29/923538.mgmt.skoltech.ru,30/923539.mgmt.skoltech.ru,31/923540.mgmt.skoltech.ru,32/923541.mgmt.skoltech.ru,0/923542.mgmt.skoltech.ru,1/923543.mgmt.skoltech.ru,19-26/925709.mgmt.skoltech.ru,27-28,33-34/929222.mgmt.skoltech.ru,18/931492.mgmt.skoltech.ru
+node23  free  36  16-18/931500.mgmt.skoltech.ru,0-7/932034.mgmt.skoltech.ru
+node24  free  40  0-2/931491.mgmt.skoltech.ru,3-10/931235.mgmt.skoltech.ru,11-18/932214.mgmt.skoltech.ru
+node25  free  40  12-15,26-33/925882.mgmt.skoltech.ru,0-5/931489.mgmt.skoltech.ru,18-19,36-38/931491.mgmt.skoltech.ru,20-25,34-35/931871.mgmt.skoltech.ru
+node26  free  40  16-23/927786.mgmt.skoltech.ru,32-36/931488.mgmt.skoltech.ru,37-38/931489.mgmt.skoltech.ru,8-15/931444.mgmt.skoltech.ru,0-7/931194.mgmt.skoltech.ru
+node27  free  40  4-7,16-19/925714.mgmt.skoltech.ru,0-3/925882.mgmt.skoltech.ru,20-27/928760.mgmt.skoltech.ru,36-38/931488.mgmt.skoltech.ru</Text-field>
+</Output>
+</Group>
+<Group labelreference="L257" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">printf(&quot;%s\134n&quot;,StringTools[FormatTime](&quot;%Y-%m-%d  %T&quot;));
+</Font>jobs:=SSH[qstat]('user'=&quot;&quot;): # 'user'=&quot;&quot; for all users</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">2018-05-17  10:29:01</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">931194   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node26   19:37        
+931222   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node1    14:24        
+931512   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node15   4:18         
+931585   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node9    2:58         
+931613   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    52:05        
+931659   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node12   1:29:22      
+931732   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    2:19         
+931756   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node16   1:45         
+931829   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931833   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node13   59:34        
+931880   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931881   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931908   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931909   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931951   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    38:12        
+931952   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node21   38:09        
+931989   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931990   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931991   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+931992   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932027   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932028   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932029   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932030   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932032   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node10   31:34        
+932034   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node23   31:34        
+932071   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node11   21:38        
+932072   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932106   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    2            
+932107   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node13   2            
+932108   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932109   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932144   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932145   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932146   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932147   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932187   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932188   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932189   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932190   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932217   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932218   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932219   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932220   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932221   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932222   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932223   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932224   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932249   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932250   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+932251   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
+928760   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node27   20:17:59     
+931871   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node25   56:45        
+927639   BDOPV-F4_cryst_PBE-D3paw900_cg3       Andriy.Zhugayevych   16   R   batch    node8    1:01:10:42   
+932214   HMTTF_cryst_PBE-D3paw600_cg3          Andriy.Zhugayevych   8    R   fastio   node24   11:30        
+931218   USPEX24                               Artem.Samtsevich     8    R   batch    node5    52:49        
+931234   USPEX19                               Artem.Samtsevich     8    R   batch    node16   42:20        
+931235   USPEX25                               Artem.Samtsevich     8    R   batch    node24   52:49        
+931236   USPEX26                               Artem.Samtsevich     8    R   batch    node18   52:41        
+931431   USPEX26                               Artem.Samtsevich     8    R   batch    node17   40:58        
+931444   USPEX11                               Artem.Samtsevich     8    R   batch    node26   37:27        
+931470   USPEX17                               Artem.Samtsevich     8    Q   batch                          
+931471   USPEX23                               Artem.Samtsevich     8    Q   batch                          
+931523   USPEX12                               Artem.Samtsevich     8    R   batch    node7    21:38        
+931524   USPEX13                               Artem.Samtsevich     8    R   batch    node14   20:11        
+931525   USPEX27                               Artem.Samtsevich     8    Q   batch                          
+931600   USPEX6                                Artem.Samtsevich     8    Q   batch                          
+931644   USPEX22                               Artem.Samtsevich     8    Q   batch                          
+931645   USPEX18                               Artem.Samtsevich     8    R   batch    node18   1:23:25      
+931755   USPEX3                                Artem.Samtsevich     8    R   batch    node21   1:13:45      
+931794   USPEX6                                Artem.Samtsevich     8    R   batch    node19   1:13:45      
+931852   USPEX4                                Artem.Samtsevich     8    R   batch    node21   53:12        
+931941   USPEX23                               Artem.Samtsevich     8    Q   batch                          
+932026   USPEX9                                Artem.Samtsevich     8    Q   batch                          
+932070   USPEX8                                Artem.Samtsevich     8    R   batch    node15   26:13        
+932104   USPEX1                                Artem.Samtsevich     8    R   batch    node14   25:39        
+932143   USPEX21                               Artem.Samtsevich     8    Q   batch                          
+932186   USPEX33                               Artem.Samtsevich     8    R   batch    node17   5:57         
+932216   USPEX34                               Artem.Samtsevich     8    R   batch    node12   4:10         
+932271   USPEX1                                Artem.Samtsevich     8    Q   batch                          
+925882   LTP_sb4_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node27   1:15:23:53   
+929222   LTP_sa1_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node22   17:29:06     
+931779   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:17:22      
+931817   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:12:02      
+931828   HZ                                    Dong.Baojuan         8    R   batch    node7    1:01:57      
+931982   USPEX                                 Dong.Baojuan         8    R   batch    node19   43:57        
+925709   doSWsampling89.sh                     Maksim.Beketov       8    R   batch    node22   1:16:56:11   
+925714   doSWfibosampling89.sh                 Maksim.Beketov       8    R   batch    node27   1:16:53:52   
+931488   USPEX                                 Nikita.Rybin         8    R   batch    node27   2:16:16      
+931489   USPEX                                 Nikita.Rybin         8    R   batch    node26   2:16:16      
+931491   USPEX                                 Nikita.Rybin         8    R   batch    node25   2:16:16      
+931492   USPEX                                 Nikita.Rybin         8    R   batch    node22   2:16:16      
+931495   USPEX                                 Nikita.Rybin         8    R   batch    node21   2:16:16      
+931497   USPEX                                 Nikita.Rybin         8    R   batch    node20   2:16:16      
+931500   USPEX                                 Nikita.Rybin         8    R   batch    node19   2:15:06      
+923183   _pbs                                  Nikita.Tukachev      8    R   batch    node19   2:22:48:25   
+925160   _pbs                                  Nikita.Tukachev      8    R   batch    node3    1:20:48:01   
+927786   _pbs                                  Nikita.Tukachev      8    R   batch    node26   1:00:17:25   
+923537   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node19   2:17:43:59   
+923538   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
+923539   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
+923540   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
+923541   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:04   
+923542   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:35   
+923543   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:35   </Text-field>
+</Output>
+</Group>
+<Group labelreference="L255" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Submit job ('nodes' may be also a node name)</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;skoltech&quot;);
+SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'mem'=3,'pmem'=0.5,'file'=40,'time'=1,'other'=&quot;,feature=avx&quot;,'queue'=&quot;fastio&quot;,'test');
+SSH[Setup](&quot;cee&quot;);
+SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'time'=1/12,'queue'=&quot;AMG&quot;,'test');</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">qsub vasp/_pbs -N jobname -l nodes=1:ppn=4,mem=3gb,pmem=500mb,file=40gb,walltime=24:00:00,feature=avx -q fastio</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UWpxcXN1Yn52YXNwL19wYnN+LU5+am9ibmFtZX4tbH5ub2Rlcz0xOnBwbj00LG1lbT0zZ2IscG1lbT01MDBtYixmaWxlPTQwZ2Isd2FsbHRpbWU9MjQ6MDA6MDAsZmVhdHVyZT1hdnh+LXF+ZmFzdGlvNiI=</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">vasp/_pbs -J jobname -n 4 -t 2:00:00 -p AMG</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UUx2YXNwL19wYnN+LUp+am9ibmFtZX4tbn40fi10fjI6MDA6MDB+LXB+QU1HNiI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L248" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Delete jobs</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qdel](27967,10);</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">deleted 27967</Text-field>
+</Output>
+</Group>
+<Group labelreference="L247" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Block a node for a fixed amount of time</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qsub](&quot;bin/infloop.pbs&quot;,&quot;&quot;,'nodes'=&quot;node15&quot;,'ppn'=8,'mem'=0,'pmem'=0,'time'=1/12);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">USsyNDQ1MS5tZ210NiI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L260" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nnp:=SSH[Setup]('nnp');</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEkbm5wRicvJSdpdGFsaWNHUSV0cnVlRicvJSxtYXRodmFyaWFudEdRJ2l0YWxpY0YnLUkjbW9HRiQ2LVEjOj1GJy9GM1Enbm9ybWFsRicvJSZmZW5jZUdRJmZhbHNlRicvJSpzZXBhcmF0b3JHRj0vJSlzdHJldGNoeUdGPS8lKnN5bW1ldHJpY0dGPS8lKGxhcmdlb3BHRj0vJS5tb3ZhYmxlbGltaXRzR0Y9LyUnYWNjZW50R0Y9LyUnbHNwYWNlR1EsMC4yNzc3Nzc4ZW1GJy8lJ3JzcGFjZUdGTC1JI21zR0YkNiNRJW5vZGVGJy8lK2ZvcmVncm91bmRHUShbMCwwLDBdRicvJSlyZWFkb25seUdGPUY5">USVub2RlNiI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L185" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title>
+<Text-field style="Heading 1" layout="Heading 1">Jobs statistics</Text-field></Title>
+<Group labelreference="L193" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">nnp:=SSH[Setup]('nnp');
+pbsnodes():
+jobs:=Sort(qstat('user'=&quot;&quot;,donotprint),j-&gt;sscanf(j[1],&quot;%d&quot;)[1]):</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEkbm5wRicvJSdpdGFsaWNHUSV0cnVlRicvJSxtYXRodmFyaWFudEdRJ2l0YWxpY0YnLUkjbW9HRiQ2LVEjOj1GJy9GM1Enbm9ybWFsRicvJSZmZW5jZUdRJmZhbHNlRicvJSpzZXBhcmF0b3JHRj0vJSlzdHJldGNoeUdGPS8lKnN5bW1ldHJpY0dGPS8lKGxhcmdlb3BHRj0vJS5tb3ZhYmxlbGltaXRzR0Y9LyUnYWNjZW50R0Y9LyUnbHNwYWNlR1EsMC4yNzc3Nzc4ZW1GJy8lJ3JzcGFjZUdGTC1JI21zR0YkNiNRJW5vZGVGJy8lK2ZvcmVncm91bmRHUShbMCwwLDBdRicvJSlyZWFkb25seUdGPUY5">USVub2RlNiI=</Equation></Text-field>
+</Output>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">18 nodes, 288 cores: 0 down, 212 busy, 76 free
+free-core statistics: (down)=13, (busy)=0,  (15)=4, (16)=1
+List of nodes (nodeXX): (15)=[&quot;1&quot;,&quot;12&quot;,&quot;14&quot;,&quot;18&quot;], (16)=[&quot;8&quot;]</Text-field>
+</Output>
+</Group>
+<Group labelreference="L244" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">ls:=[ListTools[Categorize]((u,v)-&gt;u[3]=v[3],jobs)]:
+fnp:=j-&gt;sscanf(j[7],cat(nnp,&quot;%d/%d&quot;))[2]:
+ft:=proc(j) local e;  e:=sscanf(j[4],&quot;%{3;d(:)}dc&quot;);  if type(e[1],Vector) then &lt;3600,60,1&gt;.e[1] else 0 end end:
+cpuuse:=SortM([seq([ u[1][3],
+ add(`if`(j[5]=&quot;R&quot;,fnp(j),0),j=u),
+ add(`if`(j[5]=&quot;R&quot; and ft(j)/fnp(j)&gt;7*24*3600,fnp(j),0),j=u),
+ add(`if`(j[5]=&quot;R&quot; and ft(j)/fnp(j)&gt;30*24*3600,fnp(j),0),j=u),
+ add(`if`(j[5]=&quot;Q&quot;,sscanf(j[7],&quot;/%d&quot;)[1],0),j=u),
+ add(`if`(j[5]=&quot;R&quot;,ft(j),0),j=u)/7/24/3600 ],u=ls)],[-1,2,3,4]):
+l:=max(seq(length(u[1]),u=cpuuse)):
+<Font encoding="UTF-8">printf(&quot; %-*s   R  R/w R/m   Q  cpu-weeks\134n%s\134n&quot;,l,&quot;user&quot;,cat(&quot;-&quot;$(l+30)));
+</Font>for u in cpuuse do printf(&quot;%-*s%5d%4d%4d%5d<Font encoding="UTF-8">%7.0f\134n&quot;,l,op(u)) end;
+printf(&quot;%s\134n %-*s%4d%4d%4d%5d%7.0f\134n&quot;,</Font>cat(&quot;-&quot;$(l+30)),l,&quot;total&quot;,seq(add(u[i],u=cpuuse),i=2..6));</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output"> user                   R  R/w R/m   Q  cpu-weeks
+--------------------------------------------------
+Oleg.Dubinkin           2   0   0    0      0
+Konstantin.Gubaev       3   0   0    0      0
+Alexander.Shapeev       4   0   0   18      0
+Mikhail.Litsarev        4   0   0    0      3
+Vyacheslav.Semenenko    4   3   0    0      5
+--------------------------------------------------
+ total                 17   3   0   18      9</Text-field>
+</Output>
+</Group>
+<Group labelreference="L243" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">ls:=Sort(select(j-&gt;j[5]=&quot;R&quot; and ft(j)/fnp(j)&gt;24*3600,jobs),j-&gt;-ft(j)/fnp(j)):
+<Font encoding="UTF-8">printf(&quot;days  user %*s node   job\134#\134n%s\134n&quot;,</Font>max(seq(length(j[3]),j=ls))-5,&quot;&quot;,cat(&quot;-&quot;$40));
+<Font encoding="UTF-8">for j in ls do printf(&quot;%4.0f  %-*s  %-7s%s\134n&quot;,ft(j)/fnp(j)/24/3600,max(seq(length(j[3]),j=ls)),j[3],j[7][length(nnp)+1..],j[1]) end;</Font></Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">days  user          node   job#
+----------------------------------------
+   2  Oleg.Dubinkin  10/1   5820
+   2  Oleg.Dubinkin  13/1   5817</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">   2  Oleg.Dubinkin  9/1    5821
+   2  Oleg.Dubinkin  12/1   5818
+   2  Oleg.Dubinkin  8/1    5822
+   1  Oleg.Dubinkin  11/1   5840
+   1  Oleg.Dubinkin  7/1    5841</Text-field>
+</Output>
+</Group>
+<Group labelreference="L252" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L246" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Nano</Text-field>
+</Input>
+</Group>
+<Group labelreference="L195" drawlabel="true">
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output"> user          R  R/w R/m   Q  cpu-weeks
+----------------------------------------
+jxzhu         40   0   0    0      0
+chernc        18   0   0  270      0
+dandu         16   0   0    2      0
+artemn        37   0   0   64      1
+rwang         36   0   0  150      2
+stavrosa       8   0   0    0      4
+velizhan       2   2   0    0      4
+ajneuk        48   0   0    1      6
+tammien       47   0   0    1      9
+rparedez      16   0   0    0     10
+rnieman       80   0   0   12     11
+kurill        80   0   0  371     13
+kmliu         56   8   0    0     13
+jinliu        48   8   0    0     21
+bjorgaard    100  15   3   89     51
+sfalberti     88   7   0  100     64
+ladamska      88  36   0    1     89
+----------------------------------------
+ total       808  76   3 1061    297</Text-field>
+</Output>
+</Group>
+<Group labelreference="L196" drawlabel="true">
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">weeks  user        node            job#</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">----------------------------------------
+  10  bjorgaard  compute-0-90/1   920375
+   4  bjorgaard  compute-0-59/2   922717
+   3  ladamska   compute-0-4/8    917172
+   3  ladamska   compute-0-6/8    917173
+   3  velizhan   compute-0-59/1   920782
+   2  ladamska   compute-0-92/4   917859
+   2  ladamska   compute-0-54/4   920664
+   2  ladamska   compute-0-64/4   920662
+   2  ladamska   compute-0-57/4   920663
+   2  jinliu     compute-0-104/8  920550
+   2  ladamska   compute-0-77/4   920753
+   1  velizhan   compute-0-95/1   920808
+   1  sfalberti  compute-0-44/1   917840
+   1  sfalberti  compute-0-45/1   917834
+   1  sfalberti  compute-0-45/1   917833
+   1  sfalberti  compute-0-45/1   917838
+   1  sfalberti  compute-0-45/1   917837
+   1  sfalberti  compute-0-45/1   917839
+   1  sfalberti  compute-0-45/1   917832
+   1  bjorgaard  compute-0-50/8   921137
+   1  kmliu      compute-0-55/8   921230
+   1  bjorgaard  compute-0-93/2   922715
+   1  bjorgaard  compute-0-93/2   922714</Text-field>
+</Output>
+</Group>
+<Group labelreference="L199" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Section>
+</Worksheet>

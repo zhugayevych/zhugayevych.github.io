@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='91px' height='160px' viewBox='0 0 91 160' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.H { fill:rgb(191,191,191); stroke:rgb(191,191,191) }
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+</style>
+<title>benzeneN3H/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='56.1' y1='37.6' x2='66.7' y2='43.9' />
+<line x1='73.9' y1='62.7' x2='65.6' y2='87.7' />
+<line x1='66.4' y1='62.4' x2='60.6' y2='79.7' />
+<line x1='65.6' y1='87.7' x2='24.3' y2='87.7' />
+<line x1='24.3' y1='87.7' x2='16.0' y2='62.7' />
+<line x1='29.2' y1='79.7' x2='23.5' y2='62.4' />
+<line x1='23.1' y1='43.9' x2='33.7' y2='37.6' />
+<line x1='65.6' y1='87.7' x2='86.8' y2='122.9' />
+<line x1='86.8' y1='122.9' x2='65.7' y2='156.7' />
+<line x1='77.5' y1='124.2' x2='62.8' y2='147.8' />
+<line x1='65.7' y1='156.7' x2='24.1' y2='156.7' />
+<line x1='24.1' y1='156.7' x2='3.0' y2='122.9' />
+<line x1='27.0' y1='147.8' x2='12.3' y2='124.2' />
+<line x1='3.0' y1='122.9' x2='24.3' y2='87.7' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='71.9' y='58.5' font-size='16' stroke-width='1.0' class="N">N</text>
+<text x='5.9' y='58.5' font-size='16' stroke-width='1.0' class="N">N</text>
+<text x='38.9' y='39.0' font-size='16' stroke-width='1.0' class="N">N</text>
+<text x='38.9' y='23.0' font-size='16' stroke-width='1.0' class="H">H</text>
+</g>
+</svg>

@@ -1,0 +1,27 @@
+TITLE     [12co] cubeoctahedron
+HETATM    1  S                   0.000   0.000   0.000
+HETATM    2  C                  -7.071   7.071   0.000
+HETATM    3  C                  -7.071   0.000   7.071
+HETATM    4  C                   0.000   7.071   7.071
+HETATM    5  C                   7.071   0.000   7.071
+HETATM    6  C                   7.071   7.071   0.000
+HETATM    7  C                   0.000  -7.071   7.071
+HETATM    8  C                  -7.071  -7.071   0.000
+HETATM    9  C                   0.000  -7.071  -7.071
+HETATM   10  C                   7.071  -7.071   0.000
+HETATM   11  C                   7.071   0.000  -7.071
+HETATM   12  C                   0.000   7.071  -7.071
+HETATM   13  C                  -7.071   0.000  -7.071
+CONECT    2    3    4   12   13
+CONECT    3    2    4    7    8
+CONECT    4    2    3    5    6
+CONECT    5    4    6    7   10
+CONECT    6    5    4   11   12
+CONECT    7    5    3    8   10
+CONECT    8    7    3    9   13
+CONECT    9    8   10   11   13
+CONECT   10    7    9   11    5
+CONECT   11    9   10    6   12
+CONECT   12   11    6    2   13
+CONECT   13   12    9    2    8
+

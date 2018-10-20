@@ -1,0 +1,52 @@
+#!/bin/bash
+#PBS -j eo
+#PBS -r n
+#PBS -l nodes=1:ppn=1
+#PBS -l feature=avx
+#PBS -l walltime=96:00:00
+hostname
+date
+
+cd $PBS_O_WORKDIR
+
+if [[ -z ${inp}  ]]; then
+   echo "Please specify the proper input filename!"
+   exit -1
+elif [[ ! -f ${inp}  ]]; then
+   echo "Cannot access the input file '${inp}' from the directory: ${PBS_O_WORKDIR}"
+   exit -2
+fi
+
+if [[ -z ${out}  ]]; then
+    out=${PBS_JOBNAME}.stdout
+fi
+
+cp ${inp} submit.${inp}
+
+module load QCh/Gaussian/16.RevA03/AVX
+
+export  GAUSS_SCRDIR=$TMPDIR
+export  GAUSS_LFLAGS2="--LindaOptions -s 10000000"
+
+file=$PBS_NODEFILE
+nodes=( $( cat $file | sort| uniq -c | awk 'BEGIN {FS="[ \t]+"}; { print $3 }' ) )
+cpus=(  $( cat $file | sort| uniq -c | awk 'BEGIN {FS="[ \t]+"}; { print $2 }' ) )
+
+lw=""
+for ix in ${!nodes[*]}
+do
+    lw="${lw},${nodes[$ix]}:1"
+done
+
+perl -pi -e 'print "%NProcShared='${PBS_NUM_PPN}'\n" if $. == 1' submit.${inp}
+perl -pi -e 'print "%LindaWorkers='${lw:1}'\n" if $. == 1'       submit.${inp}
+#perl -pi -e 'print "%chk='${PBS_JOBNAME}'\n" if $. == 1'        submit.${inp}
+
+cat submit.${inp}
+
+g16 < submit.${inp} > ${out}
+
+sed -i '/^%LindaWorkers/d'  submit.${inp}
+sed -i '/^%NProcShared/d'   submit.${inp}
+
+

@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='109px' height='86px' viewBox='0 0 109 86' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+text.O { fill:rgb(255,0,0); stroke:rgb(255,0,0) }
+</style>
+<title>acetamide/molec-a_B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='67.0' y1='68.5' x2='43.6' y2='55.0' />
+<line x1='45.1' y1='57.6' x2='21.8' y2='71.1' />
+<line x1='42.1' y1='52.4' x2='18.8' y2='65.9' />
+<line x1='43.6' y1='55.0' x2='43.6' y2='28.0' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='3.0' y='83.0' class="O">O</text>
+<text x='74.3' y='83.0'>Me</text>
+<text x='39.6' y='23.0' class="N">NH2</text>
+</g>
+</svg>

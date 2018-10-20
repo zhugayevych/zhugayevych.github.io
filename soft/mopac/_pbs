@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -jeo
+#PBS -r n
+#PBS -l nodes=1:ppn=1
+
+date
+hostname
+echo $PBS_JOBNAME
+
+export OMP_NUM_THREADS=$PBS_NUM_PPN
+export MOPAC_LICENSE=/home/Andriy.Zhugayevych/local/mopac
+export RUN_DIR=~/mopac
+cd ${RUN_DIR}
+
+/home/Andriy.Zhugayevych/local/mopac/MOPAC2012.exe $PBS_JOBNAME.mop >$PBS_JOBNAME.stdout 2>&1
+
+date

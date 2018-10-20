@@ -1,0 +1,1 @@
+start /min jupyter notebook --no-browser --notebook-dir=%HOMEPATH%

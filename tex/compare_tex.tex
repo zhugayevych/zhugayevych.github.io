@@ -1,0 +1,91 @@
+\documentclass[10pt,a5paper,twoside,nohref]{vpcku}
+\usepackage{enumerate}
+\usepackage{multicol}
+
+
+% technical commands
+\newcommand{\negskip}{\vskip -1ex}    % default negative vertical skip
+
+% example environment
+\newtheoremstyle{example}{8pt}{2pt}{\normalfont}{}{\bfseries}{}{ }{}
+\theoremstyle{example}
+\newtheorem{example}{Приклад}[section]
+\newcommand{\sepEx}{\hspace{-0.35em}\textbf{. }}   % period after example heading
+\newcommand{\exvs}{\strut\vspace{-0.5\abovedisplayskip}} % remove space before equation
+
+% task environment
+\newtheoremstyle{task}{5pt}{5pt}{\normalfont}{}{\bfseries}{.}{ }{}
+\theoremstyle{task}
+\newtheorem{task}{}[section]
+\renewcommand{\thetask}{\arabic{task}}
+\makeatletter
+\renewcommand{\p@task}{\thesection.}
+\makeatother
+
+% highlighting other parts of a paragraph
+\newcommand{\theory}{\small}   % theoretical material
+\newcommand{\rem}[1][]{\smallskip\noindent\small\texttt{Зауваження#1}.\ }
+\newcommand{\co}{\medskip\noindent}   % comments in tasks
+\newcommand{\sol}[1]{\vspace{1pt}\hangindent=1em\noindent\ref{#1}.} % answers
+\newcommand{\sepsol}{\medskip\hrule\medskip}  % separator of solutions to a paragraph
+
+% commands for editing mode
+%\newcommand{\ed}[1]{{\small*\textit{#1}}}    % editors comments
+\newcommand{\ed}[1]{}                        % no editors comments (default)
+%\newcommand{\showsol}[1]{\vs\hrule\vs{\small\input #1 }} % show sol-s after section
+\newcommand{\showsol}[1]{}                   % no sol-s after section (default)
+
+% commands for manual formatting
+\newcommand{\np}{\newpage}      
+\newcommand{\ep}{\enlargethispage{\baselineskip}}
+
+
+\righthyphenmin=2
+%\setlength{\columnseprule}{1pt}
+
+
+\begin{document}
+
+\begin{example} \label{sv1ex3}
+\begin{align*}
+&u_{t} =a^{2}u_{xx}+2tx+1, \\
+&u_{x}(-l,t) =t^{2}, \\
+&u(l,t) =lt^{2}+t, \\
+&u(x,0) =\cos \frac{\pi x}{4l}-\sin \frac{\pi x}{4l}.
+\end{align*}
+\end{example}
+
+$\lhd$ Тут $\chi _{1}(t)=t^{2}$, $\chi _{2}(t)=lt^{2}+t$. Оскільки межові умови неоднорідні, то
+відразу виконувати відокремлення змінних не можна. Підбираємо спочатку функцію $w$ таку,
+що\begin{equation} w_{x}(-l,t)=\chi _{1}(t),\quad w(l,t)=\chi _{2}(t).  \label{sv1_31}
+\end{equation}
+Шукаємо її у вигляді (15). Підстановка цього виразу в рівності (\ref{sv1_31}) дає
+систему рівнянь\begin{equation*} \left\{
+\begin{tabular}{l} $Q=\chi _{1},$ \\ $R+lQ=\chi _{2},$\end{tabular}\right.
+\end{equation*}розв'язавши яку знаходимо\begin{equation}
+w(x,t)=\chi _{2}(t)+(x-l)\chi _{1}(t)\equiv t+xt^{2}.  \label{sv1_32}
+\end{equation}
+
+Вводимо нову невідому функцію $v=u-w$. Замінивши $u$ на $v+w$ в рівнянні і крайових умовах,
+одержимо з урахуванням (\ref{sv1_31}) і очевидних рівностей $w_{xx}=0$, $w_{t}(x,t)=2xt+1$,
+$w(x,0)=0$, крайову задачу для $v$ (конкретизацію (00))\begin{equation*}
+\begin{array}{||l}
+v_{t}=a^{2}v_{xx}, \\ v_{x}(-l,t)=0,\quad v(l,t)=0, \\
+v(x,0)=\cos \frac{\pi x}{4l}-\sin \frac{\pi x}{4l},\end{array}\end{equation*}до якої вже можна
+застосовувати алгоритм відокремлення змінних.
+
+\textbf{1}. Записуємо задачу ШЛ:\begin{equation*} X^{\prime \prime }=-\nu ^{2}X,\quad X^{\prime
+}(-l)=0,\quad X(l)=0.
+\end{equation*}Оскільки одна з межових умов не другого роду, то
+число нуль не власне. При $\nu >0$ підставляємо загальний розв'язок (16)
+диференціального рівняння в межові умови і одержуємо систему рівнянь\begin{equation} \left\{
+\begin{tabular}{l} $A\sin \nu l+B\cos \nu l=0,$ \\ $A\cos \nu l+B\sin \nu
+l=0$\end{tabular}\right.  \label{sv1_33}
+\end{equation}відносно $A$ і $B$. Для того, щоб вона мала ненульовий
+розв'язок, необхідно і достатньо, щоб її визначник дорівнював нулю, тобто справджувалась рівність
+$\cos 2\nu l=0$. З неї знаходимо власні числа $\nu _{n}^{2}$:\begin{equation} \nu
+_{n}=\frac{(2n+1)\pi }{4l},\quad n\in \mathbb{Z}_{+}.  \label{sv1_34}
+\end{equation}При таких $\nu $ рівняння системи (\ref{sv1_33})
+пропорційні.
+
+\end{document}

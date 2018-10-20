@@ -1,0 +1,12 @@
+# The data is given in the following form:
+# COMPND
+# SG#
+# a b c alpha beta gamma
+# number of the atom sites in the asymmetric unit
+# element label WP(<letter><mult>) x y z SOF
+SnS
+59
+3.987  3.987  5.600  90  90  90
+2
+Sn	1	2a	0.250000	0.250000	0.238800	1.000000
+S	1	2a	0.250000	0.250000	0.701600	1.000000

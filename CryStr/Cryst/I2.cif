@@ -1,0 +1,434 @@
+data_Iodine
+
+#  SUBMISSION DETAILS
+
+
+_publ_contact_author_name        'Federica Bertolotti'
+_publ_contact_author_address     
+;
+University of turin
+Via P. Giuria 7
+10125, Turin
+Italy
+;
+_publ_contact_author_email       federica.bertolotti@uninsubria.it
+_publ_contact_author_fax          '+39 031 238 6630  '
+_publ_contact_author_phone        '+39 031 238 6613 '
+
+_publ_requested_journal          'Crystal Growth & Design'  
+_publ_requested_category          FA
+
+
+
+
+# 2. PROCESSING SUMMARY (IUCr Office Use Only)
+
+_journal_date_recd_electronic     ?
+_journal_date_to_coeditor         ?
+_journal_date_from_coeditor       ?
+_journal_date_accepted            ?
+_journal_date_printers_first      ?
+_journal_date_printers_final      ?
+_journal_date_proofs_out          ?
+_journal_date_proofs_in           ?
+_journal_coeditor_name            ?
+_journal_coeditor_code            ?
+_journal_coeditor_notes
+; ?
+;
+_journal_techeditor_code          ?
+_journal_paper_category           ?
+_iucr_compatibility_tag           ?
+_journal_techeditor_notes
+; ?
+;
+_journal_coden_ASTM               ?
+_journal_name_full                ?
+_journal_year                     ? 
+_journal_volume                   ?
+_journal_issue                    ?
+_journal_page_first               ? 
+_journal_page_last                ?
+_journal_suppl_publ_number        ?
+_journal_suppl_publ_pages         ?
+
+
+
+# TITLE AND AUTHOR LIST
+
+_publ_section_title
+;
+
+"The Intermolecular Bonding Features in Solid Iodine"
+;
+
+# The loop structure below should contain the names and addresses of all
+# authors, in the required order of publication. Repeat as necessary. 
+
+
+
+
+
+loop_
+_publ_author_name
+_publ_author_address
+
+'Federica Bertolotti'
+;
+University of Turin
+Via P. Giuria 7
+10125, Turin
+Italy
+;
+
+'Anastasia V. Shishkina'
+;
+D.I. Mendeleev University of Chemical Technology
+Miusskaya Square 9
+125047 Moscow, 
+Russia
+
+;
+'Alessandra Forni'
+;
+CNR-ISTM, Institute of Molecular Science and Technology 
+University of Milan
+Via Golgi 19
+20133, Milan
+Italy
+;
+
+'Giuliana Gervasio'
+;
+University of Turin
+Via P. Giuria 7
+10125, Turin
+Italy
+;
+
+'Adam I. Stash'
+;
+L.Ya. Karpov Institute of Physical Chemistry
+ul. Vorontsovo Pole 10
+103064 Moscow
+Russia
+;
+
+'Vladimir G. Tsirelson'
+
+;
+D.I. Mendeleev University of Chemical Technology
+Miusskaya Square 9
+125047 Moscow, 
+Russia
+
+;
+
+
+# Chemical information
+
+_chemical_formula_sum             'I' 
+_chemical_formula_weight           126.90 
+
+
+# Unit cell information
+
+loop_ 
+ _atom_type_symbol                     'I'
+ _atom_type_description                 'I'
+ _atom_type_scat_dispersion_real         -0.4742 
+ _atom_type_scat_dispersion_imag          1.8119
+ _atom_type_scat_source   'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+  
+
+ 
+_symmetry_space_group_name_H-M   'C m c a'
+_symmetry_cell_setting           orthorhombic
+
+loop_
+_symmetry_equiv_pos_as_xyz
+'x, y, z' 
+ '-x, -y+1/2, z+1/2' 
+ '-x, y+1/2, -z+1/2' 
+ 'x, -y, -z' 
+ 'x+1/2, y+1/2, z' 
+ '-x+1/2, -y+1, z+1/2' 
+ '-x+1/2, y+1, -z+1/2' 
+ 'x+1/2, -y+1/2, -z' 
+ '-x, -y, -z' 
+ 'x, y-1/2, -z-1/2' 
+ 'x, -y-1/2, z-1/2' 
+ '-x, y, z' 
+ '-x+1/2, -y+1/2, -z' 
+ 'x+1/2, y, -z-1/2' 
+ 'x+1/2, -y, z-1/2' 
+ '-x+1/2, y+1/2, z' 
+
+_cell_length_a                     7.15890(10)
+_cell_length_b                     4.69150(10)
+_cell_length_c                     9.80140(10)
+_cell_angle_alpha                  90
+_cell_angle_beta                   90
+_cell_angle_gamma                  90
+_cell_volume                       329.190(9)
+_cell_formula_units_Z              8
+_cell_measurement_temperature      100(2)
+_exptl_absorpt_correction_T_min                   0.23837
+_exptl_absorpt_correction_T_max                   1.00000
+
+
+
+
+# Crystal information
+
+_exptl_crystal_description       prism
+_exptl_crystal_colour            violet
+_exptl_crystal_size_max           0.15                      
+_exptl_crystal_size_mid           0.09
+_exptl_crystal_size_min           0.02 
+_exptl_crystal_density_diffrn    5.129
+_exptl_crystal_density_method    'not measured'
+_exptl_crystal_F_000             424.0
+
+
+# Absorption correction
+
+_exptl_absorpt_coefficient_mu    18.82
+_exptl_absorpt_correction_type   gaussian
+_exptl_absorpt_process_details   
+;
+  P. Coppens, L. Leiserowitz, D. Rabinovich, Acta Cryst (1965),18,1035-1038
+;
+
+# Data collection information
+
+_diffrn_radiation_type           MoK\a
+_diffrn_radiation_source         'fine-focus sealed tube'
+_diffrn_radiation_monochromator  graphite
+_diffrn_radiation_wavelength     0.71073
+_diffrn_measurement_device       'Oxford Gemini Ultra'
+_diffrn_measurement_method       '\w scan'
+_diffrn_ambient_temperature      100(2)
+_diffrn_reflns_number             1531
+_diffrn_reflns_av_R_equivalents  0.0522
+_diffrn_reflns_limit_h_min       -16
+_diffrn_reflns_limit_h_max       18
+_diffrn_reflns_limit_k_min       -12
+_diffrn_reflns_limit_k_max       11
+_diffrn_reflns_limit_l_min       -25
+_diffrn_reflns_limit_l_max       22
+_diffrn_reflns_theta_min         4.16
+_diffrn_reflns_theta_max         66.80
+_reflns_number_total             1531
+_reflns_number_gt                1281
+
+# Computer programs used
+
+_computing_data_collection       'Oxford CrysAlisPro'
+_computing_cell_refinement       'Oxford CrysAlisPro'
+_computing_data_reduction        'Oxford CrysAlisPro'
+_computing_structure_refinement  'Volkov et al, (2006)'
+_computing_molecular_graphics    'Volkov et al, (2006)'
+_computing_publication_material  'Volkov et al, (2006)'
+_publ_section_references         
+;
+Volkov, A.; Macchi, P.; Farrugia, L. J.; Gatti, C.;
+ Mallinson, P. R.; Richter, T. and Koritsanszky, T. (2006)
+ XD2006 - a computer program for multipole refinement,
+ topological analysis and evaluation of intermolecular
+ energies from experimental and theoretical structure factors.
+;
+
+# Refinement information
+
+_refine_ls_structure_factor_coef Fsqd
+_refine_ls_matrix_type           full
+_refine_ls_number_restraints     0  
+_refine_ls_R_factor_gt           0.0135 
+_refine_ls_R_factor_all          0.0220
+_refine_ls_R_Fsqd_factor         0.0172
+_refine_ls_wR_factor_ref         0.0257
+_reflns_threshold_expression     >3sigma(I)
+_refine_ls_number_reflns         1281
+_refine_ls_number_parameters     24
+_refine_ls_goodness_of_fit_ref   1.040
+_refine_ls_weighting_scheme      calc
+_refine_ls_weighting_details     
+;
+calc w2 = 1/[s^2^(Fo^2^)]
+;
+_refine_ls_shift/su_max          0
+_refine_ls_extinction_method      'Becker-Coppens type 1 Gaussian   isotropic'
+_refine_ls_extinction_expression
+;
+Becker, P.J. & Coppens, P. (1974) Acta Cryst., A30, 129-153.
+;
+_refine_ls_extinction_coef         0.005003
+_diffrn_reflns_theta_full        25.00 
+_diffrn_measured_fraction_theta_full   1.000
+_refine_diff_density_max         0.826
+_refine_diff_density_min         -0.773
+_refine_diff_density_rms         0.067
+
+# Atomic coordinates
+
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_symmetry_multiplicity
+_atom_site_U_iso_or_equiv
+I(1)    0              0.154003(15)   0.117423(6)    1    8    0.014
+
+loop_
+_atom_dummy_label
+_atom_dummy_fract_x
+_atom_dummy_fract_y
+_atom_dummy_fract_z
+DUM0    0              0              0
+DUM1    0              0              0.25
+
+loop_
+_atom_local_axes_atom_label
+_atom_local_axes_atom0
+_atom_local_axes_ax1
+_atom_local_axes_atom1
+_atom_local_axes_atom2
+_atom_local_axes_ax2
+I(1)       DUM0        Y           I        DUM1        X
+
+
+# Anisotropic displacement parameters
+
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_12
+_atom_site_aniso_U_13
+_atom_site_aniso_U_23
+I(1) 0.01623(6) 0.01555(6) 0.00980(5) 0 0 0.00091(5)
+
+# Anharmonic displacement parameters
+ 
+_atom_site_anharm_details
+;
+The atomic anharmonic pdf is approximated by a Gram-Charlier expansion
+about the harmonic pdf, according to the expression :
+ 
+      P(u) = (1 + Cijk*Hijk/3! + Dijkl*Hijkl/4!)*P(0)
+ 
+The coefficients Cijk and Dijkl are refined in the least squares procedure.
+The reported coefficients Cijk are multiplied by 1000 and Dijkl by 10000.
+;
+ 
+loop_
+    _atom_site_anharm_GC_C_label
+    _atom_site_anharm_GC_C_111
+    _atom_site_anharm_GC_C_222
+    _atom_site_anharm_GC_C_333
+    _atom_site_anharm_GC_C_112
+    _atom_site_anharm_GC_C_122
+    _atom_site_anharm_GC_C_113
+    _atom_site_anharm_GC_C_133
+    _atom_site_anharm_GC_C_223
+    _atom_site_anharm_GC_C_233
+    _atom_site_anharm_GC_C_123
+I(1) 0 -0.000287 -0.000021 -0.000194 0 -0.000035 0 0.000097 0.00005 0
+ 
+loop_
+    _atom_site_anharm_GC_D_label
+    _atom_site_anharm_GC_D_1111
+    _atom_site_anharm_GC_D_2222
+    _atom_site_anharm_GC_D_3333
+    _atom_site_anharm_GC_D_1112
+    _atom_site_anharm_GC_D_1222
+    _atom_site_anharm_GC_D_1113
+    _atom_site_anharm_GC_D_1333
+    _atom_site_anharm_GC_D_2223
+    _atom_site_anharm_GC_D_2333
+    _atom_site_anharm_GC_D_1122
+    _atom_site_anharm_GC_D_1133
+    _atom_site_anharm_GC_D_2233
+    _atom_site_anharm_GC_D_1123
+    _atom_site_anharm_GC_D_1223
+    _atom_site_anharm_GC_D_1233
+I(1) 0.000061 0.000622 -0.000017 0 0 0 0 -0.000097 -0.000013 -0.000022 -0.000014
+-0.000011 -0.000003 0 0
+ 
+
+# Multipole parameters
+
+loop_
+_atom_rho_multipole_atom_label
+_atom_rho_multipole_coeff_Pv
+_atom_rho_multipole_coeff_P00
+_atom_rho_multipole_coeff_P11
+_atom_rho_multipole_coeff_P1-1
+_atom_rho_multipole_coeff_P10
+_atom_rho_multipole_coeff_P20
+_atom_rho_multipole_coeff_P21
+_atom_rho_multipole_coeff_P2-1
+_atom_rho_multipole_coeff_P22
+_atom_rho_multipole_coeff_P2-2
+_atom_rho_multipole_coeff_P30
+_atom_rho_multipole_coeff_P31
+_atom_rho_multipole_coeff_P3-1
+_atom_rho_multipole_coeff_P32
+_atom_rho_multipole_coeff_P3-2
+_atom_rho_multipole_coeff_P33
+_atom_rho_multipole_coeff_P3-3
+_atom_rho_multipole_coeff_P40
+_atom_rho_multipole_coeff_P41
+_atom_rho_multipole_coeff_P4-1
+_atom_rho_multipole_coeff_P42
+_atom_rho_multipole_coeff_P4-2
+_atom_rho_multipole_coeff_P43
+_atom_rho_multipole_coeff_P4-3
+_atom_rho_multipole_coeff_P44
+_atom_rho_multipole_coeff_P4-4
+_atom_rho_multipole_kappa
+_atom_rho_multipole_kappa_prime0
+_atom_rho_multipole_kappa_prime1
+_atom_rho_multipole_kappa_prime2
+_atom_rho_multipole_kappa_prime3
+_atom_rho_multipole_kappa_prime4
+I 8.25(6) 0.25(6) 0.043(10) 0.013(10) 0
+-0.013(16) 0 0 0.146(10) 0.354(15)
+0 -0.021(12) 0.002(12) 0 0 -0.007(11) 0.008(11)
+0.000(18) 0 0 0.080(16) 0.149(17) 0 0 -0.126(14) 0.058(14)
+1.005(2) 0.988(15) 0.987813 0.987813 0.987813 0.987813
+
+
+#Geometrical details
+
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_distance
+_geom_bond_site_symmetry_1
+_geom_bond_site_symmetry_2
+_geom_bond_publ_flag
+I(1) I(1) 4.6915(2) 1_555 1_565 yes
+ 
+loop_
+_geom_angle_atom_site_label_1
+_geom_angle_atom_site_label_2
+_geom_angle_atom_site_label_3
+_geom_angle
+_geom_angle_site_symmetry_1
+_geom_angle_site_symmetry_2
+_geom_angle_site_symmetry_3
+_geom_angle_publ_flag
+I(1) I(1) I(1) 105.81 1_555 1_565 1_555 yes
+ 
+
+
+#### End of Crystallographic Information File ####
+
+
+
+

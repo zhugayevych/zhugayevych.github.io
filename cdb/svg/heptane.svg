@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='269px' height='40px' viewBox='0 0 269 40' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.H { fill:rgb(191,191,191); stroke:rgb(191,191,191) }
+</style>
+<title>heptane/molec_B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='39.8' y1='17.9' x2='62.3' y2='3.0' />
+<line x1='62.3' y1='3.0' x2='95.8' y2='24.9' />
+<line x1='95.8' y1='24.9' x2='129.3' y2='3.0' />
+<line x1='129.3' y1='3.0' x2='162.8' y2='24.9' />
+<line x1='162.8' y1='24.9' x2='196.3' y2='3.0' />
+<line x1='196.3' y1='3.0' x2='218.7' y2='17.9' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='3.0' y='33.1' font-size='16' stroke-width='1.0' class="H">H</text>
+<text x='15.0' y='36.8' font-size='13' fill='rgb(102,102,102)' stroke='rgb(102,102,102)' stroke-width='1.0'>3</text>
+<text x='21.5' y='33.1' font-size='16' fill='rgb(102,102,102)' stroke='rgb(102,102,102)' stroke-width='1.0'>C</text>
+<text x='225.6' y='33.1' font-size='16' fill='rgb(102,102,102)' stroke='rgb(102,102,102)' stroke-width='1.0'>CH</text>
+<text x='249.6' y='36.8' font-size='13' fill='rgb(102,102,102)' stroke='rgb(102,102,102)' stroke-width='1.0'>3</text>
+</g>
+</svg>

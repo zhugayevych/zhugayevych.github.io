@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='91px' height='210px' viewBox='0 0 91 210' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+text.O { fill:rgb(255,0,0); stroke:rgb(255,0,0) }
+</style>
+<title>nitroaniline/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='43.6' y1='182.0' x2='43.6' y2='155.0' />
+<line x1='43.6' y1='75.0' x2='43.6' y2='48.0' />
+<line x1='53.4' y1='25.9' x2='65.5' y2='18.9' />
+<line x1='56.4' y1='31.1' x2='68.5' y2='24.1' />
+<line x1='30.9' y1='31.1' x2='18.8' y2='24.1' />
+<line x1='33.9' y1='25.9' x2='21.8' y2='18.9' />
+<line x1='78.3' y1='95.0' x2='78.3' y2='135.0' />
+<line x1='78.3' y1='135.0' x2='43.6' y2='155.0' />
+<line x1='69.5' y1='131.8' x2='45.2' y2='145.8' />
+<line x1='43.6' y1='155.0' x2='9.0' y2='135.0' />
+<line x1='9.0' y1='135.0' x2='9.0' y2='95.0' />
+<line x1='16.2' y1='129.0' x2='16.2' y2='101.0' />
+<line x1='9.0' y1='95.0' x2='43.6' y2='75.0' />
+<line x1='43.6' y1='75.0' x2='78.3' y2='95.0' />
+<line x1='45.2' y1='84.2' x2='69.5' y2='98.2' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='37.6' y='43.0' font-size='16' stroke-width='1.0' class="N">N</text>
+<text x='72.3' y='23.0' font-size='16' stroke-width='1.0' class="O">O</text>
+<text x='3.0' y='23.0' font-size='16' stroke-width='1.0' class="O">O</text>
+<text x='39.6' y='203.0' font-size='16' fill='rgb(12,12,255)' stroke='rgb(12,12,255)' stroke-width='1.0'>NH</text>
+<text x='63.6' y='206.7' font-size='13' fill='rgb(12,12,255)' stroke='rgb(12,12,255)' stroke-width='1.0'>2</text>
+</g>
+</svg>

@@ -1,0 +1,24 @@
+TITLE     cF
+HETATM    1 C                    0.000   0.000   0.000
+HETATM    2 C                   10.000   0.000   0.000
+HETATM    3 C                    0.000  10.000   0.000
+HETATM    4 C                    0.000   0.000  10.000
+HETATM    5 C                    0.000  10.000  10.000
+HETATM    6 C                   10.000   0.000  10.000
+HETATM    7 C                   10.000  10.000   0.000
+HETATM    8 C                   10.000  10.000  10.000
+HETATM    9 S                    0.000   5.000   5.000
+HETATM   10 S                    5.000   0.000   5.000
+HETATM   11 S                    5.000   5.000   0.000
+HETATM   12 S                   10.000   5.000   5.000
+HETATM   13 S                    5.000  10.000   5.000
+HETATM   14 S                    5.000   5.000  10.000
+CONECT    1    2    3    4
+CONECT    2    1    6    7
+CONECT    3    1    5    7
+CONECT    4    1    5    6
+CONECT    5    3    4    8
+CONECT    6    2    4    8
+CONECT    7    2    3    8
+CONECT    8    5    6    7
+
