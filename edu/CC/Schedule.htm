@@ -1,222 +1,205 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../schedule.css">
 <title>Schedule and timeline</title>
-<style type="text/css">
-a        { color: #000080; text-decoration: none }
-a:hover  { color: #0000FF; text-decoration: underline }
-td       { border-color: #808080; border-width: 1px }
-th       { border-color: #808080; border-width: 1px; border-style: solid; background-color: #C0C0C0 }
-td.col1a  { border-left-style:  solid; background-color: #E0E0F0; text-align: center}
-td.col2a  { border-right-style: solid; background-color: #E0E0F0; text-align: right}
-td.col1b  { border-left-style:  solid; background-color: #E0F0E0; text-align: center}
-td.col2b  { border-right-style: solid; background-color: #E0F0E0; text-align: right}
-td.col1c  { border-left-style:  solid; background-color: #F0E0E0; text-align: center}
-td.col2c  { border-right-style: solid; background-color: #F0E0E0; text-align: right}
-td.col3  { border-right-style: solid}
-td.col3a { border-right-style: solid; background-color: #FFE0E0}
-td.col3b { border-right-style: solid; background-color: #E0E0E0}
-td.col4  { border-right-style: solid}
-td.col5  { border-right-style: solid}
-.note    { font-size: smaller; color: gray}
-</style>
 </head>
 <body>
-<table cellspacing="0" cellpadding="8" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1px">
+<table>
 <thead>
-<tr><th colspan="2">Date</th><th>Class</th><th>Assignment is out</th><th>Due dates</th></tr>
+<tr><th colspan="2">Date</th><th>Class</th><th>Assignment</th><th>Due date, 6am</th></tr>
 </thead>
 <tbody valign="top">
 	<tr>
-		<td class="col1a"><a href="Rec1.htm">Tue</a></td>
-		<td class="col2a">30.10</td>
-		<td class="col3"><a href="Intro_AZ.pdf">Introduction</a>. Basics of quantum chemistry</td>
-		<td class="col4"><a href="Homework1.pdf">Homework 1</a></td>
-    <td class="col5"></td>
+		<td class="c1a"><a href="Rec1.htm">Tue</a></td>
+		<td class="c2a">30.10</td>
+		<td class="c3"><a href="Intro_AZ.pdf">Introduction</a>. Basics of quantum chemistry <span class="s1">(ST/AZ)</span></td>
+		<td class="c4"><a href="Homework1.pdf">Homework 1</a></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1a"><a href="Rec2_HFCI.htm">Thu</a></td>
-		<td class="col2a">1.11</td>
-		<td class="col3">Hartree-Fock and post-HF</td>
-		<td class="col4"><a href="Project1.pdf">Team project 1</a></td>
-    <td class="col5"></td>
+		<td class="c1a"><a href="Rec2_HFCI.htm">Thu</a></td>
+		<td class="c2a">1.11</td>
+		<td class="c3">Hartree-Fock and post-HF <span class="s1">(ST/NT)</span></td>
+		<td class="c4"><a href="Project1.pdf">Team project 1</a></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1a"><a href="Rec3_DFT.htm">Fri</a></td>
-		<td class="col2a">2.11</td>
-		<td class="col3">Density functional theory</td>
-		<td class="col4"><a href="Homework2.pdf">Homework 2</a></td>
-    <td class="col5">Homework 1a</td>
+		<td class="c1a"><a href="Rec3_DFT.htm">Fri</a></td>
+		<td class="c2a">2.11</td>
+		<td class="c3">Density functional theory <span class="s1">(ST/NT)</span></td>
+		<td class="c4"><a href="Homework2.pdf">Homework 2</a></td>
+    <td class="c5">Homework 1a</td>
 	</tr>
 	<tr>
-		<td class="col1a"><a href="Rec4_ES.htm">Tue</a></td>
-		<td class="col2a">6.11</td>
-		<td class="col3">Excited states and dynamics</td>
-		<td class="col4"></td>
-    <td class="col5">Homework 1b</td>
+		<td class="c1a"><a href="Rec4_ES.htm">Tue</a></td>
+		<td class="c2a">6.11</td>
+		<td class="c3">Excited states and dynamics <span class="s1">(ST/NT)</span></td>
+		<td class="c4"></td>
+    <td class="c5">Homework 1b</td>
 	</tr>
 	<tr>
-		<td class="col1a"><a href="Rec5_CCM.htm">Thu</a></td>
-		<td class="col2a">8.11</td>
-		<td class="col3">Computational chemistry of molecules</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1a"><a href="Rec5_CCM.htm">Thu</a></td>
+		<td class="c2a">8.11</td>
+		<td class="c3">Computational chemistry of molecules <span class="s1">(ST/NT)</span></td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1a">Fri</td>
-		<td class="col2a">9.11</td>
-		<td class="col3">Computational chemistry of molecules</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1a">Fri</td>
+		<td class="c2a">9.11</td>
+		<td class="c3">Computational chemistry of molecules <span class="s1">(ST/NT)</span></td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1a">Tue</td>
-		<td class="col2a">13.11</td>
-		<td class="col3a">Presentation of team projects 1</td>
-		<td class="col4"><a href="Homework3.pdf">Homework 3</a></td>
-    <td class="col5">Homework 2</td>
+		<td class="c1a">Tue</td>
+		<td class="c2a">13.11</td>
+		<td class="c3"><span class="sr">Presentation of team projects 1</span></td>
+		<td class="c4"><a href="Homework3.pdf">Homework 3</a></td>
+    <td class="c5">Homework 2</td>
 	</tr>
 	<tr>
-		<td class="col1a"><a href="Rec6_CCC.htm">Thu</a></td>
-		<td class="col2a">15.11</td>
-		<td class="col3">Computational chemistry of crystals</td>
-		<td class="col4"><a href="Project2.pdf">Team project 2</a></td>
-    <td class="col5">Team project 1</td>
+		<td class="c1a"><a href="Rec6_CCC.htm">Thu</a></td>
+		<td class="c2a">15.11</td>
+		<td class="c3">Computational chemistry of crystals <span class="s1">(AZ/AS)</span></td>
+		<td class="c4"><a href="Project2.pdf">Team project 2</a></td>
+    <td class="c5">Team project 1</td>
 	</tr>
 	<tr>
-		<td class="col1a">Fri</td>
-		<td class="col2a">16.11</td>
-    <td class="col3">Computational chemistry of crystals</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1a">Fri</td>
+		<td class="c2a">16.11</td>
+    <td class="c3">Computational chemistry of crystals <span class="s1">(AZ/AS)</span></td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1b"><a href="Rec7_TBSE.htm">Tue</a></td>
-		<td class="col2b">20.11</td>
-		<td class="col3">Tight binding and semiempirical methods</td>
-		<td class="col4"><a href="Homework4.pdf">Homework 4</a></td>
-    <td class="col5">Homework 3</td>
+		<td class="c1b"><a href="Rec7_TBSE.htm">Tue</a></td>
+		<td class="c2b">20.11</td>
+		<td class="c3">Tight binding and semiempirical methods <span class="s1">(AZ/AZ)</span></td>
+		<td class="c4"><a href="Homework4.pdf">Homework 4</a></td>
+    <td class="c5">Homework 3</td>
 	</tr>
 	<tr>
-		<td class="col1b"><a href="Rec8_MM.htm">Thu</a></td>
-		<td class="col2b">22.11</td>
-		<td class="col3">Classical molecular mechanics</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1b"><a href="Rec8_MM.htm">Thu</a></td>
+		<td class="c2b">22.11</td>
+		<td class="c3">Classical molecular mechanics <span class="s1">(AZ/AN)</span></td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1b"><a href="Rec9_MD.htm">Fri</a></td>
-		<td class="col2b">23.11</td>
-		<td class="col3">Molecular dynamics</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1b"><a href="Rec9_MD.htm">Fri</a></td>
+		<td class="c2b">23.11</td>
+		<td class="c3">Molecular dynamics <span class="s1">(AZ/AN)</span></td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1b">Tue</td>
-		<td class="col2b">27.11</td>
-		<td class="col3a">Presentation of team projects 2</td>
-		<td class="col4"><a href="Homework5.pdf">Homework 5</a></td>
-    <td class="col5">Homework 4</td>
+		<td class="c1b">Tue</td>
+		<td class="c2b">27.11</td>
+		<td class="c3"><span class="sr">Presentation of team projects 2</span></td>
+		<td class="c4"><a href="Homework5.pdf">Homework 5</a></td>
+    <td class="c5">Homework 4</td>
 	</tr>
 	<tr>
-		<td class="col1b">Thu</td>
-		<td class="col2b">29.11</td>
-		<td class="col3">Structure prediction <span class="note">(TBC)</span></td>
-		<td class="col4"><a href="Project3.pdf">Team project 3</a></td>
-    <td class="col5">Team project 2</td>
+		<td class="c1b">Thu</td>
+		<td class="c2b">29.11</td>
+		<td class="c3">Structure prediction <span class="s1">(Nikita Matsko)</span></td>
+		<td class="c4"><a href="Project3.pdf">Team project 3</a></td>
+    <td class="c5">Team project 2</td>
 	</tr>
 	<tr>
-		<td class="col1b"><a href="Rec10_DS.htm">Fri</a></td>
-		<td class="col2b">30.11</td>
-		<td class="col3">Defects in solids <span class="note">(Dmitry Aksenov)</span></td>
-		<td class="col4"><a href="res/Proposal_template.docx">Project proposal</a></td>
-    <td class="col5"></td>
+		<td class="c1b"><a href="Rec10_DS.htm">Fri</a></td>
+		<td class="c2b">30.11</td>
+		<td class="c3">Defects in solids <span class="s1">(Dmitry Aksenov)</span></td>
+		<td class="c4"><a href="res/Proposal_template.docx">Project proposal</a></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1b"><a href="Rec11_CR.htm">Tue</a></td>
-		<td class="col2b">4.12</td>
-		<td class="col3">Chemical reactions <span class="note">(Olga Mazaleva, TBC)</span></td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1b">Tue</td>
+		<td class="c2b">4.12</td>
+		<td class="c3">Multireference methods <span class="s1">(Alexandra Freidzon)</span></td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1b"><a href="Rec12_MSM.htm">Thu</a></td>
-		<td class="col2b">6.12</td>
-		<td class="col3">Modeling of organic semiconductors <span class="note">(Andriy Zhugayevych)</span></td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1b"><a href="Rec11_CR.htm">Thu</a></td>
+		<td class="c2b">6.12</td>
+		<td class="c3">Chemical reactions <span class="s1">(Olga Mazaleva, TBC)</span></td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1b">Fri</td>
-		<td class="col2b">7.12</td>
-		<td class="col3">Machine learning approaches <span class="note">(Alexander Shapeev, TBC)</span></td>
-		<td class="col4"><a href="FinalProject.htm">Final project</a></td>
-    <td class="col5">Project proposal</td>
+		<td class="c1b">Fri</td>
+		<td class="c2b">7.12</td>
+		<td class="c3">Machine learning approaches <span class="s1">(Alexander Shapeev, TBC)</span></td>
+		<td class="c4"><a href="FinalProject.htm">Final project</a></td>
+    <td class="c5">FP proposal 6pm</td>
 	</tr>
 	<tr>
-		<td class="col1c">Tue</td>
-		<td class="col2c">11.12</td>
-		<td class="col3a">Presentation of team projects 3</span></td>
-		<td class="col4"></td>
-    <td class="col5">Homework 5</td>
+		<td class="c1c">Tue</td>
+		<td class="c2c">11.12</td>
+		<td class="c3"><span class="sr">Presentation of team projects 3</span></td>
+		<td class="c4"></td>
+    <td class="c5">Homework 5</td>
 	</tr>
 	<tr>
-		<td class="col1c">Thu</td>
-		<td class="col2c">13.12</td>
-		<td class="col3">Special or guest lecture or training or advisory</td>
-		<td class="col4"></td>
-    <td class="col5">Team project 3</td>
+		<td class="c1c"><a href="Rec12_MSM.htm">Thu</a></td>
+		<td class="c2c">13.12</td>
+		<td class="c3">Modeling of organic semiconductors <span class="s1">(AZ)</span></td>
+		<td class="c4"></td>
+    <td class="c5">Team project 3</td>
 	</tr>
 	<tr>
-		<td class="col1c">Fri</td>
-		<td class="col2c">14.12</td>
-		<td class="col3">Advisory on final project</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1c">Fri</td>
+		<td class="c2c">14.12</td>
+		<td class="c3">Special or guest lecture or training or advisory</td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1c">Tue</td>
-		<td class="col2c">18.12</td>
-		<td class="col3">Advisory on final project</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1c">Tue</td>
+		<td class="c2c">18.12</td>
+		<td class="c3">Advisory on final project</td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1c">Thu</td>
-		<td class="col2c">20.12</td>
-		<td class="col3a">Presentation of final projects (30 min/student)</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1c">Thu</td>
+		<td class="c2c">20.12</td>
+		<td class="cr">Presentation of final projects (30 min/student)</td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1c">Fri</td>
-		<td class="col2c">21.12</td>
-		<td class="col3">Advisory on final reports</td>
-		<td class="col4"></td>
-    <td class="col5"></td>
+		<td class="c1c">Fri</td>
+		<td class="c2c">21.12</td>
+		<td class="c3">Advisory on final report</td>
+		<td class="c4"></td>
+    <td class="c5"></td>
 	</tr>
 	<tr>
-		<td class="col1c">Sun</td>
-		<td class="col2c">23.12</td>
-		<td class="col3b">No class</td>
-		<td class="col4"></td>
-    <td class="col5">Final project</td>
+		<td class="c1c">Sun</td>
+		<td class="c2c">23.12</td>
+		<td class="cg">No class (final project reports are due)</td>
+		<td class="c4"></td>
+    <td class="c5">Final project</td>
 	</tr>
 </tbody>
 </table>
-<p class="note">Blocks: <span style="background-color:#E0E0F0">Computational Chemistry</span>, <span style="background-color:#E0F0E0">Materials Modeling</span>, <span style="background-color:#F0E0E0">Assessment period (Final Project)</span></p>
+<p class="note">Blocks: <span class="sa">Computational Chemistry</span>, <span class="sb">Materials Modeling</span>, <span class="sc">Assessment period (final project)</span></p>
 <p class="note">Abbreviations: CC = Computational Chemistry, HF = Hartree-Fock, MD = Molecular Dynamics, QC = Quantum Chemistry</p>
-<p>Guest lectures in previous years:</p>
+<p>Lectures from previous years:</p>
 <ul>
-<li>Alexandra Freidzon, Multireference methods (2016)</li>
-<li>Mikhail Nechaev, Modeling Chemical Reactions and Light Emitting Molecules (2015)</li>
-<li>Alexei Buchachenko, Spectra and Dynamics of Small Molecular Systems (2014)</li>
+<li>Modeling Chemical Reactions and Light Emitting Molecules <span class="s9">(Mikhail Nechaev, 2015)</span></li>
+<li>Spectra and Dynamics of Small Molecular Systems <span class="s9">(Alexei Buchachenko, 2014)</span></li>
+<li><a href="Lecture_IFSOE2016.pdf">First-principle modeling of energy and charge transport in organic semiconductors</a> <span class="s9">(Andriy Zhugayevych, IFSOE-2016)</span></li>
 </ul>
 <p>Other lectures:</p>
 <ul>
 <li>Master class for MolMod and SIMAN materials modeling packages (per request)</li>
-<li>Andriy Zhugayevych, <a href="Lecture_IFSOE2016.pdf">First-principle modeling of energy and charge transport in organic semiconductors</a> (IFSOE-2016)</li>
 </ul>
 </body>
 </html>
