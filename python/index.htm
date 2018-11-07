@@ -1,34 +1,58 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<meta name="description" content="Python/IPython applications: miscellaneous routines lacking in standard Python distributions, molecular modeling, other tools">
-<title>Python/IPython: bugs, tools, applications</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../soft.css">
+<title>Python and applications</title>
 </head>
 <body>
-<h1>Python/IPython: bugs, tools, applications</h1>
+<p><span class="h">
+ <a class="h" href="./">F</a>
+ <a class="h" href="../../Lib/Math/CompMath/Python/index.htm">L</a>
+ <a class="h" href="file:///C:/Sci/Anaconda3/">P</a>
+ <a class="h" href="../../Sci/Math/CompMath/Python/index.htm">S</a></span>
+ &nbsp;
+ <a href="http://www.python.org">website</a>,
+ discussed version: 3</p>
 
-<p><a href="Install/index.htm">Python installation instructions</a></p>
-
-<p><a href="Bugs/index.htm">Python/IPython bugs and problems from a user perspective</a> (2014)</p>
-
-<p>Note: BasicTools package is required for all the applications listed below.</p>
-
-<p>Packages:</p>
+<h2>Installation</h2>
 <ul>
-<li><a href="BasicTools/index.htm">BasicTools</a> &ndash; miscellaneous routines lacking in standard Python distributions</li>
-<li><a href="SSHTools/index.htm">SSHTools</a> &ndash; supports SSH network protocol</li>
-<li><a href="MolMod/index.htm">MolMod</a> &ndash; molecular and crystal modeling</li>
+<li>I recommend <a href="http://continuum.io/downloads">Anaconda</a> distribution.</li>
+<li>Add Anaconda root and scripts folders to system PATH.</li>
+<li>To launch IPython use one of these methods:
+ <ul>
+ <li>For Windows create and run ipystart.bat using three templates:
+  <a href="Install/ipystart_C.bat">ipystart_C.bat</a>, <a href="Install/ipystart_home.bat">ipystart_home.bat</a>, <a href="Install/ipystart_cdir.bat">ipystart_cdir.bat</a>
+ (remove "no-browser" option if needed).</li>
+ <li>Use Anaconda Launcher.</li>
+ <li>Run <code>jupyter notebook</code> from command line.</li>
+ </ul>
+ Keep thus opened window running.</li>
+<li>To open a notebook use one of these methods:
+ <ul>
+ <li>Open a browser at <a href="http://localhost:8888/tree">localhost:8888/tree</a> and locate your notebook there.</li>
+ <li>To enable double-click opening, edit and run <a href="Install/FileAssoc.reg">FileAssoc.reg</a>,
+  edit and compile <a href="Install/ipy.f90">ipy.f90</a> (or use compiled <a href="ipy.exe">ipy.exe</a>).</li>
+ </ul></li>
+<li>Periodically run <code>conda clean --all</code> and then empty <a href="C:/Sci/Anaconda3/pkgs/.trash/">pkgs/.trash</a> folder.</li>
+<li>Sometimes root folder (C:) is not readable by Jupyter browser. In this case start IPython from readable folder and modify ipy.f90 appropriately.</li>
+</ul>
+
+<h2>Packages</h2>
+<ul>
+<li><a href="http://github.com/amatgroup/MolMod">MolMod</a> &ndash; molecular and crystal modeling</li>
 <li><a href="http://github.com/dimonaks/siman">Siman</a> by Dmitry Aksenov &ndash; supports calculations in VASP and Abinit</li>
 </ul>
 
-<p>Scripts:</p>
+<h2>Notebooks</h2>
 <ul>
-<li><a href="GeometryOptimization.ipynb">GeometryOptimization</a> &ndash; sample script for geometry optimization in Gaussian on a remote machine (to test it you may need <a href="C4H5N_exp.xyz">this file</a>)</li>
-<li><a href="SinglePoint.ipynb">SinglePoint</a> &ndash; sample script for single point calculations in Gaussian on a remote machine</li>
+<li><a href="MolModApp.zip">MolModApp</a> &ndash; sample scripts for geometry optimization and single point calculations in Gaussian on a remote machine using MolMod package</li>
 </ul>
 
-<hr>
-<p style="font-size: smaller">updated 13.09.2016</p>
+<h2>Tips and tricks</h2>
+<ul>
+<li><a href="Bugs/index.htm">Python/IPython bugs and problems from a user perspective</a> (2014)</li>
+</ul>
 
 </body>
 </html>
