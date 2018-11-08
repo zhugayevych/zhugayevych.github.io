@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -j eo
+#PBS -r n
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=96:00:00
+hostname
+date
+
+module load QCh/Gaussian/16.RevA03/AVX
+
+export RUN_DIR=~/gaussian/
+export GAUSS_SCRDIR=$TMPDIR
+export GAUSS_LFLAGS2="--LindaOptions -s 10000000"
+export GAUSS_RDEF="MaxDisk=150GB"
+
+rm -rf $GAUSS_SCRDIR
+mkdir -p $GAUSS_SCRDIR
+cd ${RUN_DIR}
+
+g16 < $PBS_JOBNAME.gau > $PBS_JOBNAME.out 
+
+rm -rf $GAUSS_SCRDIR
+date

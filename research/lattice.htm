@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>Lattice models of statistical physics</title>
+</head>
+<body>
+<h1>Lattice models of statistical physics</h1>
+<p>An important feature of non-quantum finite-dimensional lattice models is principal ability to get numerically exact solution on a set of finite-size lattices suitable for doing finite size scaling and thus get approximate solution of any infinite model.</p>
+
+<h2>Lattice gas and Ising model: Dynamic correlation function of Ising antiferromagnet</h2>
+<p>Many dynamic properties of a lattice system is encoded in its equilibrium two-point two-time <a href="fig_Pedersen00.htm">correlation function</a>. Its calculation is nontrivial in contrast to the static case for which various series methods exist. In particular, the BBGKY approach developed for a classical gas is not directly transferable to a lattice gas because the equation for one-particle distribution function involves not only two-particle but also higher order distribution functions. Yet the analysis of the <a href="fig_snapshots.png">snapshots</a> shows that aside from the critical point the system can be viewed as a gas of weekly interacting structural defects complicated by the presence of transient configurations.</p>
+<ul>
+<li><a href="http://dx.doi.org/10.1103/PhysRevB.74.035418">Dynamic correlations in an ordered c(2&times;2) lattice gas, Phys Rev B 74, 035418 (2006)</a> [<a href="../pub/Argyrakis06.pdf">pdf</a>,<a href="http://arxiv.org/abs/0709.1623">arXiv</a>,<a href="../pub/LG05.pdf">talk</a>]: We extend the low-temperature expansion method to include time-dependence and transient configurations. The <a href="fig_flucL6.png">obtained correlation function</a> is accurate within few percent for the temperatures up to 0.7 of the critical temperature.</li>
+<a href="Argyrakis06.png"><img style="margin-top: 1ex" width="382" src="Argyrakis06.png"></a>
+</ul>
+
+<h2>Developing accurate analytical methods for disordered systems: Efficient perturbation expansion for disordered systems</h2>
+<p>It is an <a href="http://link.aps.org/doi/10.1103/PhysRev.74.206">old idea</a> that the perturbation series for the resolvent of a matrix can be rearranged so as to exclude the multiple scattering.</p>
+<ul>
+<li>In our work reported at Conference on Applied Physics (Kyiv, Ukraine, 2007) [<a href="../pub/perturb07.pdf">pdf in ukrainian</a>] we study this technique in detail. We observe that the believed improvement in convergence of the rearranged series is generally not valid, but is valid for sparse matrices, though the complications introduced by the rearrangement make its brute-force use inefficient. Nevertheless the constructive use of the method is possible: for matrices with i.i.d. random variables on their diagonal the rearrangement enables to take the average explicitly (note that some off-diagonal disorder, e.g. random bond model, can be reformulated as diagonal one).</li>
+</ul>
+
+</body>
+</html>

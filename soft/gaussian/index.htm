@@ -1,15 +1,12 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
 <title>Gaussian</title>
-<style type="text/css">
-a.h         { color: white; font-family: monospace; text-decoration: none }
-a.h:hover   { color: yellow }
-</style>
 </head>
 <body>
-<p><span style="background-color: lightgray">
+<p><span class="h">
  <a class="h" href="./">F</a>
  <a class="h" href="../../../Lib/MS/Methods/_soft/Gaussian/">L</a>
  <a class="h" href="C:/Sci/G09W/">P</a>
@@ -18,19 +15,20 @@ a.h:hover   { color: yellow }
  </span>
  &nbsp;
  <a href="http://www.gaussian.com">website</a>,
- discussed versions: G09 D.01, G16 A.03</p>
+ discussed version: G16 A.03</p>
+
+<p class="si">Credits: Sergey Matveev and Victor Vysotskiy (installation, scripts)</p>
 
 <h2>Installation: Linux</h2>
 <ul>
-<li>...</li>
 <li>Locate executables, edit your user initialization file, create <code>gaussian</code> directory, and learn how to submit a job.</li>
-<li>Example of Gaussian job submission using <a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a>:
-<ol>
-<li>Submission script: <a href="_pbs09">example for G09</a>, <a href="_pbs16">example for G16</a>, <a href="_pbs_SLURM">example for SLURM</a></li>
-<li>Submission command: <code>qsub gaussian/_pbs -l nodes=1:ppn=8:mpi -N example</code></li>
-<li><a href="example.gau">Gaussian input file</a></li>
-</ol></li>
+<li>Job submission scripts:
+ <a href="_pbs_magnus">Magnus cluster</a>,
+ <a href="_pbs_pardus">Pardus cluster</a> (<a href="_pbs_pardus_Linda">with Linda</a>, <a href="_pbs_pardus_v09">version 09</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub gaussian/_pbs -N test1 -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
+<li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -c 8 -t 12:00:00 gaussian/_pbs</code></li>
 <li>Example of Gaussian run script without PBS: <a href="_run">example</a></li>
+<li>Sample input file: <a href="test1.gau">test1.gau</a></li>
 </ul>
 
 <h2>Installation: Windows</h2>
@@ -44,7 +42,6 @@ a.h:hover   { color: yellow }
 
 <h2>Usage</h2>
 <ul>
-<li>Sample input files: <a href="test1.gau">test1.gau</a>.</li>
 <li>Gaussian requires explicit setting of <code>nproc</code> and <code>mem</code>.</li>
 <li><a href="readdump.f90">Fortran code</a> for extracting individual records from Gaussian chk- and rwf-files.
  You may use <a href="readdump_test.chk">this test file</a>.

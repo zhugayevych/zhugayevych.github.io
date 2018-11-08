@@ -1,0 +1,25 @@
+
+./command
+
+passwd
+
+ls
+
+env
+for bash: export <name>=<value>
+for csh:  setenv <name> <value>
+
+lpoptions -d
+lpstat -p [-d]
+
+ps
+nohup
+command &    --- run command in background
+
+source bashscript &
+
+dd bs=1 skip=60 count=12 if=inputfile of=outputfile     --- extract 12 bytes starting from 61st byte
+
+nice
+
+module av

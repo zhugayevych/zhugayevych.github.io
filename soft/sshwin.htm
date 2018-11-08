@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Basic use of SSH connection from Windows</title>
+</head>
+<body>
+
+<p>This page assumes using <a href="http://en.wikipedia.org/wiki/PuTTY">PuTTY</a> (see <a href="http://the.earth.li/~sgtatham/putty/0.67/htmldoc/">online help</a>) as SSH client.
+ For GUI access to a remote file system use <a href="http://winscp.net">WinSCP</a>.
+ See also <a href="../maple/SSH/index.htm">SSH package for Maple</a>.</p>
+
+<h2>Generating ppk-file</h2>
+<ol>
+<li>Determine <code>name@host</code> for the remote machine (use <code>ipconfig</code> for Windows and <code>ifconfig</code> for Linux)</li>
+<li>Using <a href="C:/Sys/putty/puttygen.exe">puttygen</a> utility generate a pair of private and public keys,
+ saving the private key (ppk-file) locally and appending the public key to <code>~/.ssh/authorized_keys</code> file on the remote machine in the following format:
+ <br><code>ssh-rsa HERE_IS_THE_GENERATED_KEY_FOLLOWED_BY_NEWLINE_CHARACTER name@host</code></li>
+<li>Note that PuTTY does not recognize <code>PATH</code> environment variable when looking for a private key,
+ but you can use <code>%HOMEPATH%</code> and similar constructions in Windows batch files</li>
+<li>Some programs require OpenSSH format of private key, which can also be created by puttygen utility</li>
+</ol>
+
+<h2>Examples of Windows batch files using PuTTY</h2>
+<ul>
+<li><dfn>login</dfn> &ndash; <code>start putty -ssh -i 'ppk-key' 'name'@'host'</code></li>
+<li><dfn>login via tunnel</dfn> &ndash; <code>start /min putty -ssh -i 'tunnel-ppk-key' -N -L 10022:'host':22 'name'@'tunnel-host'<br>
+  timeout /t 5<br>
+  start putty -ssh -i 'ppk-key' -P 10022 'name'@localhost</code></li>
+<li><dfn>run command</dfn> &ndash; <code>plink -ssh -i 'ppk-key' 'name'@'host' 'command'</code></li>
+<li><dfn>qstat via Gadgets</dfn> &ndash; <code>cmd /k "plink -ssh -i 'ppk-key' 'name'@'host' qstat -u 'name'"</code></li>
+<li><dfn>psftp</dfn> &ndash; <code>psftp 'name'@'host' -i psftp.ppk -b 'file of commands'</code></li>
+</ul>
+
+<h2>Unresolved questions</h2>
+<ol>
+<li>How to lunch (not run) bash scripts via SSH?</li>
+<li>How to make jobname fully visible in qstat?</li>
+</ol>
+
+</body>
+</html>

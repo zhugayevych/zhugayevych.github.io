@@ -1,17 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../soft.css">
 <meta name="description" content="Maple applications: miscellaneous routines lacking in standard Maple distribution, molecular modeling, other tools">
 <title>Maple</title>
-<style type="text/css">
-a.h       { color: white; font-family: monospace; text-decoration: none }
-a.h:hover { color: yellow }
-ul.h      { list-style-type: none; margin-left: -15 }
-</style>
 </head>
 <body>
-<p><span style="background-color: lightgray">
+<p><span class="h">
  <a class="h" href="../edu/Maple/index.htm">E</a>
  <a class="h" href="./">F</a>
  <a class="h" href="../../Lib/Math/CompMath/Maple/index.htm">L</a>
@@ -20,8 +16,7 @@ ul.h      { list-style-type: none; margin-left: -15 }
  <a class="h" href="../../Sci/Math/CompMath/Maple/index.htm">S</a></span>
  &nbsp;
  <a href="http://www.maplesoft.com">website</a>,
- discussed version: 14 (mostly compatible with later versions up to 17, current version 18 does not fully support built-in help pages),
- recommended version: 17</p>
+ discussed version: 17 (described packages are not fully compatible with later versions)</p>
 
 <h2>Installation</h2>
 <ul>
@@ -40,8 +35,13 @@ ul.h      { list-style-type: none; margin-left: -15 }
 <li>Install additional packages. See Applications section below.</li>
 <li>Create the initialization file (<code>maple.ini</code>) and copy it to your <a href="file:///C:/Users/azh/">root user folder</a>.
  Delete such file from the program <a href="file:///C:/Sci/Maple17/Users/">Users</a> folder, because that file has a preference.
- Here is my <a href="maple.ini">maple.ini</a>, which in particular defines a special <a href="../../Local/maple/">UserConfigurationFolder</a>
- as well as <a href="../../Data/">RootDataFolder</a>.</li>
+ Here is my <a href="maple.ini">maple.ini</a>, which in particular defines special folders used by the described below packages:
+ <ul>
+ <li><a href="../../Local/maple/">UserConfigurationFolder</a> &ndash; path to user configuration files;</li>
+ <li><a href="../../Sci/Math/CompMath/Maple/">ModulesFolder</a> &ndash; path to modules not installed as packages;</li>
+ <li><a href="../../Data/">RootDataFolder</a> &ndash; data are searched starting from and referenced relative to this folder;</li>
+ <li><a href="file:///C:/tmp/">TemporaryFilesFolder</a> &ndash; temporary files are stored here.</li>
+ </ul></li>
 <li>Create worksheet styles and copy them to a permanent-name folder (<a href="file:///C:/Sys/azh/">like this</a>).
  Here is my default style: <a href="styleset_default.mw">styleset_default.mw</a>.</li>
 </ul>
@@ -49,26 +49,22 @@ ul.h      { list-style-type: none; margin-left: -15 }
 <h2>Applications</h2>
 <p>Note that <code>BasicTools</code> package is required for all the applications listed here.</p>
 <p>Packages (use <code>Check4Updates</code> command):</p>
-<ul class="h">
-<li><a class="h" style="background-color: lightgray" href="../../Sci/Math/CompMath/Maple/BasicTools/">S</a>&nbsp; <a href="BasicTools/index.htm">BasicTools</a> &ndash; miscellaneous routines lacking in standard Maple distribution</li>
-<li><a class="h" style="background-color: lightgray" href="../../Sci/Math/CompMath/Maple/SSH/">S</a>&nbsp; <a href="SSH/index.htm">SSH</a> &ndash; supports SSH network protocol via PuTTY or similar client</li>
-<li><a class="h" style="background-color: lightgray" href="../../Sci/Math/AbsMath/GroupT/">S</a>&nbsp; <a href="FiniteGroups/index.htm">FiniteGroups</a> &ndash; manipulation with finite groups</li>
-<li><a class="h" style="background-color: lightgray" href="../../Sci/_RW/_comp/RandomWalk/">S</a>&nbsp; <a href="RandomWalk/index.htm">RandomWalk</a> &ndash; few routines related to a random walk problem</li>
-<li><a class="h" style="background-color: lightgray" href="../../Sci/MS/_comp/MolMod/">S</a>&nbsp; <a href="MolMod/index.htm">MolMod</a> &ndash; molecular and crystal modeling</li>
-<li><a class="h" style="background-color: lightgray" href="../../Sci/Astro/AstroTools/">S</a>&nbsp; <a href="AstroTools/index.htm">AstroTools</a> &ndash; miscellaneous routines for an amateur astronomer</li>
+<ul>
+<li><a href="BasicTools/index.htm">BasicTools</a> &ndash; miscellaneous routines lacking in standard Maple distribution</li>
+<li><a href="SSH/index.htm">SSH</a> &ndash; supports SSH network protocol via PuTTY or similar client</li>
+<li><a href="FiniteGroups/index.htm">FiniteGroups</a> &ndash; manipulation with finite groups</li>
+<li><a href="PointGroups/index.htm">PointGroups</a> &ndash; in-depth manipulation with point groups</li>
+<li><a href="RandomWalk/index.htm">RandomWalk</a> &ndash; few routines related to a random walk problem</li>
+<li><a href="MolMod/index.htm">MolMod</a> &ndash; molecular and crystal modeling</li>
+<li><a href="AstroTools/index.htm">AstroTools</a> &ndash; miscellaneous routines for an amateur astronomer</li>
 </ul>
-<p>Poorly documented packages:</p>
-<ul class="h">
-<li><a class="h" style="background-color: lightgray" href="../../Sci/MS/_comp/ALPS/">S</a>&nbsp; <a href="ALPS.zip">ALPS</a> &ndash; provides interface to <a href="http://alps.comp-phys.org/">ALPS</a> for extended Hubbard model</li>
-</ul>
-<p>Under development:</p>
-<ul class="h">
-<li><a class="h" style="background-color: lightgray" href="../../Pub/Postscript/_comp/PSTools/">S</a>&nbsp; PSTools &ndash; PostScript code generator</li>
+<p>Poorly documented packages and modules:</p>
+<ul>
+<li><a href="ALPS.zip">ALPS</a> &ndash; provides interface to <a href="http://alps.comp-phys.org/">ALPS</a> for extended Hubbard model</li>
 </ul>
 <p>Examples:</p>
 <ul>
-<li><a href="http://alps.comp-phys.org/">ALPS</a> example on Ising model: <a href="ALPS_spinmc.mw">Maple worksheet only</a>, <a href="ALPS_spinmc.zip">whole working folder</a></li>
-<li><a href="http://www.abinit.org/">ABINIT</a> example: <a href="ABINIT_example.mw">Maple worksheet only</a>, <a href="ABINIT_example.zip">whole working folder</a></li>
+<li><a href="http://alps.comp-phys.org">ALPS</a> example on Ising model: <a href="ALPS_spinmc.mw">Maple worksheet only</a>, <a href="ALPS_spinmc.zip">whole working folder</a></li>
 <li>Producing eps- and pdf-figures using <a href="http://tug.org/PSTricks/">PSTricks</a>: <a href="fig_Peierls.mw">example</a>, <a href="fig_Peierls.tex">tex-output</a>, <a href="fig_Peierls.pdf">pdf-output</a></li>
 </ul>
 <p>See also <a href="http://www.maplesoft.com/applications/index.aspx">Maple Application Center</a>.</p>
@@ -87,20 +83,20 @@ ul.h      { list-style-type: none; margin-left: -15 }
  3) Maple seems to be more reliable in numerical computations while Mathematica looks better in manipulations with symbolic expressions.</li>
 </ul>
 
-<h2>My style guide</h2>
+<h2>My programming style guide</h2>
 <ul>
 <li>Commonly used keyword arguments:
  <ul>
  <li><code>printout::boolean</code> &ndash; print information during command execution</li>
  <li><code>printnot::boolean</code> &ndash; do not print it</li>
  <li><code>digits::posint</code> &ndash; for printout</li>
- <li><code>output::string</code> &ndash; specify what to return</li>
+ <li><code>output::string</code> &ndash; specify what to return as comma separated or single-character encoded string</li>
  <li><code>noerror::boolean</code> &ndash; do not raise error</li>
  <li><code>overwrite::boolean</code> &ndash; overwrite files without a notice</li>
  </ul></li>
 </ul>
 
 <hr>
-<p style="font-size: smaller">updated 8.07.2015</p>
+<p class="si">updated 13.12.2019</p>
 </body>
 </html>

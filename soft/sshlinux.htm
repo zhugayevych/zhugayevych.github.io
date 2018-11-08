@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Basic use of SSH connection for Linux</title>
+</head>
+<body>
+
+<h2>Generating SSH key</h2>
+<ol>
+<li>Generate a pair of private and public keys by running <code>ssh-keygen</code>,
+ the default location of the private key is <code>~/.ssh/id_rsa</code> (can be changed),
+ the public key will be at <code>~/.ssh/id_rsa.pub</code></li>
+<li>Upload your key to a remote machine by running <code>ssh-copy-id name@host</code>
+ (you can determine <code>name@host</code> by <code>ifconfig</code> command)</li>
+</ol>
+
+</body>
+</html>

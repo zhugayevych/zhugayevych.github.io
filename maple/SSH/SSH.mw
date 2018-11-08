@@ -172,7 +172,7 @@
 <Group labelreference="L235" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Setup connection </Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;skoltech&quot;,printout);</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;magnus&quot;,printout);</Text-field>
 </Input>
 <Output>
 <Text-field style="Line Printed Output" layout="Line Printed Output">int=putty</Text-field>
@@ -182,8 +182,8 @@ md5=fciv
 untar=7za x -aou
 ungz=7za x
 tmp=C:/tmp/_tmpssh
-host=Andriy.Zhugayevych@pardus.skoltech.ru, ppk=C:/Users/azh/Sys/Internet/SSH/skoltech/key.ppk, port=, nnp=node, pbs=MOAB
-cnames=[cee,mazaleva,fedotov,msu,nano,naumov,skoltech]</Text-field>
+host=a.zhugayevych@10.30.16.168, ppk=C:/Users/azh/Sys/Internet/SSH/magnus/key.ppk, port=, nnp=node, pbs=SLURM
+cnames=[magnus,cmsVM,arkuda,msu,nano,pardus]</Text-field>
 </Output>
 </Group>
 <Group labelreference="L146" drawlabel="true">
@@ -261,7 +261,7 @@ SSH:-Setup('version');</Text-field>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NzRJK0ZpbGVFeGlzdHNHNiJJK0ZpbGVTdGF0dXNHRiRJK01vZHVsZUxvYWRHRiRJJlNldHVwR0YkSSRkaXJHRiRJJGdldEdGJEkmbG9naW5HRiRJK29wZW50dW5uZWxHRiRJKXBic25vZGVzR0YkSStwYnNyZXBvcnRzR0YkSSRwdXRHRiRJJHB3ZEdGJEklcWRlbEdGJEkmcXN0YXRHRiRJJXFzdWJHRiRJJHJ1bkdGJEkncnVuZnRwR0YkSSVzZ2V0R0Yk</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">Iik8MD0/</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiksLD8/</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L158" drawlabel="true">
@@ -320,7 +320,7 @@ cnames=[msu,skoltech,fedotov,nano]</Text-field>
 <Text-field style="Line Printed Output" layout="Line Printed Output">Type &quot;exit&quot; to logout</Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiVHNg==</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiQhWw==</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L157" drawlabel="true">
@@ -580,122 +580,132 @@ SSH[qstat]('user'=&quot;Andriy.Zhugayevych&quot;);
 SSH[qstat]('user'=&quot;&quot;):</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">927639   BDOPV-F4_cryst_PBE-D3paw900_cg3   Andriy.Zhugayevych   16   R   batch    node8    1:01:10:07   </Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">932214   HMTTF_cryst_PBE-D3paw600_cg3      Andriy.Zhugayevych   8    R   fastio   node24   10:55        </Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">927639   BDOPV-F4_cryst_PBE-D3paw900_cg3   Andriy.Zhugayevych   16   R   batch    node8    1:01:10:07   
-932214   HMTTF_cryst_PBE-D3paw600_cg3      Andriy.Zhugayevych   8    R   fastio   node24   10:55        </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output"> 91481  pyrene_molec_CAM-B3LYPp2p_mo          0:00  PD  1  16  AMG  (Priority) 
+ 91480  pyrene_molec_CAM-B3LYPp2p_freq        0:00  PD  1  16  AMG  (Priority) 
+ 91479  pyrene_molec_CAM-B3LYPp2p_sp          0:00  PD  1  16  AMG  (Priority) 
+ 91475  phenanthrene_molec_CAM-B3LYPp2p_exc   0:00  PD  1  16  AMG  (Priority) 
+ 91476  phenanthrene_molec_CAM-B3LYPp2p_nbo   0:00  PD  1  16  AMG  (Priority) 
+ 91477  phenanthrene_molec_CAM-B3LYPp2p_esp   0:00  PD  1  16  AMG  (Priority) 
+ 91478  phenanthrene_molec_CAM-B3LYPp2p_nto1  0:00  PD  1  16  AMG  (Priority) 
+ 91473  phenanthrene_molec_CAM-B3LYPp2p_N     0:00  PD  1  16  AMG  (Priority) 
+ 91474  phenanthrene_molec_CAM-B3LYPp2p_T     0:00  PD  1  16  AMG  (Priority) 
+ 91472  phenanthrene_molec_CAM-B3LYPp2p_P     0:00  PD  1  16  AMG  (Priority) 
+ 91471  phenanthrene_molec_CAM-B3LYPp2p_mo    0:00  PD  1  16  AMG  (Priority) 
+ 91470  phenanthrene_molec_CAM-B3LYPp2p_freq  0:00  PD  1  16  AMG  (Priority) 
+ 91469  phenanthrene_molec_CAM-B3LYPp2p_sp    0:00  PD  1  16  AMG  (Priority) 
+ 91482  pyrene_molec_CAM-B3LYPp2p_P           0:00  PD  1  16  AMG  (Priority) 
+ 91483  pyrene_molec_CAM-B3LYPp2p_N           0:00  PD  1  16  AMG  (Priority) 
+ 91484  pyrene_molec_CAM-B3LYPp2p_T           0:00  PD  1  16  AMG  (Priority) 
+ 91485  pyrene_molec_CAM-B3LYPp2p_exc         0:00  PD  1  16  AMG  (Priority) 
+ 91486  pyrene_molec_CAM-B3LYPp2p_nbo         0:00  PD  1  16  AMG  (Priority) 
+ 91487  pyrene_molec_CAM-B3LYPp2p_esp         0:00  PD  1  16  AMG  (Priority) 
+ 91488  pyrene_molec_CAM-B3LYPp2p_nto1        0:00  PD  1  16  AMG  (Priority) 
+</Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NyQ3KlEnOTI3NjM5NiJRQEJET1BWLUY0X2NyeXN0X1BCRS1EM3BhdzkwMF9jZzNGJVEzQW5kcml5LlpodWdheWV2eWNoRiVRIzE2RiVRIlJGJVEmYmF0Y2hGJVEmbm9kZThGJVErMTowMToxMDowN0YlNypRJzkzMjIxNEYlUT1ITVRURl9jcnlzdF9QQkUtRDNwYXc2MDBfY2czRiVGJ1EiOEYlRilRJ2Zhc3Rpb0YlUSdub2RlMjRGJVEmMTA6NTVGJQ==</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NyI=</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">931194   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node26   19:02        
-931222   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node1    13:49        
-931512   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node15   3:43         
-931585   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node9    2:23         
-931613   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    51:30        
-931659   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node12   1:28:47      
-931680   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node6    2:23         
-931732   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    1:44         
-931756   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node16   1:10         
-931757   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    36           
-931829   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931833   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node13   58:59        
-931880   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931881   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931908   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931909   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931951   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    37:37        
-931952   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node21   37:34        
-931989   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931990   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931991   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931992   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932027   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932028   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932029   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932030   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932032   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node10   30:59        
-932034   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node23   30:59        
-932071   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node11   21:03        
-932072   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932106   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932107   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932108   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932109   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932144   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932145   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932146   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932147   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932187   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932188   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932189   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932190   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932217   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932218   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932219   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932220   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932221   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932222   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932223   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932224   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932249   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932250   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932251   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-928760   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node27   20:17:24     
-931871   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node25   56:10        
-927639   BDOPV-F4_cryst_PBE-D3paw900_cg3       Andriy.Zhugayevych   16   R   batch    node8    1:01:10:07   
-932214   HMTTF_cryst_PBE-D3paw600_cg3          Andriy.Zhugayevych   8    R   fastio   node24   10:55        
-931218   USPEX24                               Artem.Samtsevich     8    R   batch    node5    52:14        
-931234   USPEX19                               Artem.Samtsevich     8    R   batch    node16   41:45        
-931235   USPEX25                               Artem.Samtsevich     8    R   batch    node24   52:14        
-931236   USPEX26                               Artem.Samtsevich     8    R   batch    node18   52:06        
-931431   USPEX26                               Artem.Samtsevich     8    R   batch    node17   40:23        
-931444   USPEX11                               Artem.Samtsevich     8    R   batch    node26   36:52        
-931470   USPEX17                               Artem.Samtsevich     8    Q   batch                          
-931471   USPEX23                               Artem.Samtsevich     8    Q   batch                          
-931523   USPEX12                               Artem.Samtsevich     8    R   batch    node7    21:03        
-931524   USPEX13                               Artem.Samtsevich     8    R   batch    node14   19:36        
-931525   USPEX27                               Artem.Samtsevich     8    Q   batch                          
-931600   USPEX6                                Artem.Samtsevich     8    Q   batch                          
-931644   USPEX22                               Artem.Samtsevich     8    Q   batch                          
-931645   USPEX18                               Artem.Samtsevich     8    R   batch    node18   1:22:50      
-931755   USPEX3                                Artem.Samtsevich     8    R   batch    node21   1:13:10      
-931794   USPEX6                                Artem.Samtsevich     8    R   batch    node19   1:13:10      
-931852   USPEX4                                Artem.Samtsevich     8    R   batch    node21   52:37        
-931941   USPEX23                               Artem.Samtsevich     8    Q   batch                          
-932026   USPEX9                                Artem.Samtsevich     8    Q   batch                          
-932070   USPEX8                                Artem.Samtsevich     8    R   batch    node15   25:38        
-932104   USPEX1                                Artem.Samtsevich     8    R   batch    node14   25:04        
-932143   USPEX21                               Artem.Samtsevich     8    Q   batch                          
-932186   USPEX33                               Artem.Samtsevich     8    R   batch    node17   5:22         
-932216   USPEX34                               Artem.Samtsevich     8    R   batch    node12   3:35         
-932271   USPEX1                                Artem.Samtsevich     8    Q   batch                          
-925882   LTP_sb4_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node27   1:15:23:18   
-929222   LTP_sa1_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node22   17:28:31     
-931779   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:16:47      
-931817   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:11:27      
-931828   HZ                                    Dong.Baojuan         8    R   batch    node7    1:01:22      
-931982   USPEX                                 Dong.Baojuan         8    R   batch    node19   43:22        
-925709   doSWsampling89.sh                     Maksim.Beketov       8    R   batch    node22   1:16:55:36   
-925714   doSWfibosampling89.sh                 Maksim.Beketov       8    R   batch    node27   1:16:53:17   
-931488   USPEX                                 Nikita.Rybin         8    R   batch    node27   2:15:41      
-931489   USPEX                                 Nikita.Rybin         8    R   batch    node26   2:15:41      
-931491   USPEX                                 Nikita.Rybin         8    R   batch    node25   2:15:41      
-931492   USPEX                                 Nikita.Rybin         8    R   batch    node22   2:15:41      
-931495   USPEX                                 Nikita.Rybin         8    R   batch    node21   2:15:41      
-931497   USPEX                                 Nikita.Rybin         8    R   batch    node20   2:15:41      
-931500   USPEX                                 Nikita.Rybin         8    R   batch    node19   2:14:31      
-923183   _pbs                                  Nikita.Tukachev      8    R   batch    node19   2:22:47:50   
-925160   _pbs                                  Nikita.Tukachev      8    R   batch    node3    1:20:47:26   
-927786   _pbs                                  Nikita.Tukachev      8    R   batch    node26   1:00:16:50   
-923537   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node19   2:17:43:24   
-923538   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:08:30   
-923539   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:08:30   
-923540   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:08:30   
-923541   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:08:29   
-923542   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:00   
-923543   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:00   </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             91468       AMG       bs v.vasilc PD       0:00      1 (Resources)
+             91481       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91480       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91479       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91475       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91476       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91477       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91478       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91473       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91474       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91472       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91471       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91470       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91469       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91482       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91483       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91484       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91485       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91486       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91487       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91488       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91489 AMG-mediu LiCoO2.1 d.akseno PD       0:00      1 (Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)
+             91461       AMG silicide d.poleta PD       0:00      1 (Priority)
+             91462       AMG silicide d.poleta PD       0:00      1 (Priority)
+             91490       AMG silicide d.poleta PD       0:00      1 (Priority)
+             91391       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91392       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91393       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91394       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91395       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91396       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91397       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91398       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91399       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91400       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91401       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91402       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91403       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91404       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91405       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91406       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91407       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91408       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91411       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91412       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91413       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91414       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91415       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91416       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91417       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91418       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91419       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91420       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91421       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91422       AMG Ti5O7.or   a.boev PD       0:00      1 (Priority)
+             91423       AMG TiSi2.or   a.boev PD       0:00      1 (Priority)
+             91424       AMG TiSi2.or   a.boev PD       0:00      1 (Priority)
+             91425       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
+             91426       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
+             91427       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
+             91428       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
+             91429       AMG V4P3.ort   a.boev PD       0:00      1 (Priority)
+             91430       AMG V5O7.ort   a.boev PD       0:00      1 (Priority)
+             91431       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
+             91432       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
+             91433       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
+             91434       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
+             91435       AMG VF5.orth   a.boev PD       0:00      1 (Priority)
+             91436       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91437       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91438       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91439       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91440       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91441       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91442       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91443       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91444       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91445       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91446       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91447       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91448       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91449       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91450       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91451       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91452       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91453       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91047       AMG  run_g16 n.tukach  R   11:40:29      1 node-amg04
+             91062       AMG  run_g16 n.tukach  R   11:28:36      1 node-amg02
+             91056       AMG  run_g16 n.tukach  R   11:31:00      1 node-amg05
+             91197       AMG silicide d.poleta  R    9:39:44      1 node-amg01
+             91390       AMG Mn5O7.or   a.boev  R    5:57:22      1 node-amg06
+             91387       AMG Cr5O7.or   a.boev  R    7:05:21      1 node-amg11
+             91386       AMG Cr5O7.or   a.boev  R    7:13:22      1 node-amg03
+             91382       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg10
+             91383       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg12
+             91384       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg13
+             91385       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg14
+             91380       AMG Co2O3.or   a.boev  R    7:18:35      1 node-amg07
+             91381       AMG Co2O3.or   a.boev  R    7:18:35      1 node-amg09</Text-field>
 </Output>
 </Group>
 <Group labelreference="L259" drawlabel="true">
@@ -705,42 +715,27 @@ SSH[qstat]('user'=&quot;&quot;):</Text-field>
 <Font encoding="UTF-8">for e in nodes do printf(&quot;%-8s%4s%4s  %s\134n&quot;,op(1..3,e),StringTools[Join](e[4],&quot;,&quot;)) end;</Font></Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">27 nodes, 628 cores: 0 down, 463 busy, 165 free</Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">free-core statistics: (down)=11, (busy)=0,  (1)=3, (8)=6, (9)=2, (16)=1, (17)=2, (21)=1, (25)=1
-List of nodes (nodeXX): (1)=[&quot;19&quot;,&quot;20&quot;,&quot;21&quot;], (8)=[&quot;1&quot;,&quot;10&quot;,&quot;11&quot;,&quot;3&quot;,&quot;5&quot;,&quot;9&quot;], (9)=[&quot;25&quot;,&quot;26&quot;], (16)=[&quot;6&quot;], (17)=[&quot;22&quot;,&quot;27&quot;], (21)=[&quot;24&quot;], (25)=[&quot;23&quot;]</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">NODELIST    NODES PARTITION STATE </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">node-amg01      1       AMG mix   
+node-amg02      1       AMG mix   
+node-amg03      1       AMG alloc 
+node-amg04      1       AMG alloc 
+node-amg05      1       AMG alloc 
+node-amg06      1       AMG alloc 
+node-amg07      1       AMG alloc 
+node-amg08      1       AMG alloc 
+node-amg09      1       AMG mix   
+node-amg10      1       AMG mix   
+node-amg11      1       AMG mix   
+node-amg12      1       AMG alloc 
+node-amg13      1       AMG alloc 
+node-amg14      1       AMG alloc </Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEmbm9kZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUkobWZlbmNlZEdGJDYmLUYjNlotRlA2Ji1GIzYsLUkjbXNHRiQ2I1Embm9kZTFGJy1GNjYtUSIsRidGOUY7L0Y/RjFGQEZCRkRGRkZIL0ZLUSYwLjBlbUYnL0ZOUSwwLjMzMzMzMzNlbUYnLUZZNiNRJWZyZWVGJ0Zmbi1GWTYjUSMxNkYnRmZuLUZQNiYtRiM2Ji1GWTYjUT04LTE1LzkzMTIyMi5tZ210LnNrb2x0ZWNoLnJ1RicvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXUYnLyUpcmVhZG9ubHlHRj1GOUY5LyUlb3BlbkdRIltGJy8lJmNsb3NlR1EiXUYnRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Embm9kZTJGJ0Zmbi1GWTYjUS5qb2ItZXhjbHVzaXZlRidGZm5GYW9GZm4tRlA2Ji1GIzYoLUZZNiNRPTgtMTUvOTMxNjEzLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTcvOTMyMTA2Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSZub2RlM0YnRmZuRl5vRmZuRmFvRmZuLUZQNiYtRiM2Ji1GWTYjUT04LTE1LzkyNTE2MC5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Embm9kZTRGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNigtRlk2I1E9OC0xNS85MzE5NTEubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPDAtNy85MzE3MzIubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJm5vZGU1RidGZm5GXm9GZm5GYW9GZm4tRlA2Ji1GIzYmLUZZNiNRPTQtMTEvOTMxMjE4Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSZub2RlNkYnRmZuRl5vRmZuRmFvRmZuLUZQNiYtRiM2Ji1GWTYjUSFGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSZub2RlN0YnRmZuRl1xRmZuRmFvRmZuLUZQNiYtRiM2KC1GWTYjUT04LTE1LzkzMTgyOC5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E8MC03LzkzMTUyMy5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Embm9kZThGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNiYtRlk2I1E9MC0xNS85Mjc2MzkubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJm5vZGU5RidGZm5GXm9GZm5GYW9GZm4tRlA2Ji1GIzYmLUZZNiNRPDAtNy85MzE1ODUubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUxMEYnRmZuRl5vRmZuRmFvRmZuLUZQNiYtRiM2Ji1GWTYjUT04LTE1LzkzMjAzMi5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Enbm9kZTExRidGZm5GXm9GZm5GYW9GZm4tRlA2Ji1GIzYmLUZZNiNRPTgtMTUvOTMyMDcxLm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMTJGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNigtRlk2I1E8MC03LzkzMTY1OS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E9OC0xNS85MzIyMTYubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUxM0YnRmZuRl1xRmZuRmFvRmZuLUZQNiYtRiM2KC1GWTYjUT04LTE1LzkzMTgzMy5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E8MC03LzkzMjEwNy5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Enbm9kZTE0RidGZm5GXXFGZm5GYW9GZm4tRlA2Ji1GIzYoLUZZNiNRPDAtNy85MzIxMDQubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPTgtMTUvOTMxNTI0Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMTVGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNigtRlk2I1E8MC03LzkzMjA3MC5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E9OC0xNS85MzE1MTIubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUxNkYnRmZuRl1xRmZuRmFvRmZuLUZQNiYtRiM2KC1GWTYjUT04LTE1LzkzMTIzNC5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E8MC03LzkzMTc1Ni5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Enbm9kZTE3RidGZm5GXXFGZm5GYW9GZm4tRlA2Ji1GIzYoLUZZNiNRPTgtMTUvOTMxNDMxLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTcvOTMyMTg2Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMThGJ0ZmbkZdcUZmbkZhb0Zmbi1GUDYmLUYjNigtRlk2I1E9OC0xNS85MzE2NDUubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPDAtNy85MzEyMzYubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUxOUYnRmZuRl5vRmZuLUZZNiNRIzM2RidGZm4tRlA2Ji1GIzYwLUZZNiNRPDAtNy85MjMxODMubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNROzM0LzkyMzUzNy5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E+MTYtMjAvOTMxNDk3Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4yOS0zMy85MzE1MDAubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPTgtMTUvOTMxNzk0Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4yMS0yOC85MzE5ODIubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUyMEYnRmZuRl5vRmZuRlxibEZmbi1GUDYmLUYjNjQtRlk2I1ElOC0xNUYnRmZuLUZZNiNROzI0LzkyOTIyMi5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E8MC02LzkzMTQ5NS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E+MzItMzQvOTMxNDk3Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUSMyM0YnRmZuLUZZNiNRPjI1LTMxLzkzMTc3OS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1EiN0YnRmZuLUZZNiNRPjE2LTIyLzkzMTgxNy5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZmbi1GUDYmLUYjNiwtRlk2I1Enbm9kZTIxRidGZm5GXm9GZm5GXGJsRmZuLUZQNiYtRiM2MC1GWTYjUT4zMi0zNC85MjkyMjIubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPTgtMTQvOTMxNDkyLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTszMS85MzE0OTUubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPDAtNy85MzE3NTUubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPjE1LTIyLzkzMTg1Mi5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E+MjMtMzAvOTMxOTUyLm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMjJGJ0ZmbkZeb0ZmbkZcYmxGZm4tRlA2Ji1GIzY4LUZZNiNROzI5LzkyMzUzOC5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E7MzAvOTIzNTM5Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTszMS85MjM1NDAubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNROzMyLzkyMzU0MS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E6MC85MjM1NDIubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNROjEvOTIzNTQzLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4xOS0yNi85MjU3MDkubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRJjI3LTI4RidGZm4tRlk2I1E+MzMtMzQvOTI5MjIyLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTsxOC85MzE0OTIubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUyM0YnRmZuRl5vRmZuRlxibEZmbi1GUDYmLUYjNigtRlk2I1E+MTYtMTgvOTMxNTAwLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTcvOTMyMDM0Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMjRGJ0ZmbkZeb0Zmbi1GWTYjUSM0MEYnRmZuLUZQNiYtRiM2Ki1GWTYjUTwwLTIvOTMxNDkxLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT0zLTEwLzkzMTIzNS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E+MTEtMTgvOTMyMjE0Lm1nbXQuc2tvbHRlY2gucnVGJ0ZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOUY5RmBwRmNwRmZuLUZQNiYtRiM2LC1GWTYjUSdub2RlMjVGJ0ZmbkZeb0ZmbkZmW21GZm4tRlA2Ji1GIzYyLUZZNiNRJjEyLTE1RidGZm4tRlk2I1E+MjYtMzMvOTI1ODgyLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTUvOTMxNDg5Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUSYxOC0xOUYnRmZuLUZZNiNRPjM2LTM4LzkzMTQ5MS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1EmMjAtMjVGJ0Zmbi1GWTYjUT4zNC0zNS85MzE4NzEubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUyNkYnRmZuRl5vRmZuRmZbbUZmbi1GUDYmLUYjNi4tRlk2I1E+MTYtMjMvOTI3Nzg2Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4zMi0zNi85MzE0ODgubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPjM3LTM4LzkzMTQ4OS5tZ210LnNrb2x0ZWNoLnJ1RidGZm4tRlk2I1E9OC0xNS85MzE0NDQubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPDAtNy85MzExOTQubWdtdC5za29sdGVjaC5ydUYnRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGZm4tRlA2Ji1GIzYsLUZZNiNRJ25vZGUyN0YnRmZuRl5vRmZuRmZbbUZmbi1GUDYmLUYjNi4tRlk2I1EkNC03RidGZm4tRlk2I1E+MTYtMTkvOTI1NzE0Lm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUTwwLTMvOTI1ODgyLm1nbXQuc2tvbHRlY2gucnVGJ0Zmbi1GWTYjUT4yMC0yNy85Mjg3NjAubWdtdC5za29sdGVjaC5ydUYnRmZuLUZZNiNRPjM2LTM4LzkzMTQ4OC5tZ210LnNrb2x0ZWNoLnJ1RidGW3BGXnBGOUY5RmBwRmNwRltwRl5wRjlGOUZgcEZjcEZbcEZecEY5RjlGYHBGY3BGW3BGXnBGOQ==">Nz03JlEmbm9kZTE2IlElZnJlZUYlUSMxNkYlNyNRPTgtMTUvOTMxMjIyLm1nbXQuc2tvbHRlY2gucnVGJTcmUSZub2RlMkYlUS5qb2ItZXhjbHVzaXZlRiVGJzckUT04LTE1LzkzMTYxMy5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtNy85MzIxMDYubWdtdC5za29sdGVjaC5ydUYlNyZRJm5vZGUzRiVGJkYnNyNRPTgtMTUvOTI1MTYwLm1nbXQuc2tvbHRlY2gucnVGJTcmUSZub2RlNEYlRixGJzckUT04LTE1LzkzMTk1MS5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtNy85MzE3MzIubWdtdC5za29sdGVjaC5ydUYlNyZRJm5vZGU1RiVGJkYnNyNRPTQtMTEvOTMxMjE4Lm1nbXQuc2tvbHRlY2gucnVGJTcmUSZub2RlNkYlRiZGJzcjUSFGJTcmUSZub2RlN0YlRixGJzckUT04LTE1LzkzMTgyOC5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtNy85MzE1MjMubWdtdC5za29sdGVjaC5ydUYlNyZRJm5vZGU4RiVGLEYnNyNRPTAtMTUvOTI3NjM5Lm1nbXQuc2tvbHRlY2gucnVGJTcmUSZub2RlOUYlRiZGJzcjUTwwLTcvOTMxNTg1Lm1nbXQuc2tvbHRlY2gucnVGJTcmUSdub2RlMTBGJUYmRic3I1E9OC0xNS85MzIwMzIubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUxMUYlRiZGJzcjUT04LTE1LzkzMjA3MS5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTEyRiVGLEYnNyRRPDAtNy85MzE2NTkubWdtdC5za29sdGVjaC5ydUYlUT04LTE1LzkzMjIxNi5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTEzRiVGLEYnNyRRPTgtMTUvOTMxODMzLm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMjEwNy5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE0RiVGLEYnNyRRPDAtNy85MzIxMDQubWdtdC5za29sdGVjaC5ydUYlUT04LTE1LzkzMTUyNC5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE1RiVGLEYnNyRRPDAtNy85MzIwNzAubWdtdC5za29sdGVjaC5ydUYlUT04LTE1LzkzMTUxMi5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE2RiVGLEYnNyRRPTgtMTUvOTMxMjM0Lm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMTc1Ni5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE3RiVGLEYnNyRRPTgtMTUvOTMxNDMxLm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMjE4Ni5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE4RiVGLEYnNyRRPTgtMTUvOTMxNjQ1Lm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMTIzNi5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTE5RiVGJlEjMzZGJTcoUTwwLTcvOTIzMTgzLm1nbXQuc2tvbHRlY2gucnVGJVE7MzQvOTIzNTM3Lm1nbXQuc2tvbHRlY2gucnVGJVE+MTYtMjAvOTMxNDk3Lm1nbXQuc2tvbHRlY2gucnVGJVE+MjktMzMvOTMxNTAwLm1nbXQuc2tvbHRlY2gucnVGJVE9OC0xNS85MzE3OTQubWdtdC5za29sdGVjaC5ydUYlUT4yMS0yOC85MzE5ODIubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyMEYlRiZGZXA3KlElOC0xNUYlUTsyNC85MjkyMjIubWdtdC5za29sdGVjaC5ydUYlUTwwLTYvOTMxNDk1Lm1nbXQuc2tvbHRlY2gucnVGJVE+MzItMzQvOTMxNDk3Lm1nbXQuc2tvbHRlY2gucnVGJVEjMjNGJVE+MjUtMzEvOTMxNzc5Lm1nbXQuc2tvbHRlY2gucnVGJVEiN0YlUT4xNi0yMi85MzE4MTcubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyMUYlRiZGZXA3KFE+MzItMzQvOTI5MjIyLm1nbXQuc2tvbHRlY2gucnVGJVE9OC0xNC85MzE0OTIubWdtdC5za29sdGVjaC5ydUYlUTszMS85MzE0OTUubWdtdC5za29sdGVjaC5ydUYlUTwwLTcvOTMxNzU1Lm1nbXQuc2tvbHRlY2gucnVGJVE+MTUtMjIvOTMxODUyLm1nbXQuc2tvbHRlY2gucnVGJVE+MjMtMzAvOTMxOTUyLm1nbXQuc2tvbHRlY2gucnVGJTcmUSdub2RlMjJGJUYmRmVwNyxROzI5LzkyMzUzOC5tZ210LnNrb2x0ZWNoLnJ1RiVROzMwLzkyMzUzOS5tZ210LnNrb2x0ZWNoLnJ1RiVROzMxLzkyMzU0MC5tZ210LnNrb2x0ZWNoLnJ1RiVROzMyLzkyMzU0MS5tZ210LnNrb2x0ZWNoLnJ1RiVROjAvOTIzNTQyLm1nbXQuc2tvbHRlY2gucnVGJVE6MS85MjM1NDMubWdtdC5za29sdGVjaC5ydUYlUT4xOS0yNi85MjU3MDkubWdtdC5za29sdGVjaC5ydUYlUSYyNy0yOEYlUT4zMy0zNC85MjkyMjIubWdtdC5za29sdGVjaC5ydUYlUTsxOC85MzE0OTIubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyM0YlRiZGZXA3JFE+MTYtMTgvOTMxNTAwLm1nbXQuc2tvbHRlY2gucnVGJVE8MC03LzkzMjAzNC5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTI0RiVGJlEjNDBGJTclUTwwLTIvOTMxNDkxLm1nbXQuc2tvbHRlY2gucnVGJVE9My0xMC85MzEyMzUubWdtdC5za29sdGVjaC5ydUYlUT4xMS0xOC85MzIyMTQubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyNUYlRiZGZXM3KVEmMTItMTVGJVE+MjYtMzMvOTI1ODgyLm1nbXQuc2tvbHRlY2gucnVGJVE8MC01LzkzMTQ4OS5tZ210LnNrb2x0ZWNoLnJ1RiVRJjE4LTE5RiVRPjM2LTM4LzkzMTQ5MS5tZ210LnNrb2x0ZWNoLnJ1RiVRJjIwLTI1RiVRPjM0LTM1LzkzMTg3MS5tZ210LnNrb2x0ZWNoLnJ1RiU3JlEnbm9kZTI2RiVGJkZlczcnUT4xNi0yMy85Mjc3ODYubWdtdC5za29sdGVjaC5ydUYlUT4zMi0zNi85MzE0ODgubWdtdC5za29sdGVjaC5ydUYlUT4zNy0zOC85MzE0ODkubWdtdC5za29sdGVjaC5ydUYlUT04LTE1LzkzMTQ0NC5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtNy85MzExOTQubWdtdC5za29sdGVjaC5ydUYlNyZRJ25vZGUyN0YlRiZGZXM3J1EkNC03RiVRPjE2LTE5LzkyNTcxNC5tZ210LnNrb2x0ZWNoLnJ1RiVRPDAtMy85MjU4ODIubWdtdC5za29sdGVjaC5ydUYlUT4yMC0yNy85Mjg3NjAubWdtdC5za29sdGVjaC5ydUYlUT4zNi0zOC85MzE0ODgubWdtdC5za29sdGVjaC5ydUYl</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEmbm9kZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUYjNiYtRiw2JVEhRidGL0YyLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0Y9RjlGVEZXRjk=">LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEmbm9kZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUYjNiYtRiw2JVEhRidGL0YyLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0Y9RjlGVEZXRjk=</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">2018-05-17  10:28:59
-node1   free  16  8-15/931222.mgmt.skoltech.ru
-node2   job-exclusive  16  8-15/931613.mgmt.skoltech.ru,0-7/932106.mgmt.skoltech.ru
-node3   free  16  8-15/925160.mgmt.skoltech.ru
-node4   job-exclusive  16  8-15/931951.mgmt.skoltech.ru,0-7/931732.mgmt.skoltech.ru
-node5   free  16  4-11/931218.mgmt.skoltech.ru
-node6   free  16  
-node7   job-exclusive  16  8-15/931828.mgmt.skoltech.ru,0-7/931523.mgmt.skoltech.ru
-node8   job-exclusive  16  0-15/927639.mgmt.skoltech.ru
-node9   free  16  0-7/931585.mgmt.skoltech.ru
-node10  free  16  8-15/932032.mgmt.skoltech.ru
-node11  free  16  8-15/932071.mgmt.skoltech.ru
-node12  job-exclusive  16  0-7/931659.mgmt.skoltech.ru,8-15/932216.mgmt.skoltech.ru
-node13  job-exclusive  16  8-15/931833.mgmt.skoltech.ru,0-7/932107.mgmt.skoltech.ru
-node14  job-exclusive  16  0-7/932104.mgmt.skoltech.ru,8-15/931524.mgmt.skoltech.ru
-node15  job-exclusive  16  0-7/932070.mgmt.skoltech.ru,8-15/931512.mgmt.skoltech.ru
-node16  job-exclusive  16  8-15/931234.mgmt.skoltech.ru,0-7/931756.mgmt.skoltech.ru
-node17  job-exclusive  16  8-15/931431.mgmt.skoltech.ru,0-7/932186.mgmt.skoltech.ru
-node18  job-exclusive  16  8-15/931645.mgmt.skoltech.ru,0-7/931236.mgmt.skoltech.ru
-node19  free  36  0-7/923183.mgmt.skoltech.ru,34/923537.mgmt.skoltech.ru,16-20/931497.mgmt.skoltech.ru,29-33/931500.mgmt.skoltech.ru,8-15/931794.mgmt.skoltech.ru,21-28/931982.mgmt.skoltech.ru
-node20  free  36  8-15,24/929222.mgmt.skoltech.ru,0-6/931495.mgmt.skoltech.ru,32-34/931497.mgmt.skoltech.ru,23,25-31/931779.mgmt.skoltech.ru,7,16-22/931817.mgmt.skoltech.ru
-node21  free  36  32-34/929222.mgmt.skoltech.ru,8-14/931492.mgmt.skoltech.ru,31/931495.mgmt.skoltech.ru,0-7/931755.mgmt.skoltech.ru,15-22/931852.mgmt.skoltech.ru,23-30/931952.mgmt.skoltech.ru
-node22  free  36  29/923538.mgmt.skoltech.ru,30/923539.mgmt.skoltech.ru,31/923540.mgmt.skoltech.ru,32/923541.mgmt.skoltech.ru,0/923542.mgmt.skoltech.ru,1/923543.mgmt.skoltech.ru,19-26/925709.mgmt.skoltech.ru,27-28,33-34/929222.mgmt.skoltech.ru,18/931492.mgmt.skoltech.ru
-node23  free  36  16-18/931500.mgmt.skoltech.ru,0-7/932034.mgmt.skoltech.ru
-node24  free  40  0-2/931491.mgmt.skoltech.ru,3-10/931235.mgmt.skoltech.ru,11-18/932214.mgmt.skoltech.ru
-node25  free  40  12-15,26-33/925882.mgmt.skoltech.ru,0-5/931489.mgmt.skoltech.ru,18-19,36-38/931491.mgmt.skoltech.ru,20-25,34-35/931871.mgmt.skoltech.ru
-node26  free  40  16-23/927786.mgmt.skoltech.ru,32-36/931488.mgmt.skoltech.ru,37-38/931489.mgmt.skoltech.ru,8-15/931444.mgmt.skoltech.ru,0-7/931194.mgmt.skoltech.ru
-node27  free  40  4-7,16-19/925714.mgmt.skoltech.ru,0-3/925882.mgmt.skoltech.ru,20-27/928760.mgmt.skoltech.ru,36-38/931488.mgmt.skoltech.ru</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">2019-04-20  20:25:44</Text-field>
 </Output>
 </Group>
 <Group labelreference="L257" drawlabel="true">
@@ -749,133 +744,56 @@ node27  free  40  4-7,16-19/925714.mgmt.skoltech.ru,0-3/925882.mgmt.skoltech.ru,
 </Font>jobs:=SSH[qstat]('user'=&quot;&quot;): # 'user'=&quot;&quot; for all users</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">2018-05-17  10:29:01</Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">931194   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node26   19:37        
-931222   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node1    14:24        
-931512   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node15   4:18         
-931585   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node9    2:58         
-931613   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    52:05        
-931659   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node12   1:29:22      
-931732   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    2:19         
-931756   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node16   1:45         
-931829   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931833   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node13   59:34        
-931880   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931881   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931908   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931909   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931951   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    38:12        
-931952   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node21   38:09        
-931989   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931990   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931991   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931992   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932027   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932028   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932029   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932030   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932032   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node10   31:34        
-932034   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node23   31:34        
-932071   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node11   21:38        
-932072   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932106   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    2            
-932107   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node13   2            
-932108   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932109   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932144   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932145   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932146   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932147   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932187   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932188   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932189   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932190   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932217   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932218   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932219   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932220   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932221   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932222   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932223   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932224   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932249   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932250   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932251   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-928760   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node27   20:17:59     
-931871   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node25   56:45        
-927639   BDOPV-F4_cryst_PBE-D3paw900_cg3       Andriy.Zhugayevych   16   R   batch    node8    1:01:10:42   
-932214   HMTTF_cryst_PBE-D3paw600_cg3          Andriy.Zhugayevych   8    R   fastio   node24   11:30        
-931218   USPEX24                               Artem.Samtsevich     8    R   batch    node5    52:49        
-931234   USPEX19                               Artem.Samtsevich     8    R   batch    node16   42:20        
-931235   USPEX25                               Artem.Samtsevich     8    R   batch    node24   52:49        
-931236   USPEX26                               Artem.Samtsevich     8    R   batch    node18   52:41        
-931431   USPEX26                               Artem.Samtsevich     8    R   batch    node17   40:58        
-931444   USPEX11                               Artem.Samtsevich     8    R   batch    node26   37:27        
-931470   USPEX17                               Artem.Samtsevich     8    Q   batch                          
-931471   USPEX23                               Artem.Samtsevich     8    Q   batch                          
-931523   USPEX12                               Artem.Samtsevich     8    R   batch    node7    21:38        
-931524   USPEX13                               Artem.Samtsevich     8    R   batch    node14   20:11        
-931525   USPEX27                               Artem.Samtsevich     8    Q   batch                          
-931600   USPEX6                                Artem.Samtsevich     8    Q   batch                          
-931644   USPEX22                               Artem.Samtsevich     8    Q   batch                          
-931645   USPEX18                               Artem.Samtsevich     8    R   batch    node18   1:23:25      
-931755   USPEX3                                Artem.Samtsevich     8    R   batch    node21   1:13:45      
-931794   USPEX6                                Artem.Samtsevich     8    R   batch    node19   1:13:45      
-931852   USPEX4                                Artem.Samtsevich     8    R   batch    node21   53:12        
-931941   USPEX23                               Artem.Samtsevich     8    Q   batch                          
-932026   USPEX9                                Artem.Samtsevich     8    Q   batch                          
-932070   USPEX8                                Artem.Samtsevich     8    R   batch    node15   26:13        
-932104   USPEX1                                Artem.Samtsevich     8    R   batch    node14   25:39        
-932143   USPEX21                               Artem.Samtsevich     8    Q   batch                          
-932186   USPEX33                               Artem.Samtsevich     8    R   batch    node17   5:57         
-932216   USPEX34                               Artem.Samtsevich     8    R   batch    node12   4:10         
-932271   USPEX1                                Artem.Samtsevich     8    Q   batch                          
-925882   LTP_sb4_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node27   1:15:23:53   
-929222   LTP_sa1_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node22   17:29:06     
-931779   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:17:22      
-931817   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:12:02      
-931828   HZ                                    Dong.Baojuan         8    R   batch    node7    1:01:57      
-931982   USPEX                                 Dong.Baojuan         8    R   batch    node19   43:57        
-925709   doSWsampling89.sh                     Maksim.Beketov       8    R   batch    node22   1:16:56:11   
-925714   doSWfibosampling89.sh                 Maksim.Beketov       8    R   batch    node27   1:16:53:52   
-931488   USPEX                                 Nikita.Rybin         8    R   batch    node27   2:16:16      
-931489   USPEX                                 Nikita.Rybin         8    R   batch    node26   2:16:16      
-931491   USPEX                                 Nikita.Rybin         8    R   batch    node25   2:16:16      
-931492   USPEX                                 Nikita.Rybin         8    R   batch    node22   2:16:16      
-931495   USPEX                                 Nikita.Rybin         8    R   batch    node21   2:16:16      
-931497   USPEX                                 Nikita.Rybin         8    R   batch    node20   2:16:16      
-931500   USPEX                                 Nikita.Rybin         8    R   batch    node19   2:15:06      
-923183   _pbs                                  Nikita.Tukachev      8    R   batch    node19   2:22:48:25   
-925160   _pbs                                  Nikita.Tukachev      8    R   batch    node3    1:20:48:01   
-927786   _pbs                                  Nikita.Tukachev      8    R   batch    node26   1:00:17:25   
-923537   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node19   2:17:43:59   
-923538   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
-923539   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
-923540   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
-923541   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:04   
-923542   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:35   
-923543   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:35   </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">2019-04-20  20:28:29</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             19334       AMG OPV3-Me_ a.zhugay PD       0:00      1 (Resources)
+             12942       AMG xtpce1.2 d.akseno  R 8-16:07:02      1 node-amg08
+             13964       AMG xvpce1.1 d.akseno  R 8-10:14:41      1 node-amg03
+             17428       AMG KTiPO4F. d.akseno  R 4-22:27:41      1 node-amg10
+             17429       AMG KTiPO4F. d.akseno  R 4-22:26:22      1 node-amg11
+             17741       AMG xfpce3Li d.akseno  R 3-13:17:28      1 node-amg05
+             18258       AMG xfpce3.2 d.akseno  R 3-09:13:19      1 node-amg06
+             18768       AMG Mn_V.nas   a.boev  R 2-04:30:08      1 node-amg12
+             19013       AMG LiNaCoPO d.akseno  R 1-06:49:17      1 node-amg09
+             19029       AMG LiNaCoPO d.akseno  R 1-05:15:02      1 node-amg02
+             19030       AMG LiNaCoPO d.akseno  R 1-04:06:59      1 node-amg01
+             19330       AMG OPV3-Me_ a.zhugay  R    1:53:47      1 node-amg04
+             19331       AMG OPV3-Me_ a.zhugay  R    1:53:32      1 node-amg13
+             19332       AMG OPV3-Me_ a.zhugay  R    1:53:17      1 node-amg14
+             19333       AMG OPV3-Me_ a.zhugay  R    1:41:09      1 node-amg07</Text-field>
 </Output>
 </Group>
 <Group labelreference="L255" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Submit job ('nodes' may be also a node name)</Text-field>
 <Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;skoltech&quot;);
-SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'mem'=3,'pmem'=0.5,'file'=40,'time'=1,'other'=&quot;,feature=avx&quot;,'queue'=&quot;fastio&quot;,'test');
+SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'mem'=3,'pmem'=0.5,'disk'=10,'file'=40,'time'=1,'other'=&quot;,feature=avx&quot;,'queue'=&quot;fastio&quot;,'test');
 SSH[Setup](&quot;cee&quot;);
 SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'time'=1/12,'queue'=&quot;AMG&quot;,'test');</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">qsub vasp/_pbs -N jobname -l nodes=1:ppn=4,mem=3gb,pmem=500mb,file=40gb,walltime=24:00:00,feature=avx -q fastio</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">qsub vasp/_pbs -N jobname -l nodes=1:ppn=4,mem=3gb,pmem=500mb,ddisk=10gb,file=40gb,walltime=24:00:00,feature=avx -q fastio</Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UWpxcXN1Yn52YXNwL19wYnN+LU5+am9ibmFtZX4tbH5ub2Rlcz0xOnBwbj00LG1lbT0zZ2IscG1lbT01MDBtYixmaWxlPTQwZ2Isd2FsbHRpbWU9MjQ6MDA6MDAsZmVhdHVyZT1hdnh+LXF+ZmFzdGlvNiI=</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UWVycXN1Yn52YXNwL19wYnN+LU5+am9ibmFtZX4tbH5ub2Rlcz0xOnBwbj00LG1lbT0zZ2IscG1lbT01MDBtYixkZGlzaz0xMGdiLGZpbGU9NDBnYix3YWxsdGltZT0yNDowMDowMCxmZWF0dXJlPWF2eH4tcX5mYXN0aW82Ig==</Equation></Text-field>
 </Output>
 <Output>
 <Text-field style="Line Printed Output" layout="Line Printed Output">vasp/_pbs -J jobname -n 4 -t 2:00:00 -p AMG</Text-field>
 </Output>
 <Output>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UUx2YXNwL19wYnN+LUp+am9ibmFtZX4tbn40fi10fjI6MDA6MDB+LXB+QU1HNiI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L285" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;magnus&quot;);
+SSH[qsub](&quot;gaussian/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'time'=1,'queue'=&quot;AMG&quot;,'test');</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">sbatch gaussian/_pbs -J jobname -c 4 -t 24:00:00 -p AMG</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UVhzYmF0Y2h+Z2F1c3NpYW4vX3Bic34tSn5qb2JuYW1lfi1jfjR+LXR+MjQ6MDA6MDB+LXB+QU1HNiI=</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L248" drawlabel="true">
@@ -887,16 +805,7 @@ SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'time'=1/12,'queue'=
 <Text-field style="Line Printed Output" layout="Line Printed Output">deleted 27967</Text-field>
 </Output>
 </Group>
-<Group labelreference="L247" drawlabel="true">
-<Input>
-<Text-field style="Text" layout="Normal">Block a node for a fixed amount of time</Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qsub](&quot;bin/infloop.pbs&quot;,&quot;&quot;,'nodes'=&quot;node15&quot;,'ppn'=8,'mem'=0,'pmem'=0,'time'=1/12);</Text-field>
-</Input>
-<Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">USsyNDQ1MS5tZ210NiI=</Equation></Text-field>
-</Output>
-</Group>
-<Group labelreference="L260" drawlabel="true">
+<Group labelreference="L283" drawlabel="true">
 <Input>
 <Text-field prompt="&gt; " style="Maple Input" layout="Normal">nnp:=SSH[Setup]('nnp');</Text-field>
 </Input>
@@ -905,6 +814,60 @@ SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'time'=1/12,'queue'=
 </Output>
 </Group>
 <Group labelreference="L185" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title>
+<Text-field style="Heading 1" layout="Heading 1">Block a node</Text-field></Title>
+<Group labelreference="L284" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;cee&quot;);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L277" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qstat]():</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output"> 235738  As_bilayer37_B3LYP-D3a3p_em  2-10:56:29  R  1  16  AMG  node-amg06 
+ 235737  As_molec8-a_N_CCSDa3p_em     2-10:59:26  R  1  32  AMG  node-amg04 
+ 235794  infloop                            0:05  R  1  16  AMG  node-amg03 
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L280" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Block a node for a fixed amount of time</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qsub](&quot;bin/infloop.pbs&quot;,&quot;infloop&quot;,'nodes'=<Font opaque="true" background="[255,255,153]">&quot;node-amg03&quot;</Font>,'ppn'=16,'time'=1/24,test);</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">bin/infloop.pbs -J infloop -n 16 -N node-amg03 -t 1:00:00</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UVpiaW4vaW5mbG9vcC5wYnN+LUp+aW5mbG9vcH4tbn4xNn4tTn5ub2RlLWFtZzAzfi10fjE6MDA6MDA2Ig==</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L279" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Block a node on SLURM</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[run](&quot;sbatch -J infloop -t<Font opaque="true" background="[255,255,153]"> 1:</Font>00:00 --nodelist<Font opaque="true" background="[255,255,153]">=node-amg03 </Font>~/bin/infloop.sh&quot;);</Text-field>
+</Input>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UTtTdWJtaXR0ZWR+YmF0Y2h+am9ifjIzNjAzMDYi</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L281" drawlabel="true">
+<Input>
+<Text-field style="Text" layout="Normal">Release the node</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qdel](235736);</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">deleted 235736</Text-field>
+</Output>
+</Group>
+<Group labelreference="L275" drawlabel="true">
 <Input>
 <Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
 </Input>

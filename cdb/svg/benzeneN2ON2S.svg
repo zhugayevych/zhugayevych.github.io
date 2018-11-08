@@ -26,6 +26,7 @@ text.S { fill:rgb(178,178,0); stroke:rgb(178,178,0) }
 <line x1='65.3' y1='71.4' x2='86.7' y2='104.9' />
 <line x1='86.7' y1='104.9' x2='65.7' y2='138.1' />
 <line x1='24.0' y1='138.1' x2='3.0' y2='104.9' />
+<circle cx='44.85' cy='104.9' r='27' fill='none'/>
 </g>
 <g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
 </g>

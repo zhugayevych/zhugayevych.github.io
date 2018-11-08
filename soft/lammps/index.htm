@@ -1,24 +1,21 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
 <title>LAMMPS</title>
-<style type="text/css">
-a.h         { color: white; font-family: monospace; text-decoration: none }
-a.h:hover   { color: yellow }
-</style>
 </head>
 <body>
-<p><span style="background-color: lightgray">
+<p><span class="h">
  <a class="h" href="./">F</a>
  <a class="h" href="file:///C:/Sci/lammps/">P</a>
  <a class="h" href="../../../Sys/Software/lammps/">R</a>
  <a class="h" href="../../../Sci/MS/_comp/lammps/">S</a></span>
  &nbsp;
  <a href="http://lammps.sandia.gov">website</a>,
- discussed version: 20151215</p>
+ discussed version: 7 Aug 2019</p>
 
-<p><dfn>Credits</dfn>: Sergey Matveev (installation)</p>
+<p class="si">Credits: Sergey Matveev and Victor Vysotskiy (installation, scripts)</p>
 
 <h2>Installation: Linux</h2>
 <ul>
@@ -27,8 +24,11 @@ a.h:hover   { color: yellow }
  Here are my Makefiles: <a href="Makefile_for_serial">for serial run</a>.</li></li>
 <li>Alternatively you may use compiled binaries from <a href="http://rpm.lammps.org">RPM Repository</a>.</li>
 <li>Keep potentials in a common directory, e.g. <code>~/lammps/_res</code>.</li>
-<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission script: <a href="_pbs">here</a>.
- To submit a job run <code>qsub lammps/_pbs -l nodes=1:ppn=4 -N test1</code></li>
+<li>Job submission scripts:
+ <a href="_pbs_magnus">Magnus cluster</a>,
+ <a href="_pbs_pardus">Pardus cluster</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub lammps/_pbs -N test1 -l nodes=1:ppn=4,walltime=24:00:00 -q batch</code></li>
+<li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -n 16 -t 24:00:00 lammps/_pbs</code></li>
 <li>Sample input files: <a href="test1.lam">lam</a>, <a href="test1.inp">inp</a> (modify path to potential parameter files).</li>
 </ul>
 

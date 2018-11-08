@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../doit.css">
+<title>Do it after Lecture on Multireference methods</title>
+</head>
+<body>
+<p class="topic">Topic: static correlations, MCSCF, CASSCF</p>
+<p class="note">Download <a href="Rec12_MR.zip">these files</a></p>
+
+<h2>Practice</h2>
+<ul>
+<li>Static correlations in O2 molecule <var>[O2]</var>
+ <ul>
+ <li>Run RHF for singlet and check for stability</li>
+ <li>Correct the singlet by <code>stable(opt)</code> and look for spin contamination</li>
+ <li>Show that the triplet is ground state</li>
+ <li>Do CASSCF for singlet and triplet and analyze the wavefunction [<a href="res/Morrill98.pdf">Morrill1998</a>] (use also RHF MOs to see orbital relaxation)</li>
+ <li>Do CASSCF for excited singlet and observe mor symmetric MOs for ground state singlet</li>
+ <li>Understand notations for molecular terms [<a href="https://en.wikipedia.org/wiki/Molecular_term_symbol">Wikipedia</a>]</li>
+ <li>Analyze results in terms of 2c2e UVX model</li>
+ <li>Compare state specific and state average CASSCF</li>
+ <li>Compare with XMCQDPT2 (accuracy vs time)</li>
+ </ul></li>
+<li>Static correlations: Explain the electronic structure of the twisted ethylene and understand the rotation around C-C bond <var>[ethylene]</var>
+ <ul>
+ <li>Optimize geometry of twisted ethylene using CI method (<code>OPEN(2,2) SINGLET SYMMETRY</code>)</li>
+ <li>Is it a saddle point?</li>
+ <li>Explain the electronic structure</li>
+ <li>Compare with RHF and UHF calculations (single point) and explain the results (e.g. why UHF gives lower energy than CI)</li>
+ <li>Is there a spin contamination in UHF calculations?</li>
+ <li>Compare with <code>C.I.=2</code> calculations and explain the difference</li>
+ <li>Look into nonsinglet states</li>
+ <li>Compare differences </li>
+ <li>Optimize geometry of planar ethylene using CI method (<code>C.I.=2 SINGLET SYMMETRY</code>)</li>
+ <li>Compare with <code>OPEN(2,2)</code> calculations (single point) and explain the difference</li>
+ <li>Compare rotation barrier for CI, RHF, and UHF</li>
+ <li>Rationalize bond lengths for planar and twisted conformations</li>
+ <li>Build relaxed PES for rotation imposing D2 symmetry</li>
+ <li>Build the same PES for triplet and excited singlet and discuss photoisomerization</li>
+ <li>Optimize geometry for triplet and excited singlet states</li>
+ <li>Compare S0 and S1 states at S1 geometry and discuss internal conversion</li>
+ <li>Look for NO occupancies in planar conformation (<code>C.I.=7 AUX</code>)</li>
+ <li>For planar conformation, which energy is a priori more accurate in semiempirical approaches RHF or CI?</li>
+ </ul></li>
+<li>Static correlations in Li4 molecule <var>[Li4]</var>
+ <ul>
+ <li>Determine all states for which tetrahedral Li4 molecule is stable</li>
+ <li>Compare electronic structure of tetrahedral Li4 molecule with 4c4e tetrahedral model</li>
+ <li>Determine all states for which square Li4 molecule is stable</li>
+ <li>Compare electronic structure of square Li4 molecule with 4c4e square model</li>
+ <li>Determine the lowest energy conformer for each spin and charge state and calculate its energy relative to fully relaxed singlet</li>
+ </ul></li>
+<li>Static correlations in transition metal complexes <var>[Fe]</var></li>
+<li>Orbital relaxation: Explain Hund's rule [<a href="res/Oyamada10.pdf">Oyamada2010</a>]</li>
+</ul>
+
+<h2>Reading</h2>
+<ul>
+<li>Jensen 4.6-4.7</li>
+<li>Cramer 7.2-7.4</li>
+<li>Szabo 4.5</li>
+</ul>
+
+<h2>Advanced level: transition metal coordination complexes</h2>
+<ul>
+<li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Coordination_complex">Coordination complex</a></li>
+<li>MOPAC manual: <a href="http://openmopac.net/manual/Transition_metal_complexes.html">Transition metal complexes</a></li>
+<li>F Weinhold, C Landis, Valency and bonding: a natural bond orbital donor-acceptor perspective (CUP, 2005), chapter 4</li>
+<li>The Chemical Bond: Chemical Bonding Across the Periodic Table, ed G Frenking, S Shaik (Wiley, 2014), chapters 7,8</li>
+<li>I B Bersuker, Electronic Structure and Properties of Transition Metal Compounds: Introduction to the Theory (Wiley, 2010), 2ed</li>
+<li>T A Albright, J K Burdett, M-H Whangbo, Orbital interactions in chemistry (Wiley, 2013), 2ed, chapters 15,16</li>
+</ul>
+
+</body>
+</html>

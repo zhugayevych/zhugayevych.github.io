@@ -4,7 +4,7 @@
 ! See technical details in exam_rwf.mw Maple worksheet of MolMod package
 !
 ! Andriy Zhugayevych, azh@ukr.net, www.zhugayevych.me
-! created 17.08.2011, modified 25.01.2015
+! created 17.08.2011, modified 15.10.2019
 !
 ! Many thanks for detected bugs to: Chern Chuang
 
@@ -24,7 +24,8 @@ if (count/=3) then
  print *,"Examples of numerical codes (see Programmer's Reference):"
  print *," 522 - alpha and beta eigenvalues,"
  print *," 524/526 - alpha/beta eigenvectors real part, 525/527 - imaginary part,"
- print *," 603 - density matrices, 633 - transition density."
+ print *," 603 - density matrices, 633 - transition density,"
+ print *," 637 - NO eigenvalues and eigenvectors."
  print *,"Recognized text codes:"
  print *," s1e(514),  h1e(515), evl(522), evla(522), evlb(522),"
  print *," evc(524), evca(524), evcb(526), rho(528), rhoa(528), rhob(530),"

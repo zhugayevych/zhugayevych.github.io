@@ -1,0 +1,5 @@
+#!/bin/bash
+cd exchange
+ps -f -Csparsediag > pid1.txt
+../ALPS/bin/sparsediag job.xml > output.txt 2>&1 &
+ps -f -Csparsediag > pid2.txt

@@ -1,0 +1,14 @@
+#!/bin/bash   
+#PBS -N abinit_test
+#PBS -l walltime=3:00:00
+#PBS -l nodes=1:ppn=8
+#PBS -r n
+#PBS -j eo
+#PBS -m bea
+cd $PBS_O_WORKDIR
+
+module load  Compilers/Intel/psxe_2016.4   ScriptLang/python/2.7u2i QCh/ABINIT/8.6.1/psxe2016.4
+
+
+#Basic run:
+mpirun  abinit <test.files >log
