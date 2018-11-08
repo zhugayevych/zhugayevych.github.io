@@ -27,7 +27,7 @@ a.h:hover   { color: yellow }
 <li>Example of Gaussian job submission using <a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a>:
 <ol>
 <li>Submission script: <a href="_pbs09">example for G09</a>, <a href="_pbs16">example for G16</a>, <a href="_pbs_SLURM">example for SLURM</a></li>
-<li>Submission command: <code>qsub gaussian/_pbs -l nodes=1:ppn=8:mpi -N example</code></li>
+<li>Submission command: <code>qsub gaussian/_pbs -N example -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
 <li><a href="example.gau">Gaussian input file</a></li>
 </ol></li>
 <li>Example of Gaussian run script without PBS: <a href="_run">example</a></li>
