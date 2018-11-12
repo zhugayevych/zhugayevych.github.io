@@ -36,6 +36,23 @@ Windows Registry Editor Version 5.00
 
 
 
+[HKEY_CURRENT_USER\Software\Classes\.css]
+@="azh.css"
+
+[HKEY_CURRENT_USER\Software\Classes\azh.css]
+
+[HKEY_CURRENT_USER\Software\Classes\azh.css\DefaultIcon]
+@="C:\\Sys\\ico\\css.ico"
+
+[HKEY_CURRENT_USER\Software\Classes\azh.css\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\azh.css\shell\open]
+
+[HKEY_CURRENT_USER\Software\Classes\azh.css\shell\open\command]
+@="C:\\Sci\\PSPad\\PSPad.exe %1"
+
+
+
 [HKEY_CURRENT_USER\Software\Classes\.dat]
 @="azh.dat"
 
