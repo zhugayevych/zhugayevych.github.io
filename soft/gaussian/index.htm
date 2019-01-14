@@ -26,7 +26,7 @@ a.h:hover   { color: yellow }
 <li>Locate executables, edit your user initialization file, create <code>gaussian</code> directory, and learn how to submit a job.</li>
 <li>Example of Gaussian job submission using <a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a>:
 <ol>
-<li>Submission script: <a href="_pbs09">example for G09</a>, <a href="_pbs16">example for G16</a>, <a href="_pbs_SLURM">example for SLURM</a></li>
+<li>Submission scripts: for TORQUE/MOAB (<a href="_pbs09_MOAB">G09</a>, <a href="_pbs16_MOAB">G16</a>), for SLURM (<a href="_pbs09_SLURM">G09</a>, <a href="_pbs16_SLURM">G16</a>)</li>
 <li>Submission command: <code>qsub gaussian/_pbs -N example -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
 <li><a href="example.gau">Gaussian input file</a></li>
 </ol></li>

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+jobname=
+ncores=16
+nnodes=1
+walltime=24:00:00
+queue=AMG
+
+while getopts :J:t: opt; do
+ case $opt in
+  J) jobname=$OPTARG;;
+  t) walltime=$OPTARG;;
+  ?) echo "Invalid option: -$OPTARG"
+     echo "Usage: _pbs [-J jobname] [-t walltime]"
+     exit;;
+ esac
+done
+
+if [ "$jobname" == "" ];  then echo "Invalid jobname: provide nonempty job name"; exit; fi
+
+sbatch -J $jobname -c $ncores -N $nnodes -t $walltime -p $queue /opt/g16/A03/gaussian16
