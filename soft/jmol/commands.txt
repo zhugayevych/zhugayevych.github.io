@@ -4,7 +4,6 @@ mo fill nomesh
 mo resolution 10
 isosurface resolution 8 color range all color translucent molecular map mep
 isosurface resolution 20 color range all colorscheme @{color("red" "blue" 200,true)} color translucent molecular map mep
-set autobond off
-spacefill 0.03
+set autobond off; spacefill 0.03
 write XYZ filename
 moveto 0 0 1 0 90; #view from right
