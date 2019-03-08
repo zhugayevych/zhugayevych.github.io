@@ -1,0 +1,29 @@
+
+./command
+
+ls
+
+env
+for bash: export <name>=<value>
+for csh:  setenv <name> <value>
+
+lpoptions -d
+lpstat -p [-d]
+
+qstat
+qsub <filename>
+qdel <jobnumber>
+quota
+pbsnodes, ~erb/bin/nodes, ~erb/bin/freezinc
+
+ps
+nohup
+command &    --- run command in background
+
+passwd
+
+source bashscript &
+
+dd bs=1 skip=60 count=12 if=inputfile of=outputfile     --- extract 12 bytes starting from 61st byte
+
+nice

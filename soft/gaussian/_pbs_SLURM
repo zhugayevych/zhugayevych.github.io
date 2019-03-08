@@ -25,4 +25,4 @@ if [ "$jobname" == "" ];  then echo "Invalid jobname: provide nonempty job name"
 if [ "$nnodes" -ne "1" ]; then echo "Invalid nnodes: only 1 node can be requested"; exit; fi
 if [ "$queue" != "AMG" ]; then echo "Invalid queue: only AMG queue is available"; exit; fi
 
-sbatch -J $jobname -c $ncores -N $nnodes -t $walltime -p $queue /opt/g16/A03/gaussian16
+sbatch -J $jobname -c $ncores -N $nnodes -t $walltime -p $queue /opt/cms/q-ch/gaussian16

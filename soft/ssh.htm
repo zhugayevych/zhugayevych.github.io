@@ -14,8 +14,8 @@
 <ol>
 <li>Determine <code>name@host</code> for the remote machine (use <code>ipconfig</code> for Windows and <code>ifconfig</code> for Linux)</li>
 <li>Using <a href="C:/Sys/putty/puttygen.exe">puttygen</a> utility generate a pair of private and public keys,
- saving the private key locally and the public key on the remote machine in <code>~/.ssh/authorized_keys</code> file in the following format:
- <br><code>ssh-rsa HERE_IS_THE_GENERATED_KEY_FOLLOWED_BY_NEWLINE_CHARACTER</code></li>
+ saving the private key (ppk-file) locally and appending the public key to <code>~/.ssh/authorized_keys</code> file on the remote machine in the following format:
+ <br><code>ssh-rsa HERE_IS_THE_GENERATED_KEY_FOLLOWED_BY_NEWLINE_CHARACTER name@host</code></li>
 <li>Note that PuTTY does not recognize <code>PATH</code> environment variable when looking for a private key,
  but you can use <code>%HOMEPATH%</code> and similar constructions in Windows batch files</li>
 <li>Some programs require OpenSSH format of private key, which can also be created by puttygen utility</li>

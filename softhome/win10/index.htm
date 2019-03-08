@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Windows 10</title>
+</head>
+<body>
+<p><span class="h">
+ <a class="h" href="./">F</a></span>
+ &nbsp;
+ <a href="http://windows.microsoft.com/en-US/windows">website</a></p>
+
+<h2>Built-in applications</h2>
+<p>To uninstall them login to a desired account, lunch Windows Power Shell, and run <code>Get-AppxPackage *name* | Remove-AppxPackage</code>, where name is</p>
+<ul>
+<li>Calendar and Mail &ndash; windowscommunicationsapps</li>
+<li>Groove Music &ndash; zunemusic</li>
+<li>Maps &ndash; windowsmaps</li>
+<li>Money &ndash; bingfinance</li>
+<li>Movies & TV &ndash; zunevideo</li>
+<li>News &ndash; bingnews</li>
+<li>People &ndash; people</li>
+<li>Phone &ndash; phone</li>
+<li>Photos &ndash; photos</li>
+<li>Sports &ndash; bingsports</li>
+<li>Weather &ndash; bingweather</li>
+<li>Xbox &ndash; xboxapp</li>
+</ul>
+
+<h2>Battery saving</h2>
+<ul>
+<li>To investigate performance run <code>powercfg /option /output filename.html</code>, where option is one of batteryreport, energy, sleepstudy.</li>
+<li>In case of sleep problems, to disable Connected Standby set HKLM\SYSTEM\CurrentControlSet\Control\Power\CsEnabled to 0.</li>
+<li>Common battery drainers:
+ <ul>
+ <li>Intel SST Audio Device &ndash; update driver, if doesn't help then use <a href="http://auto-mute.com/">Auto Mute</a> utility</li>
+ <li>Intel AVStream Camera &ndash; update driver, if doesn't help then don't know</li>
+ </ul></li>
+</ul>
+
+<h2>Tips and tricks</h2>
+<p>Changing language for single-language version (<a href="http://stackoverflow.com/questions/31698742/how-to-change-windows-10-interface-language-on-single-language-version">original post</a>):
+<ol>
+<li>Determine the name of your current language pack: <code>dism /online /get-packages</code>, e.g. <code>Microsoft-Windows-Client-LanguagePack-Package~31bf3856ad364e35~x86~ru-RU~10.0.14393.0</code></li>
+<li>Download the required language pack, e.g. <code>lp_d17ad4e6831135935760d21e2c8689b667430d0b.cab</code></li>
+<li>Install it: <code>dism /online /add-package /packagepath:C:\path_to_cabfile\cabfile.cab</code> then <code>dism /online /get-packages</code></li>
+<li>Remove the current pack: <code>dism /online /remove-package /packagename:current_pack_name</code></li>
+</ol>
+
+</body>
+</html>
