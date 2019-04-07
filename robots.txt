@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /_misc/
+Disallow: /_tmp/
+Disallow: /edu/CC/res/
+Disallow: /edu/Materials/res/
