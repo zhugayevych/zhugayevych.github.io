@@ -18,18 +18,19 @@ a.h:hover   { color: yellow }
  </span>
  &nbsp;
  <a href="http://www.gaussian.com">website</a>,
- discussed versions: G09 D.01, G16 A.03</p>
+ discussed version: G16 A.03</p>
+
+<p><dfn>Credits</dfn>: Sergey Matveev and Victor Vysotskiy (installation, scripts)</p>
 
 <h2>Installation: Linux</h2>
 <ul>
 <li>...</li>
 <li>Locate executables, edit your user initialization file, create <code>gaussian</code> directory, and learn how to submit a job.</li>
-<li>Example of Gaussian job submission using <a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a>:
-<ol>
-<li>Submission scripts: for TORQUE/MOAB (<a href="_pbs09_MOAB">G09</a>, <a href="_pbs16_MOAB">G16</a>), for SLURM (<a href="_pbs09_SLURM">G09</a>, <a href="_pbs16_SLURM">G16</a>)</li>
-<li>Submission command: <code>qsub gaussian/_pbs -N example -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
-<li><a href="example.gau">Gaussian input file</a></li>
-</ol></li>
+<li>Job submission scripts:
+ <a href="_pbs_magnus">Magnus cluster</a> (it calls <a href="gaussian16">this script</a>),
+ <a href="_pbs_pardus">Pardus cluster</a> (<a href="_pbs_pardus_Linda">with Linda</a>, <a href="_pbs_pardus_v09">version 09</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub gaussian/_pbs -N test1 -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
+<li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>vasp/_pbs -J test1 -n 8 -t 12:00:00</code></li>
 <li>Example of Gaussian run script without PBS: <a href="_run">example</a></li>
 </ul>
 

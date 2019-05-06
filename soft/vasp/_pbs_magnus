@@ -27,21 +27,12 @@ if [ "$jobname" == "" ];  then echo "Invalid jobname: provide nonempty job name"
 if [ "$nnodes" -ne "1" ]; then echo "Invalid nnodes: only 1 node can be requested"; exit; fi
 if [ "$queue" != "AMG" ]; then echo "Invalid queue: only AMG queue is available"; exit; fi
 
-
-module add prun/1.0
-module add intel/16.0.2.181
-module add impi/5.1.3.181
-
-#rm -rf /scratch/vasp/$1
-#cp -r ~/vasp/$1 ~/_scratch/vasp/
-#cd ~/_scratch/vasp/$1/
-
-#sbatch -J $jobname -n $ncores -N $nnodes -t $walltime -p $queue /opt/cms/q-ch/vasp/5.4.4.16052018/bin/vasp_std --exclude=node-amg03
+#sbatch -J $jobname -c $ncores -N $nnodes -t $walltime -p $queue /opt/cms/q-ch/vasp/5.4.4.16052018/bin/vasp_std --exclude=node-amg03
 
 case $prog in
- M) sbatch -J $jobname -n $ncores -N $nnodes -t $walltime -p $queue /opt/cms/q-ch/vasp/5.4.4.16052018/bin/vasp_std;;
- G) sbatch -J $jobname -n $ncores -N $nnodes -t $walltime -p $queue /opt/cms/q-ch/vasp/5.4.4.16052018/bin/vasp_gam;;
- N) sbatch -J $jobname -n $ncores -N $nnodes -t $walltime -p $queue /opt/cms/q-ch/vasp/5.4.4.16052018/bin/vasp_ncl;;
+ M) sbatch -J $jobname -c $ncores -N $nnodes -t $walltime -p $queue ~/vasp/vasp544;;
+ G) sbatch -J $jobname -c $ncores -N $nnodes -t $walltime -p $queue /opt/cms/q-ch/vasp/5.4.4.16052018/bin/vasp_gam;;
+ N) sbatch -J $jobname -c $ncores -N $nnodes -t $walltime -p $queue /opt/cms/q-ch/vasp/5.4.4.16052018/bin/vasp_ncl;;
  *) echo "Invalid prog=$prog, can be one of [M,G,N]"
     exit;;
 esac

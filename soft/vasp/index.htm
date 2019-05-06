@@ -17,18 +17,21 @@ a.h:hover   { color: yellow }
  <a class="h" href="../../../Sci/MS/_comp/vasp/">S</a></span>
  &nbsp;
  <a href="http://www.vasp.at">Website</a>,
- discussed version: 5.4.1</p>
+ discussed version: 5.4.4</p>
 
-<p><dfn>Credits</dfn>: Sergey Matveev (installation, scripts), Dmitry Aksenov (guidelines, scripts)</p>
+<p><dfn>Credits</dfn>: Sergey Matveev and Victor Vysotskiy (installation, scripts), Dmitry Aksenov (guidelines, scripts)</p>
 
 <h2>Installation</h2>
 <ul>
 <li>Follow VASP instructions. Here are our <a href="makefiles.zip">makefiles</a>.</li>
 <li>To generate input files locally unzip pseudopotentials to a desired program folder, I use <code>C:/Sci/vasp</code>.
  Note that individual files may be compressed &ndash; decompress them.</li>
-<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission scripts:
- <a href="_pbs_skoltech">Skoltech cluster</a> (<a href="_pbs_alt">alternative</a>), <a href="_pbs_cee">CEE cluster</a>.
- To submit a job run <code>qsub vasp/_pbs -N test1</code></li>
+<li>Job submission scripts:
+ <a href="_pbs_magnus">Magnus cluster</a> (it calls <a href="vasp544">this script</a>),
+ <a href="_pbs_pardus">Pardus cluster</a>,
+ <a href="_pbs_arkuda">Arkuda cluster</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub vasp/_pbs -N test1</code></li>
+<li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>vasp/_pbs -J test1 -n 8 -t 12:00:00</code></li>
 <li>Sample input files: <a href="test1.zip">zip</a>.</li>
 </ul>
 
