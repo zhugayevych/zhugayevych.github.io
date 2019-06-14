@@ -10,13 +10,13 @@
 
 <p>Methods are encoded in the following format: <code>PMETHODparameters</code>, where
  <ul>
- <li><code>P</code> &ndash; optional capital letter denoting SCF type: 'R' for restricted and 'U' for unrestricted (spin polarised) SCF</li>
+ <li><code>P</code> &ndash; optional capital letter denoting SCF type: 'R' for restricted and 'U' for unrestricted (spin polarized) SCF</li>
  <li><code>METHOD</code> &ndash; capitalized name of the method itself (also allowed are digits,+,-)</li>
  <li><code>parameters</code> &ndash; parameters (basis set, force field etc), must start with a small letter</li>
  </ul></p>
 
 <h2>Method</h2>
-<p>Name of the method itself includes core method optinally followed by a suffix separated by '-'. Examples of methods
+<p>Name of the method itself includes core method optionally followed by a suffix separated by '-'. Examples of methods
 <ul>
 <li>Empirical potentials
  <ul>
@@ -71,13 +71,15 @@ Supported suffixes are
 <p>Possible values of the suffix for gaussian basis sets are interpreted as follows.
  A letter may indicate additional functions: "p" polarization orbitals, "a" diffuse orbitals.
  Immediately after that letter the description may follow.
- The decription of polarization orbitals follows the Gaussian notations with commas and parentheses omitted,
+ The description of polarization orbitals follows the Gaussian notations with commas and parentheses omitted,
  e.g. "3df2pd" means 3d plus 1f orbitals for nonhydrogens and 2 sp-orbitals plus 1 d-orbital on hydrogens.
  The absence of the description implies a default polarization basis ("p" for smaller one, "pp" for larger one), e.g. "p2p"="p2pd", "p2pp"="p2pdp".
  The description of diffuse orbitals is currently limited to two cases:
  absence of the description means a diffusion orbital on nonhydrogens, an additional "a" means a diffusion orbital on all atoms.
  See also <a href="http://gaussian.com/basissets/">Gaussian manual</a>.</p>
-<p>Possible values of k-grid are currently include Gamma-centered grids in the format "Gn1n2n3", where 1&lt;ni&lt;10 denotes number of k-points in i-th directions. Repetitive "ni" or "ni" fixed by symmetry should not be included, e.g. "G5" for isotropic 2D systems means "G551".</p>
+<p>Possible values of k-grid are currently include Gamma-centered grids in the format "Gn1n2n3",
+ where 1&lt;ni&lt;10 denotes number of k-points in i-th directions.
+ Repetitive "ni" or "ni" fixed by symmetry should not be included, e.g. "G5" for isotropic 2D systems means "G551".</p>
 
 </body>
 </html>
