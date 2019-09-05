@@ -1,0 +1,17 @@
+# predicted assuming perfect octahedral coordination with ionic radii 0.745 for Ti4+ and 1.26 for O2-
+data_nolabel
+_symmetry_space_group_name_H-M   I41/amd:1
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_length_a                   4.01
+_cell_length_b                   4.01
+_cell_length_c                   8.02
+loop_
+_atom_site_type_symbol
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ti  4a  0  0  0
+O   8e  0  0  .25

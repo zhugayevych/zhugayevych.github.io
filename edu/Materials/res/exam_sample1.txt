@@ -1,0 +1,53 @@
+Practical part of exam by Andriy Zhugayevych
+
+1. See exam_sample1.cif
+# optimized by PBEpaw400
+data_nolabel
+_symmetry_space_group_name_H-M  I41/amd:1
+_cell_angle_alpha  90
+_cell_angle_beta   90
+_cell_angle_gamma  90
+_cell_length_a     3.827
+_cell_length_b     3.827
+_cell_length_c     9.670
+loop_
+_atom_site_type_symbol
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+ Ti  4a  0  0  0
+ O   8e  0  0  .2074
+
+2. I41/amd; a,c,z(O)
+
+3. Anatase, it is prototype, C5, tI12
+
+4. The bonding is ionic-covalent. According to ionic bonding, oxygens form fcc lattice and Ti occupy half of octahedral voids. According to covalent bonding, under crystal symmetry restrictions, three O-Ti bonds emerging from oxygen repulse each other increasing octahedral angles to 102 deg.
+
+5. See exam_sample1_predicted.cif
+# predicted assuming perfect octahedral coordination with ionic radii 0.745 for Ti4+ and 1.26 for O2-
+data_nolabel
+_symmetry_space_group_name_H-M   I41/amd:1
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_length_a                   4.01
+_cell_length_b                   4.01
+_cell_length_c                   8.02
+loop_
+_atom_site_type_symbol
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Ti  4a  0  0  0
+O   8e  0  0  .25
+
+Comparison: 2 predicted Ti-O bonds are in perfect agreement with the DFT structure (2.01 Ao), whereas another 4 are slightly shorter (1.96 Ao). Distortion of octahedral angles has been discussed above.
+
+6. Under ambient conditions, the lowest energy TiO2 polymorph is rutile, but anatase readily appears under some processing conditions.
+
+7. It is wide-gap semiconductor.
+
+8. Because of its porous structure with continuous ion-diffusion network, TiO2 can be used as electrode in Li-ion batteries (as anode because of low electrode potential of Ti reduction).
