@@ -57,7 +57,7 @@ a.h:hover   { color: yellow }
 <li>Start with good CHGCAR, e.g. from spin nonpolarized calculations, small k-grid etc.
  If needed correct unit cell parameters in CHGCAR to match POSCAR otherwise VASP ignores it.
  Alternatively you can set the grid appropriately</li>
-<li><a href="http://cms.mpi.univie.ac.at/vasp/vasp/ALGO_tag.html">Change algorithm</a>: <code>ALGO=Fast</code> (KFeSO4F)</li>
+<li><a href="http://cms.mpi.univie.ac.at/vasp/vasp/ALGO_tag.html">Change algorithm</a>: <code>ALGO=Fast</code> is reasonable default choice for insulators (KFeSO4F)</li>
 <li><a href="http://cms.mpi.univie.ac.at/vasp/vasp/Mixing_tags_IMIX_INIMIX_MAXMIX_AMIX_BMIX_AMIX_MAG_BMIX_MAG_AMIN_MIXPRE_WC.html">Change density mixing</a> (LiFePO4 by <a href="http://materialsproject.org">materialsproject</a>)</li>
 <li><a href="http://cms.mpi.univie.ac.at/vasp/vasp/NELM_NELMIN_NELMDL_tag.html">Do non-SCF steps</a>: <code>NELMDL=-9</code> (usually a number from -6 till -12)</li>
 <li>Set <code>LMIXMAX=4</code> (or even 6 for f-elements) for LDA-U calculations, see details <a href="http://cms.mpi.univie.ac.at/vasp/vasp/PAW_control_tags.html">here</a></li>
