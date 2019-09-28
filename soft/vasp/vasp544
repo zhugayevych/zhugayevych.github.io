@@ -19,15 +19,15 @@ date
 #ulimit -u unlimited
 module load Compiler/Intel/17u8  Q-Ch/VASP/5.4.4_OPT
 
-#cd ~/vasp/$SLURM_JOB_NAME
-export SCR=/scr/$SLURM_JOB_NAME
-mkdir -p $SCR
-cp ~/vasp/$SLURM_JOB_NAME/* $SCR/
-cd $SCR
+cd ~/vasp/$SLURM_JOB_NAME
+#export SCR=/scr/$SLURM_JOB_NAME
+#mkdir -p $SCR
+#cp ~/vasp/$SLURM_JOB_NAME/* $SCR/
+#cd $SCR
 mpirun -n 16 vasp_std
-cp -r $SCR/* ~/vasp/$SLURM_JOB_NAME/*
-cd ~/vasp/$SLURM_JOB_NAME/
-rm -rf $SCR
+#cp -r $SCR/* ~/vasp/$SLURM_JOB_NAME/*
+#cd ~/vasp/$SLURM_JOB_NAME/
+#rm -rf $SCR
 
 date
 rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err
