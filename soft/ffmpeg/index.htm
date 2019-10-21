@@ -14,14 +14,13 @@ a.h:hover   { color: yellow }
  <a class="h" href="file:///C:/Sys/ffmpeg/">P</a></span>
  &nbsp;
  <a href="https://www.ffmpeg.org">website</a>,
- discussed version: 2015-12-27, installed version: 4.1</p>
+ discussed version: 2015-12-27, installed version: 4.2.1</p>
 
 <h2>Installation</h2>
 <ul>
 <li>Just unzip.</li>
 <li>Edit <code>ffmpeg_*.bat</code> files and use them to automate conversion.
  Copy them to <a href="file:///C:/Sys/ffmpeg/">C:/Sys/ffmpeg</a> or any other folder in <code>PATH</code>.
- Use <code>FileMenuTools</code> for right-click access.
  Here are <a href="scripts.zip">my scripts</a> converting to MP4(H264/AAC):
  <ul>
  <li><code>info</code> &ndash; no conversion, append file-info to <code>_tmp_ffmpeg.log</code></li>
@@ -31,6 +30,7 @@ a.h:hover   { color: yellow }
  <li><code>mp4_q28&nbsp;</code> &ndash; compress to CRF28</li>
  <li><code>mp4_s2&nbsp;&nbsp;</code> &ndash; downscale by a factor of 2</li>
  <li><code>mp4_i*</code> &ndash; the same as above but with deinterlacing (-vf yadif)</li>
+ <li><code>mp3</code> &ndash; extract audio</li>
  </ul>
 </ul>
 
