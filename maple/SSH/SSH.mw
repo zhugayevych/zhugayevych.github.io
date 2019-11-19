@@ -172,18 +172,18 @@
 <Group labelreference="L235" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Setup connection </Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;cee&quot;,printout);</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;magnus&quot;,printout);</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">int=putty</Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">com=plink
-ftp=psftp
+<Text-field style="Line Printed Output" layout="Line Printed Output">int=putty
+com=plink</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">ftp=psftp
 md5=fciv
 untar=7za x -aou
 ungz=7za x
 tmp=C:/tmp/_tmpssh
-host=azh@10.30.16.62, ppk=C:/Users/azh/Sys/Internet/SSH/cee/key.ppk, port=, nnp=node, pbs=SLURM
-cnames=[msu,naumov,skoltech,arkuda,nano,cee]</Text-field>
+host=a.zhugayevych@10.30.16.168, ppk=C:/Users/azh/Sys/Internet/SSH/magnus/key.ppk, port=, nnp=node, pbs=SLURM
+cnames=[arkuda,magnus,nano,pardus,msu,cmsVM]</Text-field>
 </Output>
 </Group>
 <Group labelreference="L146" drawlabel="true">
@@ -261,7 +261,7 @@ SSH:-Setup('version');</Text-field>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NzRJK0ZpbGVFeGlzdHNHNiJJK0ZpbGVTdGF0dXNHRiRJK01vZHVsZUxvYWRHRiRJJlNldHVwR0YkSSRkaXJHRiRJJGdldEdGJEkmbG9naW5HRiRJK29wZW50dW5uZWxHRiRJKXBic25vZGVzR0YkSStwYnNyZXBvcnRzR0YkSSRwdXRHRiRJJHB3ZEdGJEklcWRlbEdGJEkmcXN0YXRHRiRJJXFzdWJHRiRJJHJ1bkdGJEkncnVuZnRwR0YkSSVzZ2V0R0Yk</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">Iik/LD4/</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">Iik+Nj4/</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L158" drawlabel="true">
@@ -320,7 +320,7 @@ cnames=[msu,skoltech,fedotov,nano]</Text-field>
 <Text-field style="Line Printed Output" layout="Line Printed Output">Type &quot;exit&quot; to logout</Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiVjNg==</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiQhWw==</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L157" drawlabel="true">
@@ -339,10 +339,10 @@ cnames=[msu,skoltech,fedotov,nano]</Text-field>
 runftp([&quot;pwd&quot;]);</Text-field>
 </Input>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">USovaG9tZS9hemg2Ig==</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UTkvaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2g2Ig==</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UV5vUmVtb3Rlfndvcmtpbmd+ZGlyZWN0b3J5fmlzfi9ob21lL2F6aHwrUmVtb3RlfmRpcmVjdG9yeX5pc34vaG9tZS9hemg2Ig==</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UVxxUmVtb3Rlfndvcmtpbmd+ZGlyZWN0b3J5fmlzfi9ob21lL0FuZHJpeS5aaHVnYXlldnljaHwrUmVtb3RlfmRpcmVjdG9yeX5pc34vaG9tZS9BbmRyaXkuWmh1Z2F5ZXZ5Y2g2Ig==</Equation></Text-field>
 </Output>
 </Group>
 <Text-field style="Text" layout="Normal"></Text-field>
@@ -580,26 +580,15 @@ SSH[qstat]('user'=&quot;Andriy.Zhugayevych&quot;);
 SSH[qstat]('user'=&quot;&quot;):</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output"> 226153  As_dimer52-b_NN_B3LYPp2p_em         1:07  R  1  32  AMG  node-amg04 
- 226152  As_dimer52-b_P_B3LYPp2p_em          1:40  R  1  16  AMG  node-amg03 
- 226151  As_dimer52-btight_N_B3LYPp2p_em     2:53  R  1  16  AMG  node-amg02 
- 226147  As_dimer52-b_T_B3LYPp2p_em       2:21:04  R  1  16  AMG  node-amg01 
-</Text-field>
-</Output>
-<Output>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NyI=</Equation></Text-field>
 </Output>
 <Output>
 <Text-field style="Line Printed Output" layout="Line Printed Output">             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-            226153       AMG As_dimer      azh  R       1:08      1 node-amg04
-            226152       AMG As_dimer      azh  R       1:41      1 node-amg03
-            226151       AMG As_dimer      azh  R       2:54      1 node-amg02
-            226147       AMG As_dimer      azh  R    2:21:05      1 node-amg01
-            225050       AMG LiNiO2.r    aboev  R 2-06:04:46      1 node-amg14
-            225049       AMG LiNiO2.r    aboev  R 2-06:05:00      1 node-amg13
-            224963       AMG LiNiO2.r    aboev  R 3-05:53:52      1 node-amg11
-            224962       AMG LiNiO2.r    aboev  R 3-05:54:00      1 node-amg10
-            225102       AMG KVPO516s  aksenov  R 1-05:15:24      1 node-amg12</Text-field>
+              8005       AMG LiCoO2.r   a.boev  R      54:59      1 node-amg02
+              8008       AMG LiCoO2.1   a.boev  R      48:00      1 node-amg05
+              8009       AMG NaCoO2.r   a.boev  R      32:44      1 node-amg01
+              8010       AMG NaCoO2.r   a.boev  R      32:44      1 node-amg06
+              8011       AMG NaCoO2.r   a.boev  R      32:44      1 node-amg07</Text-field>
 </Output>
 </Group>
 <Group labelreference="L259" drawlabel="true">
@@ -609,21 +598,18 @@ SSH[qstat]('user'=&quot;&quot;):</Text-field>
 <Font encoding="UTF-8">for e in nodes do printf(&quot;%-8s%4s%4s  %s\134n&quot;,op(1..3,e),StringTools[Join](e[4],&quot;,&quot;)) end;</Font></Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">NODELIST    NODES PARTITION STATE 
-node-amg01      1       AMG alloc 
-node-amg02      1       AMG alloc </Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">node-amg03      1       AMG alloc 
-node-amg04      1  AMG_long alloc 
+<Text-field style="Line Printed Output" layout="Line Printed Output">NODELIST    NODES PARTITION STATE </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">node-amg01      1       AMG mix   
+node-amg02      1       AMG mix   
+node-amg03      1       AMG alloc 
 node-amg04      1       AMG alloc 
-node-amg05      1       AMG idle  
-node-amg06      1  AMG_long idle  
-node-amg06      1       AMG idle  
-node-amg07      1       AMG idle  
-node-amg08      1  AMG_long idle  
-node-amg08      1       AMG idle  
-node-amg09      1       AMG idle  
-node-amg10      1       AMG alloc 
-node-amg11      1       AMG alloc 
+node-amg05      1       AMG alloc 
+node-amg06      1       AMG alloc 
+node-amg07      1       AMG alloc 
+node-amg08      1       AMG alloc 
+node-amg09      1       AMG mix   
+node-amg10      1       AMG mix   
+node-amg11      1       AMG mix   
 node-amg12      1       AMG alloc 
 node-amg13      1       AMG alloc 
 node-amg14      1       AMG alloc </Text-field>
@@ -632,7 +618,7 @@ node-amg14      1       AMG alloc </Text-field>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEmbm9kZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUYjNiYtRiw2JVEhRidGL0YyLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0Y9RjlGVEZXRjk=">LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEmbm9kZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUYjNiYtRiw2JVEhRidGL0YyLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0Y9RjlGVEZXRjk=</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">2018-12-22  18:21:13</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">2019-04-20  20:25:44</Text-field>
 </Output>
 </Group>
 <Group labelreference="L257" drawlabel="true">
@@ -641,112 +627,23 @@ node-amg14      1       AMG alloc </Text-field>
 </Font>jobs:=SSH[qstat]('user'=&quot;&quot;): # 'user'=&quot;&quot; for all users</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">2018-05-17  10:29:01</Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">931194   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node26   19:37        
-931222   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node1    14:24        
-931512   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node15   4:18         
-931585   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node9    2:58         
-931613   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    52:05        
-931659   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node12   1:29:22      
-931732   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    2:19         
-931756   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node16   1:45         
-931829   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931833   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node13   59:34        
-931880   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931881   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931908   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931909   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931951   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node4    38:12        
-931952   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node21   38:09        
-931989   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931990   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931991   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-931992   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932027   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932028   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932029   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932030   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932032   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node10   31:34        
-932034   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node23   31:34        
-932071   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node11   21:38        
-932072   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932106   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node2    2            
-932107   USPEX                                 Aleksandr.Kvashnin   8    R   batch    node13   2            
-932108   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932109   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932144   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932145   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932146   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932147   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932187   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932188   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932189   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932190   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932217   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932218   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932219   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932220   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932221   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932222   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932223   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932224   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932249   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932250   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-932251   USPEX                                 Aleksandr.Kvashnin   8    Q   batch                          
-928760   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node27   20:17:59     
-931871   run.molpro.intel_mpi_rest_scr.sh      Alexei.Buchachenko   8    R   bigmem   node25   56:45        
-927639   BDOPV-F4_cryst_PBE-D3paw900_cg3       Andriy.Zhugayevych   16   R   batch    node8    1:01:10:42   
-932214   HMTTF_cryst_PBE-D3paw600_cg3          Andriy.Zhugayevych   8    R   fastio   node24   11:30        
-931218   USPEX24                               Artem.Samtsevich     8    R   batch    node5    52:49        
-931234   USPEX19                               Artem.Samtsevich     8    R   batch    node16   42:20        
-931235   USPEX25                               Artem.Samtsevich     8    R   batch    node24   52:49        
-931236   USPEX26                               Artem.Samtsevich     8    R   batch    node18   52:41        
-931431   USPEX26                               Artem.Samtsevich     8    R   batch    node17   40:58        
-931444   USPEX11                               Artem.Samtsevich     8    R   batch    node26   37:27        
-931470   USPEX17                               Artem.Samtsevich     8    Q   batch                          
-931471   USPEX23                               Artem.Samtsevich     8    Q   batch                          
-931523   USPEX12                               Artem.Samtsevich     8    R   batch    node7    21:38        
-931524   USPEX13                               Artem.Samtsevich     8    R   batch    node14   20:11        
-931525   USPEX27                               Artem.Samtsevich     8    Q   batch                          
-931600   USPEX6                                Artem.Samtsevich     8    Q   batch                          
-931644   USPEX22                               Artem.Samtsevich     8    Q   batch                          
-931645   USPEX18                               Artem.Samtsevich     8    R   batch    node18   1:23:25      
-931755   USPEX3                                Artem.Samtsevich     8    R   batch    node21   1:13:45      
-931794   USPEX6                                Artem.Samtsevich     8    R   batch    node19   1:13:45      
-931852   USPEX4                                Artem.Samtsevich     8    R   batch    node21   53:12        
-931941   USPEX23                               Artem.Samtsevich     8    Q   batch                          
-932026   USPEX9                                Artem.Samtsevich     8    Q   batch                          
-932070   USPEX8                                Artem.Samtsevich     8    R   batch    node15   26:13        
-932104   USPEX1                                Artem.Samtsevich     8    R   batch    node14   25:39        
-932143   USPEX21                               Artem.Samtsevich     8    Q   batch                          
-932186   USPEX33                               Artem.Samtsevich     8    R   batch    node17   5:57         
-932216   USPEX34                               Artem.Samtsevich     8    R   batch    node12   4:10         
-932271   USPEX1                                Artem.Samtsevich     8    Q   batch                          
-925882   LTP_sb4_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node27   1:15:23:53   
-929222   LTP_sa1_slab1_Ot1.irlxlacGS.irlx2dp   Artem.Sergeev        16   R   batch    node22   17:29:06     
-931779   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:17:22      
-931817   USPEX                                 Dong.Baojuan         8    R   batch    node20   1:12:02      
-931828   HZ                                    Dong.Baojuan         8    R   batch    node7    1:01:57      
-931982   USPEX                                 Dong.Baojuan         8    R   batch    node19   43:57        
-925709   doSWsampling89.sh                     Maksim.Beketov       8    R   batch    node22   1:16:56:11   
-925714   doSWfibosampling89.sh                 Maksim.Beketov       8    R   batch    node27   1:16:53:52   
-931488   USPEX                                 Nikita.Rybin         8    R   batch    node27   2:16:16      
-931489   USPEX                                 Nikita.Rybin         8    R   batch    node26   2:16:16      
-931491   USPEX                                 Nikita.Rybin         8    R   batch    node25   2:16:16      
-931492   USPEX                                 Nikita.Rybin         8    R   batch    node22   2:16:16      
-931495   USPEX                                 Nikita.Rybin         8    R   batch    node21   2:16:16      
-931497   USPEX                                 Nikita.Rybin         8    R   batch    node20   2:16:16      
-931500   USPEX                                 Nikita.Rybin         8    R   batch    node19   2:15:06      
-923183   _pbs                                  Nikita.Tukachev      8    R   batch    node19   2:22:48:25   
-925160   _pbs                                  Nikita.Tukachev      8    R   batch    node3    1:20:48:01   
-927786   _pbs                                  Nikita.Tukachev      8    R   batch    node26   1:00:17:25   
-923537   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node19   2:17:43:59   
-923538   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
-923539   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
-923540   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:05   
-923541   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:09:04   
-923542   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:35   
-923543   conductivity.pbs                      Oleg.Lebedev         1    R   batch    node22   2:17:03:35   </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">2019-04-20  20:28:29</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             19334       AMG OPV3-Me_ a.zhugay PD       0:00      1 (Resources)
+             12942       AMG xtpce1.2 d.akseno  R 8-16:07:02      1 node-amg08
+             13964       AMG xvpce1.1 d.akseno  R 8-10:14:41      1 node-amg03
+             17428       AMG KTiPO4F. d.akseno  R 4-22:27:41      1 node-amg10
+             17429       AMG KTiPO4F. d.akseno  R 4-22:26:22      1 node-amg11
+             17741       AMG xfpce3Li d.akseno  R 3-13:17:28      1 node-amg05
+             18258       AMG xfpce3.2 d.akseno  R 3-09:13:19      1 node-amg06
+             18768       AMG Mn_V.nas   a.boev  R 2-04:30:08      1 node-amg12
+             19013       AMG LiNaCoPO d.akseno  R 1-06:49:17      1 node-amg09
+             19029       AMG LiNaCoPO d.akseno  R 1-05:15:02      1 node-amg02
+             19030       AMG LiNaCoPO d.akseno  R 1-04:06:59      1 node-amg01
+             19330       AMG OPV3-Me_ a.zhugay  R    1:53:47      1 node-amg04
+             19331       AMG OPV3-Me_ a.zhugay  R    1:53:32      1 node-amg13
+             19332       AMG OPV3-Me_ a.zhugay  R    1:53:17      1 node-amg14
+             19333       AMG OPV3-Me_ a.zhugay  R    1:41:09      1 node-amg07</Text-field>
 </Output>
 </Group>
 <Group labelreference="L255" drawlabel="true">
@@ -768,6 +665,18 @@ SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'time'=1/12,'queue'=
 </Output>
 <Output>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UUx2YXNwL19wYnN+LUp+am9ibmFtZX4tbn40fi10fjI6MDA6MDB+LXB+QU1HNiI=</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L285" drawlabel="true">
+<Input>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;magnus&quot;);
+SSH[qsub](&quot;gaussian/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'time'=1,'queue'=&quot;AMG&quot;,'test');</Text-field>
+</Input>
+<Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output">sbatch gaussian/_pbs -J jobname -c 4 -t 24:00:00 -p AMG</Text-field>
+</Output>
+<Output>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UVhzYmF0Y2h+Z2F1c3NpYW4vX3Bic34tSn5qb2JuYW1lfi1jfjR+LXR+MjQ6MDA6MDB+LXB+QU1HNiI=</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L248" drawlabel="true">
@@ -805,49 +714,41 @@ SSH[qsub](&quot;vasp/_pbs&quot;,&quot;jobname&quot;,'ppn'=4,'time'=1/12,'queue'=
 <Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qstat]():</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output"> 235190  As_cluster6_R_B3LYPa3p_em               0:54  R  1  16  AMG  node-amg10 
- 235140  As_bilayer37-b_NN_B3LYP-D3a2p_em     6:40:07  R  1  16  AMG  node-amg01 
- 234845  As_molec8-a_CCSDa3p_em            1-03:02:07  R  1  16  AMG  node-amg05 
- 234822  As_cluster6_CCSDa3p_em            1-19:17:24  R  1  16  AMG  node-amg14 
- 234320  As_bilayer37-b_B3LYP-D3a3p_em     2-16:53:04  R  1  16  AMG  node-amg09 
- 233105  As_oring6_CCSDa3p_em              6-01:11:36  R  1  32  AMG  node-amg04 
+<Text-field style="Line Printed Output" layout="Line Printed Output"> 235738  As_bilayer37_B3LYP-D3a3p_em  2-10:56:29  R  1  16  AMG  node-amg06 
+ 235737  As_molec8-a_N_CCSDa3p_em     2-10:59:26  R  1  32  AMG  node-amg04 
+ 235794  infloop                            0:05  R  1  16  AMG  node-amg03 
 </Text-field>
 </Output>
 </Group>
 <Group labelreference="L280" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Block a node for a fixed amount of time</Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qsub](&quot;bin/infloop.pbs&quot;,&quot;infloop&quot;,'nodes'=&quot;node-amg09&quot;,'ppn'=16,'time'=1/24,test);</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qsub](&quot;bin/infloop.pbs&quot;,&quot;infloop&quot;,'nodes'=<Font opaque="true" background="[255,255,153]">&quot;node-amg03&quot;</Font>,'ppn'=16,'time'=1/24,test);</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">bin/infloop.pbs -J infloop -n 16 -N node-amg09 -t 1:00:00</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">bin/infloop.pbs -J infloop -n 16 -N node-amg03 -t 1:00:00</Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UVpiaW4vaW5mbG9vcC5wYnN+LUp+aW5mbG9vcH4tbn4xNn4tTn5ub2RlLWFtZzA5fi10fjE6MDA6MDA2Ig==</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UVpiaW4vaW5mbG9vcC5wYnN+LUp+aW5mbG9vcH4tbn4xNn4tTn5ub2RlLWFtZzAzfi10fjE6MDA6MDA2Ig==</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L279" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Block a node on SLURM</Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[run](&quot;sbatch -J infloop --nodelist<Font opaque="true" background="[255,255,153]">=node-amg08 </Font>~/bin/infloop.sh&quot;);</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[run](&quot;sbatch -J infloop -t<Font opaque="true" background="[255,255,153]"> 1:</Font>00:00 --nodelist<Font opaque="true" background="[255,255,153]">=node-amg03 </Font>~/bin/infloop.sh&quot;);</Text-field>
 </Input>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UTtTdWJtaXR0ZWR+YmF0Y2h+am9ifjIzNTE4NjYi</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">UTtTdWJtaXR0ZWR+YmF0Y2h+am9ifjIzNjAzMDYi</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L281" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Release the node</Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qdel](235186);</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[qdel](235736);</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">deleted 235186</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">deleted 235736</Text-field>
 </Output>
-</Group>
-<Group labelreference="L276" drawlabel="true">
-<Input>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
-</Input>
 </Group>
 <Group labelreference="L275" drawlabel="true">
 <Input>
