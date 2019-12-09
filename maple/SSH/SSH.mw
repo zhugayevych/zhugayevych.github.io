@@ -176,14 +176,14 @@
 </Input>
 <Output>
 <Text-field style="Line Printed Output" layout="Line Printed Output">int=putty
-com=plink</Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">ftp=psftp
+com=plink
+ftp=psftp
 md5=fciv
 untar=7za x -aou
 ungz=7za x
-tmp=C:/tmp/_tmpssh
-host=a.zhugayevych@10.30.16.168, ppk=C:/Users/azh/Sys/Internet/SSH/magnus/key.ppk, port=, nnp=node, pbs=SLURM
-cnames=[arkuda,magnus,nano,pardus,msu,cmsVM]</Text-field>
+tmp=C:/tmp/_tmpssh</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">host=a.zhugayevych@10.30.16.168, ppk=C:/Users/azh/Sys/Internet/SSH/magnus/key.ppk, port=, nnp=node, pbs=SLURM
+cnames=[arkuda,magnus,nano,msu,cmsVM,pardus]</Text-field>
 </Output>
 </Group>
 <Group labelreference="L146" drawlabel="true">
@@ -261,7 +261,7 @@ SSH:-Setup('version');</Text-field>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NzRJK0ZpbGVFeGlzdHNHNiJJK0ZpbGVTdGF0dXNHRiRJK01vZHVsZUxvYWRHRiRJJlNldHVwR0YkSSRkaXJHRiRJJGdldEdGJEkmbG9naW5HRiRJK29wZW50dW5uZWxHRiRJKXBic25vZGVzR0YkSStwYnNyZXBvcnRzR0YkSSRwdXRHRiRJJHB3ZEdGJEklcWRlbEdGJEkmcXN0YXRHRiRJJXFzdWJHRiRJJHJ1bkdGJEkncnVuZnRwR0YkSSVzZ2V0R0Yk</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">Iik+Nj4/</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">Iik0Nz4/</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L158" drawlabel="true">
@@ -580,15 +580,76 @@ SSH[qstat]('user'=&quot;Andriy.Zhugayevych&quot;);
 SSH[qstat]('user'=&quot;&quot;):</Text-field>
 </Input>
 <Output>
+<Text-field style="Line Printed Output" layout="Line Printed Output"> 54690  C4H4_molec-da_B3LYPp2p_em  0:00  PD  1  16  AMG  (Resources) 
+</Text-field>
+</Output>
+<Output>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NyI=</Equation></Text-field>
 </Output>
 <Output>
 <Text-field style="Line Printed Output" layout="Line Printed Output">             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-              8005       AMG LiCoO2.r   a.boev  R      54:59      1 node-amg02
-              8008       AMG LiCoO2.1   a.boev  R      48:00      1 node-amg05
-              8009       AMG NaCoO2.r   a.boev  R      32:44      1 node-amg01
-              8010       AMG NaCoO2.r   a.boev  R      32:44      1 node-amg06
-              8011       AMG NaCoO2.r   a.boev  R      32:44      1 node-amg07</Text-field>
+             54690       AMG C4H4_mol a.zhugay PD       0:00      1 (Resources)
+             54686       AMG silicide d.poleta PD       0:00      1 (Priority)
+             54692       AMG silicide d.poleta PD       0:00      1 (Priority)
+             54691       AMG silicide d.poleta PD       0:00      1 (Priority)
+             54689       AMG silicide d.poleta PD       0:00      1 (Priority)
+             54687       AMG silicide d.poleta PD       0:00      1 (Priority)
+             54688       AMG silicide d.poleta PD       0:00      1 (Priority)
+             54580       AMG TcN.cubi   a.boev PD       0:00      1 (Priority)
+             54581       AMG Ti3C.cub   a.boev PD       0:00      1 (Priority)
+             54582       AMG Y3P.cubi   a.boev PD       0:00      1 (Priority)
+             54583       AMG Y3P.cubi   a.boev PD       0:00      1 (Priority)
+             54584       AMG Y3P.cubi   a.boev PD       0:00      1 (Priority)
+             54585       AMG Y3Si.cub   a.boev PD       0:00      1 (Priority)
+             54586       AMG Y3Si.cub   a.boev PD       0:00      1 (Priority)
+             54587       AMG Y3Si.cub   a.boev PD       0:00      1 (Priority)
+             54588       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
+             54589       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
+             54590       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
+             54591       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
+             54592       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
+             54593       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
+             54594       AMG Zn3B.cub   a.boev PD       0:00      1 (Priority)
+             54595       AMG Zn3B.cub   a.boev PD       0:00      1 (Priority)
+             54596       AMG Zn3B.cub   a.boev PD       0:00      1 (Priority)
+             54597       AMG Zn3C.cub   a.boev PD       0:00      1 (Priority)
+             54598       AMG Zn3C.cub   a.boev PD       0:00      1 (Priority)
+             54599       AMG Zn3C.cub   a.boev PD       0:00      1 (Priority)
+             54600       AMG Zn3P.cub   a.boev PD       0:00      1 (Priority)
+             54601       AMG Zn3P.cub   a.boev PD       0:00      1 (Priority)
+             54602       AMG Zn3P.cub   a.boev PD       0:00      1 (Priority)
+             54603       AMG Zr3N.cub   a.boev PD       0:00      1 (Priority)
+             54604       AMG Zr3N.cub   a.boev PD       0:00      1 (Priority)
+             54605       AMG Zr3N.cub   a.boev PD       0:00      1 (Priority)
+             54606       AMG Zr3S.cub   a.boev PD       0:00      1 (Priority)
+             54607       AMG Zr3S.cub   a.boev PD       0:00      1 (Priority)
+             54608       AMG Zr3S.cub   a.boev PD       0:00      1 (Priority)
+             54609       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
+             54610       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
+             54611       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
+             54612       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
+             54613       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
+             54614       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
+             54579       AMG TcN.cubi   a.boev PD       0:00      1 (Priority)
+             54578       AMG TcN.cubi   a.boev PD       0:00      1 (Priority)
+             54577       AMG TcN.cubi   a.boev PD       0:00      1 (Priority)
+             54576       AMG SiNi3.cu   a.boev PD       0:00      1 (Priority)
+             54575       AMG Rh17S15.   a.boev PD       0:00      1 (Priority)
+             54574       AMG Rh17S15.   a.boev PD       0:00      1 (Priority)
+             53885       AMG run_molp n.tukach  R    5:08:50      1 node-amg04
+             51774 AMG-mediu LiCoO2.1 d.akseno  R   17:49:15      1 node-amg06
+             54573       AMG Rh17S15.   a.boev  R      17:35      1 node-amg14
+             54572       AMG Rh17S15.   a.boev  R      23:53      1 node-amg07
+             54571       AMG Rh17S15.   a.boev  R      30:32      1 node-amg12
+             54570       AMG Rh17S15.   a.boev  R      33:21      1 node-amg02
+             54569       AMG NbF3.cub   a.boev  R      34:59      1 node-amg11
+             54568       AMG NbF3.cub   a.boev  R      52:08      1 node-amg09
+             54567       AMG NbF3.cub   a.boev  R      53:02      1 node-amg01
+             54566       AMG NbF3.cub   a.boev  R      54:12      1 node-amg08
+             54548       AMG Fe3F.cub   a.boev  R    1:04:15      1 node-amg10
+             54549       AMG Mn3S.cub   a.boev  R    1:04:15      1 node-amg13
+             54051 AMG-mediu LiCoO2.1   a.boev  R    3:55:08      1 node-amg03
+              8036  AMG-long NaNiO2.c   a.boev  R 12-01:34:04      1 node-amg05</Text-field>
 </Output>
 </Group>
 <Group labelreference="L259" drawlabel="true">
