@@ -1,28 +1,24 @@
 #!/bin/bash
+#SBATCH -o %x.e%j
+#SBATCH -e %x.e%j.err
+#SBATCH -N 1        ## --nodes=
+#SBATCH -c 16       ## --cpus-per-task=
+#SBATCH -t 24:00:00
+#SBATCH -p AMG
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=0
 
-jobname=
-ncores=16
-nnodes=1
-walltime=24:00:00
-queue=AMG
+echo 'JOB_NAME' $SLURM_JOB_NAME
+echo 'JOB_ID' $SLURM_JOB_ID
+echo 'JOB_CPUS_PER_NODE' $SLURM_JOB_CPUS_PER_NODE
+hostname
+date
 
-while getopts :J:n:N:t:p: opt; do
- case $opt in
-  J) jobname=$OPTARG;;
-  n) ncores=$OPTARG;;
-  N) nnodes=$OPTARG;;
-  t) walltime=$OPTARG;;
-  p) queue=$OPTARG;;
-  ?) echo "Invalid option: -$OPTARG"
-     echo "Usage: _pbs [-J jobname] [-n ncores] [-N nnodes] [-t walltime] [-p queue]"
-     exit;;
- esac
-done
+module load Compiler/Intel/17u8 Q-Ch/ABINIT/8.10.3/intel/2017u8
 
-echo "jobname=$jobname, ncores=$ncores, nnodes=$nnodes, walltime=$walltime, queue=$queue"
+cd ~/abinit
 
-if [ "$jobname" == ""    ]; then echo "Invalid jobname: provide nonempty job name"; exit; fi
-if [ "$nnodes"  != "1"   ]; then echo "Invalid nnodes: only 1 node can be requested"; exit; fi
-if [ "$queue"   != "AMG" ]; then echo "Invalid queue: only AMG queue is available"; exit; fi
+mpirun -np $SLURM_JOB_CPUS_PER_NODE abinit < $SLURM_JOB_NAME.files > $SLURM_JOB_NAME.log
 
-sbatch -J $jobname -c $ncores -N $nnodes -t $walltime -p $queue ~/abinit/_abinit
+date
+rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err

@@ -1,25 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
 <title>VASP</title>
-<style type="text/css">
-a.h         { color: white; font-family: monospace; text-decoration: none }
-a.h:hover   { color: yellow }
-</style>
 </head>
 <body>
-<p><span style="background-color: lightgray">
+<p><span class="h">
  <a class="h" href="./">F</a>
  <a class="h" href="../../../Lib/MS/Methods/_soft/vasp/">L</a>
  <a class="h" href="file:///C:/Sci/vasp/">P</a>
  <a class="h" href="../../../Sys/Software/vasp/">R</a>
  <a class="h" href="../../../Sci/MS/_comp/vasp/">S</a></span>
  &nbsp;
- <a href="http://www.vasp.at">Website</a>,
+ <a href="http://www.vasp.at">website</a>,
  discussed version: 5.4.4</p>
 
-<p><dfn>Credits</dfn>: Sergey Matveev and Victor Vysotskiy (installation, scripts), Dmitry Aksenov (guidelines, scripts)</p>
+<p class="si">Credits: Sergey Matveev and Victor Vysotskiy (installation, scripts), Dmitry Aksenov (guidelines, scripts)</p>
 
 <h2>Installation</h2>
 <ul>
@@ -27,12 +24,12 @@ a.h:hover   { color: yellow }
 <li>To generate input files locally unzip pseudopotentials to a desired program folder, I use <code>C:/Sci/vasp</code>.
  Note that individual files may be compressed &ndash; decompress them.</li>
 <li>Job submission scripts:
- <a href="_pbs_magnus">Magnus cluster</a> (it calls <a href="vasp544">this script</a>),
+ <a href="_pbs_magnus">Magnus cluster</a>,
  <a href="_pbs_pardus">Pardus cluster</a>,
  <a href="_pbs_arkuda">Arkuda cluster</a></li>
 <li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub vasp/_pbs -N test1</code></li>
-<li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>vasp/_pbs -J test1 -n 8 -t 12:00:00</code></li>
-<li>Sample input files: <a href="test1.zip">zip</a>.</li>
+<li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -c 16 -t 24:00:00 vasp/_pbs</code></li>
+<li>Sample input files: <a href="test1.zip">zip</a></li>
 </ul>
 
 <h2>Help</h2>
