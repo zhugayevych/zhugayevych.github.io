@@ -1,5 +1,5 @@
 #Jmol's persistent values
-#Sun Jan 07 01:08:05 MSK 2018
+#Mon Dec 16 14:34:05 MSK 2019
 Jmol.window.Jmol.h=1200
 Jmol.window.Jmol.w=1920
 Jmol.window.Jmol.x=0
@@ -9,5 +9,10 @@ Jmol.window.ScriptWindow.w=300
 Jmol.window.ScriptWindow.x=0
 Jmol.window.ScriptWindow.y=950
 Jmol.window.ScriptWindow.visible=false
+Jmol.window.FileOpen.h=730
+Jmol.window.FileOpen.w=995
+Jmol.window.FileOpen.x=706
+Jmol.window.FileOpen.y=423
+Jmol.window.FileOpen.visible=false
 povrayPath=C\:\\Program Files\\POV-Ray\\v3.7\\bin\\pvengine64.exe
 povraySavePath=C\:\\Downloads
