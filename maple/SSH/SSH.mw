@@ -175,15 +175,15 @@
 <Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;magnus&quot;,printout);</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">int=putty
-com=plink
+<Text-field style="Line Printed Output" layout="Line Printed Output">int=putty</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">com=plink
 ftp=psftp
 md5=fciv
 untar=7za x -aou
 ungz=7za x
-tmp=C:/tmp/_tmpssh</Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">host=a.zhugayevych@10.30.16.168, ppk=C:/Users/azh/Sys/Internet/SSH/magnus/key.ppk, port=, nnp=node, pbs=SLURM
-cnames=[arkuda,magnus,nano,msu,cmsVM,pardus]</Text-field>
+tmp=C:/tmp/_tmpssh
+host=a.zhugayevych@10.30.16.168, ppk=C:/Users/azh/Sys/Internet/SSH/magnus/key.ppk, port=, nnp=node, pbs=SLURM
+cnames=[magnus,cmsVM,arkuda,msu,nano,pardus]</Text-field>
 </Output>
 </Group>
 <Group labelreference="L146" drawlabel="true">
@@ -261,7 +261,7 @@ SSH:-Setup('version');</Text-field>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NzRJK0ZpbGVFeGlzdHNHNiJJK0ZpbGVTdGF0dXNHRiRJK01vZHVsZUxvYWRHRiRJJlNldHVwR0YkSSRkaXJHRiRJJGdldEdGJEkmbG9naW5HRiRJK29wZW50dW5uZWxHRiRJKXBic25vZGVzR0YkSStwYnNyZXBvcnRzR0YkSSRwdXRHRiRJJHB3ZEdGJEklcWRlbEdGJEkmcXN0YXRHRiRJJXFzdWJHRiRJJHJ1bkdGJEkncnVuZnRwR0YkSSVzZ2V0R0Yk</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">Iik0Nz4/</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IilFNz4/</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L158" drawlabel="true">
@@ -580,7 +580,26 @@ SSH[qstat]('user'=&quot;Andriy.Zhugayevych&quot;);
 SSH[qstat]('user'=&quot;&quot;):</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output"> 54690  C4H4_molec-da_B3LYPp2p_em  0:00  PD  1  16  AMG  (Resources) 
+<Text-field style="Line Printed Output" layout="Line Printed Output"> 91481  pyrene_molec_CAM-B3LYPp2p_mo          0:00  PD  1  16  AMG  (Priority) 
+ 91480  pyrene_molec_CAM-B3LYPp2p_freq        0:00  PD  1  16  AMG  (Priority) 
+ 91479  pyrene_molec_CAM-B3LYPp2p_sp          0:00  PD  1  16  AMG  (Priority) 
+ 91475  phenanthrene_molec_CAM-B3LYPp2p_exc   0:00  PD  1  16  AMG  (Priority) 
+ 91476  phenanthrene_molec_CAM-B3LYPp2p_nbo   0:00  PD  1  16  AMG  (Priority) 
+ 91477  phenanthrene_molec_CAM-B3LYPp2p_esp   0:00  PD  1  16  AMG  (Priority) 
+ 91478  phenanthrene_molec_CAM-B3LYPp2p_nto1  0:00  PD  1  16  AMG  (Priority) 
+ 91473  phenanthrene_molec_CAM-B3LYPp2p_N     0:00  PD  1  16  AMG  (Priority) 
+ 91474  phenanthrene_molec_CAM-B3LYPp2p_T     0:00  PD  1  16  AMG  (Priority) 
+ 91472  phenanthrene_molec_CAM-B3LYPp2p_P     0:00  PD  1  16  AMG  (Priority) 
+ 91471  phenanthrene_molec_CAM-B3LYPp2p_mo    0:00  PD  1  16  AMG  (Priority) 
+ 91470  phenanthrene_molec_CAM-B3LYPp2p_freq  0:00  PD  1  16  AMG  (Priority) 
+ 91469  phenanthrene_molec_CAM-B3LYPp2p_sp    0:00  PD  1  16  AMG  (Priority) 
+ 91482  pyrene_molec_CAM-B3LYPp2p_P           0:00  PD  1  16  AMG  (Priority) 
+ 91483  pyrene_molec_CAM-B3LYPp2p_N           0:00  PD  1  16  AMG  (Priority) 
+ 91484  pyrene_molec_CAM-B3LYPp2p_T           0:00  PD  1  16  AMG  (Priority) 
+ 91485  pyrene_molec_CAM-B3LYPp2p_exc         0:00  PD  1  16  AMG  (Priority) 
+ 91486  pyrene_molec_CAM-B3LYPp2p_nbo         0:00  PD  1  16  AMG  (Priority) 
+ 91487  pyrene_molec_CAM-B3LYPp2p_esp         0:00  PD  1  16  AMG  (Priority) 
+ 91488  pyrene_molec_CAM-B3LYPp2p_nto1        0:00  PD  1  16  AMG  (Priority) 
 </Text-field>
 </Output>
 <Output>
@@ -588,68 +607,105 @@ SSH[qstat]('user'=&quot;&quot;):</Text-field>
 </Output>
 <Output>
 <Text-field style="Line Printed Output" layout="Line Printed Output">             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-             54690       AMG C4H4_mol a.zhugay PD       0:00      1 (Resources)
-             54686       AMG silicide d.poleta PD       0:00      1 (Priority)
-             54692       AMG silicide d.poleta PD       0:00      1 (Priority)
-             54691       AMG silicide d.poleta PD       0:00      1 (Priority)
-             54689       AMG silicide d.poleta PD       0:00      1 (Priority)
-             54687       AMG silicide d.poleta PD       0:00      1 (Priority)
-             54688       AMG silicide d.poleta PD       0:00      1 (Priority)
-             54580       AMG TcN.cubi   a.boev PD       0:00      1 (Priority)
-             54581       AMG Ti3C.cub   a.boev PD       0:00      1 (Priority)
-             54582       AMG Y3P.cubi   a.boev PD       0:00      1 (Priority)
-             54583       AMG Y3P.cubi   a.boev PD       0:00      1 (Priority)
-             54584       AMG Y3P.cubi   a.boev PD       0:00      1 (Priority)
-             54585       AMG Y3Si.cub   a.boev PD       0:00      1 (Priority)
-             54586       AMG Y3Si.cub   a.boev PD       0:00      1 (Priority)
-             54587       AMG Y3Si.cub   a.boev PD       0:00      1 (Priority)
-             54588       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
-             54589       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
-             54590       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
-             54591       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
-             54592       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
-             54593       AMG YB6.cubi   a.boev PD       0:00      1 (Priority)
-             54594       AMG Zn3B.cub   a.boev PD       0:00      1 (Priority)
-             54595       AMG Zn3B.cub   a.boev PD       0:00      1 (Priority)
-             54596       AMG Zn3B.cub   a.boev PD       0:00      1 (Priority)
-             54597       AMG Zn3C.cub   a.boev PD       0:00      1 (Priority)
-             54598       AMG Zn3C.cub   a.boev PD       0:00      1 (Priority)
-             54599       AMG Zn3C.cub   a.boev PD       0:00      1 (Priority)
-             54600       AMG Zn3P.cub   a.boev PD       0:00      1 (Priority)
-             54601       AMG Zn3P.cub   a.boev PD       0:00      1 (Priority)
-             54602       AMG Zn3P.cub   a.boev PD       0:00      1 (Priority)
-             54603       AMG Zr3N.cub   a.boev PD       0:00      1 (Priority)
-             54604       AMG Zr3N.cub   a.boev PD       0:00      1 (Priority)
-             54605       AMG Zr3N.cub   a.boev PD       0:00      1 (Priority)
-             54606       AMG Zr3S.cub   a.boev PD       0:00      1 (Priority)
-             54607       AMG Zr3S.cub   a.boev PD       0:00      1 (Priority)
-             54608       AMG Zr3S.cub   a.boev PD       0:00      1 (Priority)
-             54609       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
-             54610       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
-             54611       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
-             54612       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
-             54613       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
-             54614       AMG ZrB6.cub   a.boev PD       0:00      1 (Priority)
-             54579       AMG TcN.cubi   a.boev PD       0:00      1 (Priority)
-             54578       AMG TcN.cubi   a.boev PD       0:00      1 (Priority)
-             54577       AMG TcN.cubi   a.boev PD       0:00      1 (Priority)
-             54576       AMG SiNi3.cu   a.boev PD       0:00      1 (Priority)
-             54575       AMG Rh17S15.   a.boev PD       0:00      1 (Priority)
-             54574       AMG Rh17S15.   a.boev PD       0:00      1 (Priority)
-             53885       AMG run_molp n.tukach  R    5:08:50      1 node-amg04
-             51774 AMG-mediu LiCoO2.1 d.akseno  R   17:49:15      1 node-amg06
-             54573       AMG Rh17S15.   a.boev  R      17:35      1 node-amg14
-             54572       AMG Rh17S15.   a.boev  R      23:53      1 node-amg07
-             54571       AMG Rh17S15.   a.boev  R      30:32      1 node-amg12
-             54570       AMG Rh17S15.   a.boev  R      33:21      1 node-amg02
-             54569       AMG NbF3.cub   a.boev  R      34:59      1 node-amg11
-             54568       AMG NbF3.cub   a.boev  R      52:08      1 node-amg09
-             54567       AMG NbF3.cub   a.boev  R      53:02      1 node-amg01
-             54566       AMG NbF3.cub   a.boev  R      54:12      1 node-amg08
-             54548       AMG Fe3F.cub   a.boev  R    1:04:15      1 node-amg10
-             54549       AMG Mn3S.cub   a.boev  R    1:04:15      1 node-amg13
-             54051 AMG-mediu LiCoO2.1   a.boev  R    3:55:08      1 node-amg03
-              8036  AMG-long NaNiO2.c   a.boev  R 12-01:34:04      1 node-amg05</Text-field>
+             91468       AMG       bs v.vasilc PD       0:00      1 (Resources)
+             91481       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91480       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91479       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91475       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91476       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91477       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91478       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91473       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91474       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91472       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91471       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91470       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91469       AMG phenanth a.zhugay PD       0:00      1 (Priority)
+             91482       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91483       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91484       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91485       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91486       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91487       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91488       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
+             91489 AMG-mediu LiCoO2.1 d.akseno PD       0:00      1 (Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)
+             91461       AMG silicide d.poleta PD       0:00      1 (Priority)
+             91462       AMG silicide d.poleta PD       0:00      1 (Priority)
+             91490       AMG silicide d.poleta PD       0:00      1 (Priority)
+             91391       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91392       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91393       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91394       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91395       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91396       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
+             91397       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91398       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91399       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91400       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91401       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91402       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
+             91403       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91404       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91405       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91406       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91407       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91408       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
+             91411       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91412       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91413       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91414       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91415       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91416       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
+             91417       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91418       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91419       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91420       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91421       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
+             91422       AMG Ti5O7.or   a.boev PD       0:00      1 (Priority)
+             91423       AMG TiSi2.or   a.boev PD       0:00      1 (Priority)
+             91424       AMG TiSi2.or   a.boev PD       0:00      1 (Priority)
+             91425       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
+             91426       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
+             91427       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
+             91428       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
+             91429       AMG V4P3.ort   a.boev PD       0:00      1 (Priority)
+             91430       AMG V5O7.ort   a.boev PD       0:00      1 (Priority)
+             91431       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
+             91432       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
+             91433       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
+             91434       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
+             91435       AMG VF5.orth   a.boev PD       0:00      1 (Priority)
+             91436       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91437       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91438       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91439       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91440       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91441       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
+             91442       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91443       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91444       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91445       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91446       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91447       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
+             91448       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91449       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91450       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91451       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91452       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91453       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
+             91047       AMG  run_g16 n.tukach  R   11:40:29      1 node-amg04
+             91062       AMG  run_g16 n.tukach  R   11:28:36      1 node-amg02
+             91056       AMG  run_g16 n.tukach  R   11:31:00      1 node-amg05
+             91197       AMG silicide d.poleta  R    9:39:44      1 node-amg01
+             91390       AMG Mn5O7.or   a.boev  R    5:57:22      1 node-amg06
+             91387       AMG Cr5O7.or   a.boev  R    7:05:21      1 node-amg11
+             91386       AMG Cr5O7.or   a.boev  R    7:13:22      1 node-amg03
+             91382       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg10
+             91383       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg12
+             91384       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg13
+             91385       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg14
+             91380       AMG Co2O3.or   a.boev  R    7:18:35      1 node-amg07
+             91381       AMG Co2O3.or   a.boev  R    7:18:35      1 node-amg09</Text-field>
 </Output>
 </Group>
 <Group labelreference="L259" drawlabel="true">
