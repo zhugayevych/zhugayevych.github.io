@@ -28,7 +28,7 @@ echo 'GAUSS_SCRDIR' $GAUSS_SCRDIR
 
 cd ~/gaussian
 
-sed -e "/nprocshared/d;/mem/d" $SLURM_JOB_NAME.gau
+sed -e "/nprocshared/d;/mem/d" -i $SLURM_JOB_NAME.gau
 
 g16 < $SLURM_JOB_NAME.gau > $SLURM_JOB_NAME.out
 
