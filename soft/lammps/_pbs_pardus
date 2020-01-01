@@ -1,0 +1,27 @@
+#!/bin/bash
+#PBS -jeo
+#PBS -r n
+#PBS -l nodes=1:ppn=1
+
+date
+hostname
+echo $PBS_JOBNAME
+
+export LAMMPS_POTENTIALS=~/lammps/_res
+
+if [ -d ~/lammps/$PBS_JOBNAME ]; then
+ export RUN_DIR=~/lammps/$PBS_JOBNAME
+else
+ export RUN_DIR=~/lammps
+fi
+
+cd ${RUN_DIR}
+
+if [ $PBS_NUM_PPN -eq 1 ]; then
+ /home/Andriy.Zhugayevych/local/lammps/lmp_serial -in $PBS_JOBNAME.lam -log $PBS_JOBNAME.out >PBS_JOBNAME.stdout
+else
+ export OMP_NUM_THREADS=$PBS_NUM_PPN
+ /home/Andriy.Zhugayevych/local/lammps/lmp_omp -sf omp -in $PBS_JOBNAME.lam -log $PBS_JOBNAME.out >PBS_JOBNAME.stdout
+fi
+
+date
