@@ -1,12 +1,12 @@
-% Andriy Zhugayevych  azh@uninet.kiev.ua
+% Andriy Zhugayevych  zhugayevych@univ.kiev.ua
 % Andriy Yurachkivsky  yap@univ.kiev.ua
 % Mathematical physics: Examples and problems
-% modified 26.12.2005
+% created 26.12.2005  modified 7.08.2020
 
 \documentclass[10pt,a5paper,twoside,openany]{vpcku}
 \usepackage{wrapfig}
-\usepackage{pstricks}
-\usepackage{pst-plot}
+\usepackage{graphicx}
+\usepackage[unicode,bookmarksnumbered,bookmarksopen,pdfstartpage=3,pdfstartview={},pdfpagelayout={TwoPageRight},colorlinks,linkcolor=black,citecolor=black]{hyperref}
 
 
 % technical commands
@@ -15,7 +15,7 @@
 % example environment
 \newtheoremstyle{example}{8pt}{2pt}{\normalfont}{}{\bfseries}{}{ }{}
 \theoremstyle{example}
-\newtheorem{example}{Приклад}[section]
+\newtheorem{example}{РџСЂРёРєР»Р°Рґ}[section]
 \newcommand{\sepEx}{\hspace{-0.35em}\textbf{. }}   % period after example heading
 \newcommand{\exvs}{\strut\vspace{-0.5\abovedisplayskip}} % remove space before equation
 
@@ -30,7 +30,7 @@
 
 % highlighting other parts of a paragraph
 \newcommand{\theory}{\small}   % theoretical material
-\newcommand{\rem}[1][]{\smallskip\noindent\small\texttt{Зауваження#1}.\ }
+\newcommand{\rem}[1][]{\smallskip\noindent\small\texttt{Р—Р°СѓРІР°Р¶РµРЅРЅСЏ#1}.\ }
 \newcommand{\co}{\medskip\noindent}   % comments in tasks
 \newcommand{\sol}[1]{\vspace{1pt}\hangindent=1em\noindent\ref{#1}.} % answers
 \newcommand{\sepsol}{\medskip\hrule\medskip}  % separator of solutions to a paragraph
@@ -42,8 +42,9 @@
 \newcommand{\showsol}[1]{}                   % no sol-s after section (default)
 
 % commands for manual formatting
-\newcommand{\np}{\newpage}      
+\newcommand{\np}{\newpage}
 \newcommand{\ep}{\enlargethispage{\baselineskip}}
+\newcommand{\nl}{\newline}
 
 
 \righthyphenmin=2
@@ -56,17 +57,17 @@
 \input preface
 %\newpage\mbox{}\newpage  % insert empty page
 
-\chapter*{Вступ}
-\addcontentsline{toc}{chapter}{Вступ}
+\chapter*{Р’СЃС‚СѓРї}
+\addcontentsline{toc}{chapter}{Р’СЃС‚СѓРї}
 \input class    \bigskip \input class_t    \showsol{class_s}
-\chapter{Метод відокремлення \\ змінних}
+\chapter[РњРµС‚РѕРґ РІС–РґРѕРєСЂРµРјР»РµРЅРЅСЏ Р·РјС–РЅРЅРёС…]{РњРµС‚РѕРґ РІС–РґРѕРєСЂРµРјР»РµРЅРЅСЏ \\ Р·РјС–РЅРЅРёС…}
 \input SL       \bigskip \input SL_t       \showsol{SL_s}
 \input sepvar1  \bigskip \input sepvar1_t  \showsol{sepvar1_s}
 \input sepvar2  \bigskip \input sepvar2_t  \showsol{sepvar2_s}
 \input sepvar2p \bigskip \input sepvar2p_t \showsol{sepvar2p_s}
 \input sepvar3s \bigskip \input sepvar3s_t \showsol{sepvar3s_s}
 \input sepvar3c \bigskip \input sepvar3c_t \showsol{sepvar3c_s}
-\chapter{Метод функцій впливу}
+\chapter{РњРµС‚РѕРґ С„СѓРЅРєС†С–Р№ РІРїР»РёРІСѓ}
 \input part2
 \input genfun   \bigskip \input genfun_t   \showsol{genfun_s}
 \input GFdiff   \bigskip \input GFdiff_t   \showsol{GFdiff_s}
@@ -75,14 +76,14 @@
 \input GFell    \bigskip \input GFell_t    \showsol{GFell_s}
 
 \newpage
-\chapter*{Відповіді до задач}
-\addcontentsline{toc}{chapter}{Відповіді до задач}
-\markboth{Відповіді до задач}{}
+\chapter*{Р’С–РґРїРѕРІС–РґС– РґРѕ Р·Р°РґР°С‡}
+\addcontentsline{toc}{chapter}{Р’С–РґРїРѕРІС–РґС– РґРѕ Р·Р°РґР°С‡}
+\markboth{Р’С–РґРїРѕРІС–РґС– РґРѕ Р·Р°РґР°С‡}{}
 {\small
-Позначення:
+РџРѕР·РЅР°С‡РµРЅРЅСЏ:
 \begin{itemize}
 \item
-$\Phi_m$, $m\in\mathbb{Z}$ -- дійсний (\ref{sv2p_3p}) або комплексний ($e^{im\phi}$) тригонометричний базис.
+$\Phi_m$, $m\in\mathbb{Z}$ -- РґС–Р№СЃРЅРёР№ (\ref{sv2p_3p}) Р°Р±Рѕ РєРѕРјРїР»РµРєСЃРЅРёР№ ($e^{im\phi}$) С‚СЂРёРіРѕРЅРѕРјРµС‚СЂРёС‡РЅРёР№ Р±Р°Р·РёСЃ.
 \end{itemize}
 \sepsol \input class_s \sepsol \input SL_s \sepsol \input sepvar1_s \sepsol \input sepvar2_s \sepsol \input sepvar2p_s \sepsol \input sepvar3s_s \sepsol \input sepvar3c_s \sepsol \input genfun_s \sepsol \input GFdiff_s \sepsol \input GFwave1_s \sepsol \input GFwave2_s \sepsol \input GFell_s
 }

@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='275px' height='122px' viewBox='0 0 275 122' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.H { fill:rgb(191,191,191); stroke:rgb(191,191,191) }
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+text.S { fill:rgb(255,229,22); stroke:rgb(255,229,22) }
+</style>
+<title>OPDBDTNi/molec_CAM-B3LYPa3p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='3.0' y1='81.4' x2='3.0' y2='44.2' />
+<line x1='10.2' y1='75.4' x2='10.2' y2='50.2' />
+<line x1='3.0' y1='44.2' x2='32.9' y2='25.9' />
+<line x1='32.9' y1='25.9' x2='65.2' y2='44.0' />
+<line x1='34.6' y1='35.1' x2='56.4' y2='47.3' />
+<line x1='65.2' y1='44.0' x2='65.2' y2='81.6' />
+<line x1='65.2' y1='81.6' x2='32.9' y2='99.7' />
+<line x1='56.4' y1='78.3' x2='34.6' y2='90.5' />
+<line x1='32.9' y1='99.7' x2='3.0' y2='81.4' />
+<line x1='272.4' y1='80.9' x2='241.5' y2='98.9' />
+<line x1='241.5' y1='98.9' x2='210.0' y2='80.9' />
+<line x1='239.9' y1='89.6' x2='218.8' y2='77.6' />
+<line x1='210.0' y1='80.9' x2='210.0' y2='44.7' />
+<line x1='210.0' y1='44.7' x2='241.5' y2='26.7' />
+<line x1='218.8' y1='48.0' x2='239.9' y2='36.0' />
+<line x1='241.5' y1='26.7' x2='272.4' y2='44.7' />
+<line x1='272.4' y1='44.7' x2='272.4' y2='80.9' />
+<line x1='265.2' y1='50.7' x2='265.2' y2='74.9' />
+<line x1='122.9' y1='71.4' x2='106.1' y2='86.3' />
+<line x1='84.4' y1='89.8' x2='65.2' y2='81.6' />
+<line x1='65.2' y1='44.0' x2='84.4' y2='35.8' />
+<line x1='106.1' y1='39.3' x2='122.9' y2='54.2' />
+<line x1='182.0' y1='96.3' x2='210.0' y2='80.9' />
+<line x1='210.0' y1='44.7' x2='182.0' y2='29.3' />
+<line x1='161.6' y1='32.4' x2='141.7' y2='53.4' />
+<line x1='141.7' y1='72.2' x2='161.6' y2='93.2' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='90.4' y='38.7' font-size='16' class="N">N</text>
+<text x='90.4' y='22.7' font-size='16' class="H">H</text>
+<text x='90.4' y='102.9' font-size='16' class="N">N</text>
+<text x='90.4' y='118.9' font-size='16' class="H">H</text>
+<text x='164.6' y='110.6' font-size='16' class="S">S</text>
+<text x='164.6' y='31.0' font-size='16' class="S">S</text>
+<text x='114.7' y='70.8' font-size='16' fill='rgb(79,209,79)'>Ni</text>
+</g>
+</svg>

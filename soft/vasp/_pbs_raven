@@ -1,0 +1,45 @@
+#!/bin/bash
+#SBATCH -o %x.e%j
+#SBATCH -e %x.e%j.err
+#SBATCH -t 24:00:00
+#SBATCH -N 1
+#SBATCH --cpus-per-task=1     ## number of OMP threads per MPI task = 1 for VASP
+#SBATCH --ntasks-per-core=1   ## no hyperthreading
+#SBATCH --ntasks-per-node=72  ## number of MPI processes = number of cores in VASP
+#SBATCH --mem=200G
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK  ## must be 1 for VASP to accept user-provided NCORE
+
+export JOBDIR=~/vasp/$SLURM_JOB_NAME
+export RUNDIR=/ptmp/$SLURM_JOB_USER/$SLURM_JOB_ID
+
+echo 'JOB_NAME' $SLURM_JOB_NAME
+echo 'JOB_ID' $SLURM_JOB_ID
+echo 'JOB_PARTITION' $SLURM_JOB_PARTITION
+echo 'OMP_NUM_THREADS' $OMP_NUM_THREADS
+echo 'CPUS_PER_TASK' $SLURM_CPUS_PER_TASK
+echo 'NTASKS_PER_CORE' $SLURM_NTASKS_PER_CORE
+echo 'NTASKS_PER_NODE' $SLURM_NTASKS_PER_NODE
+echo 'JOB_CPUS_PER_NODE' $SLURM_JOB_CPUS_PER_NODE
+echo 'MEM_PER_NODE' $SLURM_MEM_PER_NODE
+echo 'MEM_PER_CPU' $SLURM_MEM_PER_CPU
+echo 'JOBDIR' $JOBDIR
+echo 'RUNDIR' $RUNDIR
+hostname
+date
+
+module purge
+module load vasp/6.3.1
+
+mkdir -p $RUNDIR
+cp $JOBDIR/* $RUNDIR/
+cd $RUNDIR
+
+srun vasp_std
+
+cp -r $RUNDIR/* $JOBDIR/
+cd $JOBDIR
+rm -rf $RUNDIR
+
+date
+rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err

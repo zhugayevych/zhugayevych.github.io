@@ -11,7 +11,6 @@
  <a class="h" href="../../../Lib/MS/Methods/_soft/Gaussian/">L</a>
  <a class="h" href="C:/Sci/G09W/">P</a>
  <a class="h" href="../../../Sys/Software/Gaussian/">R</a>
- <a class="h" href="../../../Sci/MS/_comp/Gaussian/">S</a>
  </span>
  &nbsp;
  <a href="http://www.gaussian.com">website</a>,
@@ -23,8 +22,9 @@
 <ul>
 <li>Locate executables, edit your user initialization file, create <code>gaussian</code> directory, and learn how to submit a job.</li>
 <li>Job submission scripts:
+ <a href="_pbs_thinc">thinc cluster</a> (<a href="_pbs_mo_thinc">MO</a>, <a href="_pbs_no_thinc">NO</a>),
  <a href="_pbs_magnus">Magnus cluster</a>,
- <a href="_pbs_pardus">Pardus cluster</a> (<a href="_pbs_pardus_Linda">with Linda</a>, <a href="_pbs_pardus_v09">version 09</a>)</li>
+ <a href="_pbs_arkuda">MOAB example</a></li>
 <li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub gaussian/_pbs -N test1 -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
 <li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -c 8 -t 12:00:00 gaussian/_pbs</code></li>
 <li>Example of Gaussian run script without PBS: <a href="_run">example</a></li>
@@ -40,9 +40,15 @@
 <li>Associate gau-files with <code>gaussian.bat</code>. For this purpose you can <strong>edit</strong> and use <a href="FileAssoc.zip">these file associations</a>.</li>
 </ul>
 
+<h2>Important notes</h2>
+<ul>
+<li>Gaussian is very sensitive to the number of empty lines in the input file, i.e. wrong number might lead to misinterpreted input.
+ In particular, some Windows versions require nonempty title in input file.</li>
+</ul>
+
 <h2>Usage</h2>
 <ul>
-<li>Gaussian requires explicit setting of <code>nproc</code> and <code>mem</code>.</li>
+<li>Gaussian requires explicit setting of <code>nproc</code> and <code>mem</code>. See <a href="https://gaussian.com/running/?tabid=6">Memory Use</a>.</li>
 <li><a href="readdump.f90">Fortran code</a> for extracting individual records from Gaussian chk- and rwf-files.
  You may use <a href="readdump_test.chk">this test file</a>.
  See also <a href="readdumpbatch">sample batch script</a>.</li>
@@ -62,11 +68,6 @@
 <li><a href="http://gaussian.com/g16wutilities">Utilities</a></li>
 <li><a href="http://gaussian.com/white">White Papers and Technical Notes</a></li>
 <li><a href="../../../Lib/MS/Methods/_soft/Gaussian/Lec_Tomberg09.pdf">Tutorial by Anna Tomberg</a></li>
-</ul>
-
-<h2>Notes</h2>
-<ul>
-<li>Windows version requires nonempty title in input file.</li>
 </ul>
 
 </body>

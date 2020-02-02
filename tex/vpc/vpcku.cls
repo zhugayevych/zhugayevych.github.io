@@ -1,51 +1,50 @@
 % Document class "vpcku" for LaTeX2e
 % Authors: Denis Sheka, Andriy Zhugayevych
-% created 24.09.2005,  modified 16.12.2005
-% Клас для підготовки оригінал-макету книги для ВПЦ "Київський уніоверситет" за вимогами 2005 р.
+% created 24.09.2005,  modified 7.08.2020
+% РљР»Р°СЃ РґР»СЏ РїС–РґРіРѕС‚РѕРІРєРё РѕСЂРёРіС–РЅР°Р»-РјР°РєРµС‚Сѓ РєРЅРёРіРё РґР»СЏ Р’РџР¦ "РљРёС—РІСЃСЊРєРёР№ СѓРЅС–РІРµСЂСЃРёС‚РµС‚" Р·Р° РІРёРјРѕРіР°РјРё 2005 СЂ.
 %
 %
 % ------- Features -------
-% 1) Only two papersizes are supported: 'a5paper' (default) and 'a4paper' (for draft printing).
-% 2) The default option is 'twoside'.
+% 1) Only two papersizes are supported: 'a5paper' (default) and 'a4paper'.
 % 2) The language is ukrainian.
-% 3) Option 'nohref' means to not use hyperref (the default is to use).
 %
 %
 \NeedsTeXFormat{LaTeX2e}[1998/12/01]
-\ProvidesClass{vpcku}[2005/12/16 Standard LaTeX class]
+\ProvidesClass{vpcku}[2020/08/07 Standard LaTeX class]
+\newif\if@afour\DeclareOption{a4paper}{\@afourtrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
-\newif\if@afour   \DeclareOption{a4paper}{\@afourtrue}
-\newif\if@oneside \DeclareOption{oneside}{\@onesidetrue}
-\newif\if@nohref  \DeclareOption{nohref}{\@nohreftrue}
-\if@afour\else\PassOptionsToClass{a5paper}{book}\fi
-\if@oneside\else\PassOptionsToClass{twoside}{book}\fi
-\ProcessOptions
-\LoadClass{book}
+\ProcessOptions\relax
+\if@afour\LoadClass[a4paper]{book}\else\LoadClass[a5paper]{book}\fi
+\RequirePackage{cmap}\pdfmapfile{+cm-super-t2a.map}
+%\RequirePackage[utf8]{inputenc}   % not needed in modern LaTeX
+\RequirePackage[T1,T2A]{fontenc}
 \RequirePackage[ukrainian]{babel}
-\RequirePackage[cp1251]{inputenc}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
-\if@nohref\else\RequirePackage{hyperref}\fi
-\RequirePackage{makeidx}
+%\RequirePackage{makeidx}
 \RequirePackage{multicol}
-\RequirePackage{bm}           % похилі жирні латинські і жирні грецькі
-\RequirePackage{soul}         % розрядка
-\RequirePackage{wasysym}      % прямі інтеграли
-%\RequirePackage{pscyr}        % покращені шрифти
-
+\RequirePackage{bm}           % slanted bold latin and bold greek letters
+%\RequirePackage{soul}        % increase character spacing for cp1251
+\RequirePackage{soulutf8}     % increase character spacing for UTF-8
+\RequirePackage{wasysym}      % upright integrals
+%\RequirePackage{pscyr}       % improved fonts
 
 
 
 % ------- Page layout and paragraph formatting -------
 \if@afour
 % A4paper
+\special{papersize=210mm,297mm}
+\pdfpagewidth=210 true mm
+\pdfpageheight=297 true mm
 \textwidth 175mm \textheight 255mm
 \oddsidemargin 20mm \evensidemargin 15mm
 \parindent=9mm
 \def\specitemindent{13mm}
 \else
 % A5paper
+\special{papersize=148mm,210mm}
 \textwidth 115mm \textheight 170mm
 \oddsidemargin 16.5mm \evensidemargin 16.5mm
 \topmargin 15mm \headheight 3mm \headsep 2mm
@@ -84,7 +83,7 @@
 \renewcommand\section{\@startsection {section}{1}{\z@}%
   {3.5ex \@plus 1ex \@minus .2ex}%
   {2.3ex \@plus.2ex}%
-  {\normalfont\Large\bfseries\raggedright}}
+  {\normalfont\Large\bfseries}}
 % Put \S mark before and period after section number
 \def\@seccntformat#1{\@specindent\S\ \csname the#1\endcsname.\ }
 
@@ -122,6 +121,10 @@
 \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
 \renewcommand{\thefigure}{\arabic{figure}}
 \@addtoreset{equation}{section}
+% babel-ukrainian modifies \alph so wehave to change it back to Latin symbols
+\addto\extrasukrainian{\babel@save{\@alph}\def\@alph#1{\ifcase#1\or
+ a\or b\or c\or d\or e\or f\or g\or h\or i\or j\or k\or l\or m\or
+ n\or o\or p\or q\or r\or s\or t\or u\or v\or w\or x\or y\or z\else\@ctrerr\fi}}
 
 
 
@@ -225,7 +228,7 @@
 
 
 % ------- Some ukrainian settings -------
-\def\@chapapp{Частина}
+\def\@chapapp{Р§Р°СЃС‚РёРЅР°}
 \addto\captionsukrainian{\def\bibname{{\cyr\CYRL\cyrii\cyrt\cyre\cyrr\cyra\cyrt\cyru\cyrr\cyra}}}
 
 
@@ -248,13 +251,13 @@
 
 
 % ------- Mathematical formatting -------
-\renewcommand{\vec}{\bm}       % вектори
-\newcommand{\mat}{\mathbf}     % матриці
-\newcommand{\op}{\mathsf}      % оператори
+\renewcommand{\vec}{\bm}       % vector
+\newcommand{\mat}{\mathbf}     % matrix
+\newcommand{\op}{\mathsf}      % operator
 \renewcommand{\kappa}{\varkappa}
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
-\renewcommand{\int}{\varint}   % прямий інтеграл
+\renewcommand{\int}{\varint}   % upright integral
 
 
 

@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='69px' height='104px' viewBox='0 0 69 104' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.H { fill:rgb(191,191,191); stroke:rgb(191,191,191) }
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+</style>
+<title>imidazole/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='55.1' y1='77.7' x2='65.8' y2='38.9' />
+<line x1='49.8' y1='70.0' x2='57.3' y2='42.8' />
+<line x1='65.8' y1='38.9' x2='43.6' y2='22.7' />
+<line x1='23.2' y1='22.9' x2='3.0' y2='39.0' />
+<line x1='26.0' y1='29.9' x2='12.2' y2='40.9' />
+<line x1='3.0' y1='39.0' x2='10.8' y2='65.0' />
+<line x1='27.5' y1='77.5' x2='55.1' y2='77.7' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='27.2' y='23.0' font-size='16' class="N">N</text>
+<text x='8.5' y='85.5' font-size='16' class="N">N</text>
+<text x='8.5' y='101.5' font-size='16' class="H">H</text>
+</g>
+</svg>

@@ -1,11 +1,16 @@
-#!/bin/bash   
-#PBS -N abinit_test
-#PBS -l walltime=3:00:00
-#PBS -l nodes=1:ppn=8
-#PBS -r n
+#!/bin/bash
 #PBS -j eo
-#PBS -m bea
-cd $PBS_O_WORKDIR
-module load Compiler/GCC/5.3.1  ScriptLang/python/3.5u1_2018i MKL/2018.1.163 MPI/impi/2018.0.1 abinit/8.8.2/intel/2018/mpi/GCC/5.3.1
-#Basic run:
-mpirun  abinit <file.files >log
+#PBS -r n
+#PBS -l nodes=1:ppn=8
+####PBS -V
+hostname
+date
+
+module load  Compiler/Intel/psxe_2019.5  MPI/impi/2019.5.281
+
+cd ~/abinit
+
+mpirun ~/local/abinit/abinit < $PBS_JOBNAME.files > $PBS_JOBNAME.log > $PBS_JOBNAME.err
+
+date
+#rm -f ~/abinit/$PBS_JOBNAME.err

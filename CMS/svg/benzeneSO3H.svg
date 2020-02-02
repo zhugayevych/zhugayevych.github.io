@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='187px' height='106px' viewBox='0 0 187 106' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.O { fill:rgb(255,0,0); stroke:rgb(255,0,0) }
+text.S { fill:rgb(255,229,22); stroke:rgb(255,229,22) }
+</style>
+<title>benzeneSO3H/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='123.0' y1='82.0' x2='123.0' y2='68.0' />
+<line x1='150.0' y1='55.0' x2='136.0' y2='55.0' />
+<line x1='110.0' y1='55.0' x2='83.0' y2='55.0' />
+<line x1='123.0' y1='42.0' x2='123.0' y2='28.0' />
+<line x1='63.0' y1='89.6' x2='83.0' y2='55.0' />
+<line x1='59.8' y1='80.8' x2='73.8' y2='56.6' />
+<line x1='83.0' y1='55.0' x2='63.0' y2='20.4' />
+<line x1='63.0' y1='20.4' x2='23.0' y2='20.4' />
+<line x1='57.0' y1='27.6' x2='29.0' y2='27.6' />
+<line x1='23.0' y1='20.4' x2='3.0' y2='55.0' />
+<line x1='3.0' y1='55.0' x2='23.0' y2='89.6' />
+<line x1='12.2' y1='56.6' x2='26.2' y2='80.8' />
+<line x1='23.0' y1='89.6' x2='63.0' y2='89.6' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='117.0' y='63.0' font-size='16' class="S">S</text>
+<text x='127.8' y='91.0' font-size='32' fill='rgb(255,12,12)'>.</text>
+<text x='117.0' y='103.0' font-size='16' class="O">O</text>
+<text x='167.8' y='51.0' font-size='32' fill='rgb(255,12,12)'>.</text>
+<text x='157.0' y='63.0' font-size='16' class="O">O</text>
+<text x='117.0' y='23.0' font-size='16' fill='rgb(255,12,12)'>OH</text>
+</g>
+</svg>

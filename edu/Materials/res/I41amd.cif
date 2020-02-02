@@ -1,0 +1,22 @@
+data_nolabel
+_symmetry_space_group_name_H-M   I41/amd:1
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_length_a                   9
+_cell_length_b                   9
+_cell_length_c                   13
+loop_
+_atom_site_type_symbol
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+C   4a  0  0  0
+Li  4b  0  0  .5
+N   8c  0 .25 .125
+S   8d  0 .25 .625
+O   8e  0  0  .1
+He  16f .15 .25 .125
+F   16g .1 .1 0
+H   16h 0 .17 .2

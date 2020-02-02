@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='204px' height='134px' viewBox='0 0 204 134' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+</style>
+<title>methylcarbazole/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='102.1' y1='42.0' x2='102.1' y2='28.0' />
+<line x1='69.1' y1='74.1' x2='90.8' y2='61.5' />
+<line x1='113.3' y1='61.5' x2='135.1' y2='74.1' />
+<line x1='135.1' y1='74.1' x2='135.1' y2='112.2' />
+<line x1='127.9' y1='80.1' x2='127.9' y2='106.2' />
+<line x1='135.1' y1='112.2' x2='69.1' y2='112.2' />
+<line x1='69.1' y1='112.2' x2='69.1' y2='74.1' />
+<line x1='76.3' y1='106.2' x2='76.3' y2='80.1' />
+<line x1='3.0' y1='74.0' x2='36.0' y2='55.0' />
+<line x1='11.8' y1='77.3' x2='34.4' y2='64.2' />
+<line x1='36.0' y1='55.0' x2='69.1' y2='74.1' />
+<line x1='69.1' y1='112.2' x2='36.0' y2='131.3' />
+<line x1='36.0' y1='131.3' x2='3.0' y2='112.2' />
+<line x1='34.4' y1='122.0' x2='11.8' y2='109.0' />
+<line x1='3.0' y1='112.2' x2='3.0' y2='74.0' />
+<line x1='135.1' y1='74.1' x2='168.2' y2='55.0' />
+<line x1='168.2' y1='55.0' x2='201.2' y2='74.1' />
+<line x1='169.7' y1='64.2' x2='192.4' y2='77.3' />
+<line x1='201.2' y1='74.1' x2='201.2' y2='112.2' />
+<line x1='201.2' y1='112.2' x2='168.1' y2='131.3' />
+<line x1='192.4' y1='109.0' x2='169.7' y2='122.1' />
+<line x1='168.1' y1='131.3' x2='135.1' y2='112.2' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='96.1' y='63.0' font-size='16' class="N">N</text>
+<text x='98.1' y='23.0' font-size='16' fill='rgb(102,102,102)'>CH</text>
+<text x='122.1' y='26.7' font-size='13' fill='rgb(102,102,102)'>3</text>
+</g>
+</svg>

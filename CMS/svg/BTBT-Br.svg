@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='381px' height='131px' viewBox='0 0 381 131' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.S { fill:rgb(255,229,22); stroke:rgb(255,229,22) }
+</style>
+<title>BTBT-Br/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='303.3' y1='58.0' x2='339.0' y2='47.9' />
+<line x1='69.2' y1='76.7' x2='33.5' y2='86.9' />
+<line x1='242.3' y1='43.0' x2='215.5' y2='22.8' />
+<line x1='197.3' y1='25.3' x2='177.2' y2='51.7' />
+<line x1='177.2' y1='51.7' x2='195.3' y2='83.0' />
+<line x1='186.5' y1='53.3' x2='198.5' y2='74.2' />
+<line x1='195.3' y1='83.0' x2='233.1' y2='79.1' />
+<line x1='233.1' y1='79.1' x2='242.3' y2='43.0' />
+<line x1='130.2' y1='91.8' x2='157.0' y2='111.9' />
+<line x1='175.2' y1='109.4' x2='195.3' y2='83.0' />
+<line x1='177.2' y1='51.7' x2='139.5' y2='55.6' />
+<line x1='139.5' y1='55.6' x2='130.2' y2='91.8' />
+<line x1='294.9' y1='94.0' x2='303.3' y2='58.0' />
+<line x1='289.2' y1='86.6' x2='294.9' y2='62.2' />
+<line x1='303.3' y1='58.0' x2='277.4' y2='32.1' />
+<line x1='277.4' y1='32.1' x2='242.3' y2='43.0' />
+<line x1='273.8' y1='40.8' x2='250.1' y2='48.1' />
+<line x1='233.1' y1='79.1' x2='259.9' y2='104.6' />
+<line x1='242.4' y1='78.0' x2='260.5' y2='95.2' />
+<line x1='259.9' y1='104.6' x2='294.9' y2='94.0' />
+<line x1='77.6' y1='40.7' x2='69.2' y2='76.7' />
+<line x1='83.3' y1='48.2' x2='77.6' y2='72.5' />
+<line x1='69.2' y1='76.7' x2='95.1' y2='102.6' />
+<line x1='95.1' y1='102.6' x2='130.2' y2='91.8' />
+<line x1='98.7' y1='94.0' x2='122.4' y2='86.7' />
+<line x1='139.5' y1='55.6' x2='112.6' y2='30.2' />
+<line x1='130.2' y1='56.7' x2='112.0' y2='39.5' />
+<line x1='112.6' y1='30.2' x2='77.6' y2='40.7' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='199.1' y='23.0' font-size='16' class="S">S</text>
+<text x='345.5' y='52.3' font-size='16' fill='rgb(165,40,40)'>Br</text>
+<text x='161.4' y='127.8' font-size='16' class="S">S</text>
+<text x='3.0' y='98.4' font-size='16' fill='rgb(165,40,40)'>Br</text>
+</g>
+</svg>

@@ -1,0 +1,34 @@
+# Effective Hamiltonian for electrons in b-ITIC4F reduced to 2D
+SG=P-1
+orbs=[[1,2]]
+M=Matrix(3,3,[
+a,0,cx,
+0,b,0,
+0,0,c])
+P=Matrix(3,2,[
+x,-x,
+y,-y,
+z,-z])
+geoparams=[
+"bcryst-b_PBE-D3paw600" ==[ a=7.708771, b=20.410479, cx=+0.743021, c=25.106085, x=0.735272, y=-0.497682, z=-0.018511],
+"bcryst-bx_PBE-D3paw600"==[ a=8.565262, b=20.081321, cx=-0.490141, c=25.555564, x=0.709776, y=-0.490029, z=-0.024840],
+"cryst-bx_PBE-D3paw600" ==[ a=8.565262, b=20.081321, cx=-0.490141, c=25.555564, x=0.709776, y=-0.490029, z=-0.024840],
+NULL]
+params=[
+ # dimer approximation
+"bcryst-b_PBE-D3paw600_CAM-B3LYPp2p"    ==[ E0=-2.584501, t12aj=-0.019936, t12aaj=0.067125, t12=-0.173102],
+"bcryst-bx_PBE-D3paw600_CAM-B3LYPp2p"   ==[ E0=-2.597224, t12aj=-0.045585, t12aaj=0.000632, t12=-0.175244],
+"cryst-bx_PBE-D3paw600_CAM-B3LYPp2p"    ==[ E0=-2.545521, t12aj=-0.049167, t12aaj=0.001135, t12=-0.174307],
+ # multimers
+"bcryst-bx_PBE-D3paw600_CAM-B3LYPp2p_mm"==[ E0=-2.701838, t12aj=-0.042980, t12aaj=0.001013, t12=-0.169098],
+ # models
+"bcryst-b_PBE-D3paw600_model"==[ t12aj=0.1, t12aaj=0.1, t12=-0.17],
+NULL]
+H=[
+( 1, 2,  0,  0, 0 )==t12,
+( 1, 2,  1, -1, 0 )==t12aj,
+( 1, 2,  2, -1, 0 )==t12aaj,
+( 2, 1, -2,  1, 0 )==t12aaj,
+( 2, 1, -1,  1, 0 )==t12aj,
+( 2, 1,  0,  0, 0 )==t12,
+NULL]

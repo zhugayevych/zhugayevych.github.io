@@ -4,6 +4,10 @@
 passwd
 
 ls
+rm -r directorytodelete
+rm -r -f directorytodelete
+
+du -hd1
 
 env
 for bash: export <name>=<value>

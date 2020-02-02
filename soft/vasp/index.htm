@@ -14,7 +14,7 @@
  <a class="h" href="../../../Sci/MS/_comp/vasp/">S</a></span>
  &nbsp;
  <a href="http://www.vasp.at">website</a>,
- discussed version: 5.4.4</p>
+ discussed version: 5.4.4 and 6.3.1</p>
 
 <p class="si">Credits: Sergey Matveev and Victor Vysotskiy (installation, scripts), Dmitry Aksenov (guidelines, scripts)</p>
 
@@ -24,35 +24,49 @@
 <li>To generate input files locally unzip pseudopotentials to a desired program folder, I use <code>C:/Sci/vasp</code>.
  Note that individual files may be compressed &ndash; decompress them.</li>
 <li>Job submission scripts:
- <a href="_pbs_magnus">Magnus cluster</a>,
- <a href="_pbs_pardus">Pardus cluster</a>,
- <a href="_pbs_arkuda">Arkuda cluster</a></li>
+ <a href="_pbs_raven">Raven cluster</a>,
+ <a href="_pbs_magnus">Magnus cluster</a></li>
 <li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub vasp/_pbs -N test1</code></li>
-<li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -c 16 -t 24:00:00 vasp/_pbs</code></li>
+<li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -c 16 -t 24:00:00 vasp/_pbs</code>
+<br>or: <code>sbatch -J test1 --ntasks-per-node=16 --mem=32gb vasp/_pbs</code></li>
 <li>Sample input files: <a href="test1.zip">zip</a></li>
+</ul>
+
+<h2>Important notes</h2>
+<ul>
+<li>On some clusters VASP does not recognize INCARS created in Windows, so they should be convereted to UNIX format.</li>
 </ul>
 
 <h2>Help</h2>
 <ul>
-<li><a href="http://cms.mpi.univie.ac.at/vasp-forum">forum</a></li>
-<li>Electronic density (CHGCAR file) can be visualized by <a href="http://jp-minerals.org/vesta/">VESTA</a> program</li>
-<li>VASP has its own visualization tool: <a href="http://www.p4vasp.at">p4vasp</a></li>
-<li>Usage guidance: <a href="http://sites.google.com/site/cta4rbk/home/tips4vasp">Bk Ryu</a></li>
-<li>To continue interrupted ionic relaxation copy <code>CONTCAR</code> to <code>POSCAR</code></li>
-<li>In case of <code>RHOSYG: internal error: stars are not distinct</code>, set <code>ISYM=0</code></li>
-<li>For linear response LREAL=F is the only option</li>
-<li>To remove orbital occupations use <a href="trimoutcar.sh">this script</a> (run <code>trimoutcar.sh OUTCAR > OUTCAR_new</code>, thanks to Dmitry Aksenov)</li>
-
+<li>Resources:
+ <ul>
+ <li><a href="http://www.vasp.at/wiki">wiki</a></li>
+ <li><a href="http://cms.mpi.univie.ac.at/vasp-forum">forum</a></li>
+ <li>tips by <a href="http://sites.google.com/site/cta4rbk/home/tips4vasp">Byungki Ryu</a></li>
+ </ul></li>
+<li>Electronic density (<code>CHGCAR</code> file) can be visualized by <a href="http://jp-minerals.org/vesta/">VESTA</a> program.</li>
+<li>VASP has its own visualization tool: <a href="http://www.p4vasp.at">p4vasp</a>.</li>
+<li>To continue interrupted ionic relaxation copy <code>CONTCAR</code> to <code>POSCAR</code>.</li>
+<li>In case of <code>RHOSYG: internal error: stars are not distinct</code>, set <code>ISYM=0</code>.</li>
+<li>For linear response <code>LREAL=F</code> is the only option.</li>
+<li><code>NPAR=1</code> is probably the best choice for single node shared memory run.</li>
+<li>To remove orbital occupations use <a href="trimoutcar.sh">this script</a> (run <code>trimoutcar.sh OUTCAR > OUTCAR_new</code>, thanks to Dmitry Aksenov).</li>
+<li>For calculation of DOS use <code>ISMEAR=-5</code> (it might be necessary to converge <code>WAVECAR</code> by other method).</li>
+<li>For calculation of band structure with hybrid functionals the approach described in <a href="http://www.vasp.at/wiki/index.php/Si_bandstructure">VASP-wiki</a> works only for the provided example.
+ For other cells and finer grids it produces inaccurate eigenvalues at least those with zero weight.
+ The main challenge is to converge eigenvalues (individual eigenvalues converge much more slowly than band energy).
+ At the minimum, one has to increase precision (PREC, maybe PRECFOCK) and number of SCF steps (only ALGO D and A are applicable).</li>
 </ul>
 
 <h2>SCF convergence</h2>
 <ul>
-<li>Read VASP documentation: <a href="http://www.vasp.at/vasp-workshop/slides/optelectron.pdf">Electronic optimization</a>.</li>
+<li>Read VASP documentation: <a href="http://www.vasp.at/vasp-workshop/optelectron.pdf">Electronic optimization</a>.</li>
 <li>Look into existing convergent calculations in any internal (<code>Data</code> folder) or external database (e.g. <a href="http://materialsproject.org">Materials Project</a>).</li>
-<li>Continue iterations (run VASP with existing WAVECAR).</li>
-<li>Start with good WAVECAR, e.g. from smal energy cutoff. Set <code>ICHARG=0</code> otherwise VASP may take wrong charge density.</li>
-<li>Start with good CHGCAR, e.g. from spin nonpolarized calculations, small k-grid etc.
- If needed correct unit cell parameters in CHGCAR to match POSCAR otherwise VASP ignores it.
+<li>Continue iterations (run VASP with existing <code>WAVECAR</code>).</li>
+<li>Start with good <code>WAVECAR</code>, e.g. from smal energy cutoff. Set <code>ICHARG=0</code> otherwise VASP may take wrong charge density.</li>
+<li>Start with good <code>CHGCAR</code>, e.g. from spin nonpolarized calculations, small k-grid etc.
+ If needed correct unit cell parameters in <code>CHGCAR</code> to match <code>POSCAR</code> otherwise VASP ignores it.
  Alternatively you can set the grid appropriately.</li>
 <li><a href="http://cms.mpi.univie.ac.at/vasp/vasp/ALGO_tag.html">Change algorithm</a>: <code>ALGO=Fast</code> is reasonable default choice for insulators (KFeSO4F) but only for Gaussian smearing.</li>
 <li><a href="http://cms.mpi.univie.ac.at/vasp/vasp/Mixing_tags_IMIX_INIMIX_MAXMIX_AMIX_BMIX_AMIX_MAG_BMIX_MAG_AMIN_MIXPRE_WC.html">Change density mixing</a> (LiFePO4 by <a href="http://materialsproject.org">materialsproject</a>).</li>

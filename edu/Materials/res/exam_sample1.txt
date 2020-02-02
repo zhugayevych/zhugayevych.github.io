@@ -1,4 +1,4 @@
-Practical part of exam by Andriy Zhugayevych
+Practical part of exam by Andriy Zhugayevych: anatase TiO2
 
 1. See exam_sample1.cif
 # optimized by PBEpaw400
@@ -19,7 +19,7 @@ _atom_site_fract_z
  Ti  4a  0  0  0
  O   8e  0  0  .2074
 
-2. I41/amd; a,c,z(O)
+2. I41/amd; a,c,z(O) or two Ti-O bonds and any one O-Ti-O angle
 
 3. Anatase, it is prototype, C5, tI12
 

@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>MiKTeX</title>
+</head>
+<body>
+<p><span class="h">
+ <a class="h" href="./">F</a>
+ <a class="h" href="file:///C:/Sci/miktex/">P</a></span>
+ &nbsp;
+ <a href="http://www.miktex.org">website</a>,
+ discussed version: 2.9</p>
+
+<h2>Setup</h2>
+<ol>
+<li>Make basic installation. Preferably, the destination folder should contain no spaces or other special symbols.</li>
+<li>In Settings (Admin) set paper size and include
+	<ul>
+	<li>formats: latex, mf, pdflatex, tex;</li>
+	<li>languages: english, russian, ukrainian.</li>
+	</ul></li>
+<li>Update packages using Update (Admin) utility.</li>
+<li>In Package Manager (Admin) check the list of installed packages:
+	<ul>
+	<li>MiKTeX: miktex-*, ltxbase, ltxmisc, pdftex-def;</li>
+	<li>TeXworks: ifxetex;</li>
+	<li>basic: babel, tools, tds, latex2e-help-texinfo;</li>
+	<li>cyrillic: cyrillic, lh, miktex-hyph-cyrillic, ruhyphen, ukrhyph;</li>
+	<li>fonts: amsfonts, cm, cm-super, latex-fonts, lm, psnfss, sansmathaccent (for beamer), wasysym (wasy2);</li>
+	<li>graphics: graphics, xcolor, pstricks (pstricks-add, pspicture, pst-coil, pst-eps, pst-node, pst-plot, pst-tools), pgf;</li>
+	<li>non-article: a0poster, sciposter, beamer (mptopdf);</li>
+	<li>APS: revtex (<i>actually it is revtex4.1</i>), textcase, url;</li>
+	<li>ACS: achemso, cleveref (natmove is included), setspace, mciteplus, mhchem;</li>
+	<li>miscellaneous: bigfoot, caption, cite, cmap (mmap), colortbl, endfloat, filehook (for beamer), geometry, hyperref, enumitem, multido, multirow, natbib, siunits (siunitx), soul, tdclock, wrapfig;</li>
+	<li>bundles: ms (for beamer), oberdiek.</li>
+	</ul></li>
+<li>In Settings add <a href="../../Sys/Pub/TeX/localtexmf/">localtexmf</a> root.
+ Here is my <a href="localtexmf.zip">localtexmf</a> as an example.</li>
+</ol>
+
+<h2>Configuring TeXworks</h2>
+<ul>
+<li>Configuration directory is <a href="../../AppData/Roaming/TUG/TeXworks/configuration/">here</a>,
+ copy there custom <code>tools.ini</code> file. Here is my <a href="tools.ini">tools.ini</a>.
+ It requires <a href="UsedByTeXworks.zip">these batch files</a>.</li>
+<li>Create a folder for auxiliary files, e.g. <a href="file://C:/tmp/_aux/">C:\tmp\_aux</a>.</li>
+<li>Enable "Format/Syntax Coloring/LaTeX".</li>
+<li>Preferences:</li>
+	<ul>
+	<li>General: Small icons;</li>
+	<li>Editor: Roboto Mono or Courier New, 9 or 10pt, UTF-8 encoding;</li>
+	<li>Preview: Fit to Width;</li>
+	<li>Typesetting: set pdfLaTeX as default, add <code>-aux-directory=C:\tmp\_aux</code> argument;</li>
+	</ul></li>
+<li>Spelling dictionaries are <a href="../../AppData/Roaming/TUG/TeXworks/dictionaries/">here</a>.
+ You may want to replace preinstalled dictionaries with your own ones.
+ Note that dictionaries can be edited in a plain text editor, just make sure that all words are lexically ordered.
+ Use <code>Pub/TeX/main.mw</code> to add custom dictionary to existing one.</li>
+</ul>
+
+<h2>TeXworks help</h2>
+<ul>
+<li>See manual <a href="https://github.com/TeXworks/manual/releases">here</a></li>
+<li>Autocompletion: <code>xve \varepsilon, xco \Omega, bequ \begin{equation}, sec \subsection</code></li>
+</ul>
+
+<hr>
+<p class="si">updated 23.05.2022</p>
+</body>
+</html>

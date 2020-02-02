@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='146px' height='110px' viewBox='0 0 146 110' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<title>OPD/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='95.7' y1='88.5' x2='72.3' y2='75.0' />
+<line x1='72.3' y1='35.0' x2='95.7' y2='21.5' />
+<line x1='72.3' y1='35.0' x2='72.3' y2='75.0' />
+<line x1='72.3' y1='75.0' x2='37.6' y2='95.0' />
+<line x1='63.5' y1='71.8' x2='39.2' y2='85.8' />
+<line x1='37.6' y1='95.0' x2='3.0' y2='75.0' />
+<line x1='3.0' y1='75.0' x2='3.0' y2='35.0' />
+<line x1='10.2' y1='69.0' x2='10.2' y2='41.0' />
+<line x1='3.0' y1='35.0' x2='37.6' y2='15.0' />
+<line x1='37.6' y1='15.0' x2='72.3' y2='35.0' />
+<line x1='39.2' y1='24.2' x2='63.5' y2='38.2' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='102.9' y='23.0' font-size='16' fill='rgb(12,12,255)'>NH</text>
+<text x='126.9' y='26.7' font-size='13' fill='rgb(12,12,255)'>2</text>
+<text x='102.9' y='103.0' font-size='16' fill='rgb(12,12,255)'>NH</text>
+<text x='126.9' y='106.7' font-size='13' fill='rgb(12,12,255)'>2</text>
+</g>
+</svg>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>Filename conventions</title>
+</head>
+<body>
+
+<p>Following filenames are used: <code>sys_conf_state1_solvent1_method1_subset_state2_solvent2_method2_anythingelse_jt.ext</code>, here
+<ul>
+<li><code>sys</code> &ndash; system name, for example
+ <ul>
+ <li>OPV5 &ndash; PPV oligomer of 5 core repeating units</li>
+ <li>TCNQ-F2 &ndash; TCNQ molecule with two hydrogens replaced by fluorines</li>
+ <li>PO4--- &ndash; anion of PO4 with charge -3</li>
+ <li>benzeneN2ON2S &ndash; benzene molecule with -N-O-N- and -N-S-N- arcs attached instead of hydrogens at the opposite sides</li>
+ <li>G7 &ndash; special notation which were used in a publication</li>
+ </ul></li>
+<li><code>conf</code> &ndash; configuration
+ <ul>
+ <li>molec &ndash; molecule</li>
+ <li>molec-a &ndash; lowest energy conformer in case if 'molec' entry is not the lowest (typical situation for high-symmetry conformer)</li>
+ <li>molec-b &ndash; second lowest energy conformer</li>
+ <li>molec-s &ndash; saddle point</li>
+ <li>molec-p &ndash; planar conformer</li>
+ <li>molec-t &ndash; twisted conformer</li>
+ <li>molecH &ndash; singly protonated</li>
+ <li>molecH2 &ndash; doubly protonated</li>
+ <li>molecG &ndash; singly deprotonated</li>
+ <li>cluster4 &ndash; cluster of 4 atoms (dangling bonds are allowed)</li>
+ <li>molec4 &ndash; passivated cluster of 4 atoms</li>
+ <li>cryst &ndash; crystal</li>
+ <li>cryst-m &ndash; monoclinic polymorph</li>
+ <li>cryst-rr &ndash; rhombohedral polymorph in primitive (rhombohedral) unit cell</li>
+ <li>cryst2 &ndash; crystal with doubled cell</li>
+ <li>dimer,trimerlayer,bilayer,chain,ring &ndash; self-explanatory</li>
+ <li>base &ndash; pi-conjugated backbone</li>
+ <li>conf5 &ndash; configuration 5</li>
+ <li>stack4p &ndash; stack of 4 molecules with PBC</li>
+ </ul></li>
+<li><code>solvent1</code> &ndash; solvent in which the configuration is obtained or optimized
+ <ul>
+ <li>vac  &ndash; vacuum (normally should be omitted)</li>
+ <li>hpt  &ndash; heptane</li>
+ <li>tol  &ndash; toluene</li>
+ <li>clf  &ndash; chloroform</li>
+ <li>clb  &ndash; chlorobenzene</li>
+ <li>thf  &ndash; tetrahydrofuran</li>
+ <li>dcm  &ndash; dichloromethane</li>
+ <li>dclb &ndash; o-dichlorobenzene</li>
+ <li>eth  &ndash; ethanol</li>
+ <li>acn  &ndash; acetonitrile</li>
+ <li>dmso &ndash; dimethylsulfoxide</li>
+ <li>wat  &ndash; water</li>
+ </ul></li>
+<li><code>state1</code> &ndash; electronic state (charge,spin,excitation) at which the configuration is obtained or optimized
+ <ul>
+ <li>O=S=S0 &ndash; neutral ground state</li>
+ <li>R=S1 &ndash; lowest excited singlet</li>
+ <li>S2,S3 &ndash; higher excited singlets</li>
+ <li>T=T1 &ndash; lowest energy triplet</li>
+ <li>D,Q,Q,X,X &ndash; doublet,quartet,quintet,sextet,septet (adjacent multiplicities are distinguished by number of electrons defined by <code>sys</code>)</li>
+ <li>N=N1 &ndash; anion (charge -1)</li>
+ <li>N2,N3 &ndash; higher energy states with charge -1</li>
+ <li>NN &ndash; charge -2</li>
+ <li>P=P1 &ndash; positive charge</li>
+ <li>PT &ndash; positively charged triplet</li>
+ <li>omit <code>state1</code> section if the state is guessable (usually if it is 'O')</li>
+ <li>charges are relative, i.e. for PO4--- 'O' means charge -3 whereas neutral state will be encoded as 'PPP'</li>
+ <li>charge state must be at the beginning and excitation number must be at the end</li>
+ <li>excited states are numbered from 1 except for S# and D# notations which are numbered from 0 (so that N2=NS1)</li>
+ </ul></li>
+<li><code>method1</code> &ndash; method by which the configuration is obtained, can be either "exp" (experiment) or an <a href="methods.htm">encoded method</a></li>
+<li><code>subset</code> &ndash; subset of atoms, use "+" for "and" (e.g. "1+4" for molecule 1 and molecule 4), use "-" for "through", use the following symbols to encode translations:
+ <ul>
+ <li>a &ndash; <code>[1,0,0]</code></li>
+ <li>b &ndash; <code>[0,1,0]</code></li>
+ <li>c &ndash; <code>[0,0,1]</code></li>
+ <li>i &ndash; <code>[-1,0,0]</code></li>
+ <li>j &ndash; <code>[0,-1,0]</code></li>
+ <li>k &ndash; <code>[0,0,-1]</code></li>
+ </ul></li>
+<li><code>solvent2</code> &ndash; solvent for single point calculation, omit if <code>solvent2=solvent1</code>
+<li><code>state2</code> &ndash; state for single point calculation (charge is relative to system charge not to state1), omit if <code>state2=state1</code>
+<li><code>method2</code> &ndash; single point calculation method, omit if <code>method2=method1</code></li>
+<li><code>anythingelse</code> &ndash; see examples
+ <ul>
+ <li>new,symmetrized &ndash; reserved</li>
+ <li>old &ndash; initial geometry for optimization</li>
+ <li>planar &ndash; (depreciated, use <code>conf</code>) planarized backbone</li>
+ <li>fly &ndash; calculation duplicated by Firefly</li>
+ <li>alt,min1,min2 &ndash; (depreciated, use <code>conf</code>) alternative conformations</li>
+ <li>spd2 &ndash; saddle point for dihedral 2</li>
+ </ul></li>
+<li><code>jt</code> &ndash; job/calculation type
+ <ul>
+ <li>bin &ndash; wave-function (ev,evc,s1e files should be moved to "bin" folder)</li>
+ <li>em &ndash; geometry optimization (omit after moving to "em" folder)</li>
+ <li>esp &ndash; atomic charges (electrostatic, Hirshfield, CM5)</li>
+ <li>exc &ndash; excited state calculations</li>
+ <li>exc1 &ndash; excited state calculations with density of 1st excited state</li>
+ <li>excS,excT &ndash; excited state calculations singlets or triplets</li>
+ <li>excLR,excSS &ndash; LR or SS solvation of 1st excited state (for absorption excLR=exc, for emission excLR=exc1)</li>
+ <li>freq &ndash; frequencies (frcc file should be moved to "bin" folder)</li>
+ <li>guess &ndash; initial guess for wave-function</li>
+ <li>md400K1A10ns &ndash; 10 ns molecular dynamics at T=400K, P=1Atm</li>
+ <li>mgf,mo,no &ndash; MO/NO visualization (omit after moving to "mgf" folder)</li>
+ <li>nbo,lmo &ndash; NBO and LMO analysis</li>
+ <li>nto# &ndash; NTO visualization (move to "mgf" folder)</li>
+ <li>polar &ndash; polarization</li>
+ <li>sp &ndash; trivial single point calculation (usually "sp" should be omitted)</li>
+ </ul></li>
+</ul>
+</p>
+<p>Instead of separator "_" you can use "/", that is use folders.</p>
+<p>In MolMod package
+ <ul>
+ <li>solvents are tabulated in <code>tb_solvents</code></li>
+ <li>states are decoded by <code>DecodeState</code> command</li>
+ <li>methods are decoded by <code>DecodeMethod</code> command</li>
+ <li>translations are decoded by <code>DecodeTranslation</code> command</li>
+ <li>job types for Gaussian are detailed in 'exam_gau' script</li>
+ </ul></p>
+
+</body>
+</html>

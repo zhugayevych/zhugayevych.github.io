@@ -1,0 +1,20 @@
+# adamantane molecule optimized by B3LYPp2p, SG=-43m
+data_nolabel
+_cell_length_a                   10
+_cell_length_b                   10
+_cell_length_c                   10
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_symmetry_space_group_name_H-M   P-43m
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+ C1 C 4e  .0892726  .0892726  .0892726
+ C2 C 6f  .1781203  0         0
+ H1 H 4e  .1526839  .1526839  .1526839
+ H2 H 12i .2436139 -.0624111  .0624111

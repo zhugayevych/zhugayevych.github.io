@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='117px' height='90px' viewBox='0 0 117 90' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.O { fill:rgb(255,0,0); stroke:rgb(255,0,0) }
+text.S { fill:rgb(255,229,22); stroke:rgb(255,229,22) }
+</style>
+<title>DMSO/molec_B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='67.0' y1='68.5' x2='54.9' y2='61.5' />
+<line x1='43.6' y1='28.0' x2='43.6' y2='42.0' />
+<line x1='33.9' y1='64.1' x2='21.8' y2='71.1' />
+<line x1='30.9' y1='58.9' x2='18.8' y2='65.9' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='37.6' y='63.0' font-size='16' class="S">S</text>
+<text x='3.0' y='83.0' font-size='16' class="O">O</text>
+<text x='74.3' y='83.0' font-size='16' fill='rgb(102,102,102)'>CH</text>
+<text x='98.3' y='86.7' font-size='13' fill='rgb(102,102,102)'>3</text>
+<text x='39.6' y='23.0' font-size='16' fill='rgb(102,102,102)'>CH</text>
+<text x='63.6' y='26.7' font-size='13' fill='rgb(102,102,102)'>3</text>
+</g>
+</svg>

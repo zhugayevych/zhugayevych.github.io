@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='70px' height='92px' viewBox='0 0 70 92' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+text.S { fill:rgb(255,229,22); stroke:rgb(255,229,22) }
+</style>
+<title>thiadiazole/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='66.5' y1='49.2' x2='43.6' y2='24.5' />
+<line x1='25.9' y1='24.5' x2='3.0' y2='49.2' />
+<line x1='3.0' y1='49.2' x2='11.9' y2='70.8' />
+<line x1='11.9' y1='52.0' x2='17.6' y2='65.7' />
+<line x1='29.3' y1='81.4' x2='40.2' y2='81.4' />
+<line x1='57.6' y1='70.8' x2='66.5' y2='49.2' />
+<line x1='51.9' y1='65.7' x2='57.6' y2='52.0' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='28.8' y='23.0' font-size='16' class="S">S</text>
+<text x='47.2' y='89.4' font-size='16' class="N">N</text>
+<text x='10.3' y='89.4' font-size='16' class="N">N</text>
+</g>
+</svg>
