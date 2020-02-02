@@ -7,25 +7,47 @@
 </head>
 <body>
 <p><span class="h">
- <a class="h" href="./">F</a></span>
+ <a class="h" href="./">F</a>
+ <a class="h" href="../../../Sys/Software/win10/">R</a></span>
  &nbsp;
- <a href="http://windows.microsoft.com/en-US/windows">website</a></p>
+ <a href="http://windows.microsoft.com/en-US/windows">website</a>
+ <var>ver:</var>Home 64bit
+ <var>key:</var>bound to laptop</p>
 
-<h2>Built-in applications</h2>
-<p>To uninstall them login to a desired account, lunch Windows Power Shell, and run <code>Get-AppxPackage *name* | Remove-AppxPackage</code>, where name is</p>
+<h2>Setup</h2>
 <ul>
-<li>Calendar and Mail &ndash; windowscommunicationsapps</li>
-<li>Groove Music &ndash; zunemusic</li>
-<li>Maps &ndash; windowsmaps</li>
-<li>Money &ndash; bingfinance</li>
-<li>Movies & TV &ndash; zunevideo</li>
-<li>News &ndash; bingnews</li>
-<li>People &ndash; people</li>
-<li>Phone &ndash; phone</li>
-<li>Photos &ndash; photos</li>
-<li>Sports &ndash; bingsports</li>
-<li>Weather &ndash; bingweather</li>
-<li>Xbox &ndash; xboxapp</li>
+<li>Install Windows 10 offline, skip name/email/phone identification, decline personal info collection</li>
+<li>Turn off Device encryption (Security group)</li>
+<li>Deinstall spam offline (McAfee, MSOffice, MSOneDrive, Dropbox) and minimize</li>
+<li>Deinstall built-in applications: login to a desired account, lunch Windows Power Shell,
+ run <code>Get-AppxPackage > C:/tmp/new.txt</code> to get list of application names,
+ then run <code>Get-AppxPackage *name* | Remove-AppxPackage</code> to delete them</li>
+</ul>
+
+<h2>Control Panel</h2>
+<ul>
+<li>About: name the computer</li>
+<li>Apps and features: remove garbage</li>
+<li>Background: set Desktop background color to (43,85,128)</li>
+<li>Date and time: set time zone</li>
+<li>Default apps: set your favorite file associations by manually patching Windows Registry, see my code <a href="../../../Sys/Software/Win7/FileAssoc/">here</a></li>
+<li>Device Manager: check for malfunctioning devices</li>
+<li>Display: native resolution, 125% font size</li>
+<li>Indexing Options: check</li>
+<li>Language: use Microsoft Keyboard Layout Creator 1.4 or KLM</li>
+<li>Mouse: adjust speed, wheel scrolls 1 line</li>
+<li>Power and sleep:
+ screen off after 5/15 min, sleep after 15/30 min, hibernate after 30/60 min;
+ power button hibernates, closing the lid turns into sleep;
+ low/critical battery level 6/2% (by Dell)</li>
+<li>Printers and scanners: install printers including print-to-file printers</li>
+<li>Region: change system locale to Russian if needed</li>
+<li>System Properties:
+ disable Remote Assistance;
+ Environment Variables: add "C:\Sys" to <code>PATH</code>;
+ Visual Effects: Show thumbnails, Show window contents, Smooth edges, Smooth-scroll</li>
+<li>Taskbar: lock, auto-hide, use small icons, never combine; disable annoying icons in Notification Area; customize Start Menu (see table below)</li>
+<li>Windows Update: automatically check for updates but let me choose whether to download them (not availabe in Windows 10)</li>
 </ul>
 
 <h2>Battery saving</h2>
@@ -40,13 +62,26 @@
 </ul>
 
 <h2>Tips and tricks</h2>
-<p>Changing language for single-language version (<a href="http://stackoverflow.com/questions/31698742/how-to-change-windows-10-interface-language-on-single-language-version">original post</a>):
+<ul>
+<li>Create Restore Points on System Protection tab of System Properties</li>
+<li>To change keyboard layout use:
+<ul>
+<li><a href="../KLM/index.htm">Keyboard Layout Manager</a></li>
+<li><a href="http://support.microsoft.com/en-us/help/823010/the-microsoft-keyboard-layout-creator">Microsoft Keyboard Layout Creator</a>
+ ver </var><a href="http://www.microsoft.com/en-us/download/details.aspx?id=22339&ppud=4">1.4</a>,
+ see also <a href="http://answers.microsoft.com/en-us/windows/forum/windows_10-hardware/custom-keyboard-layout-with-windows-10/b71c7905-1e30-4b0c-861b-253efd2b5a9e">here</a></li>
+</ul></li>
+<li>Install K-Lite codec pack from <a href="http://www.codecs.com">here</a></li>
+<li>Changing language for single-language version (<a href="http://stackoverflow.com/questions/31698742/how-to-change-windows-10-interface-language-on-single-language-version">original post</a>):
 <ol>
-<li>Determine the name of your current language pack: <code>dism /online /get-packages</code>, e.g. <code>Microsoft-Windows-Client-LanguagePack-Package~31bf3856ad364e35~x86~ru-RU~10.0.14393.0</code></li>
+<li>Determine the name of your current language pack: <code>dism /online /get-packages</code>,
+ e.g. <code>Microsoft-Windows-Client-LanguagePack-Package~31bf3856ad364e35~x86~ru-RU~10.0.14393.0</code></li>
 <li>Download the required language pack, e.g. <code>lp_d17ad4e6831135935760d21e2c8689b667430d0b.cab</code></li>
-<li>Install it: <code>dism /online /add-package /packagepath:C:\path_to_cabfile\cabfile.cab</code> then <code>dism /online /get-packages</code></li>
+<li>Install it: <code>dism /online /add-package /packagepath:C:\path_to_cabfile\cabfile.cab</code>
+ then <code>dism /online /get-packages</code></li>
 <li>Remove the current pack: <code>dism /online /remove-package /packagename:current_pack_name</code></li>
-</ol>
+</ol></li>
+</ul>
 
 </body>
 </html>
