@@ -22,6 +22,7 @@
 <li>Deinstall built-in applications: login to a desired account, lunch Windows Power Shell,
  run <code>Get-AppxPackage > C:/tmp/new.txt</code> to get list of application names,
  then run <code>Get-AppxPackage *name* | Remove-AppxPackage</code> to delete them</li>
+<li>.NET Framework 3.5 (includes 2.0) is required for older apps</li>
 </ul>
 
 <h2>Control Panel</h2>
@@ -34,7 +35,9 @@
 <li>Device Manager: check for malfunctioning devices</li>
 <li>Display: native resolution, 125% font size</li>
 <li>Indexing Options: check</li>
-<li>Language: use Microsoft Keyboard Layout Creator 1.4 or KLM</li>
+<li>Language: add Ukrainian language and
+ replace default keyboard layout with <a href="ukru.zip">ukru</a> (see <a href="ukru.htm">layout</a>),
+ hide language bar (also in "Turn system icons on or off")</li>
 <li>Mouse: adjust speed, wheel scrolls 1 line</li>
 <li>Power and sleep:
  screen off after 5/15 min, sleep after 15/30 min, hibernate after 30/60 min;
@@ -47,8 +50,67 @@
  Environment Variables: add "C:\Sys" to <code>PATH</code>;
  Visual Effects: Show thumbnails, Show window contents, Smooth edges, Smooth-scroll</li>
 <li>Taskbar: lock, auto-hide, use small icons, never combine; disable annoying icons in Notification Area; customize Start Menu (see table below)</li>
+<li>Touchpad: disconnect when mouse is connected</li>
 <li>Windows Update: automatically check for updates but let me choose whether to download them (not availabe in Windows 10)</li>
 </ul>
+
+<h2>Desktop, Taskbar, and Start Menu</h2>
+<table border="1" cellspacing="2" cellpadding="2">
+<colgroup><col span="6" valign="top"></colgroup>
+<tr>
+<td>Programs (all users)</td>
+<td>Start Menu</td>
+<td>Taskbar from Left</td>
+<td>Taskbar from Right</td>
+<td>Gadgets</td>
+<td>Keyboard shortcuts Ctrl+Alt+</td>
+</tr>
+<tr>
+<td>
+Science<br>
+Office<br>
+System<br>
+Accessories<br>
+Multimedia<br>
+Internet</td>
+<td>
+AVSearch<br>
+Mozilla Firefox<br>
+Media Player Classic</td>
+<td>
+Search<br>
+Cortana<br>
+Microsoft Edge<br>
+File Explorer<br>
+PSPad</td>
+<td>
+Show desktop<br>
+Time<br>
+Network<br>
+Battery<br>
+Lingvo</td>
+<td>
+Projects<br>
+System<br>
+Research<br>
+Educational<br>
+Science<br>
+<a href="http://addgadgets.com/all_cpu_meter/">All CPU Meter</a><br>
+<a href="http://addgadgets.com/network_meter/">Network Meter</a></td>
+<td>
+<strong>B</strong>eyond Compare<br>
+<strong>C</strong>artes du Ciel<br>
+Corel <strong>D</strong>raw<br>
+Google <strong>E</strong>arth<br>
+Mozilla <strong>F</strong>irefox<br>
+Google C<strong>H</strong>rome<br>
+Media P<strong>L</strong>ayer<br>
+<strong>M</strong>aple<br>
+Adobe <strong>P</strong>hotoshop<br>
+Microsoft <strong>W</strong>ord<br>
+Microsoft E<strong>X</strong>cel</td>
+</tr>
+</table>
 
 <h2>Battery saving</h2>
 <ul>
@@ -64,14 +126,9 @@
 <h2>Tips and tricks</h2>
 <ul>
 <li>Create Restore Points on System Protection tab of System Properties</li>
-<li>To change keyboard layout use:
-<ul>
-<li><a href="../KLM/index.htm">Keyboard Layout Manager</a></li>
-<li><a href="http://support.microsoft.com/en-us/help/823010/the-microsoft-keyboard-layout-creator">Microsoft Keyboard Layout Creator</a>
- ver </var><a href="http://www.microsoft.com/en-us/download/details.aspx?id=22339&ppud=4">1.4</a>,
- see also <a href="http://answers.microsoft.com/en-us/windows/forum/windows_10-hardware/custom-keyboard-layout-with-windows-10/b71c7905-1e30-4b0c-861b-253efd2b5a9e">here</a></li>
-</ul></li>
 <li>Install K-Lite codec pack from <a href="http://www.codecs.com">here</a></li>
+<li>To fix blurry text override high DPI scaling in Compatibility, see <a href="https://wpvkp.com/fix-blurry-text-windows-10/">here</a></li>
+<li><a href="https://www.windowscentral.com/how-extend-lock-screen-timeout-display-turn-windows-10">Changing lock screen timeout</a></li>
 <li>Changing language for single-language version (<a href="http://stackoverflow.com/questions/31698742/how-to-change-windows-10-interface-language-on-single-language-version">original post</a>):
 <ol>
 <li>Determine the name of your current language pack: <code>dism /online /get-packages</code>,
