@@ -8,11 +8,11 @@
 <body>
 <p><span class="h">
  <a class="h" href="./">F</a>
- <a class="h" href="../../../Sys/Software/win10/">R</a></span>
- &nbsp;
- <a href="http://windows.microsoft.com/en-US/windows">website</a>
+ <a class="h" href="../../../Sys/Software/win10/">R</a>
+ </span>
+ &nbsp;<a href="http://windows.microsoft.com/en-US/windows">www</a>
  <var>ver:</var>Home 64bit
- <var>key:</var>bound to laptop</p>
+ </p>
 
 <h2>Setup</h2>
 <ul>
@@ -33,6 +33,7 @@
 <li>Date and time: set time zone</li>
 <li>Default apps: set your favorite file associations by manually patching Windows Registry, see my code <a href="../../../Sys/Software/Win7/FileAssoc/">here</a></li>
 <li>Device Manager: check for malfunctioning devices</li>
+<li>Desktop Icon Settings: remove everything, but Pin to Start Recycle Bin</li>
 <li>Display: native resolution, 125% font size</li>
 <li>Indexing Options: check</li>
 <li>Language: add Ukrainian language and
@@ -103,19 +104,35 @@ Science<br>
 Corel <strong>D</strong>raw<br>
 Google <strong>E</strong>arth<br>
 Mozilla <strong>F</strong>irefox<br>
-Google C<strong>H</strong>rome<br>
-Media P<strong>L</strong>ayer<br>
+Google c<strong>H</strong>rome<br>
+<strong>I</strong>nkscape<br>
+Media p<strong>L</strong>ayer<br>
 <strong>M</strong>aple<br>
 Adobe <strong>P</strong>hotoshop<br>
+<strong>R</strong>egistry Editor<br>
+Win<strong>S</strong>CP<br>
 Microsoft <strong>W</strong>ord<br>
-Microsoft E<strong>X</strong>cel</td>
+Microsoft e<strong>X</strong>cel</td>
 </tr>
 </table>
+
+<h2>Maintenance</h2>
+<ul>
+<li>Create Restore Points on System Protection tab of System Properties</li>
+<li>Clean up autorun programs in
+ <ul>
+ <li><a href="C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup">System Startup</a> and
+     <a href="../../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup">User Startup</a></li>
+ <li><code>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</code></li>
+ <li><code>HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run</code></li>
+ <li>Task Scheduler</li>
+ </ul></li>
+</ul>
 
 <h2>Battery saving</h2>
 <ul>
 <li>To investigate performance run <code>powercfg /option /output filename.html</code>, where option is one of batteryreport, energy, sleepstudy.</li>
-<li>In case of sleep problems, to disable Connected Standby set HKLM\SYSTEM\CurrentControlSet\Control\Power\CsEnabled to 0.</li>
+<li>In case of sleep problems, to disable Connected Standby set <code>HKLM\SYSTEM\CurrentControlSet\Control\Power\CsEnabled</code> to 0.</li>
 <li>Common battery drainers:
  <ul>
  <li>Intel SST Audio Device &ndash; update driver, if doesn't help then use <a href="http://auto-mute.com/">Auto Mute</a> utility</li>
@@ -123,12 +140,21 @@ Microsoft E<strong>X</strong>cel</td>
  </ul></li>
 </ul>
 
+<h2>Resources saving</h2>
+<ul>
+<li>Trun off Delivery Optimization in Services and Windows Update</li>
+<li>Turn off Microsoft Store in Services</li>
+</ul>
+
+
 <h2>Tips and tricks</h2>
 <ul>
-<li>Create Restore Points on System Protection tab of System Properties</li>
 <li>Install K-Lite codec pack from <a href="http://www.codecs.com">here</a></li>
 <li>To fix blurry text override high DPI scaling in Compatibility, see <a href="https://wpvkp.com/fix-blurry-text-windows-10/">here</a></li>
 <li><a href="https://www.windowscentral.com/how-extend-lock-screen-timeout-display-turn-windows-10">Changing lock screen timeout</a></li>
+<li>To tune <a href="http://www.virtualplastic.net/html/desk_reg.html">Windows appearance</a>
+ backup your current settings by exporting <code>HKCU\Control Panel\Desktop</code>,
+ edit <code>WindowsMetrics.reg</code> file and run it</li>
 <li>Changing language for single-language version (<a href="http://stackoverflow.com/questions/31698742/how-to-change-windows-10-interface-language-on-single-language-version">original post</a>):
 <ol>
 <li>Determine the name of your current language pack: <code>dism /online /get-packages</code>,
