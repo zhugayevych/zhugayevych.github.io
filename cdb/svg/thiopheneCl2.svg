@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='135px' height='125px' viewBox='0 0 135 125' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.Cl { fill:rgb(0,255,0); stroke:rgb(0,255,0) }
+text.S { fill:rgb(255,229,22); stroke:rgb(255,229,22) }
+</style>
+<title>thiopheneCl2/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='81.5' y1='77.1' x2='98.5' y2='102.8' />
+<line x1='45.2' y1='77.1' x2='28.2' y2='102.8' />
+<line x1='94.7' y1='45.3' x2='72.7' y2='24.0' />
+<line x1='54.0' y1='24.0' x2='32.0' y2='45.3' />
+<line x1='32.0' y1='45.3' x2='45.2' y2='77.1' />
+<line x1='40.9' y1='48.1' x2='49.5' y2='68.8' />
+<line x1='45.2' y1='77.1' x2='81.5' y2='77.1' />
+<line x1='81.5' y1='77.1' x2='94.7' y2='45.3' />
+<line x1='77.2' y1='68.8' x2='85.8' y2='48.1' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='57.3' y='23.0' font-size='16' class="S">S</text>
+<text x='99.7' y='121.6' font-size='16' class="Cl">Cl</text>
+<text x='3.0' y='121.6' font-size='16' class="Cl">Cl</text>
+</g>
+</svg>
