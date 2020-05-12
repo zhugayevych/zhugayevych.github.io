@@ -6,6 +6,7 @@
 #SBATCH -c 1        ## --cpus-per-task=
 #SBATCH -t 24:00:00
 #SBATCH -p AMG
+#SBATCH --mem-per-cpu=7gb
 
 export OMP_NUM_THREADS="'${SLURM_CPUS_PER_TASK:-1}'"
 
@@ -23,7 +24,7 @@ export LAMMPS_POTENTIALS=~/lammps/_res
 
 cd ~/lammps
 
-mpirun -np ${SLURM_NTASKS} lammps -sf intel -pk omp ${OMP_NUM_THREADS} -in $SLURM_JOB_NAME.lam -log $SLURM_JOB_NAME.out >$SLURM_JOB_NAME.stdout
+mpirun -np ${SLURM_NTASKS} lammps -sf opt -pk omp ${OMP_NUM_THREADS} -in $SLURM_JOB_NAME.lam -log $SLURM_JOB_NAME.out >$SLURM_JOB_NAME.stdout
 
 date
 rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err
