@@ -17,7 +17,7 @@ rm -rf $GAUSS_SCRDIR
 mkdir -p $GAUSS_SCRDIR
 cd ${RUN_DIR}
 
-g16 < $PBS_JOBNAME.gau > $PBS_JOBNAME.out 
+g16 < $PBS_JOBNAME.gau > $PBS_JOBNAME.out
 
 rm -rf $GAUSS_SCRDIR
 date

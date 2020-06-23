@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -j eo
+#PBS -r n
+#PBS -l nodes=1:ppn=8
+hostname
+date
+
+export g16root=~/local
+#export GAUSS_SCRDIR=${TMPDIR:-$PBS_O_WORKDIR}
+#export GAUSS_SCRDIR=$TMPDIR/$PBS_JOBNAME
+export GAUSS_SCRDIR=~/scratch/$PBS_JOBNAME
+source $g16root/g16/bsd/g16.profile
+
+export RUN_DIR=~/gaussian/
+
+rm -rf $GAUSS_SCRDIR
+mkdir -p $GAUSS_SCRDIR
+cd ${RUN_DIR}
+
+g16 < $PBS_JOBNAME.gau > $PBS_JOBNAME.out
+
+rm -rf $GAUSS_SCRDIR
+date

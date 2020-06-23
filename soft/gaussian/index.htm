@@ -24,7 +24,8 @@
 <li>Locate executables, edit your user initialization file, create <code>gaussian</code> directory, and learn how to submit a job.</li>
 <li>Job submission scripts:
  <a href="_pbs_magnus">Magnus cluster</a>,
- <a href="_pbs_pardus">Pardus cluster</a> (<a href="_pbs_pardus_Linda">with Linda</a>, <a href="_pbs_pardus_v09">version 09</a>)</li>
+ <a href="_pbs_pardus">Pardus cluster</a> (<a href="_pbs_pardus_Linda">with Linda</a>, <a href="_pbs_pardus_v09">version 09</a>),
+ <a href="_pbs_arkuda">Arkuda cluster</a></li>
 <li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub gaussian/_pbs -N test1 -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
 <li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -c 8 -t 12:00:00 gaussian/_pbs</code></li>
 <li>Example of Gaussian run script without PBS: <a href="_run">example</a></li>
