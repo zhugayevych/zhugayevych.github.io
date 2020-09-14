@@ -15,6 +15,7 @@ hostname
 date
 
 module load Compiler/Intel/17u8  Q-Ch/VASP/5.4.4_OPT
+#module load Compiler/Intel/17u8  Q-Ch/VASP/5.4.4_WANNIER_STATIC
 
 #cd ~/vasp/$SLURM_JOB_NAME
 export SCR=/scr/$SLURM_JOB_USER/$SLURM_JOB_ID
@@ -24,6 +25,7 @@ cp ~/vasp/$SLURM_JOB_NAME/* $SCR/
 cd $SCR
 
 mpirun -np $SLURM_JOB_CPUS_PER_NODE vasp_std
+#srun --mpi=pmix --cpu-bind=cores --mem-bind=local vasp_std
 
 cp -r $SCR/* ~/vasp/$SLURM_JOB_NAME/
 cd ~/vasp/$SLURM_JOB_NAME/
