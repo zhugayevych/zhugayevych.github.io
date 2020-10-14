@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='230px' height='213px' viewBox='0 0 230 213' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+</style>
+<title>annulene18CN/molec-a_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='8.4' y1='95.7' x2='8.0' y2='122.4' />
+<line x1='15.6' y1='97.9' x2='15.3' y2='116.6' />
+<line x1='8.0' y1='122.4' x2='31.1' y2='135.8' />
+<line x1='16.8' y1='119.2' x2='33.0' y2='128.6' />
+<line x1='42.3' y1='155.5' x2='41.9' y2='182.2' />
+<line x1='49.5' y1='157.6' x2='49.2' y2='176.3' />
+<line x1='41.9' y1='182.2' x2='65.0' y2='195.6' />
+<line x1='50.7' y1='179.0' x2='66.9' y2='188.4' />
+<line x1='88.0' y1='195.6' x2='111.5' y2='182.3' />
+<line x1='86.2' y1='188.4' x2='102.7' y2='179.0' />
+<line x1='111.5' y1='182.3' x2='134.6' y2='195.7' />
+<line x1='120.3' y1='179.1' x2='136.4' y2='188.4' />
+<line x1='157.5' y1='195.7' x2='181.0' y2='182.4' />
+<line x1='155.7' y1='188.4' x2='172.2' y2='179.1' />
+<line x1='181.0' y1='182.4' x2='181.4' y2='155.7' />
+<line x1='173.9' y1='176.3' x2='174.2' y2='157.6' />
+<line x1='193.2' y1='136.0' x2='216.7' y2='122.6' />
+<line x1='191.3' y1='128.7' x2='207.9' y2='119.3' />
+<line x1='216.7' y1='122.6' x2='217.1' y2='95.9' />
+<line x1='209.5' y1='116.5' x2='209.8' y2='97.8' />
+<line x1='205.9' y1='76.2' x2='182.7' y2='62.8' />
+<line x1='200.5' y1='81.4' x2='184.3' y2='72.1' />
+<line x1='182.7' y1='62.8' x2='183.1' y2='36.1' />
+<line x1='175.6' y1='56.7' x2='175.9' y2='38.1' />
+<line x1='172.0' y1='16.4' x2='148.8' y2='3.1' />
+<line x1='166.6' y1='21.6' x2='150.4' y2='12.3' />
+<line x1='148.8' y1='3.1' x2='125.4' y2='16.4' />
+<line x1='147.2' y1='12.3' x2='130.6' y2='21.7' />
+<line x1='102.4' y1='16.3' x2='79.3' y2='3.0' />
+<line x1='97.1' y1='21.6' x2='80.9' y2='12.2' />
+<line x1='79.3' y1='3.0' x2='55.8' y2='16.3' />
+<line x1='77.6' y1='12.2' x2='61.1' y2='21.6' />
+<line x1='44.0' y1='36.0' x2='43.7' y2='62.7' />
+<line x1='51.2' y1='38.1' x2='50.9' y2='56.8' />
+<line x1='43.7' y1='62.7' x2='20.2' y2='76.0' />
+<line x1='42.0' y1='71.9' x2='25.4' y2='81.3' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='2.6' y='90.6' font-size='16' class="N">N</text>
+<text x='36.5' y='150.4' font-size='16' class="N">N</text>
+<text x='70.4' y='210.2' font-size='16' class="N">N</text>
+<text x='140.0' y='210.2' font-size='16' class="N">N</text>
+<text x='175.6' y='150.5' font-size='16' class="N">N</text>
+<text x='211.3' y='90.8' font-size='16' class="N">N</text>
+<text x='177.3' y='31.0' font-size='16' class="N">N</text>
+<text x='107.8' y='30.9' font-size='16' class="N">N</text>
+<text x='38.2' y='30.9' font-size='16' class="N">N</text>
+</g>
+</svg>
