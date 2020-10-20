@@ -18,7 +18,7 @@ _journal_page_first              177
 _journal_year                    1992
 _chemical_formula_sum            SiO2
 _chemical_name_common            Quartz
-_symmetry_space_group_name_H-M   P3121
+_symmetry_space_group_name_H-M   P3121        # for VESTA use 'P 31 2 1'
 _cell_angle_alpha                90
 _cell_angle_beta                 90
 _cell_angle_gamma                120
@@ -43,4 +43,4 @@ _atom_site_aniso_U_12
 _atom_site_aniso_U_13
 _atom_site_aniso_U_23
 Si 0.00490 0.00410 0.00460 0.00205 0.00010 0.00020
-O 0.01400 0.01020 0.01010 0.00910 0.00290 0.00360
+O  0.01400 0.01020 0.01010 0.00910 0.00290 0.00360
