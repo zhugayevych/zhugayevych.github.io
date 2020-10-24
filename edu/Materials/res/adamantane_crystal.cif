@@ -1,0 +1,19 @@
+# adamantane crystal optimized by PBE-D3paw400
+# the molecule is orientaionally disordered at ambient conditions and SG=Fm-3m
+data_nolabel
+_cell_length_a     9.4032168
+_cell_length_b     9.4032168
+_cell_length_c     9.4032168
+_cell_angle_alpha  90
+_cell_angle_beta   90
+_cell_angle_gamma  90
+_symmetry_space_group_name_H-M  F-43m
+loop_
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+  C     .09449098   .09449098   .09449098
+  C     .18857519  0           0         
+  H     .16217314   .16217314   .16217314
+  H     .25859804  -.06651660   .06651660

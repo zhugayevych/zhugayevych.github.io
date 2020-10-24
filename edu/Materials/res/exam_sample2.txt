@@ -1,0 +1,44 @@
+Practical part of exam by Andriy Zhugayevych: adamantane C10H16
+
+1. See adamantane.xyz, adamantane.cif (shown here), and adamantane_crystal.cif for molecular crystal (not discussed here)
+# adamantane molecule optimized by B3LYPp2p, SG=-43m
+data_nolabel
+_cell_length_a                   10
+_cell_length_b                   10
+_cell_length_c                   10
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_symmetry_space_group_name_H-M   P-43m
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+ C1 C 4e  .0892726  .0892726  .0892726
+ C2 C 6f  .1781203  0         0
+ H1 H 4e  .1526839  .1526839  .1526839
+ H2 H 12i .2436139 -.0624111  .0624111
+
+2. -43m; x(C1),x(C2),x(H1),x(H2),z(H2) or C1-C2 bond, C1-H1 and C2-H2 bonds, C1-C2-C1 and H2-C2-H2 angles
+
+3. Adamantane, it can be considered as prototype
+
+4. The bonding is covalent. Bond lengths and angles correspond to sp3-hybridized carbon. Coordination corresponds to the diamond lattice.
+
+5. See adamantane_predicted.xyz
+The structure is predicted assuming perfect tetrahedral coordination of C2 atoms and polyethylene bondlengths CC=1.53 and CH=1.09. The comparison with the reference structure shows high accuracy of the prediction:
+       ref  predicted
+CC    1.544   1.53
+CH1   1.098   1.09
+CH2   1.099   1.09
+CCC  109.73  109.47
+HCH  106.85  109.47
+
+6. The structure is rigid (there are no low-energy confirmations). At ambient conditions molecules pack into fcc lattice with full-symmetry orientational disorder (Fm-3m). At low temperatures all atoms are ordered and symmetry is lowered to P-421c. Noticeable molecules with C10H16 formula include monoterpenes.
+
+7. Being non-pi-conjugated hydrocarbon, it should have high HOMO-LUMO gap. Frontier orbitals correspond to CCsp3 bonds and antibonds, and can be triply degenerate.
+
+8. It is the smallest molecular model of void in the diamond lattice.
