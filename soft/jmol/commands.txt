@@ -11,3 +11,4 @@ write XYZ filename
 moveto 0 0 1 0 90; #view from right
 wireframe only; vector on; vector 10; vector scale 3
 axes 2
+hide @3,@6,@12
