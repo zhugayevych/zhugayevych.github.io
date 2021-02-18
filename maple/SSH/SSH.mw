@@ -175,15 +175,15 @@
 <Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;magnus&quot;,printout);</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">int=putty</Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">com=plink
+<Text-field style="Line Printed Output" layout="Line Printed Output">int=putty
+com=plink
 ftp=psftp
-md5=fciv
-untar=7za x -aou
+md5=fciv</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">untar=7za x -aou
 ungz=7za x
 tmp=C:/tmp/_tmpssh
 host=a.zhugayevych@10.30.16.168, ppk=C:/Users/azh/Sys/Internet/SSH/magnus/key.ppk, port=, nnp=node, pbs=SLURM
-cnames=[magnus,cmsVM,arkuda,msu,nano,pardus]</Text-field>
+cnames=[arkuda,magnus,nano,pardus,msu,cmsVM]</Text-field>
 </Output>
 </Group>
 <Group labelreference="L146" drawlabel="true">
@@ -261,7 +261,7 @@ SSH:-Setup('version');</Text-field>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NzRJK0ZpbGVFeGlzdHNHNiJJK0ZpbGVTdGF0dXNHRiRJK01vZHVsZUxvYWRHRiRJJlNldHVwR0YkSSRkaXJHRiRJJGdldEdGJEkmbG9naW5HRiRJK29wZW50dW5uZWxHRiRJKXBic25vZGVzR0YkSStwYnNyZXBvcnRzR0YkSSRwdXRHRiRJJHB3ZEdGJEklcWRlbEdGJEkmcXN0YXRHRiRJJXFzdWJHRiRJJHJ1bkdGJEkncnVuZnRwR0YkSSVzZ2V0R0Yk</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiksLD8/</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">Iik0LUA/</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L158" drawlabel="true">
@@ -280,32 +280,32 @@ SSH:-Setup('version');</Text-field>
 <Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup]( 'host'=&quot;user@host&quot;, 'ppk'=&quot;key.ppk&quot;, 'md5'=&quot;checksum utility&quot;, printout);</Text-field>
 </Input>
 <Output>
-<Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20key.ppk%20does%20not%20exist.%20Provide%20the%20correct%20path%20to%20private%20key." hyperlink="true"><Font style="HyperlinkWarning">Warning, key.ppk does not exist. Provide the correct path to private key.</Font></Hyperlink></Text-field>
+<Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20Private%20key%20key.ppk%20does%20not%20exist.%20Provide%20the%20correct%20path%20to%20private%20key.%20Will%20be%20interpreted%20as%20password." hyperlink="true"><Font style="HyperlinkWarning">Warning, Private key key.ppk does not exist. Provide the correct path to private key. Will be interpreted as password.</Font></Hyperlink></Text-field>
 </Output>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">int=C:/Sys/putty/putty
-com=C:/Sys/putty/plink
-ftp=C:/Sys/putty/psftp
+<Text-field style="Line Printed Output" layout="Line Printed Output">int=putty
+com=plink
+ftp=psftp
 md5=checksum utility
-untar=7za x
+untar=7za x -aou
 ungz=7za x
-tmp=C:/Sys/putty/_tmpssh
-host=user@host, ppk=key.ppk, port=, nnp=node, pbs=TORQUE
-cnames=[msu,skoltech,fedotov,nano]</Text-field>
+tmp=C:/tmp/_tmpssh
+host=user@host, ppk=key.ppk, port=, nnp=, pbs=
+cnames=[arkuda,magnus,nano,pardus,msu,cmsVM]</Text-field>
 </Output>
 </Group>
 <Group labelreference="L219" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Recommended setup</Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;skoltech&quot;);</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup](&quot;pardus&quot;);</Text-field>
 </Input>
 </Group>
 <Group labelreference="L253" drawlabel="true">
 <Input>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup]('host','pbs');</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup]('cname','host','pbs');</Text-field>
 </Input>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NiRRR0FuZHJpeS5aaHVnYXlldnljaEBjbHVzdGVyLnNrb2x0ZWNoLnJ1NiJRJ1RPUlFVRUYk</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">NiVRJ3BhcmR1czYiUUZBbmRyaXkuWmh1Z2F5ZXZ5Y2hAcGFyZHVzLnNrb2x0ZWNoLnJ1RiRRJU1PQUJGJA==</Equation></Text-field>
 </Output>
 </Group>
 <Text-field style="Text" layout="Normal"></Text-field>
@@ -320,7 +320,7 @@ cnames=[msu,skoltech,fedotov,nano]</Text-field>
 <Text-field style="Line Printed Output" layout="Line Printed Output">Type &quot;exit&quot; to logout</Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiQhWw==</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiUlWyI=</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L157" drawlabel="true">
@@ -351,20 +351,20 @@ runftp([&quot;pwd&quot;]);</Text-field>
 <Group labelreference="L156" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Setup primary connection</Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup]('host'=&quot;azh@localhost&quot;,'ppk'=&quot;C:/Users/azh/Local/nano/key.ppk&quot;,'port'=10022);</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">SSH[Setup]('host'=&quot;azh@localhost&quot;,'ppk'=&quot;C:/Users/azh/Sys/Internet/SSH/nano/key.ppk&quot;,'port'=10022);</Text-field>
 </Input>
 </Group>
 <Group labelreference="L153" drawlabel="true">
 <Input>
 <Text-field style="Text" layout="Normal">Open a tunnel and keep it running:</Text-field>
-<Text-field prompt="&gt; " style="Maple Input" layout="Normal">opentunnel(&quot;nano.lanl.gov:22&quot;,&quot;azh@74.95.16.42&quot;,&quot;C:/Users/azh/Local/velizhan/key.ppk&quot;,printout);</Text-field>
+<Text-field prompt="&gt; " style="Maple Input" layout="Normal">opentunnel(&quot;targetsite:port&quot;,&quot;azh@tunnelsite&quot;,&quot;C:/Users/azh/Sys/Internet/SSH/tunneltest/key.ppk&quot;,printout);</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">C:/Sys/putty/putty -ssh -i C:/Users/azh/Local/velizhan/key.ppk -L 10022:nano.lanl.gov:22 -N azh@74.95.16.42</Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">To close the tunnel close the opened window/process</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">putty -ssh -i C:/Users/azh/Sys/Internet/SSH/tunneltest/key.ppk -L 10022:targetsite:port -N azh@tunnelsite
+To close the tunnel close the opened window/process</Text-field>
 </Output>
 <Output>
-<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiUpMyI=</Equation></Text-field>
+<Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output">IiUzOw==</Equation></Text-field>
 </Output>
 </Group>
 <Group labelreference="L154" drawlabel="true">
@@ -580,26 +580,26 @@ SSH[qstat]('user'=&quot;Andriy.Zhugayevych&quot;);
 SSH[qstat]('user'=&quot;&quot;):</Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output"> 91481  pyrene_molec_CAM-B3LYPp2p_mo          0:00  PD  1  16  AMG  (Priority) 
- 91480  pyrene_molec_CAM-B3LYPp2p_freq        0:00  PD  1  16  AMG  (Priority) 
- 91479  pyrene_molec_CAM-B3LYPp2p_sp          0:00  PD  1  16  AMG  (Priority) 
- 91475  phenanthrene_molec_CAM-B3LYPp2p_exc   0:00  PD  1  16  AMG  (Priority) 
- 91476  phenanthrene_molec_CAM-B3LYPp2p_nbo   0:00  PD  1  16  AMG  (Priority) 
- 91477  phenanthrene_molec_CAM-B3LYPp2p_esp   0:00  PD  1  16  AMG  (Priority) 
- 91478  phenanthrene_molec_CAM-B3LYPp2p_nto1  0:00  PD  1  16  AMG  (Priority) 
- 91473  phenanthrene_molec_CAM-B3LYPp2p_N     0:00  PD  1  16  AMG  (Priority) 
- 91474  phenanthrene_molec_CAM-B3LYPp2p_T     0:00  PD  1  16  AMG  (Priority) 
- 91472  phenanthrene_molec_CAM-B3LYPp2p_P     0:00  PD  1  16  AMG  (Priority) 
- 91471  phenanthrene_molec_CAM-B3LYPp2p_mo    0:00  PD  1  16  AMG  (Priority) 
- 91470  phenanthrene_molec_CAM-B3LYPp2p_freq  0:00  PD  1  16  AMG  (Priority) 
- 91469  phenanthrene_molec_CAM-B3LYPp2p_sp    0:00  PD  1  16  AMG  (Priority) 
- 91482  pyrene_molec_CAM-B3LYPp2p_P           0:00  PD  1  16  AMG  (Priority) 
- 91483  pyrene_molec_CAM-B3LYPp2p_N           0:00  PD  1  16  AMG  (Priority) 
- 91484  pyrene_molec_CAM-B3LYPp2p_T           0:00  PD  1  16  AMG  (Priority) 
- 91485  pyrene_molec_CAM-B3LYPp2p_exc         0:00  PD  1  16  AMG  (Priority) 
- 91486  pyrene_molec_CAM-B3LYPp2p_nbo         0:00  PD  1  16  AMG  (Priority) 
- 91487  pyrene_molec_CAM-B3LYPp2p_esp         0:00  PD  1  16  AMG  (Priority) 
- 91488  pyrene_molec_CAM-B3LYPp2p_nto1        0:00  PD  1  16  AMG  (Priority) 
+<Text-field style="Line Printed Output" layout="Line Printed Output"> 177404  LiFePO4_x1-P4H_md900K10ps_U_10                       0:00  PD  1  16  AMG-long    (QOSMaxJobsPerUserLimit) 
+ 177464  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_1           0:00  PD  1  4   AMG-short   (Resources)              
+ 177465  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_2           0:00  PD  1  4   AMG-short   (Priority)               
+ 177466  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_3           0:00  PD  1  4   AMG-short   (Priority)               
+ 177467  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_4           0:00  PD  1  4   AMG-short   (Priority)               
+ 177468  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_1+1b        0:00  PD  1  4   AMG-short   (Priority)               
+ 177469  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_1+2         0:00  PD  1  4   AMG-short   (Priority)               
+ 177470  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_1+3         0:00  PD  1  4   AMG-short   (Priority)               
+ 177471  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_1+3j        0:00  PD  1  4   AMG-short   (Priority)               
+ 177472  chrysene_cryst_PBE-D3paw600_CAM-B3LYPp2p_1+4k        0:00  PD  1  4   AMG-short   (Priority)               
+ 177460  chrysene_cryst_PBE-D3paw600_dos                      0:00  PD  1  16  AMG         (AssocGrpCpuLimit)       
+ 177461  chrysene_cryst_PBE-D3paw600_freq                     0:00  PD  1  16  AMG-medium  (AssocGrpCpuLimit)       
+ 177263  LiFePO4_x1-P4H_md900K10ps_U_8                  5-06:24:33  R   1  16  AMG-long    node-amg04               
+ 177262  LiFePO4_x1-P4H_md900K10ps_U_7                  5-12:06:25  R   1  16  AMG-long    node-amg03               
+ 177271  LiFePO4_x1-P4H_md900K10ps_U_9                  3-16:45:24  R   1  16  AMG-long    node-amg01               
+ 177403  NDT_cryst_VDW-DF2paw600_freq_LR                1-12:01:09  R   1  16  AMG-medium  node-amg06               
+ 177458  chrysene_cryst_VDW-DF2paw600_vs5                    24:41  R   1  16  AMG         node-amg09               
+ 177457  chrysene_cryst_VDW-DF2paw600_vs4                    36:29  R   1  16  AMG         node-amg12               
+ 177455  chrysene_cryst_VDW-DF2paw600_vs2                    36:50  R   1  16  AMG         node-amg08               
+ 177454  chrysene_cryst_VDW-DF2paw600_vs1                    36:56  R   1  16  AMG         node-amg07               
 </Text-field>
 </Output>
 <Output>
@@ -607,105 +607,28 @@ SSH[qstat]('user'=&quot;&quot;):</Text-field>
 </Output>
 <Output>
 <Text-field style="Line Printed Output" layout="Line Printed Output">             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-             91468       AMG       bs v.vasilc PD       0:00      1 (Resources)
-             91481       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91480       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91479       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91475       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91476       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91477       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91478       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91473       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91474       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91472       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91471       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91470       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91469       AMG phenanth a.zhugay PD       0:00      1 (Priority)
-             91482       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91483       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91484       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91485       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91486       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91487       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91488       AMG pyrene_m a.zhugay PD       0:00      1 (Priority)
-             91489 AMG-mediu LiCoO2.1 d.akseno PD       0:00      1 (Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)
-             91461       AMG silicide d.poleta PD       0:00      1 (Priority)
-             91462       AMG silicide d.poleta PD       0:00      1 (Priority)
-             91490       AMG silicide d.poleta PD       0:00      1 (Priority)
-             91391       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
-             91392       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
-             91393       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
-             91394       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
-             91395       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
-             91396       AMG Nb12O29.   a.boev PD       0:00      1 (Priority)
-             91397       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
-             91398       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
-             91399       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
-             91400       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
-             91401       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
-             91402       AMG Nb2B3.or   a.boev PD       0:00      1 (Priority)
-             91403       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
-             91404       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
-             91405       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
-             91406       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
-             91407       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
-             91408       AMG Nb3N5.or   a.boev PD       0:00      1 (Priority)
-             91411       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
-             91412       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
-             91413       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
-             91414       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
-             91415       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
-             91416       AMG NbB.orth   a.boev PD       0:00      1 (Priority)
-             91417       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
-             91418       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
-             91419       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
-             91420       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
-             91421       AMG SiAg2.or   a.boev PD       0:00      1 (Priority)
-             91422       AMG Ti5O7.or   a.boev PD       0:00      1 (Priority)
-             91423       AMG TiSi2.or   a.boev PD       0:00      1 (Priority)
-             91424       AMG TiSi2.or   a.boev PD       0:00      1 (Priority)
-             91425       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
-             91426       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
-             91427       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
-             91428       AMG V2B3.ort   a.boev PD       0:00      1 (Priority)
-             91429       AMG V4P3.ort   a.boev PD       0:00      1 (Priority)
-             91430       AMG V5O7.ort   a.boev PD       0:00      1 (Priority)
-             91431       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
-             91432       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
-             91433       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
-             91434       AMG VB.ortho   a.boev PD       0:00      1 (Priority)
-             91435       AMG VF5.orth   a.boev PD       0:00      1 (Priority)
-             91436       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
-             91437       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
-             91438       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
-             91439       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
-             91440       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
-             91441       AMG YSi.orth   a.boev PD       0:00      1 (Priority)
-             91442       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
-             91443       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
-             91444       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
-             91445       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
-             91446       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
-             91447       AMG ZrSi.ort   a.boev PD       0:00      1 (Priority)
-             91448       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
-             91449       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
-             91450       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
-             91451       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
-             91452       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
-             91453       AMG ZrSi2.or   a.boev PD       0:00      1 (Priority)
-             91047       AMG  run_g16 n.tukach  R   11:40:29      1 node-amg04
-             91062       AMG  run_g16 n.tukach  R   11:28:36      1 node-amg02
-             91056       AMG  run_g16 n.tukach  R   11:31:00      1 node-amg05
-             91197       AMG silicide d.poleta  R    9:39:44      1 node-amg01
-             91390       AMG Mn5O7.or   a.boev  R    5:57:22      1 node-amg06
-             91387       AMG Cr5O7.or   a.boev  R    7:05:21      1 node-amg11
-             91386       AMG Cr5O7.or   a.boev  R    7:13:22      1 node-amg03
-             91382       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg10
-             91383       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg12
-             91384       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg13
-             91385       AMG Cr5O7.or   a.boev  R    7:17:14      1 node-amg14
-             91380       AMG Co2O3.or   a.boev  R    7:18:35      1 node-amg07
-             91381       AMG Co2O3.or   a.boev  R    7:18:35      1 node-amg09</Text-field>
+            177404  AMG-long LiFePO4_ a.zhugay PD       0:00      1 (QOSMaxJobsPerUserLimit)
+            177464 AMG-short chrysene a.zhugay PD       0:00      1 (Resources)
+            177465 AMG-short chrysene a.zhugay PD       0:00      1 (Priority)
+            177466 AMG-short chrysene a.zhugay PD       0:00      1 (Priority)
+            177467 AMG-short chrysene a.zhugay PD       0:00      1 (Priority)
+            177468 AMG-short chrysene a.zhugay PD       0:00      1 (Priority)
+            177469 AMG-short chrysene a.zhugay PD       0:00      1 (Priority)
+            177470 AMG-short chrysene a.zhugay PD       0:00      1 (Priority)
+            177471 AMG-short chrysene a.zhugay PD       0:00      1 (Priority)
+            177472 AMG-short chrysene a.zhugay PD       0:00      1 (Priority)
+            177460       AMG chrysene a.zhugay PD       0:00      1 (AssocGrpCpuLimit)
+            177461 AMG-mediu chrysene a.zhugay PD       0:00      1 (AssocGrpCpuLimit)
+            177463 AMG-mediu  run_g16 n.tukach  R      23:48      1 node-amg02
+            177263  AMG-long LiFePO4_ a.zhugay  R 5-06:24:35      1 node-amg04
+            177262  AMG-long LiFePO4_ a.zhugay  R 5-12:06:27      1 node-amg03
+            177271  AMG-long LiFePO4_ a.zhugay  R 3-16:45:26      1 node-amg01
+            177403 AMG-mediu NDT_crys a.zhugay  R 1-12:01:11      1 node-amg06
+            177458       AMG chrysene a.zhugay  R      24:43      1 node-amg09
+            177457       AMG chrysene a.zhugay  R      36:31      1 node-amg12
+            177455       AMG chrysene a.zhugay  R      36:52      1 node-amg08
+            177454       AMG chrysene a.zhugay  R      36:58      1 node-amg07
+            177452 AMG-mediu LiFePO4l d.akseno  R    1:47:55      1 node-amg05</Text-field>
 </Output>
 </Group>
 <Group labelreference="L259" drawlabel="true">
@@ -715,27 +638,69 @@ SSH[qstat]('user'=&quot;&quot;):</Text-field>
 <Font encoding="UTF-8">for e in nodes do printf(&quot;%-8s%4s%4s  %s\134n&quot;,op(1..3,e),StringTools[Join](e[4],&quot;,&quot;)) end;</Font></Text-field>
 </Input>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">NODELIST    NODES PARTITION STATE </Text-field>
-<Text-field style="Line Printed Output" layout="Line Printed Output">node-amg01      1       AMG mix   
-node-amg02      1       AMG mix   
-node-amg03      1       AMG alloc 
-node-amg04      1       AMG alloc 
-node-amg05      1       AMG alloc 
-node-amg06      1       AMG alloc 
-node-amg07      1       AMG alloc 
-node-amg08      1       AMG alloc 
-node-amg09      1       AMG mix   
-node-amg10      1       AMG mix   
-node-amg11      1       AMG mix   
-node-amg12      1       AMG alloc 
-node-amg13      1       AMG alloc 
-node-amg14      1       AMG alloc </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">NODELIST    NODES  PARTITION STATE 
+node-amg01      1       AMG* alloc 
+node-amg01      1   AMG-long alloc 
+node-amg01      1  AMG-short alloc 
+node-amg01      1 AMG-medium alloc 
+node-amg02      1       AMG* alloc 
+node-amg02      1   AMG-long alloc </Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">node-amg02      1  AMG-short alloc 
+node-amg02      1 AMG-medium alloc 
+node-amg03      1       AMG* alloc 
+node-amg03      1   AMG-long alloc 
+node-amg03      1  AMG-short alloc 
+node-amg03      1 AMG-medium alloc 
+node-amg04      1       AMG* alloc 
+node-amg04      1   AMG-long alloc 
+node-amg04      1  AMG-short alloc 
+node-amg04      1 AMG-medium alloc 
+node-amg05      1       AMG* alloc 
+node-amg05      1   AMG-long alloc 
+node-amg05      1 AMG-medium alloc 
+node-amg05      1  AMG-short alloc 
+node-amg06      1       AMG* alloc 
+node-amg06      1   AMG-long alloc 
+node-amg06      1 AMG-medium alloc 
+node-amg06      1  AMG-short alloc 
+node-amg07      1       AMG* alloc 
+node-amg07      1   AMG-long alloc 
+node-amg07      1 AMG-medium alloc 
+node-amg07      1  AMG-short alloc 
+node-amg08      1       AMG* alloc 
+node-amg08      1   AMG-long alloc 
+node-amg08      1 AMG-medium alloc 
+node-amg08      1  AMG-short alloc 
+node-amg09      1       AMG* alloc 
+node-amg09      1   AMG-long alloc 
+node-amg09      1 AMG-medium alloc 
+node-amg09      1  AMG-short alloc 
+node-amg10      1       AMG* idle  
+node-amg10      1   AMG-long idle  
+node-amg10      1 AMG-medium idle  
+node-amg10      1  AMG-short idle  
+node-amg11      1       AMG* idle  
+node-amg11      1   AMG-long idle  
+node-amg11      1 AMG-medium idle  
+node-amg11      1  AMG-short idle  
+node-amg12      1       AMG* alloc 
+node-amg12      1   AMG-long alloc 
+node-amg12      1 AMG-medium alloc 
+node-amg12      1  AMG-short alloc 
+node-amg13      1       AMG* idle  
+node-amg13      1   AMG-long idle  
+node-amg13      1 AMG-medium idle  
+node-amg13      1  AMG-short idle  
+node-amg14      1   AMG-long idle  
+node-amg14      1 AMG-medium idle  
+node-amg14      1       AMG* idle  
+node-amg14      1  AMG-short idle  </Text-field>
 </Output>
 <Output>
 <Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEmbm9kZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUYjNiYtRiw2JVEhRidGL0YyLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0Y9RjlGVEZXRjk=">LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUkjbWlHRiQ2JVEmbm9kZXNGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSM6PUYnL0YzUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGPS8lKXN0cmV0Y2h5R0Y9LyUqc3ltbWV0cmljR0Y9LyUobGFyZ2VvcEdGPS8lLm1vdmFibGVsaW1pdHNHRj0vJSdhY2NlbnRHRj0vJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUYjNiYtRiw2JVEhRidGL0YyLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0Y9RjlGVEZXRjk=</Equation></Text-field>
 </Output>
 <Output>
-<Text-field style="Line Printed Output" layout="Line Printed Output">2019-04-20  20:25:44</Text-field>
+<Text-field style="Line Printed Output" layout="Line Printed Output">2021-01-15  16:43:52</Text-field>
 </Output>
 </Group>
 <Group labelreference="L257" drawlabel="true">

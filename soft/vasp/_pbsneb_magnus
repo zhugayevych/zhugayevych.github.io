@@ -1,0 +1,35 @@
+#!/bin/bash
+#SBATCH -o %x.e%j
+#SBATCH -e %x.e%j.err
+#SBATCH -N 1        ## --nodes=
+#SBATCH -c 16       ## --cpus-per-task=
+#SBATCH -t 24:00:00
+#SBATCH -p AMG
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=0
+
+echo 'JOB_NAME' $SLURM_JOB_NAME
+echo 'JOB_ID' $SLURM_JOB_ID
+echo 'JOB_CPUS_PER_NODE' $SLURM_JOB_CPUS_PER_NODE
+hostname
+date
+
+module load Compiler/Intel/17u8  Q-Ch/VASP/5.4.4_OPT
+#module load Compiler/Intel/17u8  Q-Ch/VASP/5.4.4_WANNIER_STATIC
+
+cd ~/vasp/$SLURM_JOB_NAME
+#export SCR=/scr/$SLURM_JOB_USER/$SLURM_JOB_ID
+#echo 'SCR' $SCR
+#mkdir -p $SCR
+#cp ~/vasp/$SLURM_JOB_NAME/* $SCR/
+#cd $SCR
+
+mpirun -np $SLURM_JOB_CPUS_PER_NODE vasp_std
+#srun --mpi=pmix --cpu-bind=cores --mem-bind=local vasp_std
+
+#cp -r $SCR/* ~/vasp/$SLURM_JOB_NAME/
+#cd ~/vasp/$SLURM_JOB_NAME/
+#rm -rf $SCR
+
+date
+rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err

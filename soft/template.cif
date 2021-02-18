@@ -42,7 +42,7 @@ _atom_site_fract_x
 _atom_site_fract_y
 _atom_site_fract_z
 _atom_site_occupancy
-_atom_site_B_iso_or_equiv
+_atom_site_U_iso_or_equiv
 _atom_site_description
 Li1  Li  2i  .389(2)   .334(1)   .659(2)   .18   2.2  01
 Li2  Li  2i  .373(2)   .236(1)   .517(2)   .82   2.2  02
