@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+<!--
+body { font-family: Arial, Helvetica, sans-serif }
+code { color: #800000; font-size: 11pt }
+samp { color: #008000; font-style: italic; font-weight: bold }
+dt   { color: #800000; font-family: monospace }
+.tg      { border-collapse: collapse; border-spacing:0; border-color:#C0C0C0 }
+.tg th   { font-size: smaller; font-weight: bold; background-color:#C0C0C0; padding: 0.1em; border-style:solid; border-width: 1px; border-color: #C0C0C0 }
+.tg td   { padding: 0.1em; border-style: solid; border-width: 1px; border-color: #C0C0C0 }
+-->
+</style>
+<title>Format of library files</title>
+</head>
+<body>
+<h1>Format of library files</h1>
+
+<h2>Format of index files</h2>
+
+<p>The general structure of index file is as follows (see examples, the encoding is UTF-8 no BOM):</p>
+<p><code>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;link rel="stylesheet" type="text/css" href="file://C:/Sys/azh/lib.css"&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;div&gt;<br>
+&lt;a href="../index.html"&gt;upward&lt;/a&gt;,<br>
+&lt;a href="."&gt;fold&lt;/a&gt;,<br>
+&lt;a href="../../../Sci/XXXXXX/index.html"&gt;sci&lt;/a&gt;,<br>
+&lt;a href="../../../Data/XXXXXX/"&gt;dat&lt;/a&gt;,<br>
+&lt;a href="https://en.wikipedia.org/wiki/XXX"&gt;wiki&lt;/a&gt;,<br>
+&lt;a href="https://webbook.nist.gov/cgi/cbook.cgi?Name=XXX"&gt;NIST&lt;/a&gt;,<br>
+&lt;a href="<samp>URI</samp>"&gt;<samp>quickaccess</samp>&lt;/a&gt;<br>
+&lt;/div&gt;<br>
+&lt;h1&gt;<samp>title</samp>&lt;/h1&gt;<br>
+<samp>Main body</samp><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</code></p>
+
+<p>Recognized quick access links:</p>
+<ul>
+<li><code>sci</code> &ndash; to corresponding project or Science entry</li>
+<li><code>dat</code> &ndash; to corresponding Data entry</li>
+<li><code>wiki</code> &ndash; to Wikipedia-like page</li>
+<li><code>NIST</code> &ndash; to NIST data page</li>
+</ul>
+
+<p>The main body may consist of the following entries:</p>
+<ul>
+<li>Subheading of levels h2 and h3
+	<br><code>&lt;h<samp>x</samp>&gt;<samp>title</samp>&lt;/h<samp>x</samp>&gt;</code></li>
+<li>List of links, which must follow strictly after a heading or a subheading (keywords may be repeated)
+	<br><code>&lt;ul&gt;
+	<br>&lt;li&gt;&lt;a href="<samp>URI</samp>"&gt;<samp>subtopic1</samp>&lt;/a&gt;
+	<br>&lt;li&gt;&lt;a href="<samp>URI</samp>"&gt;<samp>subtopic2</samp>&lt;/a&gt;
+	<br>&lt;li&gt;&lt;i&gt;<samp>keyword</samp>&lt;/i&gt; &lt;a href="<samp>URI</samp>"&gt;<samp>item1</samp>&lt;/a&gt;, &lt;a href="<samp>URI</samp>"&gt;<samp>item2</samp>&lt;/a&gt;
+	<br>&lt;li&gt;&lt;i&gt;<samp>keyword</samp>&lt;/i&gt; &lt;a href="<samp>URI</samp>"&gt;<samp>item3</samp>&lt;/a&gt;, &lt;a href="<samp>URI</samp>"&gt;<samp>item4</samp>&lt;/a&gt;
+	<br>&lt;/ul&gt;</code></li>
+<li>Bibitem entry (class "g" indicates depreciated entry)
+	<br><code>&lt;p&gt;<samp>bibitem</samp>&lt;/p&gt;</code></li>
+<li>Separator
+	<br><code>&lt;hr&gt;</code></li>
+</ul>
+
+<p>The possible values of keyword in a list of links are as follows:</p>
+<ul>
+<li><code>see also</code> related topics (links to the corresponding index files)</li>
+<li><code>journals</code> (and news portals)</li>
+<li><code>people</code></li>
+<li><code>org</code> (organizations etc.)</li>
+</ul>
+
+
+
+<h2>Format of bibliography record</h2>
+
+<p>List of journals abbreviations:</p>
+<table class="tg">
+<tr><th>my</th><th>standard</th><th>full</th><th>alternatives</th></tr>
+<tr><td>ACP</td><td>Adv. Chem. Phys.</td><td>Advances in Chemical Physics</td></tr>
+<tr><td>ACR</td><td>Acc. Chem. Res.</td><td>Accounts of Chemical Research</td></tr>
+<tr><td>AEM</td><td>Adv. Energy Mater.</td><td>Advanced Energy Materials</td></tr>
+<tr><td>AFM</td><td>Adv. Funct. Mater.</td><td>Advanced Functional Materials</td></tr>
+<tr><td>AM</td><td>Adv. Mater.</td><td>Advanced Materials</td></tr>
+<tr><td>AP</td><td>Adv. Phys.</td><td>Advances in Physics</td></tr>
+<tr><td>APL</td><td>Appl. Phys. Lett.</td><td>Applied Physics Letters</td></tr>
+<tr><td>APLM</td><td>APL Mater.</td><td>APL Materials</td></tr>
+<tr><td>APR</td><td>Appl. Phys. Rev.</td><td>Applied Physics Reviews</td></tr>
+<tr><td>AQC</td><td>Adv. Quantum Chem.</td><td>Advances in Quantum Chemistry</td></tr>
+<tr><td>ARCMP</td><td>Annu. Rev. Condens. Matter Phys.</td><td>Annual Review of Condensed Matter Physics</td></tr>
+<tr><td>ARMR</td><td>Annu. Rev. Mater. Res.</td><td>Annual Review of Materials Research</td></tr>
+<tr><td>ARPC</td><td>Annu. Rev. Phys. Chem.</td><td>Annual Review of Physical Chemistry</td></tr>
+<tr><td>ATS</td><td>Adv. Theory. Simul.</td><td>Advanced Theory and Simulations</td></tr>
+<tr><td>CM</td><td>Chem. Mater.</td><td>Chemistry of Materials</td></tr>
+<tr><td>CMS</td><td>Comput. Mater. Sci.</td><td>Computational Materials Science</td></tr>
+<tr><td>CP</td><td>Chem. Phys.</td><td>Chemical Physics</td></tr>
+<tr><td>CPC</td><td>Comput. Phys. Comm.</td><td>Computer Physics Communications</td></tr>
+<tr><td>CPL</td><td>Chem. Phys. Lett.</td><td>Chemical Physics Letters</td></tr>
+<tr><td>CPR</td><td>Chem. Phys. Rev.</td><td>Chemical Physics Reviews</td></tr>
+<tr><td>CR</td><td>Chem. Rev.</td><td>Chemical Reviews</td></tr>
+<tr><td>CSR</td><td>Chem. Soc. Rev.</td><td>Chemical Society Reviews</td></tr>
+<tr><td>CTC</td><td>Comp. Theor. Chem.</td><td>Computational and Theoretical Chemistry</td><td>J Molec. Structure THEOCHEM</td></tr>
+<tr><td>EES</td><td>Energy Environ. Sci.</td><td>Energy & Environmental Science</td></tr>
+<tr><td>IJQC</td><td>Int. J. Quant. Chem.</td><td>International Journal of Quantum Chemistry</td></tr>
+<tr><td>IRPC</td><td>Int. Rev. Phys. Chem.</td><td>International Reviews in Physical Chemistry</td></tr>
+<tr><td>JACS</td><td>J. Am. Chem. Soc.</td><td>Journal of the American Chemical Society</td></tr>
+<tr><td>JAP</td><td>J. Appl. Phys.</td><td>Journal of Applied Physics</td></tr>
+<tr><td>JCC</td><td>J. Comput. Chem.</td><td>Journal of Computational Chemistry</td></tr>
+<tr><td>JCP</td><td>J. Chem. Phys.</td><td>The Journal of Chemical Physics</td></tr>
+<tr><td>JCTC</td><td>J. Chem. Theory Comput.</td><td>Journal of Chemical Theory and Computation</td></tr>
+<tr><td>JETP</td><td>J. Exp. Theor. Phys.</td><td>Journal of Experimental and Theoretical Physics</td></tr>
+<tr><td>JETPL</td><td>JETP Lett.</td><td>JETP Letters</td></tr>
+<tr><td>JMCA</td><td>J. Mater. Chem. A</td><td>Journal of Materials Chemistry A</td></tr>
+<tr><td>JMCB</td><td>J. Mater. Chem. B</td><td>Journal of Materials Chemistry B</td></tr>
+<tr><td>JMCC</td><td>J. Mater. Chem. C</td><td>Journal of Materials Chemistry C</td></tr>
+<tr><td>JMP</td><td>J. Math. Phys.</td><td>Journal of Mathematical Physics</td></tr>
+<tr><td>JNCS</td><td>J. Non-Cryst. Solids</td><td>Journal of Non-Crystalline Solids</td></tr>
+<tr><td>JPA</td><td>J. Phys. A</td><td>Journal of Physics A: Mathematical and Theoretical</td></tr>
+<tr><td>JPB</td><td>J. Phys. B</td><td>Journal of Physics B: Atomic, Molecular and Optical Physics</td></tr>
+<tr><td>JPC</td><td>J. Phys. Condens. Matter</td><td>Journal of Physics: Condensed Matter</td><td>J. Phys. C Solid State Phys.</td></tr>
+<tr><td>JPCA</td><td>J. Phys. Chem. A</td><td>The Journal of Physical Chemistry A</td></tr>
+<tr><td>JPCB</td><td>J. Phys. Chem. B</td><td>The Journal of Physical Chemistry B</td></tr>
+<tr><td>JPCC</td><td>J. Phys. Chem. C</td><td>The Journal of Physical Chemistry C</td></tr>
+<tr><td>JPCL</td><td>J. Phys. Chem. Lett.</td><td>The Journal of Physical Chemistry Letters</td></tr>
+<tr><td>JPD</td><td>J. Phys. D</td><td>Journal of Physics D: Applied Physics</td></tr>
+<tr><td>JSM</td><td>J. Stat. Mech. Theor. Exp.</td><td>Journal of Statistical Mechanics: Theory and Experiment</td></tr>
+<tr><td>JSP</td><td>J. Stat. Phys.</td><td>Journal of Statistical Physics</td></tr>
+<tr><td>LNCS</td><td>Lect. Notes Comput. Sci.</td><td>Lecture Notes in Computer Science</td></tr>
+<tr><td>LNM</td><td>Lect. Notes Math.</td><td>Lecture Notes in Mathematics</td></tr>
+<tr><td>LNP</td><td>Lect. Notes Phys.</td><td>Lecture Notes in Physics</td></tr>
+<tr><td>MH</td><td>Mater. Horiz.</td><td>Materials Horizons</td></tr>
+<tr><td>NC</td><td>Nat. Chem.</td><td>Nature Chemistry</td></tr>
+<tr><td>NCM</td><td>npj Comput. Mater.</td><td>npj Computational Materials</td></tr>
+<tr><td>NM</td><td>Nat. Mater.</td><td>Nature Materials</td></tr>
+<tr><td>NP</td><td>Nat. Phys.</td><td>Nature Physics</td></tr>
+<tr><td>NRC</td><td>Nat. Rev. Chem.</td><td>Nature Reviews Chemistry</td></tr>
+<tr><td>NRM</td><td>Nat. Rev. Mater.</td><td>Nature Reviews Materials</td></tr>
+<tr><td>NRP</td><td>Nat. Rev. Phys.</td><td>Nature Reviews Physics</td></tr>
+<tr><td>PA</td><td>Phys. A</td><td>Physica A: Statistical Mechanics and its Applications</td></tr>
+<tr><td>PB</td><td>Phys. B</td><td>Physica B: Condensed Matter</td></tr>
+<tr><td>PCCP</td><td>Phys. Chem. Chem. Phys.</td><td>Physical Chemistry Chemical Physics</td></tr>
+<tr><td>PD</td><td>Phys. D</td><td>Physica D: Nonlinear Phenomena</td></tr>
+<tr><td>PE</td><td>Phys. E</td><td>Physica E: Low-dimensional Systems and Nanostructures</td></tr>
+<tr><td>PLA</td><td>Phys. Lett. A</td><td>Physics Letters A</td></tr>
+<tr><td>PNAS</td><td>Proc. Natl. Acad. Sci. USA</td><td>Proceedings of the National Academy of Sciences</td></tr>
+<tr><td>PR</td><td>Phys. Rep.</td><td>Physics Reports</td></tr>
+<tr><td>PRA</td><td>Phys. Rev. A</td><td>Physical Review A</td></tr>
+<tr><td>PRApp</td><td>Phys. Rev. Applied</td><td>Physical Review Applied</td></tr>
+<tr><td>PRB</td><td>Phys. Rev. B</td><td>Physical Review B</td></tr>
+<tr><td>PRC</td><td>Phys. Rev. C</td><td>Physical Review C</td></tr>
+<tr><td>PRD</td><td>Phys. Rev. D</td><td>Physical Review D</td></tr>
+<tr><td>PRE</td><td>Phys. Rev. E</td><td>Physical Review E</td></tr>
+<tr><td>PRL</td><td>Phys. Rev. Lett.</td><td>Physical Review Letters</td></tr>
+<tr><td>PRM</td><td>Phys. Rev. Mater.</td><td>Physical Review Materials</td></tr>
+<tr><td>PRX</td><td>Phys. Rev. X</td><td>Physical Review X</td></tr>
+<tr><td>PSSA</td><td>Phys. Stat. Sol. A</td><td>physica status solidi (a)</td></tr>
+<tr><td>PSSB</td><td>Phys. Stat. Sol. B</td><td>physica status solidi (b)</td></tr>
+<tr><td>PSSR</td><td>Phys. Stat. Sol. RRL</td><td>physica status solidi (RRL)</td></tr>
+<tr><td>PTP</td><td>Prog. Theor. Phys.</td><td>Progress of Theoretical Physics</td></tr>
+<tr><td>PTPS</td><td>Prog. Theor. Phys. Supp.</td><td>Progress of Theoretical Physics Supplements</td></tr>
+<tr><td>RCC</td><td>Rev. Comput. Chem.</td><td>Reviews in Computational Chemistry</td></tr>
+<tr><td>RMP</td><td>Rev. Mod. Phys.</td><td>Reviews of Modern Physics</td></tr>
+<tr><td>RPP</td><td>Rep. Prog. Phys.</td><td>Reports on Progress in Physics</td></tr>
+<tr><td>SPQEO</td><td>Semicond. Phys. Quantum Electron. Optoelectron.</td><td>Semiconductor Physics, Quantum Electronics and Optoelectronics</td></tr>
+<tr><td>TSF</td><td>Thin Solid Films</td><td>Thin Solid Films</td></tr>
+<tr><td>WCMS</td><td>WIREs Comput Mol Sci.</td><td>WIREs Computational Molecular Science</td></tr>
+<tr><td>ЖТФ</td><td>Журнал технической физики</td><td>Журнал технической физики</td></tr>
+<tr><td>ЖЭТФ</td><td>Журнал эксп. и теор. физики</td><td>Журнал Экспериментальной и Теоретической Физики</td></tr>
+<tr><td>ПЖЭТФ</td><td>Письма в ЖЭТФ</td><td>Письма в ЖЭТФ</td></tr>
+<tr><td>ТВП</td><td>Теория вероятностей и приложения</td><td>Теория вероятностей и приложения</td></tr>
+<tr><td>ТМФ</td><td>Теор. и мат. физика</td><td>Теоретическая и математическая физика</td></tr>
+<tr><td>УX</td><td>Успехи Xимии</td><td>Успехи Xимии</td></tr>
+<tr><td>УXЖ</td><td>Український Xімічний Журнал</td><td>Український Xімічний Журнал</td></tr>
+<tr><td>УМЖ</td><td>Український Математичний Журнал</td><td>Український Математичний Журнал</td></tr>
+<tr><td>УМН</td><td>Успехи Математических Наук</td><td>Успехи Математических Наук</td></tr>
+<tr><td>УФЖ</td><td>Український Фізичний Журнал</td><td>Український Фізичний Журнал</td></tr>
+<tr><td>УФЖО</td><td>Український Фізичний Журнал Огляди</td><td>Український Фізичний Журнал Огляди</td></tr>
+<tr><td>УФН</td><td>Успехи Физических Наук</td><td>Успехи Физических Наук</td></tr>
+<tr><td>ФТП</td><td>Физика и Техника Полупроводников</td><td>Физика и Техника Полупроводников</td></tr>
+<tr><td>ФТТ</td><td>Физика Твердого Тела</td><td>Физика Твердого Тела</td></tr>
+<tr><td></td><td>ACS Cent. Sci.</td><td>ACS Central Science</td></tr>
+<tr><td></td><td>Adv. Electron. Mater.</td><td>Advanced Electronic Materials</td></tr>
+<tr><td></td><td>ChemComm</td><td>Chemical Communications</td></tr>
+<tr><td></td><td>Chem. Sci.</td><td>Chemical Science</td></tr>
+<tr><td></td><td>Faraday Discuss.</td><td>Faraday Discussions</td></tr>
+<tr><td></td><td>Mater. Sci. Eng. R Rep.</td><td>Materials Science and Engineering: R: Reports</td></tr>
+<tr><td></td><td>Mater. Today Adv.</td><td>Materials Today Advances</td></tr>
+<tr><td></td><td>Nature</td><td>Nature</td></tr>
+<tr><td></td><td>Nat. Commun.</td><td>Nature Communications</td></tr>
+<tr><td></td><td>npj Comput. Mater.</td><td>npj Computational Materials</td></tr>
+<tr><td></td><td>Prog. Mater. Sci.</td><td>Progress in Materials Science</td></tr>
+<tr><td></td><td>Prog. Surf. Sci.</td><td>Progress in Surface Science</td></tr>
+</table>
+
+<p>List of publishers abbreviations:</p>
+<table border="1">
+<tr><td>LN</td><td>private Lecture Notes</td></tr>
+<tr><td>&nbsp;</td><td>	&nbsp;</td></tr>
+<tr><td>AP</td><td>Academic Press</td></tr>
+<tr><td>CUP</td><td>Cambridge University Press</td></tr>
+<tr><td>OUP</td><td>Oxford University Press</td></tr>
+<tr><td>WS</td><td>World Scientific Publishing Company</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Мир</td><td>М., Мир</td></tr>
+<tr><td>Наука</td><td>М., Наука</td></tr>
+<tr><td>ФМЛ</td><td>М., Физматлит</td></tr>
+</table>
+
+
+
+<h2>Filenaming conventions</h2>
+
+<p>Filename structure is &lt;prefix&gt;&lt;author&gt;&lt;YY&gt;&lt;suffix&gt;.</p>
+
+<p>Prefix indicates document type:</p>
+<table border="1">
+<tr><td>indexed article</td><td>no suffix</td></tr>
+<tr><td>not indexed article</td><td>_</td></tr>
+<tr><td>review</td><td>Rev_</td></tr>
+<tr><td>reference manual</td><td>Ref_</td></tr>
+<tr><td>encyclopedia</td><td>Enc_</td></tr>
+<tr><td>book or monograph</td><td>Book_</td></tr>
+<tr><td>lecture or introduction</td><td>Lec_</td></tr>
+<tr><td>letter or short note</td><td>Let_</td></tr>
+<tr><td>taskbook</td><td>Task_</td></tr>
+<tr><td>collection of articles</td><td>Col_</td></tr>
+<tr><td>PhD thesis</td><td>PhD_</td></tr>
+</table>
+
+<p>Author is surname of first author or editor with omitted spaces.</p>
+
+<p>Suffix provides additional information.</p>
+<table border="1">
+<tr><td>multiple articles in year</td><td>a,b,c,...</td></tr>
+<tr><td>multiple volumes</td><td>v1,v2,...</td></tr>
+<tr><td>only part of document</td><td>p or p1,p2,...</td></tr>
+<tr><td>supporting information</td><td>add</td></tr>
+<tr><td>draft</td><td>draft</td></tr>
+<tr><td>erratum</td><td>err</td></tr>
+<tr><td>corrigendum</td><td>cor</td></tr>
+<tr><td>comment</td><td>com</td></tr>
+<tr><td>reply</td><td>rep</td></tr>
+<tr><td>peer review</td><td>rev</td></tr>
+<tr><td>CIF files</td><td>cif</td></tr>
+<tr><td>ZIP archive</td><td>zip</td></tr>
+</table>
+
+</body>
+</html>

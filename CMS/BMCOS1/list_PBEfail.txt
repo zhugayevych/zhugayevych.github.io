@@ -1,0 +1,1 @@
+benzeneF6,benzeneO2,BODIPY,TCNQ-F2,TCNQ-F4

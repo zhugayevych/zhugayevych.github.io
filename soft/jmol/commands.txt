@@ -10,8 +10,9 @@ isosurface resolution 20 color range all colorscheme @{color("red" "blue" 200,tr
 isosurface plane {1 1 0 0} color absolute 0 0.5 colorscheme "roygb" contour 30 resolution 20 mo 1
 isosurface plane1 hkl {1000 -2000 0}
 
-moveto 0 0 1 0 90; #view from right
-moveto 0 0 0 1 90; #rotate by 90
+moveto 0 0 1 0 90            #view from right
+moveto 0 0 0 1 90            #rotate by 90
+moveto 0 152 367 709 -140.26 #view from 111
 axes 2
 axes 0.02
 axes scale 2.2
@@ -19,6 +20,8 @@ axes position [400 700]
 
 set autobond off; spacefill 0.03
 wireframe 0.02; spacefill 12%; vector on; vector 16; vector scale 3
+set bondTolerance -0.1; connect delete; connect auto
+{_K}.bondingRadius=0.1; connect delete; connect auto
 
 load "" {445 665 0}
 hide @3,@6,@12

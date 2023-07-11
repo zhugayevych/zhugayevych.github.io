@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>Method notations</title>
+</head>
+<body>
+
+<p>Methods are encoded in the following format: <code>PMETHODparameters</code>, where
+ <ul>
+ <li><code>P</code> &ndash; optional capital letter denoting SCF type: 'R' for restricted and 'U' for unrestricted (spin polarized) SCF</li>
+ <li><code>METHOD</code> &ndash; capitalized name of the method itself (also allowed are digits,+,-)</li>
+ <li><code>parameters</code> &ndash; parameters (basis set, force field etc), must start with a small letter</li>
+ </ul>
+For example, CAM-B3LYPp2p = CAM-B3LYP/6-31G*, UPBE0a3p = UPBE0/Def2-TZVP, PBE-D3paw600 = PBE+GD3BJ/PAW/600eV</p>
+
+<h2>Method</h2>
+<p>Name of the method itself includes core method optionally followed by a suffix separated by '-'. Examples of methods
+<ul>
+<li>Empirical potentials
+ <ul>
+ <li>EEP &ndash; generic Element-wise Empirical Potential (LAMMPS-compatible prm-file is required)</li>
+ <li>OPLS &ndash; generic OPLS force field</li>
+ <li>EIM,EAM,COMB,COMB3 &ndash; supported in LAMMPS</li>
+ <li>MM3 &ndash; supported in TINKER</li>
+ </ul></li>
+<li>Semiempirical methods
+ <ul>
+ <li>PM7,PM6,PM6-DH+,PM6-DH2,AM1,PM3,MNDO &ndash; supported in MOPAC</li>
+ <li>PDDG,ZINDO &ndash; supported in Gaussian</li>
+ </ul></li>
+<li>Ab initio methods
+ <ul>
+ <li>HF &ndash; Hartree-Fock</li>
+ <li>LDA,LDA-U,GGA,GGA-U,PBE,B3LYP,CAM-B3LYP,HSE06,LC-WPBE,WB97X,WB97XD,M062X,B2PLYP,APF,APFD,PW6B95,PW6B95D3,VDW-DF2,PBE-MBD &ndash; DFT methods</li>
+ <li>MP2,MP3,MP4,MP4-SDQ &ndash; MP perturbation theory</li>
+ <li>CIS,CID,CISD,QCISD,CI2,CI3,CI4 &ndash; CI methods</li>
+ <li>CCD,CCSD,CCSD-T &ndash; CC methods</li>
+ </ul></li>
+</ul>
+Supported suffixes are
+ <ul>
+ <li>D3 &ndash; Grimme's GD3BJ dispersion correction</li>
+ </ul></p>
+
+<h2>Parameters: basis set</h2>
+<p>Basis set encode four parts: family (in lowercase), size (positive integer), variations (suffix), and k-grid (if calculations are not converged with respect to k-sampling).</p>
+<p>In case of multiple sets, they are separated by "x", e.g. "p2pxa3p" means "p2p" for elements up to Ar and "a3p" for heavier elements.</p>
+<p>Basis set family:
+ <ul>
+ <li>a &ndash; Ahlrichs, modern version: a2=Def2SV, a2p=Def2SVP, a2pp=Def2SVPP, a3=Def2TZV etc.</li>
+ <li>c &ndash; Dunning, correlation consistent: c2=cc-pVDZ, c2a=aug-cc-pVDZ, c3=cc-pVTZ etc.</li>
+ <li>dg &ndash; DGauss: dg2=DGDZVP, dg2p=DGDZVP2, dg3=DGTZVP</li>
+ <li>h &ndash; Huzinaga as implemented in Firefly or STO-3G in Gaussian</li>
+ <li>l &ndash; LANL: l2=LANL2DZ, l2p=LANL2DZ ExtraBasis</li>
+ <li>p &ndash; Pople: p2=6-31G, p2p=6-31G*=6-31G(d), p2pp=6-31G**=6-31G(d,p), p2pa=6-31+G*, p2p3df2pa=6-31+G(3df,2p), p3=6-311G etc.</li>
+ <li>s &ndash; Stevens (SBK, SBKJC, LFK): s2=CEP-31G, s3=CEP-121G, s2p=CEP-31G*, s2pp=CEP-31G ExtraBasis etc.</li>
+ <li>nc &ndash; norm conserving pseudopotential</li>
+ <li>us &ndash; ultrasoft pseudopotential</li>
+ <li>paw &ndash; projector augmented wave pseudopotential</li>
+ </ul></p>
+<p>Basis set size can denote one of
+ <ul>
+ <li>plane wave energy cutoff in eV</li>
+ <li>number of valence orbitals, e.g. 2 for double zeta, 3 for triple zeta etc.</li>
+ <li>just the order number within the family</li>
+ </ul></p>
+<p>Possible values of the suffix for pseudopotentials are interpreted as in
+ <a href="http://cms.mpi.univie.ac.at/vasp/vasp/Pseudopotentials_PAW_potentials_supplied_with_VASP_package.html">VASP manual</a>
+ ("s" for softer, "h" for harder, "sv", "pv", "d").</p>
+<p>Possible values of the suffix for gaussian basis sets are interpreted as follows.
+ A letter may indicate additional functions: "p" polarization orbitals, "a" diffuse orbitals.
+ Immediately after that letter the description may follow.
+ The description of polarization orbitals follows the Gaussian notations with commas and parentheses omitted,
+ e.g. "3df2pd" means 3d plus 1f orbitals for nonhydrogens and 2 sp-orbitals plus 1 d-orbital on hydrogens.
+ The absence of the description implies a default polarization basis ("p" for smaller one, "pp" for larger one), e.g. "p2p"="p2pd", "p2pp"="p2pdp".
+ The description of diffuse orbitals is currently limited to two cases:
+ absence of the description means a diffusion orbital on nonhydrogens, an additional "a" means a diffusion orbital on all atoms.
+ See also <a href="http://gaussian.com/basissets/">Gaussian manual</a>.</p>
+<p>Possible values of k-grid currently include Gamma-centered grids in the format "Gn1n2n3",
+ where 1&lt;ni&lt;10 denotes number of k-points in i-th directions.
+ Repetitive "ni" or "ni" fixed by symmetry should not be included, e.g. "G5" for isotropic 2D systems means "G551".</p>
+
+</body>
+</html>

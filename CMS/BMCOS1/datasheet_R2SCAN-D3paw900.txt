@@ -1,0 +1,68 @@
+ sys                 conf  na1 nm   na    V1    EB    Up2 freq1   EM1  GR    K   K0   K0p  missing
+benzene              cryst  12  4   48   9.25  0.59   0.7  7.99   4.0  4.2  9.4                        
+naphthalene          cryst  18  2   36   9.15  0.87   0.7  8.49   5.3  5.9 11.1                        
+anthracene           cryst  24  2   48   9.15  1.17   0.7  7.22   4.2  5.0 11.9                        
+tetracene            cryst  30  2   60   9.10  1.48   0.6  0.00   0.0  0.0  0.0            freq        
+pentacene            cryst  36  2   72   8.98  1.82   0.6  5.61   2.7  4.4 12.9                        
+hexacene             cryst  42  2   84   8.88  2.18   1.4  5.92   2.6  3.6 12.8                        
+chrysene             cryst  30  4  120   9.18  1.43   0.7  6.73   2.4  3.8 12.2                        
+pyrene               cryst  26  4  104   9.43  1.14   0.6  5.12   2.5  3.4 11.1                        
+perylene             cryst  32  2   64   8.98  1.52   0.7  7.65   1.7  3.4 13.7                        
+IF12b                cryst  34  2   68   8.96  1.57   0.5  6.02   4.6  5.8 12.3                        
+IF21a                cryst  34  4  136   9.36  1.45   0.6  2.19   1.2  2.0 11.0                        
+triphenylene         cryst  30  4  120   9.06  1.37   0.6  4.32   4.8  4.3 12.2                        
+coronene             cryst  36  2   72   9.43  1.58   0.6  5.04   2.5  3.6 11.8                        
+stilbene             cryst  26  4  104   9.16  1.22   0.7  0.00   0.0  0.0  0.0            freq        
+triazine             cryst   9  4   36   9.80  0.65   0.6  9.10   0.7  2.5 12.3                        
+phenazine            cryst  22  2   44   9.50  1.11   0.6  7.20   2.8  4.0 11.9                        
+carbazole            cryst  22  4   88   8.98  1.21   0.6 -1.14   1.3  3.5 12.3                        
+ICZb                 cryst  32  2   64   8.93  1.89   0.6  5.72   2.3  4.4 13.8                        
+TCNQ                 cryst  20  4   80  12.08  1.42   0.7  5.62   1.9  3.6 12.8                        
+TCNQ-F2              cryst  20  2   40  12.26  1.50   0.6 10.04   1.2  3.4 11.9                        
+TCNQ-F4              cryst  20  4   80  13.13  1.47   0.8  5.39   3.7  4.0 11.7                        
+ICZbCl2c             cryst  32  2   64  10.06  2.00   0.6  5.78   3.1  4.8 14.1                        
+pentaceneN2Cl4       cryst  34  2   68  11.61  1.89   0.7  3.94   3.9  5.3 12.5                        
+TTTT                 cryst  18  2   36  12.57  1.30   1.0  5.13   5.0  7.4 12.8                        
+BTBT                 cryst  24  2   48  10.75  1.27   1.8  5.48   2.1  4.0 11.7                        
+DNTT                 cryst  36  2   72  10.21  1.83   0.6  3.79   1.4  3.6 11.8                        
+DATT                 cryst  48  2   96   9.82  2.48   0.5  0.00   0.0  0.0  0.0            freq        
+DNBDT                cryst  42  2   84   9.79  2.18   0.4  5.57   2.1  5.2 13.7                        
+NDT                  cryst  24  4   96  10.75  1.26   0.5  2.92   1.9  3.0 11.4                        
+bithiophene          cryst  16  2   32  11.52  0.96   0.6  6.46   2.6  3.2 10.9                        
+oligothiophene4      cryst  30  2   60  11.55  1.77   0.5  4.99   2.2  3.0 11.6                        
+oligothiophene6      cryst  44  2   88  11.53  2.61   0.5  4.43   2.8  3.5 12.6                        
+benzotrithiophene    cryst  21  4   84  12.27  1.20   0.6  4.59   3.4  4.4 11.2                        
+benzotrithiopheneA   cryst  21  4   84  12.00  1.28   0.5  0.00   0.0  0.0  0.0            freq        
+TTF                  cryst  14  2   28  13.52  1.15   0.7  4.90   3.5  6.5 12.0                        
+HMTTF                cryst  28  4  112   9.99  1.71   0.6  0.00   0.0  0.0  0.0            freq        
+DBTTF                cryst  26  2   52  11.59  1.58   0.8  4.09   1.8  4.7 12.2                        
+benzeneF6            cryst  12  6   72  11.93  0.60   0.7  2.12   6.2  5.8  9.5                        
+benzeneO2            cryst  12  2   24  10.17  0.85   0.6  5.49   0.2  0.9 10.0                        
+anthraquinone        cryst  24  2   48   9.37  1.34   0.8  5.79   2.5  5.3 14.0                        
+PTCDA                cryst  38  2   76   9.73  2.51   0.5  3.63   2.5  4.8 15.4                        
+NDFPh                cryst  44  2   88   9.56  1.91   0.6  3.41   1.3  3.0 10.0                        
+NDI                  cryst  26  2   52   9.68  2.02   0.6  5.77   2.1  4.2 15.9                        
+PDI                  cryst  40  2   80   9.35  2.84   0.6  2.99   4.0  6.1 17.3                        
+quinacridone         cryst  36  2   72   9.22  2.49   0.6  6.76   2.8  4.9 12.6                        
+pentaceneN4O2        cryst  32  2   64   9.62  2.17   0.7  4.70   3.9  6.2 15.4                        
+indigo               cryst  30  2   60   9.34  1.84   0.6  3.95  -1.8 45.1 13.9                        
+indigoCl2            cryst  30  2   60  10.72  2.00   0.6  6.03   2.1  3.2 15.3                        
+dibenzoindigo        cryst  42  2   84   9.34  2.21   0.5  2.66   3.0  4.4 15.0                        
+carbazoleNO2b        cryst  24  4   96   9.57  1.31   0.5  4.09   1.4  2.7 11.7                        
+TTAa                 cryst  36  2   72  11.13  2.01   0.7  3.74   3.8  5.0 13.3                        
+TTAb                 cryst  36  2   72  11.14  2.02   0.7  4.72   3.4  5.2 12.0                        
+TTPa                 cryst  34  2   68  11.51  1.98   0.7  4.28   3.5  5.4 13.6                        
+TTPb                 cryst  34  4  136  11.67  1.92   0.4  0.00   0.0  0.0  0.0            freq        
+TTPc                 cryst  34  2   68  11.76  1.91   0.6  5.59   2.5  3.8 12.1                        
+PBBTZ                cryst  30  4  120  10.44  1.88   0.6  2.15   3.0  3.8 12.2                        
+thiazolothiazolePh   cryst  30  2   60  10.49  1.57   0.6  3.96   1.7  3.6 12.2                        
+benzodithiopheneO2   cryst  18  2   36  11.50  1.33   0.7  5.45   2.7  5.4 15.3                        
+C60                  cryst  60  4  240  11.53  1.81   0.5  0.00   0.0  0.0  0.0            freq        
+triptycene           cryst  34  4  136   9.57  1.27   0.5  0.00   0.0  0.0  0.0            freq        
+BODIPY               cryst  21  8  168   9.50  1.17   0.6  3.96   3.8  4.5 11.4                        
+OPV3CN               cryst  42  4  168   9.88  2.07   0.7  2.52   1.8  3.9 12.1                        
+spirobifluorene      cryst  41  4  164   9.92  1.41   0.5  0.00   0.0  0.0  0.0            freq        
+spirobidibenzosilole cryst  41  4  164  10.25  1.56   0.5  0.00   0.0  0.0  0.0            freq        
+triphenyltriazine    cryst  39  4  156   9.18  1.75   0.7  0.00   0.0  0.0  0.0            freq        
+triphenylbenzene     cryst  42  4  168   9.33  1.67   0.5  0.00   0.0  0.0  0.0            freq        
+TPP                  cryst  34  4  136   9.89  1.34   0.6  2.99   1.1  2.6 10.4                        

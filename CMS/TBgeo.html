@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Lattice geometry initialization file</title>
+<style>
+span {color:red}
+</style>
+</head>
+<body>
+<h1>Lattice geometry initialization file</h1>
+
+<p>This file should be readable by Maple</p>
+
+<p><code><pre>
+# comment lines
+
+latname:="diamond"; <span>optional lattice name (lattice ini-file should be referable by filename)</span>
+
+C:=[a,a,a,90,90,90,"Fd-3mP"]; <span>optional (recommended) list of unit cell parameters</span>
+
+SG:="Fd-3mP"; <span>symmetry group recognized by SymmetryGroup command</span>
+
+M:=Matrix(3,3,[ <span>matrix of translation vectors as columns</span>
+0,a/2,a/2,
+a/2,0,a/2,
+a/2,a/2,0]):
+
+AP:=Matrix(3,2,[ <span>matrix of all atomic positions in lattice coordinates as columns</span>
+1/8,-1/8,
+1/8,-1/8,
+1/8,-1/8]):
+
+Aorbs:=[[1,2]]: <span>orbits of all atoms (as FGS_get("os2m") list)</span>
+
+geovalV:=[a=3.567]: <span>parameter values for visualization, e.g. with carbon, fluorine, and other light elements</span>
+
+geovalM:=[a=4/sqrt(3)]: <span>parameter values for sites and dimers calculations, e.g. scaled to have unit bondlength and ideal angles</span>
+
+geovalf:=p->[a=4/sqrt(3)*len(p[1],p[2])]: <span>procedure for determination of parameters from a list of Cartesian coordinates p::list(Vectors) of the lattice fragment defined by geomts</span>
+
+geomts:="1+2+2a": <span>encoded lattice fragment used for mapping the lattice onto real atomic positions</span>
+
+</pre></code></p>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../soft.css">
+<title>Benchmark datasets for crystalline organic semiconductors</title>
+</head>
+<body>
+<h1>Benchmark datasets for crystalline organic semiconductors</h1>
+
+<h2>Notations</h2>
+<ul>
+<li><a href="BMCOS_filenames.html">Filename notations</a></li>
+<li><a href="BMCOS_datanames.html">Dataname notations</a></li>
+</ul>
+
+<h2>Computational methodology</h2>
+<p>All calculations and data processing are performed with the same set of computational protocols referenced below:</p>
+<ul>
+<li><a href="protocols.htm#molcry.geo.cif">Molecular crystal CIF refinement</a></li>
+<li><a href="protocols.htm#molcry.geo.opt">Molecular crystal geometry optimization</a> (initial geometry is usually the experimental one)</li>
+</ul>
+
+<h2>Selection of materials</h2>
+<p>Datasets are composed and will be refined in future according to the following principles:</p>
+<ul>
+<li>All included materials have a well-defined 'main' polymorph known either experimentally (in most of the cases) or obtained by comprehensive computational search.
+ Here "well defined" means that different accurate approaches (including experiment) converge to the same structure.</li>
+<li>All crystals are dynamically stable except for a few higher energy polymorphs either with small imaginary frequencies or important for some reason (e.g. structural prototypes).
+ For crystals with large unit cell vibrational frequencies are not calculated.</li>
+<li>Majority of datasets are limited to elements of the first three periods.
+ Some datasets involve elements of the 4th period, e.g. transition metals.
+ Heavier elements are avoided.</li>
+</ul>
+
+<h2>Datasets</h2>
+<p>All data are 7-zipped into one archive per method (see next Section)
+ + <a href="BMCOS_exp.7z">experimental data</a>
+ + <a href="BMCOS_core.7z">core data</a> (the dataset itself).
+ Below is more detailed information about each subset including list of systems in each subset as text files whose first line contains coma-separated list of entries.
+ See description of notations at the end of this webpage.
+ Because for isolated molecules much more complicated calculations can be performed in a basis of atomic orbitals,
+ we have added single-molecule calculations below.</p>
+<ul>
+<li>Main polymorph of single-conformer molecules [ver.20230222, 67 molecules, <a href="BMCOS1.html">table</a>, <a href="BMCOS1_alt.html">figure</a>, <a href="BMCOS1/index.html">details</a>]:
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/Acenes/index.html">acenes</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/polyT/index.html">oligothiophenes</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/PAH/index.html">PAHs</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/Fused/Azaacenes/index.html">azaacenes</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/Fused/Thienoacenes/index.html">thienoacenes</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/Fused/Imides/index.html">imides</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/Fused/Quinones/index.html">quinones</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/Indigo/index.html">indigos</a>,
+ and other core systems including
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/TCNQ/index.html">TCNQs</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/PPV/Stilbene/index.html">stilbene</a>,
+ <a href="../Lib/MS/_spec/ConjPolymers/_spec/TTF/index.html">TTF</a>,
+ <a href="../Lib/MS/_spec/Elem/4/C/Fullerene/index.html">C60</a></li>
+<li>[To be uploaded soon] Polymorphs</li>
+<li>[To be uploaded soon] Multi-conformer molecules with side chains + crystalline sidechains</li>
+<li>[Not too many, to be uploaded later] Polymers</li>
+<li>[Not too many, to be uploaded later] Metal-organics</li>
+<li>[In development] Impurities and intrinsic defects</li>
+</ul>
+
+<h2>Benchmarked methods</h2>
+<ul>
+<li><a href="BMCOS_PBE-D3paw900.7z">PBE-D3paw900</a></li>
+<li><a href="BMCOS_PBE-D3paw900_MA.7z">PBE-D3paw900_MA</a> (medium accuracy)</li>
+<li><a href="BMCOS_PBE-D3paw600.7z">PBE-D3paw600</a> (volume scan)</li>
+<li><a href="BMCOS_R2SCAN-D3paw900.7z">R2SCAN-D3paw900</a></li>
+<li><a href="BMCOS_R2SCAN-D3paw900_MA.7z">R2SCAN-D3paw900_MA</a> (medium accuracy)</li>
+</ul>
+<p>Isolated molecules</p>
+<ul>
+<li><a href="BMCOS_CAM-B3LYPa3p.7z">CAM-B3LYPa3p</a> (<a href="BMCOS_CAM-B3LYPa3p.txt">datasheet</a>)</li>
+<li><a href="BMCOS_CAM-B3LYPp2p.7z">CAM-B3LYPp2p</a> (<a href="BMCOS_CAM-B3LYPp2p.txt">datasheet</a>)</li>
+<li><a href="BMCOS_PBE-D3a3p.7z">PBE-D3a3p</a> (<a href="BMCOS_PBE-D3a3p.txt">datasheet</a>)</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>Computational materials science capabilities</title>
+</head>
+<body>
+<h1>Computational materials science capabilities</h1>
+
+<h2>Routine calculations</h2>
+<ul>
+<li>Gaussian - <code>MolMod/exam_gau</code></li>
+<li>VASP - <code>MolMod/exam_vas</code></li>
+<li>LAMMPS - <code>MolMod/exam_lam</code></li>
+<li>TINKER - <code>MolMod/exam_tin</code></li>
+<li>MOPAC - <code>MolMod/exam_mop</code></li>
+<li>Force fields - <code>MolMod/exam_prm</code></li>
+</ul>
+
+<h2>Geometry</h2>
+<ul>
+<li>Routine geometry calculations - <code>MolMod/exam_Geometry</code>
+ <ul>
+ <li>Partition molecule and identify fragments</li>
+ <li>Check and correct atom ordering for multiple files</li>
+ <li>Morph two molecules (e.g. to substitute a fragment)</li>
+ </ul></li>
+<li>Refine CIF of molecular crystals - <code>MolMod/exam_cif2xyz</code></li>
+<li>Convert XYZ to CIF - <code>MolMod/exam_xyz2cif</code></li>
+<li>Convert PDB to XYZ or CIF - <code>MolMod/exam_pdb2xyzcif</code></li>
+</ul>
+
+<h2>Complex calculations</h2>
+<ul>
+<li>Statistical analysis of MD trajectories - <code>MolMod/exam_Statistic</code></li>
+<li>Calculation and analysis of vibronic couplings - <code>MolMod/exam_VibCoup</code></li>
+<li>Calculation of effective Hamiltonian for charge carriers and Frenkel excitons - <code>MolMod/exam_Heff</code></li>
+</ul>
+
+<h2>Selected subroutines of MolMod package</h2>
+<ul>
+<li>Filename encoding: DecodeFilename, DecodeMethod (DecodeBS, DecodeKgrid), DecodeState, DecodeTranslation (EncodeTranslation)</li>
+<li>Atomic data: AtomicData (tb_rcov, tb_rion, tb_rvdw), AtomicType (pg2Z)</li>
+<li>Molecular data: MolecularData (tb_solvents)</li>
+<li>Geometry:
+ <ul>
+ <li>Basics: Int2Cart (Cart2Int), ODR, ReduceLattice2D (ReduceLattice3D), CVP (CVP2, CVPfcc), ChangeDihedral, AliphaticDihedrals, SelectAtoms</li>
+ <li>Conversions: Atoms2Cell, SuperCell (FoldCells), cif2xyz (xyz2cif), cryst2M (M2cryst, ReshapeCell, DecodeAxes)</li>
+ <li>Connectivity: ConnectAtoms, RemoveAtoms, MolGraph, ChemDistance, Centroid, CooPolyhedra, ClassifyAtoms, GetTopology, Clusterize, ContactDistance, FragmentMolecule, JoinMol, AttachPoints</li>
+ <li>Symmetry: SymmetrizeCell, SymmetrizeAtoms, UnfoldBySymmetry</li>
+ <li>Matching: OrientBy2Vectors, CanonicOrientation, Superimpose, MatchMol (GuessPermutation)</li>
+ <li>Generators: Alkane</li>
+ </ul></li>
+<li>Molecular file tools (ReadXXX/WriteXXX): XYZ, PDB, CIF, POSCAR, ReadAtomsCube, CombineXYZ</li>
+<li>Other file tools:
+ <ul>
+ <li>Parameterized geometry: ReadPAR (WritePAR)</li>
+ <li>Force fields: ReadPRM (WritePRM, IndexPRM, MergePRM)</li>
+ </ul></li>
+<li>Wave-function:
+ <ul>
+ <li>Atomic orbitals and integrals: AO (AOangular, AOl, AOr, AOxyz, AOnormalize), GTOint, GTOreduce (GTOadd), GTOexpand, Hybrid, RotationM4AO</li>
+ <li>Molecular orbitals: LocalizeMO, MatchOrbitals</li>
+ <li>Basis sets: InitBS (ReadBS, CheckBSnorm), UnfoldBS</li>
+ <li>File tools: WriteMGF, CompressMGF</li>
+ </ul></li>
+<li>Quantum chemistry:
+ <ul>
+ <li>Vibrations: VibrationalModes, MatchVibrations</li>
+ <li>Vibronic effects: VibronicCouplings, TransSp, SingleQMode</li>
+ <li>Electronic couplings: MultimerH</li>
+ <li>Other chemistry: ChemBalance (EnergyBalance)</li>
+ </ul></li>
+<li>Output: printAO, plotE, plot3Dgrid, plotMol, simplifySVG, CompressEigenvectors</li>
+<li>External programs input and run: WriteAtom, WriteMethod (WriteBS, WriteEBS), WriteInput, WriteScript, Run, CleanUp, SubmitJob (DownloadJob), AFMorder, showkgrids</li>
+<li>External programs output: ReadAtoms, ReadOutput, ReadExcStates, ReadVibrations, ReadNBO, OptimCurve, GetTiming, ReadDump, ReadAUX, CompressAUX, ReadRawMatrixElement, ReadDOS, getv (getvlbl)</li>
+<li>Materials science: MaterialsData, IdentifyMolecule (MolFingerprint), EOSfit</li>
+</ul>
+
+</body>
+</html>

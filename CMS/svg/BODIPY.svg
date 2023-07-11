@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width='198px' height='133px' viewBox='0 0 198 133' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+<style type='text/css'>
+text.F { fill:rgb(0,255,0); stroke:rgb(0,255,0) }
+text.N { fill:rgb(0,0,255); stroke:rgb(0,0,255) }
+</style>
+<title>BODIPY/molec_CAM-B3LYPp2p.xyz</title>
+<g stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round'>
+<line x1='112.7' y1='26.3' x2='105.7' y2='38.4' />
+<line x1='92.7' y1='38.4' x2='85.7' y2='26.3' />
+<line x1='195.4' y1='89.6' x2='171.9' y2='57.3' />
+<line x1='186.0' y1='89.0' x2='169.6' y2='66.4' />
+<line x1='171.9' y1='57.3' x2='146.2' y2='65.6' />
+<line x1='133.8' y1='82.6' x2='133.8' y2='109.6' />
+<line x1='133.8' y1='109.6' x2='171.9' y2='122.0' />
+<line x1='141.8' y1='104.6' x2='168.4' y2='113.3' />
+<line x1='171.9' y1='122.0' x2='195.4' y2='89.6' />
+<line x1='3.0' y1='89.6' x2='26.5' y2='122.0' />
+<line x1='26.5' y1='122.0' x2='64.6' y2='109.6' />
+<line x1='30.0' y1='113.3' x2='56.6' y2='104.6' />
+<line x1='64.6' y1='109.6' x2='64.6' y2='82.6' />
+<line x1='52.2' y1='65.6' x2='26.5' y2='57.3' />
+<line x1='26.5' y1='57.3' x2='3.0' y2='89.6' />
+<line x1='28.8' y1='66.4' x2='12.4' y2='89.0' />
+<line x1='64.6' y1='109.6' x2='99.2' y2='129.6' />
+<line x1='99.2' y1='129.6' x2='133.8' y2='109.6' />
+<line x1='122.6' y1='63.1' x2='110.5' y2='56.1' />
+<line x1='87.9' y1='56.1' x2='75.8' y2='63.1' />
+</g>
+<g font-family='sans-serif' font-size='20' fill='rgb(0,0,0)' stroke='rgb(0,0,0)' stroke-width='0'>
+<text x='104.0' y='125.6' font-size='32' fill='rgb(102,102,102)'>.</text>
+<text x='58.6' y='77.6' font-size='16' class="N">N</text>
+<text x='127.8' y='77.6' font-size='16' class="N">N</text>
+<text x='93.2' y='57.6' font-size='16' fill='rgb(255,181,181)'>B</text>
+<text x='113.2' y='23.0' font-size='16' class="F">F</text>
+<text x='73.2' y='23.0' font-size='16' class="F">F</text>
+</g>
+</svg>

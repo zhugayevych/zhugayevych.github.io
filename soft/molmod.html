@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Molecular modeling software</title>
+</head>
+<body>
+
+<h1>Molecular modeling software (2013)</h1>
+
+<h2>Complete solutions</h2>
+<p>An environment for molecular modeling must include:
+ GUI environment for all its subprograms,
+ tools for creating and editing molecular and crystal structures,
+ subprograms performing electronic structure calculations (semiempirical and ab-initio, crystals and molecules),
+ subprograms performing molecular dynamics simulations (classical and quantum),
+ other subprograms calculating some specific quantities,
+ and finally tools for visualizing and exploring the results of computations.
+ All such environments known to me are commercial.
+ Some of them have student licenses:
+ <a href="http://www.wavefun.com/products/spartan.html">Spartan 14</a> ($50),
+ <a href="http://www.hyper.com/">HyperChem 8</a> ($80).</p>
+
+<h2>File formats</h2>
+<p>Currently there is no a versatile commonly accepted
+ <a href="http://en.wikipedia.org/wiki/Chemical_file_format">chemical file format</a>
+ for storing both molecular and crystal structures.</li>
+<ul>
+<li>The standard file format for storing crystal structures is
+ <a href="http://www.iucr.org/resources/cif">CIF</a> (Crystallographic Information File,
+ see <a href="http://www.iucr.org/__data/iucr/cifdic_html/1/cif_core.dic/index.html">Core CIF Dictionary</a>).
+ See a <a href="template.cif">template</a>.</li>
+<li>One of the most universal format is <a href="http://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)">PDB</a>
+ (Protein Data Bank, the same as ENT), but its fixed precision (8.3) format impedes its use for storing coordinates optimized by quantum chemistry calculations.
+ See <a href="note_pdb.html">notes on editing pdb files</a> and examples of pdb files in the present site.
+ See a <a href="template.pdb">template</a>.</li>
+<li>The simplest format is <a href="http://en.wikipedia.org/wiki/XYZ_file_format">XYZ</a> containing only atom names and cartesian coordinates.
+ See a <a href="template.xyz">template</a>.</li>
+<li>See also <a href="http://en.wikipedia.org/wiki/Smiles_arbitrary_target_specification">SMILES</a> format
+ and its <a href="http://cactus.nci.nih.gov/services/translate/">online translator</a>.</li>
+<li>Different formats can be converted by <a href="http://openbabel.org/">Open Babel 2.3.2</a> program.</li>
+</ul>
+
+<h2>Viewers</h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Jmol">Jmol 13</a> (open-source) &ndash; molecules and crystals.
+ In addition it renders surfaces and has a powerful scripting language.
+ Observed limitations:
+  very limited customization,
+	poor tools for visualizing crystals.</li>
+<li><a href="http://www.ccdc.cam.ac.uk/products/mercury/">Mercury 2.4</a> (free version) &ndash; molecules and crystals.
+ Observed limitations:
+  rendering is either slow with "-nodirectrendering" option or corrupted without it (Windows 7),
+  most of the elements are rendered by the same color and the implemented use of style sets is inconvenient,
+	coloring by symmetry works only for molecular crystals.</li>
+<li><a href="http://www.crystalimpact.com/diamond/">Diamond 3.2</a> (expensive, demo version) &ndash; editing and analyzing crystal structures.
+ Observed limitations:
+  does not recognize some PDB files and space groups in some settings, e.g. P2<sub>1</sub>/n.</li>
+</ul>
+
+</body>
+</html>

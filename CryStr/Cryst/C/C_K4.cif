@@ -7,7 +7,7 @@ _journal_name_full               'Phys Rev B'
 _journal_volume                  78
 _journal_page_first              125415
 _journal_year                    2008
-_chemical_name_common            'H-6 carbon'
+_chemical_name_common            'K4 carbon'
 _chemical_formula_sum            C
 _cell_length_a                   4.063
 _cell_length_b                   4.063

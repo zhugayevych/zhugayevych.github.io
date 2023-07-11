@@ -1,6 +1,0 @@
-COMPND    a-O_2
-CRYST1    5.389    3.433    5.071  90.00 132.27  90.00 C2/m
-HETATM    1 O                   -0.017   0.000   0.642
-HETATM    2 O                    0.017   0.000  -0.642
-REMARK  it is not necessary to include the second atom explicitely
-

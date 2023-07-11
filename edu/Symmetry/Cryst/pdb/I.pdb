@@ -1,6 +1,0 @@
-COMPND    I_2
-CRYST1    7.250    4.790    9.780  90.00  90.00  90.00 Cmca
-HETATM    1 I                    0.000   0.719   1.144
-HETATM    2 I                    0.000  -0.719  -1.144
-REMARK  it is not necessary to include the second atom explicitely
-

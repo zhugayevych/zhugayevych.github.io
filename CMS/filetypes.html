@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>File types</title>
+</head>
+<body>
+
+<p>Following file types are recognized:</p>
+<ul>
+<li>fhi, fly, gau, lam, mop, mpr, tin, vas &ndash; FHI-aims, GAMESS Firefly, Gaussian, LAMMPS, MOPAC, Molpro, TINKER or VASP input file</li>
+<li>out &ndash; (text) program-specific output file</li>
+<li>xyz,cif &ndash; (text) atomic coordinates</li>
+<li>coo &ndash; (binary) atomic coordinates ::Matrix(3,na)</li>
+<li>md  &ndash; (binary) MD trajectory or set of configurations ::Array(3,na,nconf)</li>
+<li>mdm &ndash; (binary) same as 'md' but grouped into molecules ::Array(3,na,nm,nconf)</li>
+<li>mgf &ndash; (text) file containing MO/NO/NTO for visualization</li>
+<li>pes &ndash; (binary) potential energy surface data</li>
+<li>frcc &ndash; (binary) force constants ::Matrix(3*na,symmetric)</li>
+<li>evl, evla, evlb &ndash; (binary) eigenvalues, alpha- and beta-eigenvalues ::Vector(no)</li>
+<li>evc, evca, evcb &ndash; (binary) eigenvectors ::Matrix(N,no)</li>
+<li>evr &ndash; (binary) bra-eigenvectors = Transpose(evc)*s1e ::Matrix(no,N)</li>
+<li>s1e &ndash; (binary) overlap matrix ::Matrix(N,symmetric)</li>
+<li>h1e &ndash; (binary) one-electron Hamiltonian ::Matrix(N,symmetric)</li>
+<li>rho, rhoa, rhob &ndash; (binary) density matrix ::Matrix(N,symmetric)</li>
+<li>633 &ndash; (binary) Gaussian record 633</li>
+</ul>
+<p>* Symmetric matrices are written as triangular[lower]</p>
+
+</body>
+</html>

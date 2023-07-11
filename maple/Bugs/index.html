@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Detected Maple 14 bugs and problems">
+<title>Maple bugs</title>
+</head>
+<body>
+
+<h1>Maple 14-17 bugs and problems</h1>
+
+<h2 style="color: red">Major problems</h2>
+<ul>
+<li>If mserver crashes (<em style="color: red">it always crashes upon an external call crash</em>), Maple application cannot be closed normally.
+ Maple allows you to save your worksheet but in fact <em style="color: red">does not save it</em>!
+ Fortunately, Maple saves the current version of the worksheet as .sav file, but unfortunately <em style="color: red">that file is incomplete</em> (the last section is missing)!
+ The solution is as follows:
+ 1) Make sure that .sav file is generated;
+ 2) Kill all Maple programs;
+ 3) Rename .sav and _MAS files otherwise they will be overwritten next time you open your worksheet in Maple.
+ 4) Use the last saved version of the worksheet or _MAS file as your restore point.
+ 5) Use .sav file to copy the last-minute changes if any.</li>
+</ul>
+
+<h2>List of detected problems</h2>
+<ul>
+<li>Error command inside loops can destroy Maple kernel [<a href="error.mw">example</a>].</li>
+<li>For <code>_EnvLegendreCut=1..infinity</code>, which is the standard choice for physical applications,
+ Maple incorrectly evaluates Legendre functions [<a href="Legendre.mw">example</a>].</li>
+<li>Incorrect evaluation of the complementary elliptic function of the third kind [<a href="EllipticCPi.mw">example</a>].</li>
+<li>Erroneous symbolic integration [<a href="SymInt.mw">example</a>].</li>
+<li><code>Eigenvectors</code> command fails for symbolic matrices [<a href="Eigenvectors.mw">example</a>].</li>
+<li>Blocks recognition in <code>GraphTheory</code> package fails, see example of <code>TwoEdgeConnectedComponents</code> command [<a href="TwoEdgeConnectedComponents.mw">example</a>].</li>
+<li>Bug in <code>save</code>/<code>read</code> commands [<a href="saveread.mw">example</a>].</li>
+<li>Bug in <code>FileTools[Binary][Write]</code> command [<a href="byteorder.mw">example</a>].</li>
+<li>Bug in <code>evalhf</code> command [<a href="evalhf.mw">example</a>].</li>
+<li>Plot option "filled" produces vertical streaks.</li>
+<li>If you run an external program using <code>ssystem</code> command and that programs becomes suspended, Maple becomes suspended too, not allowing you to save the worksheet.</li>
+<li><code>ExcelTools[Import]</code> command creates empty <code>example.log</code> file in current directory.</li>
+<li>Some plots, e.g. <code>dualaxisplot</code>, cannot be saved in a Maple worksheet (when reopened Maple tells that the worksheet is incomplete) [<a href="dualaxisplot.mw">example</a>].</li>
+<li>Tickmarks settings are ignored sometimes [<a href="tickmarks.mw">example</a>].</li>
+<li>KernelDensity estimators crash if the variable 'x' is initialized [<a href="KernelDensity.mw">example</a>].</li>
+</ul>
+
+<h2 style="margin-bottom: 0">Limitations</h2>
+<p style="font-size: smaller; margin-top: 0">(to the best of my knowledge of Maple)</p>
+<ul>
+<li>Optimization package cannot compute the gradient numerically [<a href="NLPSolve.mw">example</a>].</li>
+<li>Most of the commands from XMLTools package are useless when dealing with "real-world" xml-files, the rest of the commands are inefficient/inconvenient.</li>
+<li>There is no way to access the local variables of your procedure from the outside [<a href="Local_names.mw">example</a>].</li>
+<li>Limited unevaluation tools [<a href="Unevaluation.mw">example</a>].</li>
+<li>Module inheritance is not supported. You cannot even duplicate an existing module.</li>
+<li>Restart is needed to "unwith" a non-package module. The latter is needed when you need to access the module variables.</li>
+<li>Limited debugging tools. Let you have a cumbersome procedure and you have misprinted a name or have forgotten to declare it.
+ Fortran will tell you that you have undeclared variable. Maple may decide that it is the global variable and you have to find your bug by yourself.</li>
+<li>Multithreading does not work [<a href="Threads.mw">example</a>].</li>
+<li>Use of unprotected names as parameters makes the code vulnerable [<a href="Names_as_param.mw">example</a>].</li>
+<li>Tables and other objects whose name is a pointer are not protected by <code>protect</code> command.</li>
+<li>The <code>scanf</code> command cannot scan "1.234D-05".</li>
+<li>Maple continue to execute the Execution Group after an error, and there is no way to change this unusual behavior.</li>
+<li>Z-order cannot be set: curves are always on top of filled regions.</li>
+<li>Every mw-worksheet contains at least 50 Kb of redundant information, mainly style definitions.</li>
+</ul>
+
+</body>
+</html>

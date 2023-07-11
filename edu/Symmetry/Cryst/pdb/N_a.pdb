@@ -1,6 +1,0 @@
-COMPND    a-N_2
-CRYST1    5.644    5.644    5.644  90.00  90.00  90.00 Pa-3
-HETATM    1 N                    0.305   0.305   0.305
-HETATM    2 N                   -0.305  -0.305  -0.305
-REMARK  it is not necessary to include the second atom explicitely
-

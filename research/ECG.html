@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>Electronic coarse-graining</title>
+</head>
+<body>
+<h1>Electronic coarse-graining</h1>
+
+<p>The goal of electronic coarse-graining of a semiconductor is to construct a minimal local basis
+ providing an accurate description of the frontier orbitals and near-gap excitations under small atomic displacements.
+ It serves as a basis for first-principles electron-phonon models.
+ In particular, it gives electronic intermolecular couplings, which themselves provide electronic connectivity map of the semiconductor.</p>
+
+<a href="ECGpolyT.png"><img style="margin-top: 1ex" width="500" src="ECGpolyT.png"></a>
+
+<p>Requirements:</p>
+<ol>
+<li>Stability/robustness of the coarse-grained basis wrt molecular fluctuations at ambient conditions</li>
+<li>Robustness and scalability of the coarse-graining algorithm</li>
+<li>Quality control of the coarse-grained basis and matrix elements</li>
+</ol>
+
+<h2>Applications</h2>
+<ul>
+<li>Determination of the electronic structure of an infinite system from calculations of its fragments
+ (if conventional methods are unsuitable)
+ [<a href="https://doi.org/10.1021/acs.jpclett.1c00929">2D pnictogens</a>,
+  <a href="https://doi.org/10.1039/C6SC01599A">polymers</a>]</li>
+<li>Basis optimization and calculation of matrix elements of electron-phonon Hamiltonian
+ [<a href="https://doi.org/10.1021/acs.chemmater.0c04111">charge transport in molecular solids</a>,
+  <a href="https://doi.org/10.1146/annurev-physchem-040214-121440">review on modeling</a>]</li>
+<li>Basis optimization for non-adiabatic molecular dynamics</li>
+<li>In-depth analysis of electronic structure including a map of electronic connectivity
+ [<a href="https://doi.org/10.1016/j.dyepig.2020.108899">polymers</a>]</li>
+<li>Generation of high-level descriptors for machine learning</li>
+<li>Hybrid approaches like QM/TB</li>
+</ul>
+
+<a href="ECGtransfer.png"><img style="margin-top: 1ex" height="200" src="ECGtransfer.png"></a>
+
+<h2>References</h2>
+<ul>
+<li><a href="../Lib/MS/Methods/Extended/Fragmentation/index.html">Fragmentation methods</a></li>
+<li><a href="../Lib/MS/Methods/BS/LMO/index.html">Localized molecular orbitals</a></li>
+<li><a href="../Lib/MS/Methods/BS/Wannier/index.html">Wannier functions</a></li>
+<li><a href="../Lib/MS/Methods/TB/index.html">Tight-binding methods</a></li>
+<li><a href="../Lib/MS/_spec/ConjPolymers/Methods/eProp/TB/index.html">Tight-binding approaches</a> in Conjugated polymers</li>
+<li><a href="../Lib/MS/Methods/Extended/Multiscale/index.html">Multiscale modeling</a></li>
+<li><a href="../Lib/MS/Methods/Classical/Multiscale/index.html">Multiscale approaches</a> in Classical molecular dynamics</li>
+<li>Presentations: <a href="../pub/2022_BCCMS.pdf">seminar Oct 2022</a></li>
+</ul>
+
+<h2>Publications</h2>
+<ul>
+<li><a href="https://doi.org/10.1063/5.0155488">Electronic coarse-graining of long conjugated molecules: Case study of non-fullerene acceptors, JCP 159, 024107 (2023)</a> [<a href="../pub/Zhugayevych23a.pdf">pdf</a>]</li>
+<a href="Zhugayevych23a.png"><img style="margin-top: 1ex" height="200" src="Zhugayevych23a.png"></a>
+</ul>
+
+</body>
+</html>

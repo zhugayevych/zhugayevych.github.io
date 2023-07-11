@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Description of MolMod package</title>
+</head>
+<body>
+<h2>Description of MolMod package</h2>
+<p>by <a href="http://zhugayevych.me">Andriy Zhugayevych</a></p>
+<p>MolMod is a molecular modelling package.</p>
+<p>If you have comments, suggestions, or have found a bug, please <a href="mailto:azh@ukr.net">email me</a>.</p>
+<p>Tested for Maple 17 on Windows 7 and 10.</p>
+
+<h2>Highlighted features</h2>
+<ul>
+<li>Use the same commands to process input/output of various programs (Gaussian, VASP, MOPAC, LAMMPS etc).</li>
+<li>Read/write of commonly used formats for geometry and wave-function.</li>
+<li>Comprehensive support of symmetry: e.g. you can find all symmetry inequivalent elements of tight binding Hamiltonian.</li>
+<li>Computational geometry: matching/morphing two systems of atoms, coordination polyhedra, fragmentation, atom type classification etc.</li>
+<li>Quantum chemistry: vibrationally resolved electronic spectra, coarse graining of electronic Hamiltonian.</li>
+<li>Ready-to-use notebooks for most common tasks in computational materials science including batch calculations.</li>
+</ul>
+
+<h2>Installation</h2>
+<ul>
+<li>Download source files <a href="MolMod.zip">MolMod.zip</a>, unzip to any location, open <code>install.mw</code> and follow the instructions.</li>
+<li>Windows users: If failed to install or you don't need the source, download <a href="MolMod_lib.zip">MolMod_lib.zip</a> and unzip to Maple library folder <code>MapleXX/lib</code>.</li>
+<li>Experienced users: the package can be initialized by reading <a href="MolMod.ini">MolMod.ini</a> with Maple "read" command.</li>
+<li>If not exist, create <code>MolMod_Setup.ini</code> in <code>UserConfigurationFolder</code> (see its definition <a href="../index.html">here</a>). Use <a href="MolMod_Setup.ini">MolMod_Setup.ini</a> as a template.</li>
+<li>The documentation is built into the Maple Help system. Individual help pages are also available as individual mw-files.</li>
+</ul>
+
+<h2>Credits</h2>
+<ul>
+<li>Sergey Matveev</li>
+<li>Artem Naumov &ndash; force fields</li>
+<li>Sergei Tretiak &ndash; vibronic couplings</li>
+</ul>
+
+<h2>Requires implementation</h2>
+<ul>
+<li>Read/write/manipulate wave-function (for VASP see Fortran code <a href="http://www.andrew.cmu.edu/user/feenstra/wavetrans/">here</a>)</li>
+<li><code>WritePAR</code> command</li>
+<li><code>WriteMGF</code> for Slater orbitals</li>
+<li>Canonic fundamental domain (similar to <code>CanonicOrientation</code> command)</li>
+<li><code>SymmetrizeCell</code> for subperiodic groups</li>
+<li>Convert point group symmetry to MOPAC input format</li>
+<li>A program (f90 or any C) which takes a <a href="http://lammps.sandia.gov/doc/dump.html">LAMMPS binary dump file</a>
+ and creates md-file in <a href="../../soft/bin.html">this binary format</a>. This program should run autonomously locally or remotely.
+ See also <code>ReadDump/WriteDump</code> commands, lammps/.../tools/binary2txt.cpp, Gaussian readdump for examples.</li>
+</ul>
+
+</body>
+</html>

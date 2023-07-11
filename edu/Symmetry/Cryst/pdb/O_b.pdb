@@ -1,6 +1,0 @@
-COMPND    beta-O_2 [A7]
-CRYST1    3.289    3.289   11.281  90.00  90.00 120.00 R-3m
-HETATM    1 O                    0.000   0.000   0.613
-HETATM    2 O                    0.000   0.000  -0.613
-REMARK  it is not necessary to include the second atom explicitely
-

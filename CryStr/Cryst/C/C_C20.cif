@@ -1,28 +1,18 @@
-data_global
-loop_
-_publ_author_name
-'Rignanese G'
-'Charlier J'
-_journal_name_full               'Phys Rev B'
-_journal_volume                  78
-_journal_page_first              125415
-_journal_year                    2008
-_chemical_name_common            'C-20 carbon'
-_chemical_formula_sum            C
+# C-20 carbon [Rignanese08]
+data_nolabel
+_journal_paper_doi               10.1103/PhysRevB.78.125415
 _cell_length_a                   9.007
 _cell_length_b                   9.007
 _cell_length_c                   9.007
 _cell_angle_alpha                90
 _cell_angle_beta                 90
 _cell_angle_gamma                90
-_symmetry_cell_setting           cubic
-_symmetry_space_group_name_H-M   'F m -3 m'
-_symmetry_int_tables_number      225
+_symmetry_space_group_name_H-M   Fm-3m
 loop_
-_atom_site_label
+_atom_site_type_symbol
 _atom_site_Wyckoff_symbol
 _atom_site_fract_x
 _atom_site_fract_y
 _atom_site_fract_z
-C1 32f 0.1391 0.1391 0.1391
-C2 48h 0 0.1976 0.1976
+ C  32f  0.1391  0.1391  0.1391
+ C  48h   0      0.1976  0.1976

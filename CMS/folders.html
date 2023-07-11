@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../def.css">
+<title>Folders structure</title>
+</head>
+<body>
+
+<p>All calculations for a single system should be kept in one folder.
+ The standard structure of folders and key auxiliary files is given by "_template" folder.</p>
+<p>The following folders can be scanned for information:
+<ul>
+<li><code>arc/</code> &ndash; input files and other archived files</li>
+<li><code>bin/</code> &ndash; binary files</li>
+<li><code>bm/</code> &ndash; benchmarking folder</li>
+<li><code>dat/</code> &ndash; all textual data generated manually or as high-level postprocessing of standard calculations</li>
+<li><code>em/</code> &ndash; geometry relaxation files</li>
+<li><code>fig/</code> &ndash; figures</li>
+<li><code>md/</code> &ndash; molecular dynamics trajectories and snapshots</li>
+<li><code>mgf/</code> &ndash; mgf files</li>
+<li><code>scans/</code> &ndash; PES, conformational, and other scans</li>
+<li><code>tmp/</code> &ndash; self-explanatory</li>
+</ul></p>
+<p>The following files can be scanned for information:
+<ul>
+<li><code>dat/main.dat</code> &ndash; contains machine-readable key parameters of the system in the format <code>key=value</code>:
+ <ul>
+ <li><code>name,name2</code> &ndash; name and alternative names of the system</li>
+ <li><code>Q</code> &ndash; default charge (if appropriate it should correspond to the singlet spin state)</li>
+ <li><code>SG</code> &ndash; symmetry group (maximum reasonable symmetry)</li>
+ <li><code>CO</code> &ndash; definition of canonic orientation of molecule or crystal</li>
+ <li><code>base</code> &ndash; &pi;-conjugated backbone as list of atom numbers</li>
+ <li><code>perm_other</code> &ndash; map atom ordering perm_other[other]=this_folder_files (ordering of atom coordinates must identical within this data folder)</li>
+ <li><code>d0,d1,d2</code> &ndash; definitions of named flexible dihedrals (as [i,j,k,l])</li>
+ <li><code>ds</code> &ndash; definition of all flexible dihedrals (as list of lists)</li>
+ <li><code>tds1,tds2</code> &ndash; definitions of named terminal dihedrals (as [i_terminal,i_dihedral,i_tobereplaced])</li>
+ <li><code>tds</code> &ndash; definition of all terminal dihedrals</li>
+ <li><code>boxsize</code> &ndash; size of simulation box</li>
+ </ul></li>
+<li><code>dat/molec.xyz</code> &ndash; contains most relevant geometry, optionally topology, and also SG and CO records to overwrite 'main.dat' settings</li>
+</ul></p>
+
+</body>
+</html>

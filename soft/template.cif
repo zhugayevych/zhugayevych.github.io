@@ -29,7 +29,7 @@ _cell_formula_units_Z            2      # useful but optional
 _symmetry_space_group_name_H-M   'P-1'
 _space_group_IT_number           2      # optional
 _diffrn_ambient_temperature      300    # K
-_diffrn_ambient_pressure         100    # kPa
+_diffrn_ambient_pressure         100    # kPa (as defined by IUCr) but other units can be used in practice e.g. atm (100kPa)
 loop_
 _symmetry_equiv_pos_as_xyz              # needed only for nonstandard settings
 x,y,z

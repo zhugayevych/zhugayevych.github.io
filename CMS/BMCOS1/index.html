@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../def.css">
+<title>Technical details for BMCOS1</title>
+</head>
+<body>
+<h1>Technical details for BMCOS1</h1>
+<ul>
+<li>Comma-separated list of systems:
+ <ul>
+ <li><a href="list.txt">full dataset</a></li>
+ <li><a href="list_V0.txt">systems with V1 extrapolated to 0K</a></li>
+ <li><a href="list_PBEfail.txt">systems for which PBE-D3 is inaccurate</a> (benzeneO2 and molecules with fluorine atoms)</li>
+ </ul>
+<li>Datasheets:
+ <ul>
+ <li><a href="datasheet_core.txt">core data</a></li>
+ <li><a href="datasheet_exp.txt">experimental data</a></li>
+ <li><a href="datasheet_PBE-D3paw900.txt">PBE-D3paw900</a></li>
+ <li><a href="datasheet_PBE-D3paw900_MA.txt">PBE-D3paw900_MA (medium accuracy)</a></li>
+ <li><a href="datasheet_PBE-D3paw600.txt">PBE-D3paw600</a></li>
+ <li><a href="datasheet_R2SCAN-D3paw900.txt">R2SCAN-D3paw900</a></li>
+ <li><a href="datasheet_R2SCAN-D3paw900_MA.txt">R2SCAN-D3paw900_MA (medium accuracy)</a></li>
+ </ul></li>
+<li>Comparison wrt experiment for V1 extrapolated to 0K:
+ <ul>
+ <li><a href="V1at0K.txt">summary table</a></li>
+ <li><a href="V1at0K_dV1vsEAC_PBE.pdf">correlation with error in charges for PBE-D3</a> (ellipse is for 2&sigma;)</li>
+ <li><a href="V1at0K_R2SCANvsPBE.pdf">R2SCAN-D3 vs PBE-D3</a> (ellipse is for 2&sigma;)</li>
+ <li>Thermal expansion plots:
+     <a href="V1vsT_BODIPY.pdf">BODIPY</a>,
+     <a href="V1vsT_NDI.pdf">NDI</a>,
+     <a href="V1vsT_OPV3CN.pdf">OPV3CN</a>,
+     <a href="V1vsT_phenazine.pdf">phenazine</a>,
+     <a href="V1vsT_TCNQ.pdf">TCNQ</a>,
+     <a href="V1vsT_triazine.pdf">triazine</a></li>
+ </ul></li>
+<li>Comparison wrt PBE-D3paw900:
+ <ul>
+ <li><a href="PBE-D3paw900_exp.txt">experiment</a> (<a href="PBE-D3paw900_exp_V1.pdf">histogram for V1</a>, <a href="PBE-D3paw900_exp_dev_dSh.pdf">dev-dSh correlation</a>, <a href="PBE-D3paw900_exp_dev_phi.pdf">dev-phi correlation</a>)</li>
+ <li><a href="PBE-D3paw900_MA.txt">medium accuracy</a></li>
+ <li><a href="PBE-D3paw900_600.txt">smaller cutoff</a> (<a href="PBE-D3paw600_cg3.txt">smaller cutoff with unconstrained relaxation</a>)</li>
+ <li><a href="PBE-D3paw900_R2S.txt">R2SCAN-D3</a> (<a href="PBE-D3paw900_R2S_dev_dSh.pdf">dev-dSh correlation</a>, <a href="PBE-D3paw900_R2S_dev_phi.pdf">dev-phi correlation</a>)</li>
+ <li><a href="PBE-D3paw900_X.txt">method X</a></li>
+ <li><a href="PBE-D3paw900_UR.txt">method UR</a></li>
+ <li><a href="PBE-D3paw900_U.txt">method U</a></li>
+ <li><a href="PBE-D3paw900_Z4.txt">method Z4</a></li>
+ <li><a href="PBE-D3paw900_Z3.txt">method Z3</a></li>
+ <li><a href="PBE-D3paw900_ZX.txt">method ZX</a></li>
+ </ul></li>
+<li>Comparison wrt R2SCAN-D3paw900:
+ <ul>
+ <li><a href="R2SCAN-D3paw900_exp.txt">experiment</a> (<a href="R2SCAN-D3paw900_exp_V1.pdf">histogram for V1</a>, <a href="R2SCAN-D3paw900_exp_dev_dSh.pdf">dev-dSh correlation</a>, <a href="R2SCAN-D3paw900_exp_dev_phi.pdf">dev-phi correlation</a>)</li>
+ <li><a href="R2SCAN-D3paw900_MA.txt">medium accuracy</a></li>
+ <li><a href="R2SCAN-D3paw900_PBE.txt">PBE-D3paw900</a></li>
+ <li><a href="R2SCAN-D3paw900_X.txt">method X</a></li>
+ <li><a href="R2SCAN-D3paw900_URR.txt">method URR</a></li>
+ <li><a href="R2SCAN-D3paw900_URP.txt">method URP</a></li>
+ <li><a href="R2SCAN-D3paw900_UR.txt">method UR</a></li>
+ <li><a href="R2SCAN-D3paw900_U.txt">method U</a></li>
+ <li><a href="R2SCAN-D3paw900_Z4.txt">method Z4</a></li>
+ <li><a href="R2SCAN-D3paw900_Z3.txt">method Z3</a></li>
+ <li><a href="R2SCAN-D3paw900_ZX.txt">method ZX</a></li>
+ </ul></li>
+<li>Gradients at optimized geometry:
+ <ul>
+ <li><a href="G_cryst_PBE-D3paw900.txt">cryst_PBE-D3paw900</a></li>
+ <li><a href="G_cryst_PBE-D3paw900_MA.txt">cryst_PBE-D3paw900_MA</a></li>
+ <li><a href="G_molec_PBE-D3paw900.txt">molec_PBE-D3paw900</a></li>
+ <li><a href="G_cryst_PBE-D3paw600.txt">cryst_PBE-D3paw600 (fixed volume)</a></li>
+ <li><a href="G_molec_PBE-D3paw600.txt">molec_PBE-D3paw600</a></li>
+ <li><a href="G_cryst_R2SCAN-D3paw900.txt">cryst_R2SCAN-D3paw900</a></li>
+ <li><a href="G_cryst_R2SCAN-D3paw900_MA.txt">cryst_R2SCAN-D3paw900_MA</a></li>
+ <li><a href="G_molec_R2SCAN-D3paw900.txt">molec_R2SCAN-D3paw900</a></li>
+ </ul></li>
+<li>Imaginary frequencies and their PES scans (MWD=Mass-weighted displacement):
+ <ul>
+ <li>benzeneO2 (<a href="freqI_benzeneO2_cryst_PBE-D3paw900.xyz">mode</a>, <a href="freqI_benzeneO2_cryst_PBE-D3paw900.pdf">PES</a>)</li>
+ <li>carbazoleNO2b (<a href="freqI_carbazoleNO2b_cryst_PBE-D3paw900.xyz">mode</a>, <a href="freqI_carbazoleNO2b_cryst_PBE-D3paw900.pdf">PES</a>)</li>
+ <li>IF21a (<a href="freqI_IF21a_cryst_PBE-D3paw900.xyz">mode</a>, <a href="freqI_IF21a_cryst_PBE-D3paw900.pdf">PES</a>, medium accuracy <a href="freqI_IF21a_cryst_PBE-D3paw900_MA.pdf">PES</a>)</li>
+ </ul></li>
+<li>PES scans of unit cell parameters:
+ <ul>
+ <li>BODIPY 2D scan in ab-plane with full relaxation (<a href="scan_BODIPY_cryst_PBE-D3paw900_MA.txt">PBE-D3 medium accuracy</a>, <a href="scan_BODIPY_cryst_R2SCAN-D3paw900_MA.txt">R2SCAN-D3 medium accuracy</a>)</li>
+ <li>BTBT 2D scan in bc- plane with full relaxation (<a href="scan_BTBT_cryst_PBE-D3paw900_MA.txt">PBE-D3 medium accuracy</a>, <a href="scan_BTBT_cryst_PBE-D3paw900_HA.txt">PBE-D3 higher accuracy</a>)</li>
+ <li>TPP 2D scan in ab-plane plane (<a href="scan_TPP_cryst_PBE-D3paw900_cg3.txt">PBE-D3 full relaxation</a>, <a href="scan_TPP_cryst_PBE-D3paw900_cg2.txt">PBE-D3 fixed cell</a>, <a href="scan_TPP_cryst_PBE-D3paw900_cg2.jpg">figure</a>)</li>
+ </ul></li>
+<li>K-grids (note that finer smearing is used for finer K-grid):
+ <ul>
+ <li><a href="kgrids.txt">Comparison of different k-grids</a></li>
+ <li><a href="K_cryst_PBE-D3paw900.txt">cryst_PBE-D3paw900</a></li>
+ <li><a href="K_cryst_PBE-D3paw900_MA.txt">cryst_PBE-D3paw900_MA</a></li>
+ <li><a href="K_cryst_PBE-D3paw600.txt">cryst_PBE-D3paw600</a></li>
+ <li><a href="K_cryst_R2SCAN-D3paw900.txt">cryst_R2SCAN-D3paw900</a></li>
+ <li><a href="K_cryst_R2SCAN-D3paw900_MA.txt">cryst_R2SCAN-D3paw900_MA</a></li>
+ </ul></li>
+<li>Charge amplitude (L1-norm of atomic charges) and its difference:
+ <ul>
+ <li><a href="CA_CAM-B3LYPa3p_PBE-D3a3p_Hir.txt">CAM-B3LYPa3p vs PBE-D3a3p (Hirshfeld)</a>, <a href="CA_CAM-B3LYPa3p_PBE-D3a3p_Hir.pdf">histogram</a></li>
+ <li><a href="CA_CAM-B3LYPa3p_PBE-D3a3p_CM5.txt">CAM-B3LYPa3p vs PBE-D3a3p (CM5)</a></li>
+ <li><a href="CA_CAM-B3LYPa3p_PBE-D3a3p_ESP.txt">CAM-B3LYPa3p vs PBE-D3a3p (ESP)</a></li>
+ </ul></li>
+<li>HOMO-LUMO gaps:
+ <ul>
+ <li><a href="gap_molec_CAM-B3LYPa3p.txt">molec_CAM-B3LYPa3p</a></li>
+ <li><a href="gap_molec_PBE-D3a3p.txt">molec_PBE-D3a3p</a></li>
+ <li><a href="gap_cryst_PBE-D3paw900.txt">cryst_PBE-D3paw900</a></li>
+ <li><a href="gap_cryst_R2SCAN-D3paw900.txt">cryst_R2SCAN-D3paw900</a></li>
+ </ul></li>
+<li>Spin (sgap), optical (ogap), and charge (cgap) gaps:
+ <ul>
+ <li><a href="gap_molec_CAM-B3LYPa3p_alt.txt">molec_CAM-B3LYPa3p</a></li>
+ <li><a href="gap_molec_PBE-D3a3p_alt.txt">molec_PBE-D3a3p</a></li>
+ </ul></li>
+<li>Runtime:
+ <ul>
+ <li><a href="time_cryst_PBE-D3paw900_MA_sp.txt">cryst_PBE-D3paw900_MA_sp</a></li>
+ <li><a href="time_cryst_PBE-D3paw900_MA.txt">cryst_PBE-D3paw900_MA (fine k-grid)</a></li>
+ <li><a href="time_cryst_PBE-D3paw900_MA_freq.txt">cryst_PBE-D3paw900_MA_freq</a></li>
+ <li><a href="time_cryst_PBE-D3paw900_MA_cg3.txt">cryst_PBE-D3paw900_MA_cg3</a></li>
+ <li><a href="time_cryst_R2SCAN-D3paw900_MA_sp.txt">cryst_R2SCAN-D3paw900_MA_sp</a></li>
+ <li><a href="time_cryst_R2SCAN-D3paw900_MA.txt">cryst_R2SCAN-D3paw900_MA (fine k-grid)</a></li>
+ <li><a href="time_cryst_R2SCAN-D3paw900_MA_freq.txt">cryst_R2SCAN-D3paw900_MA_freq</a> (some systems ran out of time)</li>
+ <li><a href="time_cryst_R2SCAN-D3paw900_freq.txt">cryst_R2SCAN-D3paw900_freq</a> (some systems ran out of time)</li>
+ <li><a href="time_cryst_R2SCAN-D3paw900_MA_cg3.txt">cryst_R2SCAN-D3paw900_MA_cg3</a></li>
+ </ul></li>
+<li>Runtime (methods comparison):
+ <ul>
+ <li><a href="time_R2SCAN_vs_PBE_sp_MA.pdf">R2SCAN vs PBE for SP (medium accuracy)</a></li>
+ <li><a href="time_R2SCAN_vs_PBE_dos_MA.pdf">R2SCAN vs PBE for SP with fine k-grid (medium accuracy)</a></li>
+ <li><a href="time_PBE_MA_vs_PBE_sp.pdf">PBE_MA vs PBE for SP</a></li>
+ <li><a href="time_PBE_MA_vs_PBE_dos.pdf">PBE_MA vs PBE for SP with fine k-grid</a></li>
+ <li><a href="time_PBE_MA_vs_PBE_freq.pdf">PBE_MA vs PBE for frequencies</a></li>
+ </ul></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+ gap    sys
+ 0.18  hexacene
+ 0.44  pentaceneN2Cl4
+ 0.60  dibenzoindigo
+ 0.62  pentacene
+ 0.84  TCNQ-F2
+ 0.89  indigoCl2
+ 0.95  DATT
+ 0.95  indigo
+ 1.09  PDI
+ 1.13  PTCDA
+ 1.14  tetracene
+ 1.18  TCNQ-F4
+ 1.18  TCNQ
+ 1.26  C60

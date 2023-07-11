@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../soft.css">
+<title>BMCOS filename notations</title>
+</head>
+<body>
+<h1>BMCOS filename notations</h1>
+
+<p>The database is grouped in folders, each folder corresponding to a single polymorph encoded in the folder name as
+ <code>system_polymorph</code>, where 'system' is the name of the material and 'polymorph' is the polymorph label,
+ e.g. 'cryst-b' for beta-polymorph, 'cryst-aH' for high-symmetry/temperature alpha-polymorph,
+ 'cryst-x' for purely computational polymorph, 'cryst' is the main polymorph,
+ 'cryst-MA' for medium-accuracy geometry (EDIFFG=1E-4), and so forth.
+ Each folder contains the following files:</p>
+<ul>
+<li><code>main.dat</code> core data such as name of the molecule and PubChem CID</li>
+<li><code>molec.xyz</code> molecular geometry, topology, and formal atomic types based on nearest neighbors</li>
+<li><code>polymoprh.xyz</code> crystal geometry, number of molecules in unit cell, space group and its orbits if there are symmetry-inequivalent molecules</li>
+<li><code>polymoprh_method.xyz</code> geometry optimized/obtained by 'method' in <a href="../soft/xyz.html">XYZ-format</a> (see <a href="methods.html">method notations</a>, 'exp' means experimental data)</li>
+<li><code>polymoprh_method.cif</code> CIF-version of geometry for visualization only (less complete that XYZ-file)</li>
+<li><code>polymoprh_method.out</code> single point calculation of energy with fine k-grid</li>
+<li><code>polymoprh_method_sp.out</code> single point calculation of energy with the same k-grid as in geometry optimization</li>
+<li><code>polymoprh_method_freq.out</code> calculation of vibrational modes at Gamma-point (due to large size these files are available per request)</li>
+<li><code>polymoprh_method_freq.txt</code> brief analysis of the above file</li>
+<li><code>polymoprh_method_vs.pdf</code> volume scan and equation of state parameters in graphical format</li>
+<li><code>polymoprh_method_vs.txt</code> volume scan and equation of state parameters in text format</li>
+<li><code>molec_method.xyz</code> geometry of an isolated molecule optimized by 'method' in XYZ-format</li>
+<li><code>molec_method.out</code> single point calculation of total energy of an isolated molecule</li>
+<li><code>molec_method_esp.out</code> atomic charges (ESP, CM5, Hirshfeld)</li>
+<li><code>V1vsT.txt</code> thermal expansion data</li>
+<li><code>V1vsT.pdf</code> thermal expansion plot</li>
+</ul>
+
+</body>
+</html>

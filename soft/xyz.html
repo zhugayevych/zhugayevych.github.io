@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>XYZ file format</title>
+<style>
+span {color:red}
+</style>
+</head>
+<body>
+
+<h1>XYZ file format</h1>
+
+<p>See <a href="template.xyz">template</a> and <a href="template_topo.xyz">template with topology</a>.</p>
+
+<p>The basic format is described in <a href="https://de.wikipedia.org/wiki/Xyz-Format">Wikipedia</a>.
+ It is a fixed-lines format:
+ the first line contains number of atoms, let say N;
+ the second line is comment;
+ then the next N lines contain atoms descriptions (one line per atom) with data elements separated by any number of space-class symbols;
+ the rest of the file is ignored except for a multirecord-XYZ file where all records go one by one without a vertical space.
+ Atom description starts with element symbol ('Tv' means translation vector) and three cartesian coordinates,
+ the interpretation of the rest of the line is reader-dependent.</p>
+
+<p>For computational materials science of crystals, XYZ-format is more convenient than CIF because of several reasons:
+ the symmetry is not restricted to space groups,
+ all atoms in the unit cell are listed explicitly avoiding ambiguity of unfolding from asymmetric unit,
+ unit cell is listed as matrix avoiding ambiguity of deriving it from [a,b,c,alpha,beta,gamma],
+ easy to keep required precision because coordinates are cartesians.
+ Also, XYZ is more convenient than POSCAR because of much simpler file and data structure
+ (one atom per line records in XYZ vs complicated element to coordinates binding in POSCAR).</p>
+
+<p><code><pre>
+23  <span>number of atoms</span>
+comment line, SG=p3-m1, nm=4  <span>here 'SG' is symmetry group, 'nm' is number of monomers</span>
+ O  0   0      0          <span>basic format</span>
+ H  0   0.76  0.59
+ H  0  -0.76  0.59
+...
+ El  X  Y  Z  Q           <span>atomic charges</span>
+...
+ El  X  Y  Z  ux  uy  uz  <span>vibrational amplitudes</span>
+...
+ S  1.89 -1.00721949  0.0  `7    [2,3]    <span>topology containing atom type and list of bonded neighbors</span>
+ C  0.69  0.25898281  0.0  `3    [1,4,28]
+ C  3.21  0.13086628  0.0  `3    [1,5,27]
+...
+</pre></code></p>
+
+</body>
+</html>

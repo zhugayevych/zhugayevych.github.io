@@ -1,6 +1,0 @@
-COMPND    b-N_2
-CRYST1    3.861    3.861    6.265  90.00  90.00 120.00 P63/mmc
-HETATM    1 N                    1.931   1.115   2.118
-HETATM    1 N                    1.931   1.115   1.014
-REMARK  it is not necessary to include the second atom explicitely
-
