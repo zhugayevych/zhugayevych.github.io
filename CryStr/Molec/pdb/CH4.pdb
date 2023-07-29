@@ -1,8 +1,0 @@
-COMPND    CH4
-HETATM    1  H                   0.635   0.635   0.635
-HETATM    2  H                  -0.635  -0.635   0.635
-HETATM    3  H                   0.635  -0.635  -0.635
-HETATM    4  H                  -0.635   0.635  -0.635
-HETATM    5  C                   0.000   0.000   0.000
-CONECT    5    1    2    3    4
-
