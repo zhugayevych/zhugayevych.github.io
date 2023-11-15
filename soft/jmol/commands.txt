@@ -13,6 +13,7 @@ isosurface plane1 hkl {1000 -2000 0}
 moveto 0 0 1 0 90            #view from right
 moveto 0 0 0 1 90            #rotate by 90
 moveto 0 152 367 709 -140.26 #view from 111
+center visible
 axes 2
 axes 0.02
 axes scale 2.2
