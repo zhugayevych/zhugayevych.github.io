@@ -16,7 +16,7 @@
  <a class="h" href="../../Sci/Math/CompMath/Maple/index.html">S</a></span>
  &nbsp;
  <a href="http://www.maplesoft.com">website</a>,
- discussed version: 17 (described packages are not fully compatible with later versions)</p>
+ discussed version: 17</p>
 
 <h2>Installation</h2>
 <ul>
@@ -24,8 +24,7 @@
 <li>Uninstall unneeded versions.</li>
 <li>Run installer. If asked, choose no bat-file run.</li>
 <li>Activate by a purchase code or copy <code>license.dat</code> to the program <a href="file:///C:/Sci/Maple17/license/">license</a> folder.</li>
-<li>The program <code>maple.exe</code> tries to take control over network connections &ndash; block it.
- If not done by OS during the first run, add <code>maple.exe</code> to Windows Firewall Inbound rules.</li>
+<li>The program <code>maple.exe</code> tries to take control over network connections &ndash; block it.</li>
 <li>Configure Tools/Options. The configuration file is <a href="../../AppData/Roaming/Maple/">here</a>. Here are my favorite settings:
  <ul>
  <li>General: disable updates and MapleCloud.</li>
@@ -43,13 +42,15 @@
  <li><a href="../../Data/">RootDataFolder</a> &ndash; data are searched starting from and referenced relative to this folder;</li>
  <li><a href="file:///C:/tmp/">TemporaryFilesFolder</a> &ndash; temporary files are stored here.</li>
  </ul></li>
-<li>Create worksheet styles and copy them to a permanent-name folder (<a href="file:///C:/Sys/azh/">like this</a>).
+<li>Create custom worksheet styles and use via Format/Manage Style Sets.
  Here is my default style: <a href="styleset_default.mw">styleset_default.mw</a>.</li>
 <li>To run code without GUI see <a href="test.zip">test</a>.
  Copy <a href="run.bat">run.bat</a> and all code files to a single folder and use this <a href="FileAssoc.zip">FileAssoc</a>.</li>
 </ul>
 
 <h2>Applications</h2>
+<p>Below-described packages might be not fully compatible with versions later than Maple 17.
+   This icludes integration into Maple help system which was changed in later versions.</p>
 <p>Note that <code>BasicTools</code> package is required for all the applications listed here.</p>
 <p>Packages (use <code>Check4Updates</code> command):</p>
 <ul>
@@ -57,7 +58,7 @@
 <li><a href="SSH/index.html">SSH</a> &ndash; supports SSH network protocol via PuTTY or similar client</li>
 <li><a href="FiniteGroups/index.html">FiniteGroups</a> &ndash; manipulation with finite groups</li>
 <li><a href="PointGroups/index.html">PointGroups</a> &ndash; in-depth manipulation with point groups</li>
-<li><a href="LatticeTools/index.html">LatticeTools</a> &ndash; miscellaneous routines for working with lattices</li>
+<li><a href="LatticeTools/index.html">LatticeTools</a> &ndash; miscellaneous routines for working with lattices (currently under upgrade)</li>
 <li><a href="MolMod/index.html">MolMod</a> &ndash; molecular and crystal modeling</li>
 <li><a href="AstroTools/index.html">AstroTools</a> &ndash; miscellaneous routines for an amateur astronomer</li>
 </ul>
@@ -100,6 +101,6 @@
 </ul>
 
 <hr>
-<p class="si">updated 13.12.2019</p>
+<p class="si">updated 23.11.2023</p>
 </body>
 </html>
