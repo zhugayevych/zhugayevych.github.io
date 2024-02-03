@@ -3,15 +3,15 @@
 !   Maple BasicTools or Python ReadWrite.py.
 ! See technical details in exam_rwf.mw Maple worksheet of MolMod package
 !
-! Andriy Zhugayevych, azh@ukr.net, zhugayevych.me
-! created 17.08.2011, modified 21.01.2024
+! Andriy Zhugayevych, azh@ukr.net, www.zhugayevych.me
+! created 17.08.2011, modified 15.10.2019
 !
 ! Many thanks for detected bugs to: Chern Chuang
 
 program readdump
 implicit none
 integer, parameter :: myid=1760568055
-integer :: count, cod, isize, filesize, i, nrec, L, cod2, pos1, pos2, pos3, pos4, n, datapos, mycode, ndims, dims(2), na
+integer :: count, cod, isize, filesize, j, i, nrec, L, cod2, pos1, pos2, n, datapos, mycode, ndims, dims(2), na
 real(8), parameter :: hartree2eV=27.2113956555172, bohr2A=0.529177257506917
 real(8) :: r,c
 character(255) :: dumpfile, outfile, code
@@ -66,7 +66,9 @@ case default
 
 ! Determine integer size and find record
 inquire(FILE=dumpfile,SIZE=filesize)
-do isize=4,8,4
+isize=2
+do j=1,2
+ isize=2*isize
  open(unit=1,file=dumpfile,form='unformatted',access='direct',action='read',status='old',recl=isize)
  read(1,rec=1) nrec
  read(1,rec=2) L
@@ -88,7 +90,7 @@ do isize=4,8,4
 	end if
  close(1)
  end do
-if (isize>8) then
+if (j>2) then
  print *,"Cannot determine integer size"
  call exit()
  end if
@@ -109,16 +111,8 @@ case ("evl","evla","evlb")
 case ("evc","evca","evcb")
  mycode=18221058
  ndims=2
- open(unit=1,file=dumpfile,form='unformatted',access='direct',action='read',status='old',recl=isize)
- do i=1,nrec
-  read(1,rec=4*i-3) cod2
-  if (cod2==522) exit
-  end do
- read(1,rec=4*i-2) pos3
- read(1,rec=4*i-1) pos4
- close(1)
- dims(2)=(pos4-pos3)/2
- dims(1)=n/dims(2)
+ dims(1)=int(sqrt(n*1.))
+ dims(2)=dims(1)
 case ("frc")
  mycode=18221058
  ndims=2
