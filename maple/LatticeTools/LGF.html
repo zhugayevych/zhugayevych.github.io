@@ -1,0 +1,152 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Lattice Green's functions</title>
+</head>
+<body>
+<h1>Lattice Green's functions</h1>
+<ul>
+<li><a href="#notations">Notations</a></li>
+<li><a href="#universal">Universal notations for lattice Green's functions</a></li>
+<li><a href="#availability">Availability of universally-named functions for specific lattices</a></li>
+<li><a href="#hypercubic">Procedures specific to hypercubic lattices</a></li>
+<li><a href="#closepacked">Procedures specific to close packed lattices</a></li>
+</ul>
+<hr>
+
+<p>See examples in <code>LGFhc.mw</code>, <code>LGFcp.mw</code>, <code>LGFbcc.mw</code></p>
+
+<h2><a name="notations">Notations</a></h2>
+<ul>
+<li><code>d</code> spatial dimension</li>
+<li><code>t</code> time</li>
+<li><code>s</code> Laplace transform variable</li>
+<li><code>q</code> series expansion variable</li>
+<li><code>X::[x1,x2,...]</code> spatial coordinates</li>
+<li><code>r=||X||=Norm(X,2)</code> Euclidean distance</li>
+<li><code>x=|X|=Norm(X,1)</code> shortest-path distance</li>
+</ul>
+
+<h2><a name="universal">Universal notations for lattice Green's functions</a></h2>
+<p><code>lat{name}{function}(args)</code> where <code>name</code> is lattice name <code>(Dsc,1,2sq,3sc,2tri)</code> and <code>function(args)</code> is one of:</p>
+<ul>
+<p><dfn>Basic functions</dfn></p>
+<li><code>X(X)::X</code> symmetry-unique site</li>
+<li><code>O(X,sorted)::Xs</code> site orbit, <code>sorted</code> means that <code>X</code> is already symmetry-unique</li>
+<li><code>ONT(X,sorted)::[Osize,Otype::posint]</code> orbit size and type (Wyckoff position)</li>
+<li><code>CD(X,sorted)::nonnegint=|X|</code></li>
+<li><code>ED2(X)::numeric=||X||^2</code></li>
+<li><code>add(f::procedure(x1,...,xd),L)</code> lattice summation of a full-symmetry function</li>
+<li><code>p(t,X)</code> propagator</li>
+
+<p><dfn>Green's function</dfn></p>
+<li><code>g(s,X)</code> Green's function evaluated by best available method</li>
+<li><code>h?(q,X)=g?(s,X)</code> replace "g" by "h" to change argument</li>
+<li><code>go(s)</code> Green's function at origin</li>
+<li><code>gos(s)</code> derivative of the Green's function at origin</li>
+<li><code>r(sigma)</code> density of states</li>
+<li><code>gF</code> by Fourier integral</li>
+<li><code>gL(s,X,{fulloutput})</code> by large-scale approximation,
+ full output includes <code>g,eta,kappa,Xsorted</code></li>
+<li><code>gP</code> Green's function evaluated by path expansion</li>
+<li><code>gR</code> by recurrence</li>
+
+<p><dfn>Path expansion</dfn></p>
+<li><code>gP(q,X,N:=-1,output:=`if`(type(q,numeric),"","v"),{digits})</code>
+ Green's function by path expansion up to order <code>N</code> or maximum available,
+ where <code>output</code> is one of
+ <code>v</code>=value,
+ <code>c</code>=corrected value,
+ <code>r</code>=[c,reminder],
+ <code>e</code>=[c,r,errorbar], otherwise corrected value with checks</li>
+<li><code>PR(q,X,N,shift:=0)</code> series reminder,
+ negative <code>shift</code> gives the upper bound,
+ note that reminder to <code>P(N)</code> is <code>PR(N+1)</code></li>
+<li><code>N(n,X,{sorted,all})</code> path expansion numbers of order <code>n&ge;0</code>,
+ <code>sorted</code> relates to <code>X</code>,
+ <code>all</code> requests all numbers for given <code>X</code></li>
+<li><code>Nc(n,X,{sorted,all})</code> path expansion coefficients</li>
+<li><code>Nc1(n,X,shift:=0)</code> approximation to path expansion coefficients,
+ negative <code>shift</code> gives the upper bound</li>
+<li><code>Nc2(n,X,shift:=0,shift2:=shift)</code> improved approximation to path expansion coefficients</li>
+<li><code>N_init(d,L,N,{maxsize1,maxsize2,printout})</code>
+ initialize path expansion numbers and coefficients,
+ <code>d&lt;1</code> reset some or all tables and arrays (see examples)</li>
+
+<p><dfn>Recurrent evaluation</dfn></p>
+<li><code>hR(q,X,output:=`if`(type(q,numeric),"v","l"))</code>
+ Green's function by recurrence, where <code>output</code> is one of
+ <code>v</code>=value, <code>l</code>=list of coefficients at basis functions</li>
+<li><code>B(d,q)::[h0,h1,..,hd]</code> natural basis for recurrence</li>
+<li><code>M(X,{sorted})</code> recurrence polynomial coefficients</li>
+</ul>
+
+<h2><a name="availability">Availability of universally-named functions for specific lattices</a></h2>
+<ul>
+<li>Basic functions are available for all implemented lattices</li>
+<li><code>lat{1}g(s,x)</code></li>
+<li><code>lat{1,2sq,3sc,2tri}go</code></li>
+<li><code>lat{1,2sq,3sc}gos</code></li>
+<li><code>lat{1,2sq,3sc,2tri}r(sigma)</code></li>
+<li><code>lat{2sq,3sc,2tri}B(q)</code></li>
+<li><code>lat{Dsc}gL</code></li>
+<li><code>lat{Dsc,2tri}gP</code></li>
+<li><code>lat{Dsc,2tri}gR</code></li>
+</ul>
+
+<h2><a name="hypercubic">Procedures specific to hypercubic lattices</a></h2>
+<ul>
+<p><dfn>Recurrent evaluation</dfn></p>
+<li>For <code>d&le;3</code> basis is available in terms of elliptic integrals,
+ otherwise <code>latDschP(q,X,_rest)</code> is used</li>
+
+<p><dfn>Series at zero</dfn></p>
+<li><code>latDscSZ(d,p)</code> singular function</li>
+<li><code>latDscScB(d)</code> coefficient at singular part</li>
+<li><code>latDscSAJ2A(d,AJ,Am::list(Array),B::Array,extra:=0,{p0:=1})::list[d-1]</code>
+ coefficients at regular part from Ref.[Joyce03]</li>
+<li><code>latDscSC(d,mv:=-1)</code>
+ get (<code>mv::integer</code>) or set (<code>mv::list</code>) coefficients at ODE basis,
+ if <code>mv&lt;0</code> then all coefficients are returned,
+ if <code>mv=[]</code> then default values are used</li>
+<li><code>latDscSAB(a0,b0,N,dN:=1,IC:=[0=0],{printout})</code>
+ series coefficients of regular <code>A::Array(0..d,0..N)</code> and singular <code>B</code> parts,
+ <code>a0,b0</code> can be either IC for recurrence or existing <code>A,B</code> to extend</li>
+<li><code>latDscS(d,m,n,k,dN:=20,all)</code>
+ series coefficients <code>BA[m,n,k]</code>, where
+ <code>m=0..d</code> is for ODE basis,
+ <code>n=0..d</code> is for recurrence basis, and
+ <code>k=0..N</code> is at <code>p^(2k)</code></li>
+<li><code>latDschpS(p,X,N:=0,sorted,basis)</code>
+ function <code>hp(p,X)=h(q,X)*q^(|X|-1)</code> where <code>p^2+q^2=1</code>,
+ if <code>basis</code> then basis functions are returned
+ <code>hp=add(C[m]*hb[m],m=1..d)+C[d]*hb[0]*Z+hb[1]-correction</code></li>
+
+<p><dfn>Integral representations</dfn></p>
+<li><code>latDscgI(s,X)</code> Green's function as integral (Laplace transform) for <code>Re(s)>0</code></li>
+<li><code>latDscgI_alt(s,X)</code> Green's function as integral for <code>Im(s)>0</code></li>
+
+<p><dfn>Functions accepting special symbolic arguments for symbolic output</dfn></p>
+<li><code>lat3scgos(s,/xi,K,E)</code></li>
+<li><code>lat2sqB(q,/K,E)</code></li>
+<li><code>lat3scB(q,/xi,K,L,/K1,K2)</code> (the last two optional arguments are detected by <code>_nrest</code>)</li>
+
+<p><dfn>Other dimension-specific functions</dfn></p>
+<li><code>lat3scgo0</code> value at 0</li>
+<li><code>lat3sc_q2xi(q),lat3sc_xi2q(xi)</code> conversion between <code>q</code> and Joyce's <code>xi</code> variable</li>
+<li><code>lat3sc_xi2k(xi)</code> argument of the complete elliptic integrals used for evaluation of the Green's function</li>
+<li><code>lat3scho_H0,1</code> two equivalent representations via Heun function</li>
+</ul>
+
+<h2><a name="closepacked">Procedures specific to close packed lattices</a></h2>
+<ul>
+<p><dfn>Triangular lattice</dfn></p>
+<li><code>lat2trip(t,X,n)</code> here <code>n</code> is number of terms in convolution</li>
+<li><code>lat2tri_q2xi(q),lat2tri_xi2q(xi)</code> conversion between <code>q</code> and Joyce's <code>xi</code> variable</li>
+<li><code>lat2tri_xi2k(xi)</code> argument of the complete elliptic integrals used for evaluation of the Green's function</li>
+</ul>
+
+</body>
+</html>

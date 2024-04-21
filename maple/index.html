@@ -20,9 +20,8 @@
 
 <h2>Installation</h2>
 <ul>
-<li>Important: all folders that you plan to access from inside the Maple must contain no spaces or other special symbols.</li>
-<li>Uninstall unneeded versions.</li>
-<li>Run installer. If asked, choose no bat-file run.</li>
+<li>Important: all folders that you plan to access from Maple must have no spaces or special symbols.</li>
+<li>Run installer.</li>
 <li>Activate by a purchase code or copy <code>license.dat</code> to the program <a href="file:///C:/Sci/Maple17/license/">license</a> folder.</li>
 <li>The program <code>maple.exe</code> tries to take control over network connections &ndash; block it.</li>
 <li>Configure Tools/Options. The configuration file is <a href="../../AppData/Roaming/Maple/">here</a>. Here are my favorite settings:
@@ -32,7 +31,7 @@
  <li>Interface: Open hyperlinks in New Tab, default format is Worksheet, disable Quick Help.</li>
  <li>Precision: Limit expression length to 50000.</li>
  </ul></li>
-<li>Install additional packages. See Applications section below.</li>
+<li>Install additional packages from my list below or from <a href="https://www.maplesoft.com/Applications">Maple Application Center</a>.</li>
 <li>Create the initialization file (<code>maple.ini</code>) and copy it to your <a href="file:///C:/Users/azh/">root user folder</a>.
  Delete such file from the program <a href="file:///C:/Sci/Maple17/Users/">Users</a> folder, because that file has a preference.
  Here is my <a href="maple.ini">maple.ini</a>, which in particular defines special folders used by the described below packages:
@@ -48,30 +47,30 @@
  Copy <a href="run.bat">run.bat</a> and all code files to a single folder and use this <a href="FileAssoc.zip">FileAssoc</a>.</li>
 </ul>
 
-<h2>Applications</h2>
-<p>Below-described packages might be not fully compatible with versions later than Maple 17.
-   This icludes integration into Maple help system which was changed in later versions.</p>
-<p>Note that <code>BasicTools</code> package is required for all the applications listed here.</p>
-<p>Packages (use <code>Check4Updates</code> command):</p>
+<h2>My packages</h2>
 <ul>
-<li><a href="BasicTools/index.html">BasicTools</a> &ndash; miscellaneous routines lacking in standard Maple distribution</li>
+<li><a href="BasicTools/index.html">BasicTools</a> &ndash; basic routines lacking in standard Maple distribution (required for all my other packages)</li>
 <li><a href="SSH/index.html">SSH</a> &ndash; supports SSH network protocol via PuTTY or similar client</li>
 <li><a href="FiniteGroups/index.html">FiniteGroups</a> &ndash; manipulation with finite groups</li>
 <li><a href="PointGroups/index.html">PointGroups</a> &ndash; in-depth manipulation with point groups</li>
-<li><a href="LatticeTools/index.html">LatticeTools</a> &ndash; miscellaneous routines for working with lattices (currently under upgrade)</li>
+<li><a href="LatticeTools/index.html">LatticeTools</a> &ndash; routines for working with lattices (currently under upgrade)</li>
 <li><a href="MolMod/index.html">MolMod</a> &ndash; molecular and crystal modeling</li>
-<li><a href="AstroTools/index.html">AstroTools</a> &ndash; miscellaneous routines for an amateur astronomer</li>
+<li><a href="AstroTools/index.html">AstroTools</a> &ndash; a few routines for an amateur astronomer</li>
 </ul>
-<p>Poorly documented packages and modules:</p>
+<p>Installation of my packages:</p>
+<ul>
+<li>Best option: Download source files (<code>packagename.zip</code>), unzip to any location, open <code>install.mw</code> and follow the instructions.</li>
+<li>Windows users: If failed to install or you don't need the source, download compiled library (<code>packagename_lib.zip</code>) and unzip to Maple User library folder.</li>
+<li>Experienced users: Packages can be initialized by reading <code>packagename.ini</code> with Maple "read" command.</li>
+<li>To change default settings use <code>packagename[Setup]</code> command or make changes directly to <code>packagename.ini</code>.</li>
+<li>Updates can be checked by <code>Check4Updates</code> command.</li>
+</ul>
+<p>Poorly documented outdated applications:</p>
 <ul>
 <li><a href="ALPS.zip">ALPS</a> &ndash; provides interface to <a href="http://alps.comp-phys.org/">ALPS</a> for extended Hubbard model</li>
-</ul>
-<p>Examples:</p>
-<ul>
 <li><a href="http://alps.comp-phys.org">ALPS</a> example on Ising model: <a href="ALPS_spinmc.mw">Maple worksheet only</a>, <a href="ALPS_spinmc.zip">whole working folder</a></li>
 <li>Producing eps- and pdf-figures using <a href="http://tug.org/PSTricks/">PSTricks</a>: <a href="fig_Peierls.mw">example</a>, <a href="fig_Peierls.tex">tex-output</a>, <a href="fig_Peierls.pdf">pdf-output</a></li>
 </ul>
-<p>See also <a href="http://www.maplesoft.com/applications/index.aspx">Maple Application Center</a>.</p>
 
 <h2>Tips and tricks</h2>
 <ul>
@@ -81,26 +80,28 @@
 <li>For editing standalone Maple code use any text editors with syntax highlighting.
  I use PSPad, see details <a href="../soft/pspad/index.html">here</a> (I store Maple code in text files with the extension <code>ini</code>).</li>
 <li>If you get error "Cannot find maple engine library maple.dll" add <code>C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler</code> to Windows <code>PATH</code>.</li>
-<li>Comparison of Maple 14 and Mathematica 7:
- 1) any difference is of personal favor only;
- 2) Maple has Fortran-like programming language while Mathematica offers sophisticated constructions;
- 3) Maple seems to be more reliable in numerical computations while Mathematica looks better in manipulations with symbolic expressions.</li>
 </ul>
 
-<h2>My programming style guide</h2>
+<h2>My notations and programming style guide</h2>
 <ul>
+<li>All packages have <code>Setup</code> command documented in <a href="BasicTools/index.html">BasicTools</a>.</li>
+<li>Optional arguments are separated by "/", e.g. <code>proc(a,b,/c,d,{e,f},$)</code>.</li>
+<li>List names are constructed by adding "s" to element name, e.g. <code>mts::list(mt)</code></li>
 <li>Commonly used keyword arguments:
  <ul>
- <li><code>printout::boolean</code> &ndash; print information during command execution</li>
- <li><code>printnot::boolean</code> &ndash; do not print it</li>
  <li><code>digits::posint</code> &ndash; for printout</li>
- <li><code>output::string</code> &ndash; specify what to return as comma separated or single-character encoded string</li>
+ <li><code>fulloutput::boolean</code> &ndash; return excessive output</li>
  <li><code>noerror::boolean</code> &ndash; do not raise error</li>
+ <li><code>output::string</code> &ndash; specify what to return as comma separated or single-character encoded string</li>
  <li><code>overwrite::boolean</code> &ndash; overwrite files without a notice</li>
+ <li><code>printnot::boolean</code> &ndash; do not print it</li>
+ <li><code>printout::boolean</code> &ndash; print information during command execution</li>
+ <li><code>simplifyf::procedure</code> &ndash; simplification routine</li>
+ <li><code>sym::boolean</code> &ndash; use symmetry or generate symmetric object</li>
  </ul></li>
 </ul>
 
 <hr>
-<p class="si">updated 23.11.2023</p>
+<p style="font-size: smaller">updated 20.04.2024</p>
 </body>
 </html>

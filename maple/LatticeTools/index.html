@@ -3,34 +3,54 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../../soft.css">
-<title>Description of LatticeTools package</title>
+<title>LatticeTools package</title>
 </head>
 <body>
-<h1>Description of LatticeTools package</h1>
-<p>by <a href="https://zhugayevych.me">Andriy Zhugayevych</a></p>
-<p>LatticeTools package provides miscellaneous routines for working with lattices (finite and infinite, regular and generic).</p>
-<p>If you have comments, suggestions, or have found a bug, please <a href="mailto:azh@ukr.net">email me</a>.</p>
-<p>Tested for Maple 17 on Windows 7 and 10.</p>
+<h1>LatticeTools package</h1>
+<p>LatticeTools package provides routines for working with lattices (finite and infinite, regular and generic).</p>
+<p>Download
+ <a href="LatticeTools.zip">source</a> or
+ <a href="LatticeTools_lib.zip">library</a> or
+ <a href="LatticeTools.ini">ini-file</a>. Tested for Maple 2024.</p>
 
 <p style="color:red">The package is under major revision, the working part of the package is available as <a href="LatticeTools.ini">LatticeTools.ini</a></p>
 
-<h2>Installation</h2>
+<h2>References</h2>
 <ul>
-<li>Download source files <a href="LatticeTools.zip">LatticeTools.zip</a>, unzip to any location, open <code>install.mw</code> and follow the instructions.</li>
-<li>Windows users: If failed to install or you don't need the source, download <a href="LatticeTools_lib.zip">LatticeTools_lib.zip</a> and unzip to Maple library folder <code>MapleXX/lib</code>.</li>
-<li>Experienced users: the package can be initialized by reading <a href="LatticeTools.ini">LatticeTools.ini</a> with Maple "read" command.</li>
-<li>To change default settings use <code>LatticeTools[Setup]</code> command or make changes directly to <code>LatticeTools.ini</code>.</li>
-<li>The documentation is built into the Maple Help system. Individual help pages are also available as individual mw-files.</li>
-</ul>
-
-<h2>Credits</h2>
-<ul>
-<li></li>
+<li>Preprint "Random walk on a lattice"</li>
+<li>Preprint "Lattice Green's functions"</li>
 </ul>
 
 <h2>Requires implementation</h2>
 <ul>
-<li></li>
+<li>Green's function for FCC and multidimensional BCC.</li>
+</ul>
+
+<h2>Documentation</h2>
+<ul>
+<li><a href="Functions.html">Miscellaneous functions</a><code>
+<br>gfunRd,propRd</code></li>
+<li><a href="Generic.html">Generic models</a><code>
+<br>BuildW,BuildA,BuildH,
+<br>GreensF,StatSol,ZeroExpan,
+<br>Velocity,DiffusionTensor,DiffusionLength,
+<br>PathExpansion</code></li>
+<li><a href="LGF.html">Lattice Green's functions</a><code>
+<br>latDscX,latDscO,latDscONT,latDscCD,latDscED2,latDscp,
+<br>latDscgL,latDschL,
+<br>latDscgP,latDschP,latDscPR,latDscN,latDscNc,latDscNc1,latDscNc2,latDscN_init,
+<br>latDscgR,latDschR,latDscB,latDscM,
+<br>latDscSZ,latDscScB,latDscSAJ2A,latDscSC,latDscSAB,latDscS,latDschpS,
+<br>latDscgI,latDscgI_alt,
+<br>lat1g,lat1h,lat1go,lat1gos,lat1r,
+<br>lat2sqgo,lat2sqho,lat2sqgos,lat2sqr,lat2sqB,lat2sqadd,
+<br>lat3scgo,lat3scho,lat3scgos,lat3scr,lat3scB,lat3scadd,
+<br>lat3scgo0,lat3sc_q2xi,lat3sc_xi2q,lat3sc_xi2k,lat3scho_H0,lat3scho_H1,
+<br>lat2triX,lat2triO,lat2triONT,lat2triCD,lat2triED2,lat2triadd,lat2trip,
+<br>lat2tri_q2xi,lat2tri_xi2q,lat2tri_xi2k,
+<br>lat2trigo,lat2triho,lat2trir,
+<br>lat2trigP,lat2trihP,lat2triPR,lat2triN,lat2triNc,lat2triNc1,lat2triNc2,
+<br>lat2trigR,lat2trihR,lat2triB,lat2triM</code></li>
 </ul>
 
 </body>

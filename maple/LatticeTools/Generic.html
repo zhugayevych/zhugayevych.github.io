@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Generic models</title>
+</head>
+<body>
+<h1>Generic models</h1>
+
+<p>See examples in <code>Generic.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>k</code> k-vector</li>
+<li><code>d::posint</code> spatial dimension</li>
+<li><code>o::1..d</code> enumerates dimensions</li>
+<li><code>M::Matrix(d)</code> matrix of Cartesian translation vectors as columns (default is identity matrix)</li>
+<li><code>n::posint</code> number of sites in unit cell</li>
+<li><code>m::1..n</code> enumerates sites in unit cell</li>
+<li><code>mt=[m,t1,...,td]</code> enumerates sites in translationally invariant system, here <code>t</code> denotes integer translations</li>
+<li><code>mtsid</code> indexing table <code>mts[mtsid[mt]]=mt</code></li>
+<li><code>n2::posint</code> size of the extended cell consisting of all sites coupled to unit cell starting from <code>n</code> sites belonging to the unit cell</li>
+<li><code>sites::Array(n2,0..d)</code> such that <code>sites[i,0]=mts[i][1]</code> and <code>sites[i,o]=mts[i][1+o]</code></li>
+<li><code>replicas::Vector(n)</code> whose <code>i</code>-th entry is list of all replicas of <code>i</code>-th site including <code>i</code></li>
+<li><code>Points/points::Matrix(d,n)</code> whose columns are Cartesian/lattice coordinates</li>
+<li><code>W::Matrix(n,n2)</code> transition rate matrix (its diagonal elements will be set to zero if appropriate)</li>
+<li><code>Wk::Matrix(n)</code> Fourier transform of <code>W</code></li>
+<li><code>W0,Wp,Wpp</code> are <code>Wk</code>, its derivative <code>diff(Wk(k),I*k)</code>, and second derivative all at <code>k=0</code> and with zero diagonal</li>
+<li><code>U::Vector</code> decay rates vector</li>
+<li><code>H::Matrix(n,n2)</code> single-cell real-space Hamiltonian</li>
+<li><code>Hk::Matrix(n)</code> Fourier-transform of <code>H</code></li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+<p><dfn>Builders</dfn></p>
+<li><code>BuildW(n,genfun,genopt,{sym::boolean})::W</code>
+ build transition rates matrix (symmetric if <code>sym</code>),
+ <code>genfun</code> determines generating function which uses <code>genopt,_rest</code> and can be one of
+ <ul>
+ <li><code>"Matrix"</code> use <code>Matrix</code></li>
+ <li><code>"RandomMatrix"</code> use <code>RandomMatrix</code></li>
+ <li><code>"Generate"</code> use <code>RandomTools[Generate]</code></li>
+ <li><code>"Sample"</code> use <code>Statistics[Sample]</code></li>
+ <li><code>"GamEps"</code> use <code>Gam[i,j](Sample(genopt[1]))*exp(Eps[i](Sample(genopt[2])))</code> (returns <code>W,Gam,Eps</code>)</li>
+ </ul></li>
+<li><code>BuildA(W,/U,$)::Matrix(n)</code> build generator of Markov chain such that <code>P(t)=exp(A*t)</code></li>
+<li><code>BuildH(tbH,k::{name,indexable},{symmetric,printout},$)::H,Hk,mts,mtsid</code> build translationally invariant Hamiltonian matrix,
+ here <code>tbH::table</code> of translationally unique Hamiltonian elements <code>tbH[m0,m,t1,...,td]</code></li>
+<p><dfn>Solvers</dfn></p>
+<li><code>GreensF(s,W,/U,$)::Matrix</code> compute Green's function <code>G=(s-BuildA(W,U))^(-1)</code> (datatype is derived from <code>s,W</code>)</li>
+<li><code>StatSol(W,/i0,simplifyf,{printout},$)</code> find stationary solution,
+ with respect to site <code>i0::nonnegint:=0</code> (must be significant site to avoid the loss of precision),
+ if zero <code>i0</code> is set to a site with the maximum outflow</li>
+<li><code>ZeroExpan(W,/i0,simplifyf,{printout},$)</code> expand the resolvent at zero</li>
+<li><code>Velocity(sites,W,/M,replicas,i0,simplifyf,{printout},$)</code> velocity for infinite periodic lattice</li>
+<li><code>DiffusionTensor(sites,W,/M,replicas,i0,simplifyf,{printout},$)</code> diffusion tensor</li>
+<li><code>DiffusionLength(sites,W,U,points,/M,replicas,{printout},$)</code> mean square displacement</li>
+<p><dfn>Analyzers</dfn></p>
+<li><code>PathExpansion(H,E,oi,of,vmin,Nmax,/subsys,{Lmax,neglect,printout,digits,nprint},$)
+ <br>::table([seq(L=list([v,o1,o2,...,oL]),L=0..Lmax2)])</code>
+ perform path expansion of sub-Hamiltonian in perturbation theory over nondiagonal matrix elements
+ by expanding <code>Hrenorm[oi,of]=H[oi,of]+H[oi,env].(E-Henv)^(-1).H[env,of]</code> in powers of transfer integrals
+ <ul>
+ <li><code>E::numeric</code> perturbation eigenenergy</li>
+ <li><code>oi,of::posint</code> indices of a matrix element to be expanded</li>
+ <li><code>subsys::list(posint):=[oi,of]</code> list of indices of the subsystem, other indices are considered as environment <code>env</code></li>
+ <li><code>vmin::numeric</code> expansion threshold in value of tau-matrix elements</li>
+ <li><code>neglect::numeric:=1e-3</code> threshold for perturbation terms <code>vmin2=neglect*vmin</code></li>
+ <li><code>Nmax::posint</code> maximum value of terms to keep at each iteration</li>
+ <li><code>Lmax::posint:=99</code> maximum order of expansion</li>
+ <li><code>Lmax2</code> internal variable defining maximum nonzero term of expansion</li>
+ <li><code>nprint::posint:=9</code> number of largest terms to print</li>
+ </ul></li>
+</ul>
+
+</body>
+</html>
