@@ -54,13 +54,12 @@
 <li><code>gR</code> by recurrence</li>
 
 <p><dfn>Path expansion</dfn></p>
-<li><code>gP(q,X,N:=-1,output:=`if`(type(q,numeric),"","v"),{digits})</code>
+<li><code>gP(q,X,/N:=-1,output:=`if`(type(q,numeric),"","v"),digits:={8})</code>
  Green's function by path expansion up to order <code>N</code> or maximum available,
  where <code>output</code> is one of
- <code>v</code>=value,
- <code>c</code>=corrected value,
- <code>r</code>=[c,reminder],
- <code>e</code>=[c,r,errorbar], otherwise corrected value with checks</li>
+ <code>v</code>=value without reminder,
+ <code>c</code>=corrected by reminder value,
+ <code>r</code>=[c,reminder], otherwise corrected value with checks</li>
 <li><code>PR(q,X,N,shift:=0)</code> series reminder,
  negative <code>shift</code> gives the upper bound,
  note that reminder to <code>P(N)</code> is <code>PR(N+1)</code></li>
@@ -68,9 +67,6 @@
  <code>sorted</code> relates to <code>X</code>,
  <code>all</code> requests all numbers for given <code>X</code></li>
 <li><code>Nc(n,X,{sorted,all})</code> path expansion coefficients</li>
-<li><code>Nc1(n,X,shift:=0)</code> approximation to path expansion coefficients,
- negative <code>shift</code> gives the upper bound</li>
-<li><code>Nc2(n,X,shift:=0,shift2:=shift)</code> improved approximation to path expansion coefficients</li>
 <li><code>N_init(d,L,N,{maxsize1,maxsize2,printout})</code>
  initialize path expansion numbers and coefficients,
  <code>d&lt;1</code> reset some or all tables and arrays (see examples)</li>
