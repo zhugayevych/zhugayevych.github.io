@@ -32,6 +32,10 @@ select (*)[2][17]; label %i; color labels black; set labelFront on
 
 write XYZ filename
 
+Saving isosurface mesh as text:
+write isosurface "filename.pmesh"
+https://chemapps.stolaf.edu/jmol/docs/#writeobject
+https://jmol.sourceforge.net/docs/surface/#Save
 
 
 
