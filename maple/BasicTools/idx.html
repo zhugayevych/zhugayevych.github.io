@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Indexing</title>
+</head>
+<body>
+<h1>Indexing</h1>
+
+<p>See examples in <code>idx.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>L::list(posint)</code> lattice dimensions,
+ single value implies <code>[L$d]</code> where <code>d=nops(x)</code></li>
+<li><code>x::list(nonnegint)</code> coordinate of a point, <code>x[i]=0..L[i]-1</code>,
+ if <code>x[i]</code> is out of this range it is reduced</li>
+<li><code>n::posint</code> index</li>
+<li><code>index/symmetric12</code> array symmetric with respect to the first two indexes</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>Dim2(A::{rtable,list})</code> upper limits of rtable or nops(list), see also
+ <a href="https://www.maplesoft.com/support/help/view.aspx?path=ArrayDims">ArrayDims</a>,
+ <a href="https://www.maplesoft.com/support/help/view.aspx?path=rtable_dims">rtable_dims</a></li>
+<li><code>idL(x,L,$)::n</code> enumerates points of a multidimensional lattice</li>
+<li><code>iidL(n,L,$)::x</code> inverse of <code>idL</code></li>
+<li><code>idI(m::integer)::n</code> enumerates integers starting from zero</li>
+<li><code>iidI(n)::m</code> inverse of <code>idI</code></li>
+<li><code>idS(ij::[posint$2],$)::n</code> 2D symmetric indexing function</li>
+<li><code>iidS(n,$)::ij</code> inverse of <code>idS</code>,
+ note that inverse symmetric indexings are not very efficient computationally because of square root operation</li>
+<li><code>idA(ij::[posint$2],$)::n</code> 2D antisymmetric indexing function</li>
+<li><code>iidA(n,$)::ij</code> inverse of <code>idA</code></li>
+<li><code>idSS(ijkl::[posint$4],$)::[n1,n2]</code> 4D doubly symmetric indexing function</li>
+<li><code>iidSS([n1,n2])::ijkl</code> inverse of <code>idSS</code></li>
+<li><code>nextpointS(x,$)::x</code> symmetric iterator in multidimensional lattice</li>
+</ul>
+
+</body>
+</html>
