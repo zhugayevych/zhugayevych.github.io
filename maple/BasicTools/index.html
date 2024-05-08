@@ -27,60 +27,67 @@
 
 <h2>Documentation</h2>
 <ul>
-<li><a href="Misc.html">Miscellaneous tools</a><code>
+<li>Miscellaneous tools<code>
 <br>Round,Reduce2P,PeriodicMean,PeriodicStandardDeviation,angle2pair,
-<br>mod1,coeffs2,convert2range,convert2repeat,simplifyradical,GetPath</code></li>
-<li><a href="Array.html">Array tools</a><code>
-<br>SearchPos,Substitute,Dim2,Grid,Grid2,
-<br>idL,iidL,idI,iidI,idS,iidS,idA,iidA,idSS,iidSS,nextpointS,
-<br>isleq,Sort,Rort,SortM,SortIdx,MaxVal,MinVal,MaxIdx,MinIdx,SortEE,SortSign,
-<br>IdentifyPairs,Classify2,BlockSplit,idExch,idSym,idASym,
+<br>mod1,coeffs2,convert2range,convert2repeat,simplifyradical,GetPath,
+<br>ReduceFloat,ReduceFloat2,ReduceFloat3,ReduceFloatGrid</code></li>
+<li>List tools<code>
+<br>SearchPos,Substitute,Grid,Grid2,
+<br>IdentifyPairs,Classify2,BlockSplit,idExch,idSym,idASym</code></li>
+<li>List tools: Trees<code>
 <br>PrintTree,Tree2Seq,Tree2Seq2,Tree2List</code></li>
-<li><a href="String.html">String tools</a><code>
+<li>Array tools: Indexing<code>
+<br>Dim2,idL,iidL,idI,iidI,idS,iidS,idA,iidA,idSS,iidSS,nextpointS</code></li>
+<li>Array tools: Sorting<code>
+<br>isleq,Sort,Rort,SortM,SortIdx,MaxVal,MinVal,MaxIdx,MinIdx,SortEE,SortSign</code></li>
+<li>String tools<code>
 <br>Squeeze,TrimLeft,TrimRight,Trim,StartNewLine,SearchKeySeq,ReadBody,ReadByMask,
 <br>Split2,FormattedOperation,FormatFloat,AlignPoints,FormatTable,FormatTime2,
 <br>PrintColumns,PrintMatrix,PrintUpperMatrix,PrintVector3d,ascii2unicode</code></li>
-<li><a href="CombAlg.html">Combinatorics and algorithms</a><code>
+<li>Combinatorics and algorithms<code>
 <br>CyclesAndTrees,defistree,CycleBasis2</code></li>
-<li><a href="Geo.html">Geometry</a><code>
+<li>Geometry<code>
 <br>Circumsphere</code></li>
-<li><a href="Calculus.html">Calculus</a><code>
+<li>Calculus<code>
 <br>fullparfrac2,fZero,fDblZero,fZeros,FZERO,NLPSolve2,HessianByGradient,
 <br>PolynomialInterpolation1der,BezierControlPoints,BezierNodes,
 <br>ExtrapolateMPE</code></li>
-<li><a href="DE.html">Differential equations</a><code>
+<li>Differential equations<code>
 <br>devpsolve</code></li>
-<li><a href="LA.html">Linear algebra</a><code>
+<li>Linear algebra<code>
 <br>CheckEigenvector,NormalizeVector,NormalizeMatrix,RealJordanBlockMatrix,MatrixFunction2,
-<br>SparseMM,SparseMHM,SparseMV,SparseMO,SparseMN,SparseMap,
 <br>SuperimposeM,LocalizeVectors4</code></li>
-<li><a href="LTrans.html">Linear transformations</a><code>
+<li>Sparse linear algebra<code>
+<br>SparseMM,SparseMHM,SparseMV,SparseMO,SparseMN,SparseMap</code></li>
+<li>Rotations<code>
 <br>RotationM,ReflectionM,RotationParam,RotationParamEulerX,RotationParamEulerY,
-<br>RotationMEulerX,RotationMEulerY,EulerY2Rot,Rot2EulerY,RotationMp2q,RotationM2zx,
+<br>RotationMEulerX,RotationMEulerY,EulerY2Rot,Rot2EulerY,RotationMp2q,RotationM2zx</code></li>
+<li>Transformations<code>
 <br>TransSpherCoo,TransSpherCooI,TransTensor,ExtendedTransM</code></li>
-<li><a href="Ylm.html">Spherical harmonics</a><code>
+<li>Special functions: Spherical harmonics<code>
 <br>Phim,NPhim2,Pnma,NPnma2,Ylm,Yxyz,YxyzM,YxyzR,YxyzL,
 <br>Wignerd,WignerD,Wigner3j,Wigner6j,MatElemYlm,MatElemY</code></li>
-<li><a href="SpecFun.html">Other special functions</a><code>
+<li>Special functions: <a href="LerchPhi.html">Lerch transcendent</a><code>
 <br>LerchPhi2,polylogR,polylogR_init</code></li>
-<li><a href="File.html">File tools</a><code>
+<li>File tools<code>
 <br>ExpandPath,SimplifyPath,FoldersTree,LoadTextFile,UnloadTextFile,
 <br>SearchFilePos,ReadLines,ReadValue,ReadPaginatedMatrix,WriteLines,ReplaceLines,
 <br>ReadRecord,WriteRecord,ReadSet,ReadUTF8,WriteUTF8,ReadBIN,WriteBIN,
 <br>PrintFile,convert2unix,convert2dos,OpenFolder</code></li>
-<li><a href="Graphics.html">Graphics</a><code>
+<li>Graphics<code>
 <br>GetBox,Spline2,ErrorBar,TextOnLine,Rainbow,WritePlotData,
 <br>plotps,CorrectEPS,ImageCoreBox</code></li>
-<li><a href="Data.html">Data manipulation</a><code>
+<li>Data manipulation<code>
 <br>RootMeanSquare,LinearFit2,LinearFitTrig,MultiDimFit,GaussianFit,
 <br>FindExtremum,ReorderXYdata,Intersection</code></li>
-<li><a href="HTML.html">HTML/XML tools</a><code>
-<br>SqueezeHTML,SqueezeTable,ReadHref,ResolveURI,GetXMLChild,ReadXML,WriteXML</code></li>
-<li><a href="Physics.html">Physics tools</a><code>
+<li>HTML tools<code>
+<br>SqueezeHTML,SqueezeTable,ReadHref,ResolveURI</code></li>
+<li>XML tools<code>
+<br>GetXMLChild,ReadXML,WriteXML</code></li>
+<li>Physics tools<code>
 <br>GetConstantSU,ConvertSU</code></li>
-<li><a href="System.html">System tools</a><code>
+<li>System tools<code>
 <br>BuildHelp,AssignModule,ReadModules,Check4Updates,TabulatedFunction,
-<br>ReduceFloat,ReduceFloat2,ReduceFloat3,ReduceFloatGrid,
 <br>Timing,InitTiming,ProcessSetupArgs</code></li>
 </ul>
 
