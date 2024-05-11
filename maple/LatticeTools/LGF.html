@@ -57,12 +57,12 @@
 <li><code>gP(q,X,/N:=-1,output:=`if`(type(q,numeric),"","v"),digits:={8})</code>
  Green's function by path expansion up to order <code>N</code> or maximum available,
  where <code>output</code> is one of
- <code>v</code>=value without reminder,
- <code>c</code>=corrected by reminder value,
- <code>r</code>=[c,reminder], otherwise corrected value with checks</li>
-<li><code>PR(q,X,N,shift:=0)</code> series reminder,
+ <code>v</code>=value without remainder,
+ <code>c</code>=corrected by remainder value,
+ <code>r</code>=[c,remainder], otherwise corrected value with checks</li>
+<li><code>PR(q,X,N,shift:=0)</code> series remainder,
  negative <code>shift</code> gives the upper bound,
- note that reminder to <code>P(N)</code> is <code>PR(N+1)</code></li>
+ note that remainder to <code>P(N)</code> is <code>PR(N+1)</code></li>
 <li><code>N(n,X,{sorted,all})</code> path expansion numbers of order <code>n&ge;0</code>,
  <code>sorted</code> relates to <code>X</code>,
  <code>all</code> requests all numbers for given <code>X</code></li>
