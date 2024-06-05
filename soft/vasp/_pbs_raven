@@ -29,7 +29,7 @@ hostname
 date
 
 module purge
-module load vasp/6.4.1
+module load vasp/6.4.2
 
 mkdir -p $RUNDIR
 cp $JOBDIR/* $RUNDIR/
@@ -42,4 +42,4 @@ cd $JOBDIR
 rm -rf $RUNDIR
 
 date
-rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err
+if [[ ! -s ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err ]]; then rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err; fi
