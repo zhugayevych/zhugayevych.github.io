@@ -3,7 +3,7 @@ https://zhugayevych.me/index.html
 https://zhugayevych.me/skills.html
 https://zhugayevych.me/Astro/index.html
 https://zhugayevych.me/Astro/charts/charts.html
-https://zhugayevych.me/edu/CC.html
+https://zhugayevych.me/edu/CCbase.html
 https://zhugayevych.me/edu/GradingSkoltech.html
 https://zhugayevych.me/edu/index.html
 https://zhugayevych.me/edu/LaTeX.html
