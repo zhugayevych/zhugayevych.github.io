@@ -13,18 +13,6 @@
  <a href="BasicTools_lib.zip">library</a> or
  <a href="BasicTools.ini">ini-file</a>. Tested for Maple 2024.</p>
 
-<h2>Acknowledgements</h2>
-<ul>
-<li>Dennis Isbister &ndash; Wigner3j and Wigner6j routines.</li>
-<li>L. F. Shampine and H. A. Watts &ndash; code from SLATEC package is used in FZERO routine.</li>
-</ul>
-
-<h2>Requires implementation</h2>
-<ul>
-<li>At the end of BasicTools.mw create an execution group checking if BasicTools, MolMod and other packages were installed correctly</li>
-<li>Enhance <code>BasicTools:-ReadLines</code> procedure so that it can read specific line numbers including reverse numbering from the end (modify input parameters as follows <code>number::{integer,list(integer)}:=1</code>). Then update <code>PrintFile</code> appropriately.</li>
-</ul>
-
 <h2>Documentation</h2>
 <ul>
 <li><a href="Setup.html">Setup</a></li>
@@ -90,6 +78,18 @@
 <li>System tools<code>
 <br>BuildHelp,AssignModule,ReadModules,Check4Updates,TabulatedFunction,
 <br>Timing,InitTiming,ProcessSetupArgs</code></li>
+</ul>
+
+<h2>Acknowledgements</h2>
+<ul>
+<li>Dennis Isbister &ndash; Wigner3j and Wigner6j routines.</li>
+<li>L. F. Shampine and H. A. Watts &ndash; code from SLATEC package is used in FZERO routine.</li>
+</ul>
+
+<h2>Requires implementation</h2>
+<ul>
+<li>At the end of BasicTools.mw create an execution group checking if BasicTools, MolMod and other packages were installed correctly.</li>
+<li>Enhance <code>BasicTools:-ReadLines</code> procedure so that it can read specific line numbers including reverse numbering from the end (modify input parameters as follows <code>number::{integer,list(integer)}:=1</code>). Then update <code>PrintFile</code> appropriately.</li>
 </ul>
 
 </body>

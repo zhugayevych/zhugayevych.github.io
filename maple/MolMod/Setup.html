@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Setup</title>
+</head>
+<body>
+<h1>Setup</h1>
+
+<p>See examples in <code>MolMod.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>MolMod[Setup](seq,{quick,database,thisdatalookup,setupversion,printout})</code>
+ package setup taking <code>seq</code> as sequence of keywords or initializing equations for them exactly as in
+ <a href="https://www.maplesoft.com/support/help/view.aspx?path=interface">interface</a> command.
+ Note that keyword values are not checked. Here
+ <ul>
+ <li><code>quick</code> process only <code>seq</code></li>
+ <li><code>database</code> load <code>MaterialsTable</code></li>
+ <li><code>thisdatalookup::list(string):=[]</code> override <code>datalookup</code> without changing it</li>
+ </ul></li>
+</ul>
+
+</body>
+</html>

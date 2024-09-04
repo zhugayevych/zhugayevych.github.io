@@ -3,14 +3,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../../soft.css">
-<title>Description of MolMod package</title>
+<title>MolMod package</title>
 </head>
 <body>
-<h2>Description of MolMod package</h2>
-<p>by <a href="http://zhugayevych.me">Andriy Zhugayevych</a></p>
-<p>MolMod is a molecular modelling package.</p>
-<p>If you have comments, suggestions, or have found a bug, please <a href="mailto:azh@ukr.net">email me</a>.</p>
-<p>Tested for Maple 17 on Windows 7 and 10.</p>
+<h1>MolMod package</h1>
+<p>MolMod is a molecular and crystal modeling package.</p>
+<p>Download
+ <a href="MolMod.zip">source</a> or
+ <a href="MolMod_lib.zip">library</a> or
+ <a href="MolMod.ini">ini-file</a>,
+ and <a href="MolMod_Setup.ini">sample configuration file</a>.
+ Tested for Maple 17.</p>
+<p>Prerequisite packages:
+ <a href="../BasicTools/index.html">BasicTools</a>,
+ <a href="../FiniteGroups/index.html">FiniteGroups</a>,
+ <a href="../SSH/index.html">SSH</a></p>
 
 <h2>Highlighted features</h2>
 <ul>
@@ -22,20 +29,116 @@
 <li>Ready-to-use notebooks for most common tasks in computational materials science including batch calculations.</li>
 </ul>
 
-<h2>Installation</h2>
+<h2>Documentation</h2>
 <ul>
-<li>Download source files <a href="MolMod.zip">MolMod.zip</a>, unzip to any location, open <code>install.mw</code> and follow the instructions.</li>
-<li>Windows users: If failed to install or you don't need the source, download <a href="MolMod_lib.zip">MolMod_lib.zip</a> and unzip to Maple library folder <code>MapleXX/lib</code>.</li>
-<li>Experienced users: the package can be initialized by reading <a href="MolMod.ini">MolMod.ini</a> with Maple "read" command.</li>
-<li>If not exist, create <code>MolMod_Setup.ini</code> in <code>UserConfigurationFolder</code> (see its definition <a href="../index.html">here</a>). Use <a href="MolMod_Setup.ini">MolMod_Setup.ini</a> as a template.</li>
-<li>The documentation is built into the Maple Help system. Individual help pages are also available as individual mw-files.</li>
+<li><a href="Notations.html">Notations and notes</a></li>
+<li><a href="Setup.html">Setup</a></li>
+<li>Auxiliary routines<code>
+<br>BestProgram,TypeMethod,
+<br>NormalizeCharges,LabelAtoms,SaveTempData</code></li>
+<li>Decorders<code>
+<br>DecodeFormula,EncodeFormula,
+<br>DecodeTranslation,DecodeTranslation1,EncodeTranslation,EncodeTranslation1,
+<br>DecodeState,DecodeFilename,DecodeMethod,DecodeBS,DecodeKgrid</code></li>
+<li>Atomic data<code>
+<br>AtomicNumber,ElementSymbol,ElementName,AtomicType,pg2Z,AtomMass,
+<br>tb_rcov,tb_rion,tb_rvdw,
+<br>GetASD</code></li>
+<li>Molecular data<code>
+<br>tb_solvents</code></li>
+<li>Geometry: Coordinates<code>
+<br>len,angle,dihedral,len2,angle2,dihedral2,
+<br>Get4th,GetInternals,Int2Cart,Cart2Int</code></li>
+<li>Geometry: Lattices<code>
+<br>ReduceLattice2D, ReduceLattice3D, CVP, CVP2, CVPfcc</code></li>
+<li>Geometry: Unit cells<code>
+<br>Atoms2Cell,SuperCell,FoldCells,
+<br>cryst2M,M2cryst,ReshapeCell,DecodeAxes,DecodeAxes2</code></li>
+<li>Geometry: Connectivity<code>
+<br>ConnectAtoms,RemoveAtoms,MolGraph,ChemDistance,
+<br>Clusterize,ContactDistance,FragmentMolecule,FragmentPlot,
+<br>CooPolyhedra,CooPolyhedron,SelectAtoms,
+<br>ClassifyAtoms,atype_mm3,atype_opls,GetTopology,HasTopology</code></li>
+<li>Geometry: Orient<code>
+<br>ODR,Centroid,OrientBy2Vectors,CanonicOrientation</code></li>
+<li>Geometry: Match<code>
+<br>Superimpose,GuessPermutation,MatchMol</code></li>
+<li>Geometry: Modify<code>
+<br>ChangeDihedral,JoinMol,AttachPoints,
+<br>AliphaticDihedrals,Alkane,SortAlkane</code></li>
+<li>Geometry: Symmetry<code>
+<br>SymmetrizeCell,SymmetrizeAtoms,UnfoldBySymmetry</code></li>
+<li>Wave-function: Atomic orbitals<code>
+<br>AOangular,AOl,AOt,AOr,AOxyz,AOnormalize</code></li>
+<li>Wave-function: Integrals<code>
+<br>GTOint1,GTOint2,GTOint3,GTOint4,GTOint42,GTOoverlap,GTOoverlap2,
+<br>GTOreduce,GTOadd,GTOexpand1,GTOexpand3,GTOexpand,Hybrid</code></li>
+<li>Wave-function: Basis sets<code>
+<br>shell2LtN,LtN2shell,UnfoldBS,FoldBS,ReadBS</code></li>
+<li>Wave-function: Transform and match<code>
+<br>RotationM4AO,TransformMO,LocalizeMO,MatchOrbitals</code></li>
+<li>File tools: Geometry<code>
+<br>ReadXYZ,WriteXYZ,CombineXYZ,
+<br>ReadCIF,WriteCIF,cif2xyz,xyz2cif,
+<br>ReadPOSCAR,WritePOSCAR,ReadPDB,WritePDB,
+<br>ReadGRO,ReadAtomsCube</code></li>
+<li>File tools: Parameters<code>
+<br>ReadPAR,WritePAR,IndexPRM,ReadPRM,WritePRM,MergePRM</code></li>
+<li>File tools: Wave-function<code>
+<br>WriteMGF,CompressMGF</code></li>
+<li>Chemistry<code>
+<br>ChemBalance,EnergyBalance</code></li>
+<li>Quantum chemistry: Wave-function<code>
+<br>showkgrids,DetermineBandGap,MultimerH,AFMorder</code></li>
+<li>Quantum chemistry: Vibrations<code>
+<br>VibrationalModes,MatchVibrations</code></li>
+<li>Quantum chemistry: Vibronic couplings<code>
+<br>VibronicCouplings,TransSp,CoarsegrainSp,fTransSp,
+<br>GenerateES,SingleQMode,SingleQModeFit</code></li>
+<li>Materials science<code>
+<br>EOSfit</code></li>
+<li>Output<code>
+<br>PrintSpherPolynom,pqrlabel,SPindex,SPDindex,printAO,
+<br>plotE,plot3Dgrid,plotMol,acolor_azh,acolor_azh2,asize_azh,
+<br>simplifySVG,CompressEigenvectors,DomainMO,printMO</code></li>
+<li>External programs input<code>
+<br>WriteAtom,WriteMethod,WriteBS,WriteEBS,
+<br>WriteInput,WriteScript,Run,CleanUp,
+<br>SubmitJob,DownloadJob</code></li>
+<li>External programs output<code>
+<br>WhatProgram,IsNormalTermination,GetTiming,
+<br>ReadOutput,LoadMO,
+<br>ReadAtoms,ReadExcStates,ReadVibrations,
+<br>ReadDOS,ReadNBO,ReadRawMatrixElement,
+<br>CorrectSymmetryOrientation,OptimCurve,
+<br>ReadDump,WriteDump,ReadAUX,CompressAUX,
+<br>getv,getvlbl</code></li>
+<li>MOPAC output<code>
+<br>ReadFockM</code></li>
+<li>Materials data<code>
+<br>MaterialsData,MaterialsTable,MaterialsIndex,
+<br>IdentifyMolecule,MolFingerprint,MolSearchInit</code></li>
 </ul>
 
-<h2>Credits</h2>
+<h2>Notebooks of examples and gray-box solutions</h2>
 <ul>
-<li>Sergey Matveev</li>
-<li>Artem Naumov &ndash; force fields</li>
-<li>Sergei Tretiak &ndash; vibronic couplings</li>
+<li><code>exam_{gau,lam,mop,tin,vas}.mw</code> &ndash; routine calculations in the corresponding programs.</li>
+<li><code>exam_Geometry.mw</code> &ndash; routine geometrical calculations.</li>
+<li><code>exam_Statistic.mw</code> &ndash; statistical analysis of MD trajectories.</li>
+<li><code>exam_VibCoup.mw</code> &ndash; calculation and analysis of vibronic couplings.</li>
+<li><code>exam_cif2xyz.mw</code> &ndash; clean up CIF for molecular crystal.</li>
+<li><code>exam_xyz2cif.mw</code> &ndash; convert XYZ to CIF.</li>
+<li><code>exam_pdb2xyzcif.mw</code> &ndash; convert PDB-file to XYZ or CIF.</li>
+<li><code>exam_prm.mw</code> &ndash; force field explorer.</li>
+<li><code>exam_fitESPmodel.mw</code> &ndash; fit electrostatic model.</li>
+<li><code>exam_BinFileFormats.mw</code> &ndash; binary file formats used in MolMod.</li>
+</ul>
+
+<h2>Acknowledgements</h2>
+<ul>
+<li>Sergey Matveev &ndash; translation to Python of <a href="https://github.com/amatgroup/MolMod">some commands</a>.</li>
+<li>Artem Naumov &ndash; force fields.</li>
+<li>Sergei Tretiak &ndash; vibronic couplings.</li>
 </ul>
 
 <h2>Requires implementation</h2>

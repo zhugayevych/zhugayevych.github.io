@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Notations and notes</title>
+</head>
+<body>
+<h1>Notations and notes</h1>
+
+<h2>Notations</h2>
+<ul>
+<li><code>element::{posint,string}</code> &ndash; element number, symbol, or name.</li>
+<li><code>Atoms::list([symbol,&lt;X,Y,Z&gt;,optional_entries])</code> &ndash; list of atoms,
+ sometimes internal coordinates are allowed as <code>[symbol,[i1,r,i2,theta,i3,phi]]</code> or as incomplete form of the latter.</li>
+<li><code>M::Matrix</code> &ndash; unit cell matrix whose columns are translation vectors.</li>
+<li><code>Cell::[a,b,c,alpha,beta,gamma,optional_entries]</code> &ndash; unit cell parameters recognizable by <code>cryst2M</code> command.</li>
+<li><code>SG::string</code> &ndash; Symmetry Group recognizable by <a href="../FiniteGroups/index.html">FiniteGroup[SymmetryGroup]</a> command.</li>
+<li><code>BS::list(AO)</code> &ndash; Basis Set as list of Atomic Orbitals.</li>
+<li><code>FBS::list</code> &ndash; Folded Basis Set as list of shells.</li>
+</ul>
+
+<h2>Units</h2>
+<ul>
+<li>Electronic wave-function &ndash; bohrs</li>
+<li>Atomic coordinates &ndash; Ao</li>
+<li>Energy &ndash; eV</li>
+<li>Temperature &ndash; K or eV</li>
+<li>Pressure &ndash; GPa (10 kbar)</li>
+<li>Gradient &ndash; eV/Ao</li>
+<li>Dipole (l-pole) &ndash; e*Ao (e*Ao^l)</li>
+<li>See also list of conversion constants printed by <code>Setup</code> command.</li>
+</ul>
+
+<h2>Notes</h2>
+<ul>
+<li>When reading a file, its extension can be omitted if there will be no confusion.</li>
+<li>Fully supported external programs are
+ <a href="../../soft/gaussian/index.html">Gaussian</a>,
+ <a href="../../soft/vasp/index.html">VASP</a>,
+ <a href="../../soft/mopac/index.html">MOPAC</a>,
+ <a href="../../soft/lammps/index.html">LAMMPS</a>.</li>
+<li>Partially supported are
+ <a href="../../soft/tinker/index.html">TINKER</a>,
+ <a href="../../soft/firefly/index.html">Firefly</a>,
+ and also
+ <a href="../../soft/abinit/index.html">Abinit</a>,
+ <a href="https://www.molpro.net">Molpro</a>,
+ <a href="https://fhi-aims.org">FHI-aims</a>,
+ <a href="https://www.gromacs.org">GROMACS</a>.</li>
+<li>Some commands and applications use global variable <code>CurrentDataFolder</code> if that variable is defined.</li>
+<li>Some commands accept two types of geometry input:
+ if atoms are provided as pair <code>Atoms,Cell</code> then the coordinates are assumed to be lattice,
+ if <code>Cell</code> is not provided then cartesian coordinates are assumed, see also <code>Atoms2Cell</code> command.</li>
+</ul>
+
+</body>
+</html>
