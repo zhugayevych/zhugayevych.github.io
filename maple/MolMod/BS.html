@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Wave-function: Basis sets </title>
+</head>
+<body>
+<h1>Wave-function: Basis sets </h1>
+
+<p>See examples in <code>BS.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>BS::list(BF)</code> Basis Set as list of Atomic Orbitals.</li>
+<li><code>FBS::list(BL)</code> Folded Basis Set as list of shells.</li>
+<li><code>BF::[center,angular,radial,C,label]</code> basis function defined exactly as AO.</li>
+<li><code>BL::[center,shell::string,radial,C,label]</code> shell of basis functions.</li>
+<li><code>shell::string=cat(L,t)</code> contains information about the angular quantum number and functional form of the basis functions.
+ For example, Dm=[XX,YY,ZZ,XY,XZ,YZ], Dt=[Z2,XZ,YZ,X2,XY], Dc=[X2,Z2,YZ,XZ,XY].</li>
+<li><code>L::{integer,string}</code> if integer it is orbital quantum number (-1 means SP), if string it is one of S,P,D,F,G,H and the combination SP.</li>
+<li><code>t::string</code> type of basis functions: "m" for monomials, "t" for trigonometric, "c" for cubic.</li>
+<li><code>N=|BS|</code> number of basis functions.</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>shell2LtN(shell,Ltrig::integer:=-1,$)::[L::integer,t,N]</code> decode shell, where <code>Ltrig</code> is min L from which trigonometric spherical harmonics are used</li>
+<li><code>LtN2shell(L::{string,integer},torN::{string,posint},$)::shell</code> encode shell</li>
+<li><code>UnfoldBS(FBS,NorL::integer,prefactor::procedure:=((a,l)->sqrt((2*a)^(l+3/2)*2/GAMMA(l+3/2))),labelformat::string:="%s",
+ {program::string:="",printout},$)::BS</code> unfold basis set, where
+ <ul>
+ <li><code>NorL</code> posint means expected N, negint means Ltrig</li>
+ <li><code>prefactor</code> multiply each primitive gaussian by this factor</li>
+ <li><code>program</code> for program-specific features (currently not used)</li>
+ </ul></li>
+<li><code>FoldBS( BS::list, prefactor::procedure:=((a,l)->sqrt((2*a)^(l+3/2)*2/GAMMA(l+3/2))),$)::FBS</code> fold basis set</li>
+<li><code>ReadBS(filename,Atoms,Ltrig::integer:=-1,prefactor::procedure:=((a,l)->sqrt((2*a)^(l+3/2)/Pi/GAMMA(l+1/2))),$)</code> read basis set from file
+ in the format of Basis Set Exchange GAMESS-US, which is compatible with Firefly and Gaussian.
+ To read basis from program output use ReadOutput.</li>
+<li><code>RewriteBasis(filename,filename1,lsi::list(posint),{maxgeodev::numeric:=1e-6,overwrite},$)::FBS1</code>
+ read basis from <code>filename</code>, reduce it to subset of atoms <code>lsi</code>, and save subset of atoms and its basis to <code>filename1</code>.
+ If <code>filename1</code> begins with undescore then it is treated as suffix to <code>filename</code>.</li>
+</ul>
+
+</body>
+</html>
