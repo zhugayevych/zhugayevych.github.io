@@ -39,7 +39,7 @@
  in the format of Basis Set Exchange GAMESS-US, which is compatible with Firefly and Gaussian.
  To read basis from program output use ReadOutput.</li>
 <li><code>RewriteBasis(filename,filename1,lsi::list(posint),{maxgeodev::numeric:=1e-6,overwrite},$)::FBS1</code>
- read basis from <code>filename</code>, reduce it to subset of atoms <code>lsi</code>, and save subset of atoms and its basis to <code>filename1</code>.
+ read basis from Gaussian output <code>filename</code>, reduce it to subset of atoms <code>lsi</code>, and save subset of atoms and its basis to <code>filename1</code>.
  If <code>filename1</code> begins with undescore then it is treated as suffix to <code>filename</code>.</li>
 </ul>
 

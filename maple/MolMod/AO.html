@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Wave-function: Atomic orbitals</title>
+</head>
+<body>
+<h1>Wave-function: Atomic orbitals</h1>
+
+<p>See examples in <code>AO.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>AO::[center,angular,radial,C,label]</code> encoded form of atomic orbital (AO), where</li>
+<li><code>center::{0,atomindex,&lt;X,Y,Z&gt;}</code> AO center,</li>
+<li><code>angular::{[px,py,pz],[-l,m,0],[-l,k],[l,k],AOsym}</code> angular part of monomial "m", trigonometric "t", or cubic "c" type, where</li>
+<li><code>[px,py,pz]</code> powers at x,y,z of monomial angular part,</li>
+<li><code>[-l,m,0]</code> orbital quantum numbers (l,m) of trigonometric angular part
+ (real spherical harmonics <code>Ylm</code>, the last number is ignored but 0 guarantees correct interpretation of 00 harmonics),</li>
+<li><code>[-l,k]</code> orbital main quantum number (l) and order number (k) of trigonometric harmonics ordered as 0,1,-1,2,-2,...,</li>
+<li><code>[l,k]</code> orbital main quantum number (l) and order number (k) of monomial functions ordered according to <code>pqr</code> table,</li>
+<li><code>AOsym</code> either a monomial "X..XY..YZ..Z" or one of cubic harmonics recognized by <code>Yxyz</code> command (e.g. X2,Y3,Z3,XY2,S4),</li>
+<li><code>radial::{[n2,zeta],list([a,c])}</code> radial part of Gaussian (GTO) or Slater (STO) type, where</li>
+<li><code>n,n2,zeta</code> principal quantum number (<code>n=n2+l</code>) and exponent of STO,</li>
+<li><code>a,c</code> exponent and coefficient of a primitive gaussian constituting the contracted gaussian,</li>
+<li><code>C::numeric:=1</code> optional precomputed normalization constant (or a multiplicative factor),</li>
+<li><code>label::string:=""</code> optional label.</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>AOangular(angular,x,y,z)::expression</code> normalized angular part,</li>
+<li><code>AOl(angular)::nonnegint</code> angular quantum number,</li>
+<li><code>AOt(angular)::{"m","t","c"}</code> type of angular function,</li>
+<li><code>AOr(AO,r)::expression</code> radial part,</li>
+<li><code>AOxyz(AO,x,y,z)::expression</code> explicit form,</li>
+<li><code>AOnormalize(AO,{function})::AO</code> normalize AO by recalculating <code>C</code>,
+ if <code>function</code> then it normalizes only radial part (constants <code>c</code> for GTO, error for STO)
+ and recalculates <code>C</code> to keep the entire norm unchanged.</li>
+</ul>
+
+<h2>Notes</h2>
+<ul>
+<li>Only trigonomertic spherical harmonics and low-order monomials are actively used in computational chemistry.</li>
+</ul>
+
+</body>
+</html>
