@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Wave-function: Localize</title>
+</head>
+<body>
+<h1>Wave-function: Localize</h1>
+
+<p>See examples in <code>LocalizeMO.mw</code> and LocalizeMO folder</p>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>LocalizeMO(mo,pro,typ,nof,evorH, moSorS:=1(N),purifymo:=undefined,
+ {minocc,donotdiagonalize,nprint,digits,printout}) ::lmo,lmoS,lme,occ2,occ1,T</code>
+ localize molecular orbitals, where
+ <ul>
+ <li><code>mo::Matrix(N,n)</code></li>
+ <li><code>pro::{list,Matrix}</code> projector onto inner/outer space or list of basis set indices of the inner space,</li>
+ <li><code>typ::"in,out,inU,inV,outU,outV,on"</code> type of localization algorithm, see Notes,</li>
+ <li><code>nof::{posint,numeric}</code> either number of LMOs or outer space occupation threshold,</li>
+ <li><code>evorH::{Matrix,Vector,0}</code> Hamiltonian in mo-basis or eigenvalues if it is diagonal, LMOs are rotated to diagonalize this matrix unless donotdiagonalize,</li>
+ <li><code>moSorS::Matrix</code> basis set ovelap or <code>moS=mo<sup>+</sup>.S</code></li>
+ <li><code>purifymo::name</code> remove irrelevant MOs and rerun the command, <code>list([mo#,T.T<sup>+</sup>[mo#,mo#]])</code> sorted by MO weights (second element) is returned in <code>purifymo</code>,</li>
+ <li><code>minocc::numeric:=.01</code> to print,</li>
+ <li><code>nprint::posint:=8</code> minimum number of LMOs to print,</li>
+ <li><code>digits::posint:=3</code> for printing occupations</li>
+ <li><code>T::Matrix(n,no)</code> unitary matrix transforming <code>mo</code> to <code>lmo</code> (in principle unitarity is not required but is checked),</li>
+ <li><code>lmo::Matrix(N,no)=mo.T</code> resulting LMOs,</li>
+ <li><code>lmoS::Matrix(no,N)=lmo<sup>+</sup>.S</code> </li>
+ <li><code>lme::Vector(no)</code> if <code>donotdiagonalize</code> then diagonal energies otherwise eigenenergies,</li>
+ <li><code>occ2,occ1::Matrix</code> occupations after and before the diagonalization, see Notes.</li>
+ </ul>
+ Notes:
+ <ul>
+ <li>If <code>typ="on"</code> the command rotates <code>mo</code> to match <code>pro</code>
+  by compact SVD of the matrix <code>mo<sup>+</sup>.S.prо=U.Sigma.V<sup>+</sup></code>, so that <code>T=U.V+</code>.
+  The final occupations are calculated as <code>o->|lmoS[o,..].prо|</code> in the quadratic norm.</li>
+ <li>If <code>typ=in/out</code> the command maximizes/minimizes <code>U<sup>+</sup>.mo<sup>+</sup>.P'.S.P.mo.V</code>
+  wrt to norm-preserving <code>U</code> and <code>V</code>, where <code>P</code> is algorithm-dependent projector.
+  If <code>P'=P<sup>+</sup></code> then <code>U=V=T</code> and the extremum is determined
+  by solving generalized eigenvalue problem with the normalization <code>T<sup>+</sup>.mo<sup>+</sup>.S.mo.T=1</code>.
+  Otherwise the optimization problem is solved by compact SVD.</li>
+ <li>Two types of the projector <code>P</code> are supported:
+  projective matrix <code>P=pro</code> with <code>P'=P<sup>+</sup></code>,
+  and list of basis set indices <code>K=pro</code> of the projection space.
+  In the latter case the matrix <code>mo<sup>+</sup>.P'.S.P.mo</code> is constructed as
+  either <code>mo[lsk,..]<sup>+</sup>.S[lsk,lsk].mo[lsk,..]</code> for <code>typ=in/out</code> (so that <code>P'=P<sup>+</sup></code>)
+  or <code>mo<sup>+</sup>.S[..,lsk].mo[lsk,..]</code> for <code>typ=in/out+U/V</code> (so that <code>P'&ne;P<sup>+</sup></code>)
+  with <code>lsk=K</code> for "in" and complementary set of indices to <code>K</code> for "out".
+  In the former case the "direction" of the projector pro is provided by <code>typ</code>.
+  The  final occupations are calculated as the diagonal of <code>lmo<sup>+</sup>.P'.S.P.lmo</code>.</li>
+ <li>In the nonsymmetric case there are two options <code>T=U</code> or <code>T=V</code>, the choice is set by <code>typ</code>.</li>
+ <li>Only the highest occupations defined by <code>nof</code> are kept.</li>
+ <li>Not all supported values of <code>typ</code> are meaningful: often "in,inV,outU" produce wrong results (in particular for unoccuped MOs).
+  The most universal are "inU" and "outV", because "out" requires full overlap matrix, whereas "on" requires good initial guess of LMO.</li>
+ </ul></li>
+</ul>
+
+<h2>References</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Kabsch_algorithm">Kabsch algorithm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Wahba's_problem">Wahba's problem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem">Orthogonal Procrustes problem</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Wave-function: GTO</title>
+</head>
+<body>
+<h1>Wave-function: GTO</h1>
+
+<p>See examples in <code>GTO.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>GTO::AO</code> see <a href="AO.html">Atomic Orbitals</a>.</li>
+<li><code>a::positive</code> exponential coefficient of primitive gaussian.</li>
+<li><code>ac=list([a,c])</code> list of exponential and preexponential coefficients at primitive gaussians constituting the contracted gaussian.</li>
+<li><code>p::nonnegint</code> monomial power at primitive gaussian.</li>
+<li><code>px,py,pz::nonnegint</code> powers at x,y,z.</li>
+<li><code>xpa=[x0,p,a]</code> defined primitive gaussian, where x0 is its center.</li>
+<li><code>XPa</code> 3D version of <code>xpa</code>.</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>GTOreduce(psi,maxdev:=10^(2-Digits),maxdev2:=maxdev)</code> combine equivalent GTOs in a given wave-function,
+ where <code>maxdev</code> if for exponents and <code>maxdev2</code> is for squared distance between centers.</li>
+<li><code>GTOadd(psi1,psi2,maxdev,maxdev2)</code> add two GTO-based wave-functions.</li>
+<li><code>GTOexpand1(xpa1,xpa2)</code> expand product of two 1D primitive gaussians.</li>
+<li><code>GTOexpand3(XPa1,XPa2)</code> expand product of two 3D primitive gaussians.</li>
+<li><code>GTOexpand(GTO1,GTO2,{noprefactor,donotreduce})</code> expand product of two GTOs,
+ where <code>noprefactor</code> ignores standard prefactor for monomials
+ and <code>donotreduce</code> skips reduction.</li>
+<li><code>GTOint1(a,p)</code> primitive gaussian integral.</li>
+<li><code>GTOint2(ac1,ac2,px,py,pz)</code> integral of the product of two contracted gaussians.</li>
+<li><code>GTOint3(e::expression)</code> symbolic integration.</li>
+<li><code>GTOint3(p1,p2,a1,a2,x12)</code> integral of the product of two gaussians with power function separated by x12.</li>
+<li><code>GTOoverlap(GTO1,GTO2,{noprefactor})</code> overlap integral.</li>
+</ul>
+
+</body>
+</html>

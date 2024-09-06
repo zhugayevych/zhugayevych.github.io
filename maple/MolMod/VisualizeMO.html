@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Wave-function: Visualize</title>
+</head>
+<body>
+<h1>Wave-function: Visualize</h1>
+
+<p>See examples in <code>VisualizeMO.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>WriteMGF(filename,A,FBS,evl::{Vector,list(Vector)},evc::{Matrix,list(Matrix)},
+ labelsorhomo:=0, {Ltrig,obin,width,pos,symlabelpos,jmol,before,after,overwrite})</code>
+ write MGF file, where
+ <ul>
+ <li><code>labelsorhomo::{Vector,list(Vector),nonnegint,list(nonnegint)}</code> </li>
+ <li><code>Ltrig</code> passed to <a href="BS.html">UnfoldBS</a>,</li>
+ <li><code>obin::posint:=5</code> number of molecular orbitals per page (must be 5 for Jmol),</li>
+ <li><code>width::posint:=10</code> of columns of MO coefficients (must be 10 for Jmol),</li>
+ <li><code>pos::posint:=22</code> starting position of the first column (must be at least 22 for Jmol),</li>
+ <li><code>symlabelpos::posint:=14</code> starting position of the symmetry label (for Jmol symmetry label must start with 1-2 nonspace symbols followed by any AO-symmetry-like label),</li>
+ <li><code>jmol::boolean:=false,</code> make it readable by Jmol (convert to monomials, remove L>3 orbitals, unfold SPD shells),</li>
+ <li><code>before,after::list({string,list}):=[]</code> write at the start and end of the file.</li>
+ </ul></li>
+<li><code>CompressMGF(filename,left:=2,{nobackup,forcebackup,pos})</code>
+ compress Gaussian log-file with orbitals (NO and NTO), where
+ <ul>
+ <li><code>left::nonnegint:=2</code> number of eigenvalue blocks to leave (e.g. 0 - no NOs, 1 - 5 NOs, 2 - 15 NOs),</li>
+ <li><code>forcebackup</code> overwrite those files,</li>
+ <li><code>pos::posint:=21</code> starting position to read eigenvalues.</li>
+ </ul></li>
+</ul>
+
+</body>
+</html>

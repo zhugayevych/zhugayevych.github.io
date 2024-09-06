@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Wave-function: Transform</title>
+</head>
+<body>
+<h1>Wave-function: Transform</h1>
+
+<p>See examples in <code>TransformMO.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>Hybrid(triple::[{Vector,numeric,symbol}$3],{inplane,weightsonly})::{W,T}</code>
+ hybridize s- and p-orbitals to direct 3 of the resulting 4 orbitals along specified directions, where
+ <ul>
+ <li><code>triple</code> is a list of Vectors, or numerical angles between them in degrees, or symbolic angles between them in radians,</li>
+ <li><code>inplane</code> assumes that the triple is inplane,</li>
+ <li><code>weightsonly</code> if true the list of three s-orbital weights <code>W::list(3)</code> is returned,
+  otherwise the transformation matrix <code>T::Matrix(4)</code> is returned.</li>
+ </ul>
+ The transformation matrix <code>T</code> is 4 by 4 matrix with its 1st column index corresponding to s-orbitals.
+ The 2nd to 4th row indices of <code>T</code> correspond to the hybrids directed along the triple, so that <code>T[1,2..4]</code> vector gives the 4th direction.
+ The s-orbital weights are <code>W=[seq(T[i,1]^2,i=2..4)]</code>, they give the measure of the hybridization.
+ The hybridization procedure is ill-defined if the sum of angles is greater than 360 degrees
+ or if one of angles is lessequal than 90 degrees.</li>
+<li><code>RotationM4AO(R,L,t::"mtc",$))::Matrix</code>
+ transformation matrix for AO of orbital quantum number <code>L</code> and type of angular functions <code>t</code> (see <a href="BS.html">Basis sets</a>),
+ where <code>R::{Matrix,[alpha,beta,gamma,det]}</code> is rotation matrix foratoms or its Euler parameters.</li>
+<li><code>TransformMO(R,evc0::{Matrix,Vector},BS,S0:=undefined)::evc(,S)</code>
+ transform MO upon rotation of the molecule, where <code>evc0</code> provides vectors to rotate,
+ <code>BS</code> is basis set, and <code>S0</code> is overlap matrix to rotate.</li>
+</ul>
+
+</body>
+</html>
