@@ -10,24 +10,23 @@
 
 <h2>Package-wise notations</h2>
 <ul>
+<li><code>1(N)=IdentityMatrix(N), T<sup>+</sup>=HermitianTranspose(T)</code></li>
 <li><code>el,element::{posint,string}</code> element number, symbol, or name.</li>
 <li><code>A,Atoms::list([symbol,&lt;X,Y,Z&gt;,optional_entries])</code> list of atoms,
  sometimes internal coordinates are allowed as <code>[symbol,[i1,r,i2,theta,i3,phi]]</code> or as incomplete form of the latter.</li>
 <li><code>M::Matrix(3,nt)</code> unit cell matrix whose columns are translation vectors <code>Tvs=list(Tv::["Tv",Vector(3)])</code>.</li>
 <li><code>C,Cell::[a,b,c,alpha,beta,gamma,optional_entries]</code> unit cell parameters recognizable by <code>cryst2M</code> command.</li>
 <li><code>SG::string</code> Symmetry Group recognizable by <a href="../FiniteGroups/index.html">FiniteGroup[SymmetryGroup]</a> command.</li>
-<li><code>ev::Vector(no)</code> eigenvalues</li>
-<li><code>evc,mo,lmo::Matrix(N,no)</code> right eigenvectors (MO, LMO) as columns</li>
-<li><code>evr::Matrix(no,N)</code> left eigenvectors as rows</li>
-<li><code>S::Matrix(N,N)</code> overlap matrix</li>
+<li><code>ev::Vector(no)</code> eigenvalues.</li>
+<li><code>evc,mo,lmo::Matrix(N,no)</code> right eigenvectors (MO, LMO) as columns.</li>
+<li><code>S::Matrix(N,N)</code> basis set overlap matrix.</li>
+<li><code>evr,evcS,moS,lmoS::Matrix(no,N)=evc<sup>+</sup>.S</code> left eigenvectors as rows multiplied by <code>S</code> so that <code>evr.evc=1</code>.</li>
 <li><code>AO</code> <a href="AO.html">Atomic Orbitals</a></li>
 <li><code>BS</code> <a href="BS.html">Basis Set</a></li>
 <li><code>psi::list(AO)</code> wave-function</li>
 <li><code></code> </li>
-<li><code></code> </li>
-<li><code></code> </li>
 <li><code>na=|A|, nt=|Tvs|, N=|BS|, no,n=|ev|</code></li>
-<li><code>1(N)=IdentityMatrix(N), T<sup>+</sup>=HermitianTranspose(T)</code></li>
+<li><code>i,j=1..na, k=1..N, o=1..no</code></li>
 </ul>
 
 <h2>Units</h2>

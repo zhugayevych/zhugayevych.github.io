@@ -25,12 +25,15 @@
  The s-orbital weights are <code>W=[seq(T[i,1]^2,i=2..4)]</code>, they give the measure of the hybridization.
  The hybridization procedure is ill-defined if the sum of angles is greater than 360 degrees
  or if one of angles is lessequal than 90 degrees.</li>
-<li><code>RotationM4AO(R,L,t::"mtc",$))::Matrix</code>
+<li><code>RotationM4AO(R,L,t::"mtc")::Matrix</code>
  transformation matrix for AO of orbital quantum number <code>L</code> and type of angular functions <code>t</code> (see <a href="BS.html">Basis sets</a>),
  where <code>R::{Matrix,[alpha,beta,gamma,det]}</code> is rotation matrix foratoms or its Euler parameters.</li>
-<li><code>TransformMO(R,evc0::{Matrix,Vector},BS,S0:=undefined)::evc(,S)</code>
+<li><code>TransformMO(R,evc0::{Matrix,Vector},BS,/PorA::list,S0,{maxdev:=1})::evc(,S)</code>
  transform MO upon rotation of the molecule, where <code>evc0</code> provides vectors to rotate,
- <code>BS</code> is basis set, and <code>S0</code> is overlap matrix to rotate.</li>
+ <code>BS</code> is basis set, and <code>S0</code> is overlap matrix to rotate.
+ To permute the basis (e.g. if <code>R</code> is symmetry),
+ one has to provide either atoms <code>A</code> or ther permutation <code>P</code> such that <code>R.A[P]=A</code>.
+ In the first case, error is raised if maximum deviation of rotated atoms exceeds <code>maxdev</code>.</li>
 </ul>
 
 </body>

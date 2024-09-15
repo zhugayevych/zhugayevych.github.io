@@ -12,40 +12,51 @@
 
 <h2>Procedures</h2>
 <ul>
-<li><code>MatchOrbitals( A1,ev1,evc1,sym1,S1, A2,ev2,evc2,sym2,S2,
- de,minO:=0,lso:=[],lsi:=[],k2i:=[], {maxrot:=0.1,maxdS:=1e-8,printout})
- ::A2a,ev2a,evc2a,sym2a,C2a,P2a,O12a,O12,S,L,R</code>
- match two sets of orbitals where
+<li><code>MatchMO(A1,A2,moS1,mo2,minO,output,/lsi,KKB,{sym,ev,S,maxdS,maxrot,det:=1,printout,printO,raiseerror})</code>
+ match two sets of MOs where
  <ul>
- <li><code>sym::{Vector,list}</code> orbital symmetry labels,</li>
- <li><code>O12::Matrix</code> overlap between <code>evc1</code> and <code>evc2</code>,</li>
- <li><code>O12a::Matrix</code> overlap with <code>evc2a</code> containing only matched orbitals,</li>
- <li><code>de::numeric</code> orbitals are matched by symmetry and then by <code>((ev1[o1]-ev2[o2])/de)^2-O12[o1,o2]^2</code>,</li>
+ <li><code>moS1::Matrix(n1,N1),mo2::Matrix(N2,n2)</code> are orbitals to match,</li>
  <li><code>minO::numeric</code> discard matched pairs with smaller <code>O12[o1,o2]</code>,</li>
- <li><code>lso::list</code> subset of orbitals to match,</li>
- <li><code>lsi::list</code> subset of atoms used in matching,</li>
- <li><code>k2i::list</code> used to define the common basis <code>|K1|=|K2|</code>, see Notes,</li>
- <li><code>maxrot::numeric</code> </li>
- <li><code>maxdS::numeric</code> if |S1-S2| is larger then S=sqrt(S1)[..,K1].sqrt(S2)[K2,..] otherwise S=S1[K1,K1],</li>
- <li><code>printout::{boolean,posint}:=false</code> number of smallest-overlap orbitals to print (default is 3),</li>
- <li><code>A2a::Atoms</code> superimposed <code>A2</code>,</li>
- <li><code>R::Matrix</code> rotation matrix <code>A2</code> to <code>A1</code>,</li>
- <li><code>ev2a,evc2a,sym2a</code> new orbitals, see Notes,</li>
- <li><code>P2a::list</code> permutation of orbitals,</li>
- <li><code>C2a::Vector</code> such that <code>C2a[o]=O12a[o,o]</code> for matched orbitals, 7 for unmatched evc1, 8 for unmatched evc2, 9 otherwise,</li>
- <li><code>L::list([O12a[o,o],ev2[o2]-ev1[o1],o1,ev1[o1],o2,ev2[o2]])</code>, note that <code>O12a</code> is reduced to subset of matched and permuted orbitals.</li>
+ <li><code>output::string</code> sequence of character-codes, see below,</li>
+ <li><code>lsi::[lsi1,lsi2::list(posint)]:=[[]$2]</code> subset of atoms for each molecule used in matching,</li>
+ <li><code>KKB::{[K1,K2::list(posint),BS2],[BS1,BS2],[BS2]}:=[]</code> defines subset of basis set indexes <code>|K1|=|K2|=N</code> used in matching,
+  here <code>K1,2</code> are the subset of indexes and <code>BS1,2</code> are the basis sets;
+  not that only <code>BS[k][1]=i</code> mapping is used to derive <code>K</code> from <code>lsi</code>,
+  but entire <code>BS2</code> is used for MO2 rotation,</li>
+ <li><code>sym::list:=[sym1,sym2::{list,Vector}(string),/w]:=[]</code> MO-symmetries,
+  if <code>w&gt;0</code> it is the penalty for symmetry mismatch in matching MOs,</li>
+ <li><code>ev::list:=[ev1,ev2::Vector,/de]</code> MO-energies,
+  if <code>de&gt;0</code> then <code>((ev1-ev2)/de)^2</code> is the penalty for energy mismatch in matching MOs,</li>
+ <li><code>S::[S1,S2]:=[]</code> basis set overlaps, if provided then <code>moS1</code> must be mo</li>
+ <li><code>maxdS::numeric:=1e-8</code> threshold for <code>|S1-S2|</code> to use <code>S12=sqrt(S1[K1,K1]).sqrt(S2[K2,K2])</code> instead of <code>S1[K1,K1]</code>,</li>
+ <li><code>maxrot::numeric:=0.1</code> threshold for <code>|R-1|</code> to rotate MO2,</li>
+ <li><code>det::{-1,0,1}:=1</code> passed to <code>Superimpose</code> command,</li>
+ <li><code>printout::{boolean,posint}:=false</code> number of smallest-overlap orbitals to print (default is 9),</li>
+ <li><code>printO::nonnegint:=0</code> size of <code>O12</code> submatrix to print,</li>
+ <li><code>raiseerror</code> raise error if there are unmatched MO1.</li>
+ </ul>
+ Output codes:
+ <ul>
+ <li><code>a</code> superimposed <code>A2</code>,</li>
+ <li><code>b</code> derived basis set overlap matrix <code>S12::Matrix(N)</code>,</li>
+ <li><code>e</code> permuted <code>ev21::Vector(n1)</code>,</li>
+ <li><code>m</code> permuted and sign-corrected <code>mo21::Matrix(N2,n1)</code>,</li>
+ <li><code>o</code> overlap matrix <code>O21::Matrix(n1)</code> between MOs1 and rotated and matched MOs2,</li>
+ <li><code>q</code> overlap matrix <code>O12::Matrix(n1,n2)</code> between MOs1 and rotated MOs2,</li>
+ <li><code>p</code> permutation <code>P21::list(n1)</code> of MOs2, so that e.g. <code>ev21=ev2[P21]</code> except for unmatched MOs1 for which <code>P21[o]=0</code>,</li>
+ <li><code>r</code> rotation matrix <code>A2</code> to <code>A1</code>,</li>
+ <li><code>s</code> correction signs for MOs2 after permutation <code>s21::Vector(n1)</code>,</li>
+ <li><code>u</code> number of unmatched MOs1,</li>
+ <li><code>v</code> list of <code>[o1,o2,val[o1,o2],O12[o1,o2],ev2[o2]-ev1[o1],[ev1[o1],ev2[o2]],[sym1[o1],sym2[o2]]]</code> for matched orbitals sorted by <code>o1</code>,</li>
+ <li><code>y</code> permuted <code>sym21::Vector(n1)</code>,</li>
+ <li><code>1</code> subset <code>K1</code></li>
+ <li><code>2</code> subset <code>K2</code></li>
  </ul>
  Notes:
  <ul>
- <li>In the current implementation orbitals are not rotated.</li>
- <li>Each of parameters <code>lso,lsi,k2i</code> can be a single list or a pair of lists.
-  In the former case the list is duplicated.</li>
- <li>For each molecule, its list <code>k2i</code> can be either unfolded basis set or list of atom indexes
-  &ndash; only basis functions belonging to <code>lsi</code> will be kept and reordered according to <code>lsi</code>.</li>
- <li>In <code>ev2a,evc2a</code> matched orbitals are reordered and sign-corrected,
-  unmatched <code>evc1</code> orbitals are replaced with <code>evc1</code> orbitals,
-  unmatched <code>evc2</code> orbitals are moved right after the last matched orbital,
-  and the rest of <code>evc2</code> orbitals are shifted appropriately.</li>
+ <li>MOs are matched using <code>IdentifyPairs</code> by <code>val[o1,o2]=-O12[o1,o2]^2</code> plus symmetry and energy penalties as described above.</li>
+ <li>The command tries to match all MOs1, so that the output entries corresponding to unmatched MOs1 are all set to zero or empty string.</li>
+ <li>Both <code>lsi1,2</code> and <code>K1,2</code> should be taken large enough to represent MOs of interest.</li>
  </ul></li>
 </ul>
 
