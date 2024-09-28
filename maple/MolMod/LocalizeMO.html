@@ -20,7 +20,7 @@
  <li><code>pro::{list,Matrix}</code> projector onto inner/outer space or list of basis set indices of the inner space,</li>
  <li><code>typ::"in,out,inU,inV,outU,outV,on"</code> type of localization algorithm, see Notes,</li>
  <li><code>nof::{posint,numeric}</code> either number of LMOs or outer space occupation threshold,</li>
- <li><code>evorH::{Matrix,Vector,0}</code> Hamiltonian in mo-basis or eigenvalues if it is diagonal, LMOs are rotated to diagonalize this matrix unless donotdiagonalize,</li>
+ <li><code>evorH::{Matrix,Vector,0}</code> Hamiltonian in mo-basis or eigenvalues if it is diagonal, LMOs are rotated to diagonalize this matrix unless <code>donotdiagonalize</code>,</li>
  <li><code>moSorS::Matrix</code> basis set ovelap or <code>moS=mo<sup>+</sup>.S</code></li>
  <li><code>purifymo::name</code> remove irrelevant MOs and rerun the command, <code>list([mo#,T.T<sup>+</sup>[mo#,mo#]])</code> sorted by MO weights (second element) is returned in <code>purifymo</code>,</li>
  <li><code>minocc::numeric:=.01</code> to print,</li>
@@ -56,6 +56,20 @@
  <li>Not all supported values of <code>typ</code> are meaningful: often "in,inV,outU" produce wrong results (in particular for unoccuped MOs).
   The most universal are "inU" and "outV", because "out" requires full overlap matrix, whereas "on" requires good initial guess of LMO.</li>
  </ul></li>
+<li><code>MultimerH(ev,evr,evcs,{exact,printout,maxsize})::Ho,H,S,T,W,lso</code>
+ calculate effective one-particle Hamiltonian for a given molecular multimer, where
+ <ul>
+ <li><code>ev::Vector(n),evr::Matrix(n,N)</code> MO energies and row-MOs of the multimer,</li>
+ <li><code>evcs::list(Matrix(Nm,nom))</code> monomers basis, <code>add(Nm,m)=N, add(nom,m)=no&le;n</code>,</li>
+ <li><code>exact</code> determine set of covered MOs and repeat with only those MOs,</li>
+ <li><code>maxsize::posint:=99</code> passed to <code>PrintMatrix</code>,</li>
+ <li><code>T::Matrix(n,no)=evr.evcs</code> projection matrix,</li>
+ <li><code>S::Matrix(no)=T<sup>+</sup>.T</code> overlap matrix in the monomers basis,</li>
+ <li><code>H::Matrix(no)=T<sup>+</sup>.ev.T</code> effective Hamiltonian in the monomers basis,</li>
+ <li><code>Ho=S^(-1/2).H.S^(-1/2)</code> orthogonalized Hamiltonian,</li>
+ <li><code>W=Vector(n,k->add(T[k,o]^2,o=1..no))</code> weights of MOs of the multimer in the monomers basis,</li>
+ <li><code>lso::list[no](posint)</code> list of MOs of the multimer covered by the monomers basis.</li>
+ </ul></li>
 </ul>
 
 <h2>References</h2>
@@ -63,6 +77,7 @@
 <li><a href="https://en.wikipedia.org/wiki/Kabsch_algorithm">Kabsch algorithm</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Wahba's_problem">Wahba's problem</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Orthogonal_Procrustes_problem">Orthogonal Procrustes problem</a></li>
+<li>A Zhugayevych, Holstein model for exciton and charge transport in organic semiconductors (preprint, 2012)</li>
 </ul>
 
 </body>

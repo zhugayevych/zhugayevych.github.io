@@ -18,6 +18,7 @@ axes 2
 axes 0.02
 axes scale 2.2
 axes position [400 700]
+axes position [47 53 %]
 
 set autobond off; spacefill 0.03
 wireframe 0.02; spacefill 12%; vector on; vector 16; vector scale 3
