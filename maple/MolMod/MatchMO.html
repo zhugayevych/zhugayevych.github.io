@@ -21,7 +21,7 @@
  <li><code>lsi::[lsi1,lsi2::list(posint)]:=[[]$2]</code> subset of atoms for each molecule used in matching,</li>
  <li><code>KKB::{[K1,K2::list(posint),BS2],[BS1,BS2],[BS2]}:=[]</code> defines subset of basis set indexes <code>|K1|=|K2|=N</code> used in matching,
   here <code>K1,2</code> are the subset of indexes and <code>BS1,2</code> are the basis sets;
-  not that only <code>BS[k][1]=i</code> mapping is used to derive <code>K</code> from <code>lsi</code>,
+  note that only <code>BS[k][1]=i</code> mapping is used to derive <code>K</code> from <code>lsi</code>,
   but entire <code>BS2</code> is used for MO2 rotation,</li>
  <li><code>sym::list:=[sym1,sym2::{list,Vector}(string),/w]:=[]</code> MO-symmetries,
   if <code>w&gt;0</code> it is the penalty for symmetry mismatch in matching MOs,</li>
@@ -39,6 +39,7 @@
  <ul>
  <li><code>a</code> superimposed <code>A2</code>,</li>
  <li><code>b</code> derived basis set overlap matrix <code>S12::Matrix(N)</code>,</li>
+ <li><code>d</code> RMSD deviation in geometry,</li>
  <li><code>e</code> permuted <code>ev21::Vector(n1)</code>,</li>
  <li><code>m</code> permuted and sign-corrected <code>mo21::Matrix(N2,n1)</code>,</li>
  <li><code>o</code> overlap matrix <code>O21::Matrix(n1)</code> between MOs1 and rotated and matched MOs2,</li>
