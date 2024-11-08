@@ -180,11 +180,12 @@ Microsoft e<strong>X</strong>cel</td>
 </ol></li>
 <li>To delete Windows Defender history remove all files in its <a href="C:/ProgramData/Microsoft/Windows Defender/Scans/History/Service/">Service folder</a>.</li>
 <li>To disable hotspot for standard users set or create <code>HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections\NC_ShowSharedAccessUI=0</code> as <code>DWORD (32-bit) Value</code>.</li>
+<li>To limit number of hotspot connections to X set or create <code>HKLM\SYSTEM\CurrentControlSet\Services\icssvc\Settings\WifiMaxPeers=X</code> as <code>DWORD (32-bit) Value</code>.</li>
 <li>To block web-parasites update your <a href="C:/Windows/System32/drivers/etc/HOSTS">HOSTS file</a>
  by <a href="https://winhelp2002.mvps.org">MVPS list</a>.
  For efficient browsing stop "DNS Client" service from automatic loading.</li>
 </ul>
-
+HKEY_LOCAL_MACHINE\
 <h2>Batch operations</h2>
 <ul>
 <li>Convert to UTF-8: <code>foreach($i in ls -recurse -filter "*.html") {$temp = Get-Content $i.fullname; Out-File -filepath $i.fullname -inputobject $temp -encoding utf8 -force}</code></li>

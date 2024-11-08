@@ -12,11 +12,12 @@
 
 <h2>Procedures</h2>
 <ul>
-<li><code>ReadTBH(filename,/ids,{printout})::SG,M,P,tbH,GV,GP,GI,HV,HP,HI</code>
+<li><code>ReadTBH(filename,/ids,{longid,printout})::SG,M,P,tbH,GV,GP,GI,HV,HP,HI</code>
  read tight-binding Hamiltonian file, where
  <ul>
  <li><code>ids::{[Hid::{posint,string}],[Gid,Hid]}</code> identifies parameter set
      (if only <code>Hid</code> is given, its prefix is used to determine <code>Gid</code>),</li>
+ <li><code>longid::boolean</code> use long indexing <code>[m1,m2,t1,..,td,o1,o2]</code>,</li>
  <li><code>SG::string</code> space group,</li>
  <li><code>M::Matrix(nd,nt)</code> unit cell matrix,</li>
  <li><code>P::Matrix(nd,nm)</code> site positions in lattice coordinates,</li>
