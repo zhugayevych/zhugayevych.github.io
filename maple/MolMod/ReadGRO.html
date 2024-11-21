@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>File tools: GROMACS geometry </title>
+</head>
+<body>
+<h1>File tools: GROMACS geometry </h1>
+
+<p>See examples in <code>ReadGRO.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>ReadGRO(filename,/output,notelements,{printout})</code>
+ read GROMACS-file (atom types are added as 3rd element), where
+ <ul>
+ <li><code>output::string:="a"</code> "a" - atoms, "b" - box, "B" - box as string, "d" - description, "f" - full record, "r" - rest of lines,</li>
+ <li><code>notelements::list(string):=["Na","Nb","Si"]</code> not considered as elements,</li>
+ </ul></li>
+</ul>
+
+</body>
+</html>

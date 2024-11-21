@@ -61,7 +61,8 @@
  <ul>
  <li><code>ev::Vector(n),evr::Matrix(n,N)</code> MO energies and row-MOs of the multimer,</li>
  <li><code>evcs::list(Matrix(Nm,nom))</code> monomers basis, <code>add(Nm,m)=N, add(nom,m)=no&le;n</code>,</li>
- <li><code>exact</code> determine set of covered MOs and repeat with only those MOs,</li>
+ <li><code>exact</code> determine set of covered MOs and repeat with only those MOs,
+     set to <code>false</code> for entangled bands in incomplete monomer basis,</li>
  <li><code>maxsize::posint:=99</code> passed to <code>PrintMatrix</code>,</li>
  <li><code>T::Matrix(n,no)=evr.evcs</code> projection matrix,</li>
  <li><code>S::Matrix(no)=T<sup>+</sup>.T</code> overlap matrix in the monomers basis,</li>
