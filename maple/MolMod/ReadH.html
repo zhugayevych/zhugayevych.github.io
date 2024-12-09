@@ -15,7 +15,7 @@
 <li><code>ReadTBH(filename,/ids,{longid,printout})::SG,M,P,tbH,GV,GP,GI,HV,HP,HI</code>
  read tight-binding Hamiltonian file, where
  <ul>
- <li><code>ids::{[Hid::{posint,string}],[Gid,Hid]}</code> identifies parameter set
+ <li><code>ids::{[Hid::{0,posint,string}],[Gid,Hid]}:=[0]</code> if nonzero identifies parameter set
      (if only <code>Hid</code> is given, its prefix is used to determine <code>Gid</code>),</li>
  <li><code>longid::boolean</code> use long indexing <code>[m1,m2,t1,..,td,o1,o2]</code>,</li>
  <li><code>SG::string</code> space group,</li>
@@ -25,7 +25,6 @@
  <li><code>GV,HV::list(string)</code> Geometry and Hamiltonian symbolic variables,</li>
  <li><code>GP,HP::table(id=list(name=value))</code> Geometry and Hamiltonian parameters,</li>
  <li><code>GI,HI::list(string)</code> indices of <code>GP,HP</code> ordered as in  <code>filename</code>,</li>
- <li><code>ids::{[Hid::{posint,string}],[Gid,Hid]}</code> identifies parameter set.</li>
  </ul></li>
 </ul>
 
