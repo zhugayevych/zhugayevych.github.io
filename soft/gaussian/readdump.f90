@@ -1,7 +1,6 @@
 ! The readdump utility extracts a record from Gaussian rwf-dump or checkpoint file and store it in a binary file.
-! If the provided code is text, the binary file is formatted according to ReadBIN command from
-!   Maple BasicTools or Python ReadWrite.py.
-! See technical details in exam_rwf.mw Maple worksheet of MolMod package
+! If the provided code is a recognized text code, the binary file is formatted as described at https://cmsos.github.io/cmsos/bin
+! See technical details in exam_gau.mw Maple worksheet of MolMod package
 !
 ! Andriy Zhugayevych, azh@ukr.net, zhugayevych.me
 ! created 17.08.2011, modified 21.01.2024

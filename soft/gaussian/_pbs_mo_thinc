@@ -2,10 +2,10 @@
 #SBATCH -o %x.e%j
 #SBATCH -e %x.e%j.err
 #SBATCH -N 1        ## --nodes=
-#SBATCH -c 20       ## --cpus-per-task=
+#SBATCH -c 32       ## --cpus-per-task=
 #SBATCH -t 36:00:00
 #SBATCH --ntasks-per-node=1
-#SBATCH -p CPU_Std20
+#SBATCH -p CPU_Std32
 
 ulimit -s unlimited
 ulimit -t unlimited
