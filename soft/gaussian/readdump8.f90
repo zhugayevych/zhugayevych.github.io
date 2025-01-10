@@ -15,7 +15,7 @@ program readdump
 implicit none
 integer(4), parameter :: myid=1760568055
 integer(4) :: mycode, dims(2)
-integer(4) :: L, i, n, pos1, pos2, pos3, pos4, cod, cod2, filesize
+integer(8) :: L, i, n, pos1, pos2, pos3, pos4, cod, cod2, filesize
 integer :: count, isize, nrec, ndims, na, datapos
 real(8), parameter :: hartree2eV=27.2113956555172, bohr2A=0.529177257506917
 real(8) :: r,c
@@ -71,7 +71,7 @@ case default
 
 ! Determine integer size and find record
 inquire(FILE=dumpfile,SIZE=filesize)
-do isize=4,8,4
+do isize=8,8,4
  open(unit=1,file=dumpfile,form='unformatted',access='direct',action='read',status='old',recl=isize)
  read(1,rec=1) nrec
  read(1,rec=2) L

@@ -8,7 +8,7 @@
 ! All input and output binary files are formatted as described at https://cmsos.github.io/cmsos/bin
 !
 ! Andriy Zhugayevych, azh@ukr.net, zhugayevych.me
-! created 31.12.2024, modified 31.12.2024
+! created 31.12.2024, modified 2.01.2025
 !
 ! Requires implementation:
 ! - parameters and variables checkup
@@ -17,9 +17,10 @@
 
 program frontmo
 implicit none
-integer(4), parameter :: myid=1760568055, evccode=18221058, evlcode=16844802
-integer(4) :: count, nfo, Na, Nb, o1, o2, no2, id, N, no, i, j, k, o, q
+integer(4), parameter :: myid=1760568055, evccode=18221058, evlcode=16844802, intzero=0
 integer(1), dimension(4) :: cod
+integer(4) :: id, N, no, no2
+integer :: count, nfo, Na, Nb, o1, o2, i, j, k, o, q
 real(8) :: chksum
 real(8), dimension(4) :: buffer
 real(8), allocatable :: evc(:,:), mo(:,:), S(:,:), moS(:,:), chk(:,:), ev(:)
@@ -189,19 +190,19 @@ close(1)
 
 ! Write binaries
 open(unit=2,file=evrfile,form='unformatted',access='stream',action='write',status='new')
-write(2) myid,evccode,no2,N,0,0,0,0
+write(2) myid,evccode,no2,N,intzero,intzero,intzero,intzero
 write(2) moS
 close(2)
 
 call rename(evcfile,trim(evcfile)//'.bak')
 open(unit=2,file=evcfile,form='unformatted',access='stream',action='write',status='new')
-write(2) myid,evccode,N,no2,0,0,0,0
+write(2) myid,evccode,N,no2,intzero,intzero,intzero,intzero
 write(2) mo
 close(2)
 
 call rename(evlfile,trim(evlfile)//'.bak')
 open(unit=2,file=evlfile,form='unformatted',access='stream',action='write',status='new')
-write(2) myid,evlcode,no2,0,0,0,0,0
+write(2) myid,evlcode,no2,intzero,intzero,intzero,intzero,intzero
 write(2) ev(o1:o2)
 close(2)
 
