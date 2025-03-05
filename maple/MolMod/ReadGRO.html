@@ -12,11 +12,12 @@
 
 <h2>Procedures</h2>
 <ul>
-<li><code>ReadGRO(filename,/output,notelements,{printout})</code>
+<li><code>ReadGRO(filename,/output,elements,notelements,{printout})</code>
  read GROMACS-file (atom types are added as 3rd element), where
  <ul>
  <li><code>output::string:="a"</code> "a" - atoms, "b" - box, "B" - box as string, "d" - description, "f" - full record, "r" - rest of lines,</li>
- <li><code>notelements::list(string):=["Na","Nb","Si"]</code> not considered as elements,</li>
+ <li><code>elements::set(string):={}</code> considered as elements (overrides <code>notelements</code>, useful for unusual entries such as "SI"),</li>
+ <li><code>notelements::list(string):=["Ba","Ca","Na","Nb","Pb","Sb"]</code> not considered as elements.</li>
  </ul></li>
 </ul>
 
