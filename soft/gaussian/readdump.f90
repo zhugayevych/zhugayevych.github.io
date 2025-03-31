@@ -9,7 +9,8 @@
 !
 ! Limitations:
 ! - Unable to process large files because they require integer(8) for indexing
-!   whereas smaller files require integer(4); two versions of the code may be required
+!   whereas smaller files require integer(4); two versions of the code may be required;
+!   the maximum number of basis functions Nmax<sqrt(2^31/8), tests give 15564<Nmax<16144
 
 program readdump
 implicit none
