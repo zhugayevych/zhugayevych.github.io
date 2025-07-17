@@ -25,10 +25,12 @@ export GAUSS_SCRDIR=/usr/scratch/$SLURM_JOB_USER/$SLURM_JOB_ID
 echo 'GAUSS_PDEF' $GAUSS_PDEF
 echo 'GAUSS_SCRDIR' $GAUSS_SCRDIR
 
+export LOCAL_DIR=~/gaussian
+
 mkdir -p $GAUSS_SCRDIR
-rsync -a pckr252:~/gaussian/$SLURM_JOB_NAME.* $GAUSS_SCRDIR
-rsync -a pckr252:~/bin/readdump $GAUSS_SCRDIR
-rsync -a pckr252:~/bin/frontmo $GAUSS_SCRDIR
+rsync -a $LOCAL_DIR/$SLURM_JOB_NAME.* $GAUSS_SCRDIR
+rsync -a ~/bin/readdump $GAUSS_SCRDIR
+rsync -a ~/bin/frontmo $GAUSS_SCRDIR
 cd $GAUSS_SCRDIR
 
 g16 < $SLURM_JOB_NAME.gau >> $SLURM_JOB_NAME.out
@@ -38,10 +40,10 @@ g16 < $SLURM_JOB_NAME.gau >> $SLURM_JOB_NAME.out
 ./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.s1e s1e
 ./frontmo $SLURM_JOB_NAME
 
-rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.out ~/gaussian
-rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evl ~/gaussian
-rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evc ~/gaussian
-rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evr ~/gaussian
+rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.out $LOCAL_DIR
+rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evl $LOCAL_DIR
+rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evc $LOCAL_DIR
+rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evr $LOCAL_DIR
 rm -rf $GAUSS_SCRDIR
 date
 if [[ ! -s ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err ]]; then rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err; fi
