@@ -1,1 +1,1 @@
-java -Duser.language=en -Xmx1024m -jar C:\Sci\Jmol\Jmol.jar -i -L -t -g1920x1200 %1
+java -Duser.language=en -Xmx4096m -jar C:\Sci\Jmol\Jmol.jar -L -t -i -g1900x960 %1

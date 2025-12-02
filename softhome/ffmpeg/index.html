@@ -38,6 +38,7 @@
 <ul>
 <li>Example: <code>C:\Sys\ffmpeg\bin\ffmpeg.exe -i in.mts -ss 3 -t 10 -vf yadif,transpose=dir=cclock -preset veryslow out.mp4</code></li>
 <li>Commonly used options: <code>-ss 3 -t 10 -vf transpose=dir=clock -vf code=1600:900:200:100</code></li>
+<li>Options for recoding Zoom recordings: <code>-ss 0:16 -i in.mp4 -t 34:10 -c copy out.mp4</code></li>
 <li><a href="http://www.ffmpeg.org/ffmpeg.html">ffmpeg</a>, <a href="http://ffmpeg.org/ffmpeg-filters.html">filters</a></li>
 <li><a href="http://trac.ffmpeg.org/wiki/Encode/H.264">H.264 Encoding Guide</a></li>
 </ul>

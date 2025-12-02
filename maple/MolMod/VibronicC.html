@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Quantum chemistry: Vibronic couplings</title>
+</head>
+<body>
+<h1>Quantum chemistry: Vibronic couplings</h1>
+
+<p>See examples in <code>VibronicC.mw</code> and <code>exam_VibCoup.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>A,A2::Atoms</code> ground/excited state geometry</li>
+<li><code>frcc::Matrix</code> force constants in ground state orientation</li>
+<li><code>N::posint</code> number of normal modes</li>
+<li><code>VE::Vector(N)</code> Vector of normal mode energies (frequencies)</li>
+<li><code>VS::Vector(N)</code> Vector of corresponding Huang-Rhys factors</li>
+<li><code>TorVn::{numeric,Vector(N)}</code> temperature (canonic ensemble) or Vector of oscillator occupation numbers (microcanonic ensemble)</li>
+<li><code>sp::list</code> list of [transition energy, line intensity].</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>VibronicCouplings(A,A2,frcc,/output,{vibrationsonly,printout,nprint2,digits})</code>
+ calculate vibronic couplings, where
+ <ul>
+ <li><code>output::string:="nesm"</code> see VibrationalModes,
+   accepted codes are "egmMnstz", where "g" means couplings and "s" means Huang-Rhys factors,</li>
+ <li><code>vibrationsonly::boolean:=false</code> return vibrations only,</li>
+ <li><code>nprint2::posint:=3</code> number of strong modes to print</li>
+ <li><code>_rest</code> passed to <code>VibrationalModes</code></li>
+ </ul>
+ Note: in printout, bandwidth is vibrational broadening dispersion (i.e. half-bandwidth).</li>
+
+<li><code>TransSp(VE,VS,TorVn,vmin,
+ {absbin,relbin,sorted,avew,wdigits,maxnconf,maxerror,maxerror2,sort,Edigits,Sdigits,printout},$)::Vomax,lstr,Erng,vmax,err</code>
+ tabulate transition spectral density combinatorially, where
+ <ul>
+ <li><code>vmin::numeric</code> – minimal value of transition intensities, increase this value until you reach the required spectral progression,</li>
+ <li><code>absbin::numeric:=infinity</code> energy bin for the vibrational spectrum coarse graining,</li>
+ <li><code>relbin::numeric:=0.5</code></li>
+ <li><code>sorted::boolean:=false</code> if true <code>VE</code> is assumed to be sorted,</li>
+ <li><code>avew::numeric:=0.5</code> for each bin the coarse-grained energy is calculated as <code>avew*coth_mean+(1-avew)*arithmetic_mean</code>,</li>
+ <li><code>wdigits::posint:=30</code> working precision for evaluating transition intensities (e.g. Franck-Condon factors),</li>
+ <li><code>maxnconf::posint:=1e6</code> maximum allowed number of configurations per iteration,</li>
+ <li><code>maxerror::numeric:=0.1, maxerror2::numeric:=maxerror/10</code> maximum allowed deviations from 1 of spectral progression sum and sum of elementary transition intensities respectively,</li>
+ <li><code>sort::boolean:=false</code> sort <code>lstr</code> by transition intensity,</li>
+ <li><code>Edigits::nonnegint:=3, Sdigits::nonnegint:=2</code> for printout,</li>
+ <li><code>Vomax::Vector(N)</code> the strongest transition configuration, <code>Vomax[i]</code> gives the difference in the occupation numbers for <code>i</code>-th mode,</li>
+ <li><code>lstr::list</code> the transition spectral density is <code>add(v[2]*delta(E-v[1]),v=lstr)</code>,
+   where <code>delta</code> is delta-function and <code>v[1]</code> is given in eV;
+   the last entry <code>v[3]::list([i,o])</code>, where <code>o</code> is the difference in the occupation numbers for <code>i</code>-th mode if differs from <code>Vomax</code>,</li>
+ <li><code>Erng::range</code> spectral range of <code>lstr</code> (the latter is unsorted),</li>
+ <li><code>vmax::numeric</code> maximum transition intensity,</li>
+ <li><code>err::numeric</code> spectral progression error.</li>
+ </ul></li>
+<li><code>fTransSp(E::numeric,VE,VS,TorVn,sigma::numeric,{digits:=5},$)::float</code>
+ calculate transition spectral density for energy <code>E</code> via correlator, where <code>sigma</code> is the dispersion of gaussian-shape line broadening.</li>
+
+<li><code>CoarsegrainSp(sp0::{Vector,sp},binE::numeric,{printout},$)::sp</code> coarse grain spectrum to <code>binE</code>;
+ if <code>sp0</code> is Vector or atomic list then it is treated as equal-weight list of energies and is normalized in the output.</li>
+
+<li><code>GenerateES(/ES0,N0,Edist,Sdist,Emax,S0,lambda0,
+ {output::{"list","vectors"}:="vectors",printout,plotout,colors::[string,string]:=["Red","Blue"],eunit::string:=" (eV)"},$)</code>
+ generate energies and Huang-Rhys factors, where
+ <ul>
+ <li><code>ES0::list([numeric,numeric]):=[]</code> list of explicitly provided modes,</li>
+ <li><code>N0::nonnegint:=0</code> number of randomly generated modes,</li>
+ <li><code>Edist,Sdist::anything:=undefined</code> distributions of energies and Huang-Rhys factors,</li>
+ <li><code>Emax,S0,lambda0::numeric:=0</code> maximum mode energy and approximate total Huang-Rhys factor and reorganization energy of randomly generated modes.</li>
+ </ul></li>
+
+<li><code>SingleQMode(E,sigma,EQ,SQ)</code> spectral function for a single quantum mode (the mode is quantum if its energy is much larger than the temperature).</li>
+
+<li><code>SingleQModeFit(sp,EQ0,SQ0,cy,cL,/cR,
+ {crop,porder,sratio,sestimate,Acor,Ecor,scor,maxvar,maxdev,EQSQfixed,digits,NLPopt},$)::
+ [ r, [ OS, EC+SQ*EQ, sqrt(s^2+SQ*EQ^2), EQ, SQ ], [OS,EC,s,EQ,SQ], [Emax,fmax,s1], E->OS*SingleQMode(E-EC,s,EQ,SQ), fitting_range ]</code>
+ fit a spectral profile to a single quantum mode spectral function, where
+ <ul>
+ <li><code>s=sigma</code> dispersion for the line broadening (inhomogeneous broadening or broading by a swarm of classical modes),</li>
+ <li><code>EQ,SQ</code> energy and Huang-Rhys factor for the quantum mode,</li>
+ <li><code>EQ0,SQ0::numeric</code> estimates for EQ and SQ,</li>
+ <li><code>EC+SQ*EQ</code> vertical excitation energy or the mean energy of the spectral profile; here EC would be the vertical excitation energy without the quantum mode,</li>
+ <li><code>s^2+SQ*EQ^2</code> dispersion of the spectral profile,</li>
+ <li><code>OS</code> proportional to the oscillator strength of the electronic transition,</li>
+ <li><code>r</code> relative standard deviation for the fitting,</li>
+ <li><code>ls0=list([E,f])</code> spectral profile to fit by f(E)=OS*SingleQMode(E-EC,s,EQ,SQ) (five parameters); note that the absorption spectrum is given by E*f(E),</li>
+ <li><code>crop::range:=0..0, cL::numeric, cR::numeric:=cL</code> the original data are cropped by energy to crop, then the left and right wings of the spectral peak at [Emax,fmax] is cut to cL*fmax and cR*fmax respectively,</li>
+ <li><code>cy::numeric, porder::posint:=2</code> passed to FindExtremum,</li>
+ <li><code>sratio&lt;1::numeric:=0.9</code> if sqrt(SQ0)*EQ0/s1>sratio, then the dispersion s cannot be estimated by the formula s0=sqrt(s1^2-SQ*EQ^2), here s1 is the dispersion estimated by FindExtremum; this usually means wrong choice of EQ0,SQ0,</li>
+ <li><code>sestimate::numeric:=0</code> an estimate to s must be provided if sratio is violated,</li>
+ <li><code>Acor,Ecor,scor::numeric:=1,0,1</code> empirical corrections to A0,EC0,s0 estimated from the results of FindExtremum,</li>
+ <li><code>maxvar&gt;1::numeric:=2</code> the boundaries for a fitting parameter x are x0/max..x0*maxvar, here x=A,s,EQ,SQ; for EC the boundaries are EC0-SQ0*EQ0*(maxvar-1)..EC0+SQ0*EQ0*(maxvar-1),</li>
+ <li><code>0&lt;maxdev&le;1::numeric:=1</code> if the optimized values for the parameters deviate from the estimated values by more than maxdev in relative scale then a warning is issued; if maxdev=1 no warnings are produced,</li>
+ <li><code>EQSQfixed::boolean:=false</code> do the 3-parameter fit,</li>
+ <li><code>digits::posint:=Digits-2</code> precision for SingleQMode, should be larger then log10(1/r),</li>
+ <li><code>NLPopt::list:=[]</code> options for NLPSolve2.</li>
+ </ul>
+ Note that the fitting procedure is ill-defined because the fitting parameters are strongly correlated, especially EC and SQ.
+ However the triple OS, EC+SQ*EQ, sqrt(s^2+SQ*EQ^2) can be estimated robustly.
+ A good guess for the parameters is highly important because the optimization landscape has a lot of metastable minima.
+ The optimized value for SQ is unreliable and strictly speaking is undefined for multiple modes.
+ To improve the reliability scan over EQ0 and SQ0.
+ Should work well for unstructured spectra.</li>
+</ul>
+
+<h2>References</h2>
+<ul>
+<li>A Zhugayevych, Holstein model for exciton and charge transport in organic semiconductors (preprint, 2012)</li>
+</ul>
+
+</body>
+</html>

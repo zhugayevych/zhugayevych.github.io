@@ -22,7 +22,7 @@
 <li><code>LerchPhi2(z,a,v,vmax::numeric:=10,$)</code> quick patch to
  <a href="https://www.maplesoft.com/support/help/view.aspx?path=LerchPhi">LerchPhi</a>
  command for large <code>v>vmax</code> (scales as <code>1+2/5*a</code>)</li>
-<li><code>polylogR(z,n)</code> polylog renormalized to be finite at <code>z=0,1</code></li>
+<li><code>polylogR(z,n)</code> polylog renormalized by adding <code>n!/ln(z)^(n+1)</code> to be finite at <code>z=0,1</code> (function <code>R_n(z)</code> from the referenced nadbook)</li>
 <li><code>polylogR_init(n,N::posint,$)</code> initialization</li>
 </ul>
 

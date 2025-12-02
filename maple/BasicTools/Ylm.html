@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Spherical harmonics</title>
+</head>
+<body>
+<h1>Spherical harmonics</h1>
+
+<p>See examples in <code>Ylm.mw</code></p>
+<p>References: <a href="../../pub/SpecFun.pdf">Handbook on special functions</a></p>
+<p>Wikipedia:
+ <a href="https://en.wikipedia.org/wiki/Spherical_harmonics">Spherical harmonics</a> and
+ <a href="https://en.wikipedia.org/wiki/Table_of_spherical_harmonics">their tables</a>,
+ <a href="https://en.wikipedia.org/wiki/Wigner_D-matrix">Wigner D-matrix</a>,
+ <a href="https://en.wikipedia.org/wiki/3-j_symbol">3-j symbol</a></p>
+<p>Acknowledgements: Dennis Isbister for Wigner3j/6j code</p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>phi</code> azimutal angle</li>
+<li><code>m::integer</code> azimutal number;
+ in matrices, complex and trigonometric basises are ordered as <code>m=0,1,-1,2,-2,...</code> and <code>1,cos(p),sin(p),cos(2p),...</code> respectively</li>
+<li><code>complex::boolean:=complexTrigBasis</code> if true then the <code>exp(I*m*phi)</code> basis is used,
+ otherwise the real trigonometric basis is used: <code>cos(m*phi)</code> for nonnegative <code>m</code> and <code>sin(m*phi)</code> for negative <code>m</code>.
+ The <code>complexTrigBasis</code> can be changed by <a href="Setup.html">Setup</a> command.</li>
+<li><code>theta</code> polar angle</li>
+<li><code>Theta</code> either <code>theta</code> or list of hyperspherical non-azimutal angles beginning with <code>theta</code></li>
+<li><code>l::nonnegint</code> order of a spherical harmonic</li>
+<li><code>L::{nonnegint,list(nonnegint)}</code> either <code>l</code> or list of indexes of <code>Ylm</code> beginning with <code>l</code></li>
+<li><code>convention::string:=conventionY</code> one of <code>[standard,complex,real]</code>; the <code>conventionY</code> can be changed by <a href="Setup.html">Setup</a> command.
+ The "standard" convention is used in quantum mechanics, "complex" convention is used in mathematics.</li>
+<li><code>normalized::boolean</code> if true then the function is normalized</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+<li><code>Phim(m,phi,{complex},$)</code> trigonometric basis</li>
+<li><code>NPhim2(m,{complex},$)</code> squared norm of <code>Phim</code></li>
+<li><code>Pnma(n::nonnegint,m::nonnegint, opt a:=0,theta)</code> hyperspherical quasipolynomial as defined in the referenced handbook;
+ it differs from associated Legendre polynomial by <code>(-1)^m</code>.
+ Note that <code>a&gt;-1/2</code></li>
+<li><code>NPnma2(n,m,a)</code> squared norm of <code>Pnma</code> (with proper weight)</li>
+<li><code>Ylm(L,m,Theta,phi,/convention,{normalized:=normalizedY},$)</code> hyperspherical harmonic; <code>normalizedY</code> can be changed by <a href="Setup.html">Setup</a> command</li>
+<li><code>Yxyz(l,m::{integer,string},x,y,z,$)</code> normalized harmonic polynomial.
+ If <code>m</code> is integer then trigonometric basis is used, otherwise it can be one of <code>[trig,cubic,A1,A2,E,F1,F2]</code>.
+ In the case of <code>[trig,cubic]</code> the list of all basis functions is returned.</li>
+<li><code>YxyzM(l,m::{integer,string},/convention,$)::{Vector,Matrix}</code> expansion of harmonic polynomials in spherical harmonics, i.e. <code>&lt;Ylm|Yxyz&gt;<sup>+</sup></code></li>
+<li><code>YxyzR(l)::list(string)</code> list of irreducible representations of the cubic group</li>
+<li><code>YxyzL(l)::list(string)</code> list of labels of functions of the cubic group</li>
+<li><code>WignerD(l,m1,m2,alpha,beta,gamma)</code> Wigner's rotation function (gives representation of the rotation group and rotates spherical harmonics)</li>
+<li><code>Wignerd(l,m1,m2,cos(beta/2),sin(beta/2))</code> auxiliary function</li>
+<li><code>Wigner3j(j1,j2,j3,m1,m2,m3)</code> Wigner's 3j symbols</li>
+<li><code>Wigner6j(j1,j2,j3,l1,l2,l3)</code> Wigner's 6j symbols</li>
+<li><code>MatElemYlm(l1,m1,l,m,l2,m2)</code> matrix elements of spherical harmonics on complex spherical harmonics</li>
+<li><code>MatElemY(l1,m1,f,l2,m2,/convention,$)</code> matrix elements of any function on complex or real spherical harmonics</li>
+</ul>
+
+</body>
+</html>
