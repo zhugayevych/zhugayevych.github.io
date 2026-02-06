@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Expression tools</title>
+</head>
+<body>
+<h1>Expression tools</h1>
+
+<p>See examples in <code>Express.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>simplifyradical=e->if(has(e,I),applytoRe/Im,signum(e)*sqrt(expand(rationalize((radnormal(e)^2)))))</code>
+ a patch for standard simplify command.</li>
+
+<hr>
+<li><code>coeffs2(e,vars::list,$)::list([p1,...,pN,c])</code>
+ user-friendly version of <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=coeffs">coeffs</a> command.</li>
+
+<hr>
+<li><code>idExch(e,A,id1,id2)</code>
+ exchange indexes <code>id1</code> and <code>id2</code>
+ at each occurence of <code>A::name<code> in expression <code>e</code>.</li>
+
+<li><code>idSym(e,A,i,j,k,...)</code>
+ symmetrize expression over pair or triple of indexes.</li>
+
+<li><code>idASym(e,A,i,j)</code>
+ antisymmetrize expression over pair of indexes.</li>
+
+</ul>
+
+</body>
+</html>

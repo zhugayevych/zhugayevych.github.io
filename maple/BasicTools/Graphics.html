@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Graphics</title>
+</head>
+<body>
+<h1>Graphics</h1>
+
+<p>See examples in <code>Graphics.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>h2w::numeric:=0.55</code> height to width ratio for text letters,
+ for text printing it allows to request only height of text.</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>GetBox(ls,/rdx,rdy,$)::x1,x2,y1,y2</code>
+ gets boundaries of <code>ls::list</code> of lists of [x,y] points,
+ where <code>rdx::numeric:=0,rdy::numeric:=rdx</code> are relative extensions of the box,
+ so that e.g. <code>x1:=x1-rdx*(x2-x1)</code>
+
+<hr>
+<li><code>Spline2(xydata,cod,{degree})::procedure</code>
+ is the modified <a href="https://maplesoft.com/support/help/Maple/view.aspx?path=CurveFitting/Spline">CurveFitting[Spline]</a> command,
+ where <code>xydata,degree::posint:=3,_rest</code> are data, polynomial degree and other arguments to be passed to <code>Spline</code> command
+ and <code>cod::{0,1,2,12}</code> is used to impose zero-derivative condition to left (1) and right (2) endpoints.
+ Note that the command <code>Spline2</code> applies <code>Spline</code> command to <code>xydata</code> and returns a function,
+ which is undefined beyond the endpoints of <code>xydata</code>.</li>
+
+<hr>
+<li><code>ErrorBar(x0,r,/w,opt,$)</code>
+ plots vertical error bar at <code>x0</code>
+ with confidence interval for ordinate <code>r::range</code>,
+ where <code>w::realcons:=0</code> is the width of the bar ends (the default is no bar ends)
+ and <code>opt::list:=[]</code> are options in <a href="https://maplesoft.com/support/help/Maple/view.aspx?path=plottools/line">plottools[line]</a> command.</li>
+
+<hr>
+<li><code>Legend2(L,x,y,a,h,/h2w,symb,{symbw,sep,imx,imy,omx,omy,opts,optt,optb,nobox},$)::plot</code>
+ plots legend to overcome limitations of the built-in <a href="https://www.maplesoft.com/support/help/maple/view.aspx?path=plot%2foptions">legend</a>,
+ where
+ <ul>
+ <li><code>L::list(list)</code> list of [text,color] for each item of the legend;</li>
+ <li><code>x,y::numeric</code> legend position;</li>
+ <li><code>a::string</code> legend alignment wrt <code>[x,y]</code>,
+  use L/R for left/right and A/B for above/below, the default is centered;</li>
+ <li><code>h::numeric</code> text height, all other vertical distances should be  given in this unit,
+  all horizontal distances should be given in unit of <code>h*h2w</code>;</li>
+ <li><code>symb::string:="line"</code> symbol used in the legend;</li>
+ <li><code>symbw::numeric:=`if`(symb="line",2,1)</code> symbol width;</li>
+ <li><code>sep::numeric:=0</code> symbol-text separation;</li>
+ <li><code>imx,imy,omx,omy::numeric:=3/4,1/4,1/2,1/4</code> inner and outer x/y margins of the box;</li>
+ <li><code>opts::list:=[thickness=2]</code> plot options for legend symbol,</li>
+ <li><code>optt::list:=[]</code> plot options for legend text,</li>
+ <li><code>optb::list:=[color="Gray",thickness=0]</code> plot options for legend box,</li>
+ <li><code>nobox::boolean</code> do not show legend box.</li>
+ </ul></li>
+
+<hr>
+<li><code>TextOnLine(x1,y1,x2,y2,s,h,/h2w,g,rxy,{textover})</code>
+ plots line and text over it center, where
+ <ul>
+ <li><code>x1,y1,x2,y2::realcons</code> coordinates of the line;</li>
+ <li><code>s::string</code> text;</li>
+ <li><code>h::numeric</code> text height;</li>
+ <li><code>g::numeric:=0.03</code> relative gap between line end-points and actually drawn line;</li>
+ <li><code>rxy::{[rx::numeric],[rx,ry]}:=[0.5]</code> fractional position of the text relative to <code>(x1,y1)</code>;</li>
+ <li><code>textover::boolean</code> alternative approach when a rectangle is drawn above the line below the text
+ (not working in Maple but suitable for export);</li>
+ <li><code>_rest</code> is passed to <a href="https://maplesoft.com/support/help/maple/view.aspx?path=plots/textplot">textplot</a>.</li>
+ </ul>
+ Note that actually <code>h2w:=max(h2w,g)</code> and <code>g:=min(h2w,g)</code> to avoid accidental mistakes.</li>
+
+<hr>
+<li><code>Rainbow(n,/before,after,{reverse::boolean},$)::list(COLOR)</code>
+ generate rainbow colors, where
+ <code>n::{nonnegint,list}</code> is the number of colors or list of indices for color table
+ (if more than 11 then cycling is used),
+ <code>before,after::list:=[]</code> will be inserted into the list.</li>
+
+<hr>
+<li><code>WritePlotData(filename,ls,Xformat,Yformat,/com,{Xlabel,legend,emptycell,sep,overwrite},$)</code>
+ write plot data to file, where
+ <ul>
+ <li><code>ls::list(list(list))</code> list of list of data points as in <code>plot</code> command;</li>
+ <li><code>Xformat,Yformat::string</code> formatting strings for data;</li>
+ <li><code>com::string:=""</code> comment;</li>
+ <li><code>Xlabel::string:="Xvalue",legend::list(string):=[]</code> labels for X and Y columns;</li>
+ <li><code>emptycell::string:=""</code> to be printed at Y coulmn when its value for given X is absent;</li>
+ <li><code>sep::character:="\t"</code> separator between numbers in a line.</li>
+ </ul>
+ Notes:
+ <ul>
+ <li>Label for Y-axis can be provided in the comment <code>com</code>.</li>
+ <li>Longer separators can be provided via <code>Yformat</code>.</li>
+ <li>X-values are matched as strings printed according to <code>Xformat</code>.</li>
+ </ul></li>
+
+<hr>
+<li><code>plotps(filename,pl,/opt,cbb,{waittime,eps2pdf,overwrite})</code>
+ user-friendly postscript plot, where
+ <ul>
+ <li><code>filename::string</code> has the default extension "eps",
+     if the extension is "pdf" then pdf-file is produced;</li>
+ <li><code>pl,_rest</code> are passed to <code>display</code> command;</li>
+ <li><code>opt::string:=psplotoptions</code> are plot options
+     for <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=plot/ps">plotsetup</a>,
+     the default value can be changed by <a href="Setup.html">Setup</a> command;</li>
+ <li><code>cbb::[integer$4]:=[0,0,0,0]</code> is passed to <code>CorrectEPS</code> command;</li>
+ <li><code>waittime::numeric:=0.1</code> wait this time before running <code>CorrectEPS</code> command;</li>
+ <li><code>eps2pdf::string:="eps2pdf.bat"</code> eps2pdf converter,
+     see <a href="../../softhome/gs/index.html">here</a>.</li>
+ </ul></li>
+
+<li><code>CorrectEPS(filename::string,cbb::list:=[0,0,0,0],$)</code>
+ correct EPS-file by cropping Bounding Box by <code>cbb</code> from [left,bottom,right,top].
+ It also removes "%%Pages" entries.</li>
+
+<hr>
+<li><code>ImageCoreBox(img::Array,threshold::numeric:=1,$)::[x1,y1,x2,y2]</code>
+ determine the smallest rectangular circumscribing image at given threshold
+ such that the smallest x-coordinate of the resulting image with <code>HSV[3]&lt;threshold</code> is <code>x1</code>.</li>
+
+</ul>
+
+</body>
+</html>

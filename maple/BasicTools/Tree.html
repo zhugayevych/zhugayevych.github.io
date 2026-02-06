@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Trees</title>
+</head>
+<body>
+<h1>Trees</h1>
+
+<p>See examples in <code>Tree.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>PrintTree(tree,/level,str,{filedesc,prefix},$)</code>
+ print tree data structure <code>tree::list</code> (hierarchical list), where
+ <ul>
+ <li><code>level::nonegint:=0</code> is the root level;</li>
+ <li><code>str::procedure:=(x->x)</code> prints one node of the tree;</li>
+ <li><code>filedesc::{string,integer}=""</code> file name or descriptor if output is to the file, "" means terminal;</li>
+ <li><code>prefix::string:="."</code> for level alignment.</li>
+ </ul></li>
+
+<hr>
+<li><code>Tree2Seq(tree,/prefix,str,{separator},$)::seq(string)</code>
+ convert tree to decorated sequence of strings, where
+ <ul>
+ <li><code>prefix::string:=""</code> is inserted before each entry;</li>
+ <li><code>str::procedure:=(x->x)</code> converts or prints one node of the tree;</li>
+ <li><code>separator::string:="/"</code> is between parent and child.</li>
+ </ul></li>
+
+<li><code>Tree2Seq2( tree::list, index::list(posint):=[], size::posint:=1, body::procedure:=(x->x),$)::seq([body,index,numberofchilds::nonnegint])</code>
+ linearize tree and generate tree indexes, where
+ <ul>
+ <li><code>index::list(posint):=[]</code> is index of a node in the tree,
+  e.g. [2,5] means 5th child of 2nd child of the root, where [] denotes the root node;</li>
+ <li><code>size::posint:=1</code> - the first size elements of a tree record are considered as the node information;</li>
+ <li><code>body::procedure:=(x->x)</code> - each node information is processed by <code>body(`if`(size=1,tree[1],tree[..size]))</code>.</li>
+ </ul></li>
+
+<li><code>Tree2List( tree::list, size::posint:=1, body::procedure:=(x->x),$)::list([body,parent::nonnegint,children::list(posint))</code>
+ convert tree to list with parent and children indexes,
+ where 0 denotes the parent of the root node.</li>
+
+</ul>
+
+</body>
+</html>

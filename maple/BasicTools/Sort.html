@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Sorting</title>
+</head>
+<body>
+<h1>Sorting</h1>
+
+<p>See examples in <code>Sort.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>isleq(u,v)</code>
+ check if the first argument is less or equal than the second one.
+ The main aim of this procedure is to extend <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=evalb">evalb</a> to lists.</li>
+
+<hr>
+<li><code>Sort(L,/F,id,$)::list</code>
+ enhances interface to the built-in <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=sort">sort</a> command
+ to sort <code>L::list</code>.
+ If <code>F::procedure:=(u->u)</code> is <code>proc(anything,anything)</code>
+ then it is used a standard input to the built-in sort command,
+ otherwise the value of <code>F</code> is used in comparison.
+ In addition, if <code>id::list:=[]</code> is nonempty then
+ instead of element <code>e</code>, the value of <code>e[op(id)]</code> is used in <code>F</code>.</li>
+
+<li><code>Rort(L,/F,id,$)::list</code>
+ sorts in the reverse order.</li>
+
+<hr>
+<li><code>SortM(L,id)::list</code>
+ sorts the list of lists <code>L::list</code> by all indices in the list <code>id::list</code>.</li>
+
+<hr>
+<li><code>SortIdx(L,/F,id,{nolist},$)::list</code>
+ for a given <code>L::indexable</code>, returns the list of indexes <code>P</code>
+ such that <code>L[P]</code> is sorted.
+ Arguments <code>F,id</code> are the same as in <code>Sort</code> command.
+ The optional argument <code>nolist::boolean</code> has the same meaning
+ as for the built-in <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=indices">indices</a> command.
+ Be aware that if <code>type(L,rtable)</code> then zero entries are ignored
+ in <code>SortIdx,MaxVal,MinVal,MaxIdx,MinIdx</code>.</li>
+
+<li><code>MaxVal/MinVal(L,/ForId,$)::list</code>
+ return the greatest/smallest element.
+ Here <code>ForId:=(u->u)</code> can be either <code>F</code> or <code>id</code> from <code>Sort</code> command.</li>
+
+<li><code>MaxIdx/MinIdx(L,/ForId,$)::list</code>
+ return index of the greatest/smallest element.</li>
+
+<hr>
+<li><code>SortEE(ev,/evc,F,$)</code>
+ sort eigenvalues <code>ev::Vector</code> and
+ optionally eigenvectors <code>evc::Matrix:=&lt;&lt;0&gt;&gt;</code>
+ in the order of <code>F(ev)</code> (acts elementwise),
+ where <code>F::procedure:=(u->u)</code>.</li>
+
+<hr>
+<li><code>SortSign(L,$)::{list,Vector},{-1,1}</code>
+ sort <code>L::{list,Vector}</code> and return the sorted <code>L</code> together with the permutation sign.
+ It uses <a href="http://rosettacode.org/wiki/Sorting_algorithms/Insertion_sort">Insertion Sort</a> algorithm.</li>
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>List tools</title>
+</head>
+<body>
+<h1>List tools</h1>
+
+<p>See examples in <code>List.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>SearchPos(s,xorf,$)</code>
+ search position of <code>xorf</code> in <code>s::{string,list}</code>,
+ where <code>xorf</code> is substring or element to search,
+ or boolean-valued procedure of single character or element.
+ For strings <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=searchtext">SearchText</a> is called.
+ See also <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=ListTools/Search">ListTools[Search]</a>.</li>
+
+<li><code>Substitute(s,xorf,_rest)</code>
+ substitute <code>xorf</code> by <code>_rest</code>.
+ For strings <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=StringTools/Substitute">StringTools[Substitute]</a> is called.</li>
+
+<hr>
+<li><code>Classify2(L,ForId,{index,nolist},$)::table</code>
+ user-friendly version of <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=ListTools/Classify">ListTools[Classify]</a>.
+ Here
+ <ul>
+ <li><code>L</code> – if list then list is returned compared to set in built-in command;</li>
+ <li><code>ForId::{procedure,list}</code> if procedure the classification by its result is made,
+  if list classification by the value of <code>op(ForId)</code>-th element is performed;</li>
+ <li><code>index::boolean</code> return indices instead of entries;</li>
+ <li><code>nolist::boolean</code> passed to <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=indices">indices</a> for tables.</li>
+ </ul></li>
+
+<hr>
+<li><code>IdentifyPairs(L1,L2,idf,/output,{nolist},$)</code>
+ identify pairs of elements from two indexable objects
+ <code>L1,L2::indexable</code> using <code>idf::procedure</code>
+ of a pair of elements from <code>L1</code> and <code>L2</code> to be minimized.
+ The <code>output::string:="l"</code> can be one of
+ <ul>
+ <li><code>"l"</code> list of <code>[k1,k2,idf(L1[k1],L2[k2])]</code>,</li>
+ <li><code>"v"</code> list of <code>[L1[k1],L2[k2],idf(L1[k1],L2[k2])]</code>,</li>
+ <li><code>"r"</code> list of unpaired elements,</li>
+ <li><code>"m"</code> max deviation.</li>
+ </ul></li>
+
+<hr>
+<li><code>BlockSplit(L,B,$)::list(list)</code>
+ block-split <code>L::list</code> into sublists of lengths from <code>B::list(nonnegint)</code>.
+ In contrast to <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=ListTools/LengthSplit">ListTools[LengthSplit]</a>
+ the rest of <code>L</code> is ignored.</li>
+
+</ul>
+
+</body>
+</html>

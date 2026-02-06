@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Numerical conversions</title>
+</head>
+<body>
+<h1>Numerical conversions</h1>
+
+<p>See examples in <code>NumConvert.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>Round(v,digits,$)</code>
+ round number to desired number of <code>digits::integer</code>.
+ Here <code>v</code> can be realcons or complex or any indexable object of any depth.</li>
+
+<hr>
+<li><code>mod1(e,m,$)</code>
+ reduce <code>e::integer</code> to integer modulo <code>m::posint</code> in the range <code>1..m</code>
+ (use <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=mod">mod</a> to reduce to range <code>0..m-1</code>).</li>
+
+<li><code>Reduce2P(x,/P,x0,$)</code>
+ reduces a number <code>x</code> to the interval <code>x0..x0+P</code> using periodicity condition.
+ Here and below <code>P:=1</code> and <code>x0:=0</code>.
+ In the case of symbolic <code>x</code>, the list of indeterminates is evaluated by the sequence
+ of numbers <code>exp(-2.07-0.5*i),i=1..</code></li>
+
+<li><code>PeriodicMean(V,/i1orx1,P,x0,{maxiter,digits,printout},$)</code>
+ calculate mean value for periodic variable given by <code>V::indexable</code>.
+ It is only meaningful if there is a gap in the distribution of <code>V</code>,
+ because one need to iteratively find the middle of this gap, <code>xgap</code>,
+ and preprocess <code>V</code> by <code>Reduce2P(V,P,xgap)</code>.
+ If the gap is small, either increase <code>maxiter::posint:=3</code>,
+ or decrease <code>digits::integer:=Digits-2</code>,
+ or provide better initial guess of the mean value through <code>i1orx1::{list,set}:=[1]</code>:
+ if it is a list, <code>V[op(i1orx1)]</code> is used for the guess,
+ otherwise <code>op(i1orx1)</code> is used.</li>
+
+<li><code>PeriodicStandardDeviation(V,/i1orx1,P,x0,{maxiter,digits,printout},$)</code>
+ calculate standard deviation for periodic variable.</li>
+
+<hr>
+<li><code>angle2pair(angle::numeric,n::integer,$)::a0,da</code>
+ determine the nearest high-symmetry (<code>360/n</code>) and
+ reduce it to <code>-180&lt;a0&le;180</code> interval, so that <code>a=a0+da+360*integer</code>.
+ For negative <code>n</code> the reference angle is shifted by <code>180/|n|</code>, see examples.</li>
+
+<hr>
+<li><code>ReduceFloat(f)::float</code>
+ delete trailing zeros from float <code>f::atomic</code> or add decimal point to integer.</li>
+
+<li><code>ReduceFloat2(f,$)::{float,integer}</code>
+ delete trailing zeros from float, converting it to integer if appropriate.</li>
+
+<li><code>ReduceFloat3(f,base,/digits,$)::{float,integer,rational}</code>
+ convert float to rational with <code>base::posint</code>
+ by checking if <code>f*base</code> is integer at <code>digits::posint:=Digits-2</code> level of precision.</li>
+
+<li><code>ReduceFloatGrid(G,id,digits,/digits2,$)::G,lsn</code>
+ convert grid of floats to rational grid, where
+ <ul>
+ <li><code>G::list(list)</code> is the grid;</li>
+ <li><code>id::{posint,list(posint)}</code> grid indexes, a posint is interpreted as <code>[$1..id]</code>;</li>
+ <li><code>digits::posint</code> for identifying zero values and negligible deviations;</li>
+ <li><code>digits2::posint:=digits-2</code> for <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=convert,rational">convert,rational</a>;</li>
+ <li><code>lsn::list(integer)</code> list of common denominators.</li>
+ </ul></li>
+ The primary use of this command is to provide the unique representation of float indices of tables.
+ Don't use "x.yen" construction because "1e2" and "100." are different numbers in Maple.</li>
+
+</ul>
+
+</body>
+</html>

@@ -11,73 +11,113 @@
 <p>Download
  <a href="BasicTools.zip">source</a> or
  <a href="BasicTools_lib.zip">library</a> or
- <a href="BasicTools.ini">ini-file</a>. Tested for Maple 2024.</p>
+ <a href="BasicTools.ini">ini-file</a>. Tested for Maple 2025.</p>
 
 <h2>Documentation</h2>
 <ul>
+
 <li><a href="Setup.html">Setup</a></li>
-<li>Miscellaneous tools<code>
-<br>Round,Reduce2P,PeriodicMean,PeriodicStandardDeviation,angle2pair,
-<br>mod1,coeffs2,convert2range,convert2repeat,simplifyradical,GetPath,
+
+<li><a href="NumConvert.html">Numerical conversions</a><code>
+<br>Round,mod1,Reduce2P,PeriodicMean,PeriodicStandardDeviation,angle2pair,
 <br>ReduceFloat,ReduceFloat2,ReduceFloat3,ReduceFloatGrid</code></li>
-<li>List tools<code>
-<br>SearchPos,Substitute,Grid,Grid2,
-<br>IdentifyPairs,Classify2,BlockSplit,idExch,idSym,idASym</code></li>
-<li>List tools: Trees<code>
+
+<li><a href="Express.html">Expression tools</a><code>
+<br>simplifyradical,coeffs2,idExch,idSym,idASym</code></li>
+
+<li><a href="List.html">List tools</a><code>
+<br>SearchPos,Substitute,IdentifyPairs,Classify2,BlockSplit</code></li>
+
+<li><a href="Grid.html">Grids and sequences</a><code>
+<br>Grid,Grid2,GetPath,convert2range,convert2repeat</code></li>
+
+<li><a href="Tree.html">Trees</a><code>
 <br>PrintTree,Tree2Seq,Tree2Seq2,Tree2List</code></li>
-<li>Array tools: <a href="idx.html">Indexing</a><code>
+
+<li><a href="idx.html">Indexing</a><code>
 <br>Dim2,idL,iidL,idI,iidI,idS,iidS,idA,iidA,idSS,iidSS,nextpointS</code></li>
-<li>Array tools: Sorting<code>
+
+<li><a href="Sort.html">Sorting</a><code>
 <br>isleq,Sort,Rort,SortM,SortIdx,MaxVal,MinVal,MaxIdx,MinIdx,SortEE,SortSign</code></li>
+
 <li>String tools<code>
-<br>Squeeze,TrimLeft,TrimRight,Trim,StartNewLine,SearchKeySeq,ReadBody,ReadByMask,
-<br>Split2,FormattedOperation,FormatFloat,AlignPoints,FormatTable,FormatTime2,
-<br>PrintColumns,PrintMatrix,PrintUpperMatrix,PrintVector3d,ascii2unicode</code></li>
+<br>SearchKeySeq,ReadBody,ReadByMask,StartNewLine,Split2,
+<br>Squeeze,TrimLeft,TrimRight,Trim,ascii2unicode</code></li>
+
+<li>Printing<code>
+<br>FormattedOperation,FormatFloat,AlignPoints,FormatTable,FormatTime2,
+<br>PrintColumns,PrintMatrix,PrintUpperMatrix,PrintVector3d</code></li>
+
 <li>Combinatorics and algorithms<code>
 <br>CyclesAndTrees,defistree,CycleBasis2</code></li>
+
 <li>Geometry<code>
 <br>Circumsphere</code></li>
+
 <li>Calculus<code>
 <br>fullparfrac2,fZero,fDblZero,fZeros,FZERO,NLPSolve2,HessianByGradient,
 <br>PolynomialInterpolation1der,BezierControlPoints,BezierNodes,
 <br>ExtrapolateMPE</code></li>
+
 <li>Differential equations<code>
 <br>devpsolve</code></li>
+
 <li>Linear algebra<code>
 <br>CheckEigenvector,NormalizeVector,NormalizeMatrix,RealJordanBlockMatrix,MatrixFunction2,
 <br>SuperimposeM,LocalizeVectors4</code></li>
+
 <li>Sparse linear algebra<code>
 <br>SparseMM,SparseMHM,SparseMV,SparseMO,SparseMN,SparseMap</code></li>
+
 <li>Rotations<code>
 <br>RotationM,ReflectionM,RotationParam,RotationParamEulerX,RotationParamEulerY,
 <br>RotationMEulerX,RotationMEulerY,EulerY2Rot,Rot2EulerY,RotationMp2q,RotationM2zx</code></li>
+
 <li>Transformations<code>
 <br>TransSpherCoo,TransSpherCooI,TransTensor,ExtendedTransM</code></li>
+
 <li>Special functions: <a href="Ylm.html">Spherical harmonics</a><code>
 <br>Phim,NPhim2,Pnma,NPnma2,Ylm,Yxyz,YxyzM,YxyzR,YxyzL,
 <br>Wignerd,WignerD,Wigner3j,Wigner6j,MatElemYlm,MatElemY</code></li>
+
 <li>Special functions: <a href="LerchPhi.html">Lerch transcendent</a><code>
 <br>LerchPhi2,polylogR,polylogR_init</code></li>
-<li>File tools<code>
-<br>ExpandPath,SimplifyPath,FoldersTree,LoadTextFile,UnloadTextFile,
-<br>SearchFilePos,ReadLines,ReadValue,ReadPaginatedMatrix,WriteLines,ReplaceLines,
-<br>ReadRecord,WriteRecord,ReadSet,ReadUTF8,WriteUTF8,ReadBIN,WriteBIN,
-<br>PrintFile,convert2unix,convert2dos,OpenFolder</code></li>
-<li>Graphics<code>
-<br>GetBox,Spline2,ErrorBar,TextOnLine,Rainbow,WritePlotData,
+
+<li>File system<code>
+<br>ExpandPath,SimplifyPath,FoldersTree,OpenFolder</code></li>
+
+<li>Text files<code>
+<br>LoadTextFile,UnloadTextFile,PrintFile,
+<br>SearchFilePos,ReadLines,ReadValue,WriteLines,ReplaceLines,
+<br>convert2unix,convert2dos,ReadUTF8,WriteUTF8<br></code></li>
+
+<li>Formatted text files<code>
+<br>ReadRecord,WriteRecord,ReadSet,ReadPaginatedMatrix<br></code></li>
+
+<li>Binary files<code>
+<br>ReadBIN,WriteBIN</code></li>
+
+<li>HTML tools<code>
+<br>SqueezeHTML,SqueezeTable,ReadHref,ResolveURI</code></li>
+
+<li>XML tools<code>
+<br>GetXMLChild,ReadXML,WriteXML</code></li>
+
+<li><a href="Graphics.html">Graphics</a><code>
+<br>GetBox,Spline2,ErrorBar,Legend2,TextOnLine,Rainbow,WritePlotData,
 <br>plotps,CorrectEPS,ImageCoreBox</code></li>
+
 <li>Data manipulation<code>
 <br>RootMeanSquare,LinearFit2,LinearFitTrig,MultiDimFit,GaussianFit,
 <br>FindExtremum,ReorderXYdata,Intersection</code></li>
-<li>HTML tools<code>
-<br>SqueezeHTML,SqueezeTable,ReadHref,ResolveURI</code></li>
-<li>XML tools<code>
-<br>GetXMLChild,ReadXML,WriteXML</code></li>
+
 <li>Physics tools<code>
 <br>GetConstantSU,ConvertSU</code></li>
-<li>System tools<code>
-<br>BuildHelp,AssignModule,ReadModules,Check4Updates,TabulatedFunction,
-<br>Timing,InitTiming,ProcessSetupArgs</code></li>
+
+<li><a href="System.html">System tools</a><code>
+<br>BuildHelp,AssignModule,ReadModules,ProcessSetupArgs,
+<br>Check4Updates,TabulatedFunction,Timing,InitTiming</code></li>
+
 </ul>
 
 <h2>Acknowledgements</h2>
@@ -87,7 +127,6 @@
 
 <h2>Requires implementation</h2>
 <ul>
-<li>At the end of BasicTools.mw create an execution group checking if BasicTools, MolMod and other packages were installed correctly.</li>
 <li>Enhance <code>BasicTools:-ReadLines</code> procedure so that it can read specific line numbers including reverse numbering from the end (modify input parameters as follows <code>number::{integer,list(integer)}:=1</code>). Then update <code>PrintFile</code> appropriately.</li>
 </ul>
 

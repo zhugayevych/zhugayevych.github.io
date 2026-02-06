@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>System tools</title>
+</head>
+<body>
+<h1>System tools</h1>
+
+<p>See examples in <code>System.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>BuildHelp(source,/hdbfile,{rootkey,catkey,hflkey,tockey,ext,test,printout},$)</code>
+ build or append help database file <code>hdbfile::string:=""</code> (without extension)
+ from a properly formatted <code>source</code> file,
+ which references help-page files with extension <code>ext::string:=".mw"</code>,
+ using <a href="https://www.maplesoft.com/support/help/view.aspx?path=makehelp">makehelp</a> command
+ which is skipped if <code>test::boolean</code> is true.
+ The source file is parsed line by line with the following rules:
+ <ul>
+ <li>if line starts with <code>rootkey::string:="#root:"</code> then the rest of the line defines the root name in the help-browser;</li>
+ <li>if line starts with <code>catkey::string:="#cat:"</code> then the rest of the line defines the category name;</li>
+ <li>if line starts with <code>hflkey::string:="#hfl:"</code> then the rest of the line defines the name of the help file and the next lines are treated as follows:</li>
+ <li>(a) if line starts with <code>tockey::string:="#toc:"</code> it will be the TOC entry text otherwise the TOC entry will be equal to the topic name,</li>
+ <li>(b) if line starts with <code>#</code> then the rest of the line defines the topic name and its aliases as comma-separated list (surrounding whitespaces are trimmed),</li>
+ <li>(c) otherwise the line is considered as procedure definition and its name is taken as topic name.</li>
+ </ul>
+ The path to the help files is calculated as folder(source)+helpfilename+ext.
+ The default root is the source filename.
+ In case of rebuilding existing hdb-file one has to delete it first (usually it is protected during Maple session).
+ The format and extension of help files was changed in Maple 18 from ".hdb" to ".help".
+ Do not forget to append <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=libname">libname</a> if necessary.</li>
+
+<hr>
+<li><code>ReadModules(filename,/prefix::string:="s_",$)::list(string)</code>
+ returns list of modules as strings read from a text file.
+ The <code>filename::string</code> can be either full filename with path
+ or short filename with or without extension (the default extension is ".ini").
+ The command scans all module definitions and for each module "modulename"
+ assigns its string definition to the variable "prefix|modulename"
+ (existing names will be reassigned without a notice).
+ Module definition must strictly follow the rules:
+ <ul>
+ <li>begin module with "\nmodulename:=\nmodule()" and end with "end module" (spaces are allowed only as give in exemples);</li>
+ <li>comments and the word "module" are not allowed within the module definition.</li>
+ </ul>
+ If you don't want a module to be read by <code>ReadModules</code>, do not start it with "\nmodule()".
+ If <code>filename</code> file does not exist,
+ ReadModules determines the file name <code>fn</code> and extension <code>fx</code>
+ and tries to read <code>ModulesFolder|fn|fx</code> and <code>ModulesFolder|fn/fn|fx</code>.</li>
+
+<li><code>AssignModule(moduledef)::module</code>
+ parse module defined by <code>moduledef::string</code> (either string containing module definition or name of the module)
+ and initialize it by parsing a string containing module definition
+ and running <code>:-ModuleInit(_rest)</code> command if the module contain this procedure.
+ If module definition was not initialized, it calls <code>ReadModules</code>.
+ The main aim of <code>AssignModule</code> and <code>ReadModules</code> commands
+ is to create multiple copies of a module, that is not supported in Maple.</li>
+
+<hr>
+<li><code>ProcessSetupArgs(lsargs,variables,/constants,suffix,$)</code>
+ process Setup arguments, where
+ <ul>
+ <li><code>lsargs::list</code> of keywords or initializing equations for them exactly as in <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=interface">interface</a> command;</li>
+ <li><code>variables::list(name)</code> known variables;</li>
+ <li><code>constants::list(name):=[]</code> known constants (cannot be changed);</li>
+ <li><code>suffix::string:=""</code> to avoid name conflicts, see examples.</li>
+ </ul>
+ Note that keywords values are not checked!</li>
+
+<hr>
+<li><code>Check4Updates(/root,packages,{openlinks},$)</code>
+ check for package updates at <code>root::string:="http://zhugayevych.me/maple/"</code> folder.
+ The list to check is given by <code>packages::list(string):=["BasicTools","SSH","FiniteGroups","LatticeTools","MolMod","AstroTools"]</code>.
+ If <code>openlinks::boolean</code> is true, updatable packages are opened by Windows Explorer.</li>
+
+<hr>
+<li><code>TabulatedFunction(_rest)::module</code>
+ support of tabulated functions. Exported module members:
+ <ul>
+ <li><code>:-XV::list([argument,value])</code> list of calculated values of the function;</li>
+ <li><code>:-ModuleApply(x,dr,$)::[argument,value]</code>
+  the tabulated version of the function, where
+  <code>x</code> is a float or any indexable object of floats (lists and Vectors works for sure) and
+  <code>dr::positive:=defdr</code> defines spatial the resolution:
+  if no tabulated points on the distance <code>dr</code> from <code>x</code> are found
+  then the function is calculated for <code>x</code> and the result is appended to <code>XV</code>;</li>
+ <li><code>:-Remove(x,$)</code> the nearest to <code>x</code> point will be removed from <code>XV</code>;</li>
+ <li><code>:-Read(filename,/Fdim,convert,$)</code>
+  append <code>XV</code> by data from file <code>filename::string</code>,
+  where <code>Fdim::posint:=1</code> is the number of the function components
+  and <code>convert::procedure:=(V->Vector[column](V))</code> converts the raw data to the format of <code>XV</code> entries;</li>
+ <li><code>:Save(filename,{digits,overwrite},$)</code>
+  save <code>XV</code> data to a file <code>filename::string</code> (empty string means terminal)
+  with <code>digits::posint:=min(10,Digits-2)</code> precision;</li>
+ <li><code>:-ModuleInit(ForXVorFilename,defdr,/rhof,{Fdim},$)</code>
+  initialize the module with <code>_rest</code>, where
+  <code>ForXVorFilename</code> is either function or <code>XV</code> list or datafile,
+  and <code>rhof::procedure:=((x,y)->`if`( type(x,atomic), abs(x-y), evalf(sqrt(add(v^2,v=x-y))) ))</code> is the metric function.</li>
+ </ul>
+ It is the extended version of remember tables.
+ Useful if the function evaluation is more demanding than searching the nearest point in the tabulated list.</li>
+
+<hr>
+<li><code>Timing(/nleft,percentages,{nmin,timestep},$)</code>
+ print progress and time left to finish the computations. Here:
+ <ul>
+ <li><code>nleft::integer:=nLeft</code> number of computations cycles left;</li>
+ <li><code>percentages::list(posint):=[]</code> at which the progress is printed regardless of time (ignored if <code>nleft&lt;0</code>);</li>
+ <li><code>nmin::posint:=3</code> minimum number of cycles for estimating computation time;</li>
+ <li><code>timestep::positive:=5</code> minimum separation in seconds between output.</li>
+ </ul>
+ Real time is used, see <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=time">time</a> for details.
+ For computations with equal duration of each cycle set <code>nmin</code> as small as possible, i.e. 1 or 2.
+ For computations with random duration of cycles set <code>nmin</code> as large as possible,
+ but not too large because you will wait a long time for the first output.
+ Place <code>Timing</code> at the end of the computation cycle
+ and don't forget to run <code>InitTiming</code> before starting the computations.</li>
+
+<li><code>InitTiming(nleft::integer:=-1,{timestep::positive:=10},$))</code> initializes <code>Timing</code></li>
+
+</ul>
+
+</body>
+</html>

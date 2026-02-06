@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Grids and sequences</title>
+</head>
+<body>
+<h1>Grids and sequences</h1>
+
+<p>See examples in <code>Grid.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<hr>
+<li><code>Grid(rng,n,/f,avoid,$)::list</code>
+ generate a list of <code>max(2,n::integer)</code> values
+ in a given range <code>rng::complexcons..complexcons</code>
+ by the formula <code>x=f(t)</code>, where
+ <code>f::procedure:=(x->x)</code> and <code>t</code> runs uniform grid,
+ avoiding points listed in <code>avoid::list:=[]</code>.</li>
+
+<li><code>Grid2(lsp,dx,/c,$)::listlist</code>
+ generate grid by interpolating between vertices <code>lsp::listlist</code>,
+ where <code>dx::numeric</code> is spacing and
+ <code>c::numeric:=1.1</code> is technical parameter insuring that no lattice points will be skipped.</li>
+
+<hr>
+<li><code>GetPath(X,Y,N,$)::list(whattype(X))</code>
+ get linear path between two points <code>X,Y::{list,Vector}</code>
+ of a rational rectangular grid with denominators <code>N::list(nonnegint)</code>.</li>
+
+<hr>
+<li><code>convert2range(L,/minnum,{asstring},$)::{list,string}</code>
+ convert monotonic sequence of integers <code>L::list(integer)</code> to range,
+ where <code>minnum::posint:=3</code> is the minimum number of integers to convert to range.
+ If <code>asstring::boolean</code> is true then the output is converted to string.</li>
+
+<li><code>convert2repeat(L,/minnum,format,$)</code>
+ convert monotonic sequence of items <code>L::list</code> to range,
+ where <code>minnum::posint:=3</code> is the minimum number of repetitions to convert to $.
+ If <code>format::string:=""</code> is nonempty, the output is converted to string with this format.</li>
+
+</ul>
+
+</body>
+</html>
