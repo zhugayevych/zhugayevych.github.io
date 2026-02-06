@@ -19,10 +19,14 @@
 <h2>Procedures</h2>
 <ul>
 
-<li><code>GetBox(ls,/rdx,rdy,$)::x1,x2,y1,y2</code>
- gets boundaries of <code>ls::list</code> of lists of [x,y] points,
+<li><code>GetBox(L,/rdx,rdy,$)::x1,x2,y1,y2</code>
+ gets boundaries of <code>L::list</code> of lists of [x,y] points,
  where <code>rdx::numeric:=0,rdy::numeric:=rdx</code> are relative extensions of the box,
- so that e.g. <code>x1:=x1-rdx*(x2-x1)</code>
+ so that e.g. <code>x1:=x1-rdx*(x2-x1)</code></li>
+
+<li><code>GetBox2(L,$)::x1,x2,y1,y2</code>
+ gets boundaries of <code>L::list</code> of plots
+ using <a href="https://maplesoft.com/support/help/Maple/view.aspx?path=plottools/getdata">plottools[getdata]</a> command.</li>
 
 <hr>
 <li><code>Spline2(xydata,cod,{degree})::procedure</code>
