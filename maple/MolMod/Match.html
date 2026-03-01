@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Geometry: Match</title>
+</head>
+<body>
+<h1>Geometry: Match</h1>
+
+<p>See examples in <code>Match.mw</code></p>
+
+<h2>References</h2>
+<ul>
+<li>S K Kearsley, On the orthogonal transformation used for structural comparisons, Acta Cryst A45, 208 (1989)</li>
+</ul>
+
+<h2>Notations</h2>
+<ul>
+<li><code>A1::list</code> reference geometry</li>
+<li><code>A2::list</code> geometry to be matched to <code>A1</code></li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>Superimpose(A1,A2,/perm2,{massweighted,isotopes,weights, det,axis,cellonly,translateonly,unorderedtvs, raiseerror,output,printout},$)</code>
+ superimpose two chemically identical molecules (or list of points) to minimize the mean square distance between them,
+ <ul>
+ <li><code>perm2::list(posint):=[$1..nops(A2)]</code> actually <code>A2[perm2]</code> is used to determine the required linear transformation;</li>
+ <li><code>massweighted::boolean</code> self-explanatory;</li>
+ <li><code>isotopes::list:=[0$nops(A1)]</code> to be passed to <code>AtomMass</code> routine;</li>
+ <li><code>weights::Vector:=Vector(nops(A1),1)</code> self-explanatory;</li>
+ <li><code>det::{-1,0,1}:=0</code> the sign of the determinant of the rotation matrix, if 0 the best matching transformation is returned;</li>
+ <li><code>axis::{undefined,Vector(3)}:=undefined</code> fixed rotation axis;</li>
+ <li><code>cellonly::boolean</code> transform cell only including retranslation of atoms;</li>
+ <li><code>translateonly::boolean</code> self-explanatory;</li>
+ <li><code>unorderedtvs::boolean</code> use <code>SuperimposeM</code> to align translation vectors,
+  otherwise are rotated in such a way that the first vectors are fully aligned and the second vectors are aligned "in plane";</li>
+ <li><code>raiseerror::boolean</code> raise error instead of warning.</li>
+ </ul>
+ The <code>output::string:="a"</code> is a string of characters:
+ <ul>
+ <li><code>a</code> superimposed atoms <code>A2a=R.(A2-r2)+r1</code>;</li>
+ <li><code>r</code> rotation matrix <code>R</code>;</li>
+ <li><code>1,2</code> center of mass of the first <code>r1</code> and second <code>r2</code> molecule;</li>
+ <li><code>d,D</code> RMSD and RMSD*sqrt(W);</li>
+ <li><code>e,f</code> largest deviation and vector of all deviations;</li>
+ <li><code>m,v</code> matrix <code>M</code> (see the code) and its eigenvalues;</li>
+ <li><code>w,W</code> weights and their sum.</li>
+ </ul></li>
+
+<hr>
+<li><code>GuessPermutation(A1,A2,/maxdev,{astable,checkidentity},$)::P,Vd</code>
+ guess if two molecules have common part and determine corresponding index permutation, where
+ <ul>
+ <li><code>maxdev::numeric:=999</code> for distances to be included in the output list;</li>
+ <li><code>astable::boolean</code> output tables instead of lists;</li>
+ <li><code>checkidentity::boolean</code> fast pre-check if molecules can be identical, raises error if not identical by chemical composition;</li>
+ <li><code>P::list</code> permutation such that <code>A1=A2[P]</code>, if there is no match <code>P=[]</code>;</li>
+ <li><code>Vd::list</code> distances.</li>
+ </ul></li>
+
+<li><code>MatchMol(A1,A2,/method,MSDmax,{emax,dmax,refp,asis,det,scan, opt4CA1,opt4CA2,opt4CO1,opt4CO2,output,printout,digits,xyzfile},$)</code>
+ match two molecules, where
+ <ul>
+ <li><code>method::{"","topo","geo","refp"}:=""</code> ;</li>
+ <li><code>MSDmax::realcons:=`if`(method="geo",10.^(2-Digits),999)</code> maximum allowed mean square deviation in <code>Superimpose</code>;</li>
+ <li><code>emax::numeric:=`if`(method="geo",1,999)</code> maximum allowed individual deviation in the refined superimposition;</li>
+ <li><code>dmax::numeric:=0.3</code> only atoms closer than dmax are used in refining superimposing;</li>
+ <li><code>refp::list:=[]</code> list of <code>i1=i2</code> for at least three prematched atoms;</li>
+ <li><code>asis::boolean</code> do not rotate or translate molecules for determining permutation;</li>
+ <li><code>det::{-1,0,1}:=1</code> passed to <code>Superimpose</code>;</li>
+ <li><code>scan::{0,1,2,3,12,13,23,123}:=123</code> check also reflections in the corresponding coordinates (if molecule is asymmetric use 0, if planar use 12 etc);</li>
+ <li><code>opt4CA1::list:=[],opt4CA2::list:=opt4CA1</code> passed to <code>ConnectAtoms</code>;</li>
+ <li><code>opt4CO1::list:=[], opt4CO2::list:=opt4CO1,</code> passed to <code>CanonicOrientation</code>;</li>
+ <li><code>digits::posint:=3</code> for printout;</li>
+ <li><code>xyzfile::string:=cat(tmpfld,"_tmp.xyz")</code> to visualize the refernce and superimposed geometries.</li>
+ </ul></li>
+ The <code>output::string:="b"</code> is a string of characters:
+ <ul>
+ <li><code>1,2</code> canonically oriented <code>A1,2</code>;</li>
+ <li><code>a</code> superimposed <code>A2</code>;</li>
+ <li><code>b</code> true/false;</li>
+ <li><code>d</code> RMSD;</li>
+ <li><code>e</code> max individual deviation;</li>
+ <li><code>p</code> permutation <code>P</code>;</li>
+ <li><code>r</code> rotation matrix;</li>
+ <li><code>t</code> translation vector;</li>
+ <li><code>v</code> distances <code>Vd</code>.</li>
+ </ul></li>
+
+</li>
+</ul>
+
+</body>
+</html>
