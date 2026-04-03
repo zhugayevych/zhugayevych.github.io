@@ -53,10 +53,13 @@
 <li><code>NPAR=1</code> is probably the best choice for single node shared memory run.</li>
 <li>To remove orbital occupations use <a href="trimoutcar.sh">this script</a> (run <code>trimoutcar.sh OUTCAR > OUTCAR_new</code>, thanks to Dmitry Aksenov).</li>
 <li>For calculation of DOS use <code>ISMEAR=-5</code> (it might be necessary to converge <code>WAVECAR</code> by other method).</li>
-<li>For calculation of band structure with hybrid functionals the approach described in <a href="http://www.vasp.at/wiki/index.php/Si_bandstructure">VASP-wiki</a> works only for the provided example.
+<li>For calculation of band structure with hybrid functionals the approach
+ described in <a href="http://www.vasp.at/wiki/index.php/Si_bandstructure">VASP-wiki</a>
+ as "0-weight SC procedure" works only for the provided example (2021).
  For other cells and finer grids it produces inaccurate eigenvalues at least those with zero weight.
  The main challenge is to converge eigenvalues (individual eigenvalues converge much more slowly than band energy).
  At the minimum, one has to increase precision (PREC, maybe PRECFOCK) and number of SCF steps.</li>
+<li>Phonons calculations can be reliably performed only with <a href="https://phonopy.github.io/phonopy/vasp.html">phonopy</a> package (2025).</li>
 </ul>
 
 <h2>SCF convergence</h2>
