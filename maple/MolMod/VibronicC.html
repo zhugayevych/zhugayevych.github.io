@@ -16,7 +16,10 @@
 <li><code>frcc::Matrix</code> force constants in ground state orientation</li>
 <li><code>N::posint</code> number of normal modes</li>
 <li><code>VE::Vector(N)</code> Vector of normal mode energies (frequencies)</li>
-<li><code>VS::Vector(N)</code> Vector of corresponding Huang-Rhys factors</li>
+<li><code>MT::Matrix(n,N)</code> Matrix of normal modes normalized as <code>Transpose(MT).Matrix(VM).MT=1</code></li>
+<li><code>VM::Vector(n)</code> Vector of atomic masses</li>
+<li><code>Vg::Vector(N)</code> Vector of vibronic couplings</li>
+<li><code>VS::Vector(N)</code> Vector of Huang-Rhys factors</li>
 <li><code>TorVn::{numeric,Vector(N)}</code> temperature (canonic ensemble) or Vector of oscillator occupation numbers (microcanonic ensemble)</li>
 <li><code>sp::list</code> list of [transition energy, line intensity].</li>
 </ul>
@@ -24,17 +27,15 @@
 <h2>Procedures</h2>
 <ul>
 
-<li><code>VibronicCouplings(A,A2,frcc,/output,{vibrationsonly,printout,nprint2,digits})</code>
- calculate vibronic couplings, where
+<li><code>VibronicCouplingsDHO(A,A2,VE,MT,VM,{printout,nprint,digits})::Vg,basdef</code>
+ calculate vibronic couplings in Displaced Harmonic Oscillator model, where
  <ul>
- <li><code>output::string:="nesm"</code> see VibrationalModes,
-   accepted codes are "egmMnstz", where "g" means couplings and "s" means Huang-Rhys factors,</li>
- <li><code>vibrationsonly::boolean:=false</code> return vibrations only,</li>
- <li><code>nprint2::posint:=3</code> number of strong modes to print</li>
- <li><code>_rest</code> passed to <code>VibrationalModes</code></li>
+ <li><code>nprint::posint:=3</code> number of strongly coupled modes to print</li>
+ <li><code>basdef</code> basis defficiency showing if the displacement can be fully represented via <code>MT</code></li>
  </ul>
  Note: in printout, bandwidth is vibrational broadening dispersion (i.e. half-bandwidth).</li>
 
+<hr>
 <li><code>TransSp(VE,VS,TorVn,vmin,
  {absbin,relbin,sorted,avew,wdigits,maxnconf,maxerror,maxerror2,sort,Edigits,Sdigits,printout},$)::Vomax,lstr,Erng,vmax,err</code>
  tabulate transition spectral density combinatorially, where
@@ -57,12 +58,15 @@
  <li><code>vmax::numeric</code> maximum transition intensity,</li>
  <li><code>err::numeric</code> spectral progression error.</li>
  </ul></li>
+
 <li><code>fTransSp(E::numeric,VE,VS,TorVn,sigma::numeric,{digits:=5},$)::float</code>
  calculate transition spectral density for energy <code>E</code> via correlator, where <code>sigma</code> is the dispersion of gaussian-shape line broadening.</li>
 
+<hr>
 <li><code>CoarsegrainSp(sp0::{Vector,sp},binE::numeric,{printout},$)::sp</code> coarse grain spectrum to <code>binE</code>;
  if <code>sp0</code> is Vector or atomic list then it is treated as equal-weight list of energies and is normalized in the output.</li>
 
+<hr>
 <li><code>GenerateES(/ES0,N0,Edist,Sdist,Emax,S0,lambda0,
  {output::{"list","vectors"}:="vectors",printout,plotout,colors::[string,string]:=["Red","Blue"],eunit::string:=" (eV)"},$)</code>
  generate energies and Huang-Rhys factors, where
@@ -73,6 +77,7 @@
  <li><code>Emax,S0,lambda0::numeric:=0</code> maximum mode energy and approximate total Huang-Rhys factor and reorganization energy of randomly generated modes.</li>
  </ul></li>
 
+<hr>
 <li><code>SingleQMode(E,sigma,EQ,SQ)</code> spectral function for a single quantum mode (the mode is quantum if its energy is much larger than the temperature).</li>
 
 <li><code>SingleQModeFit(sp,EQ0,SQ0,cy,cL,/cR,

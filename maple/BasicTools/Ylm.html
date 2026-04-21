@@ -21,7 +21,8 @@
 <ul>
 <li><code>phi</code> azimutal angle</li>
 <li><code>m::integer</code> azimutal number;
- in matrices, complex and trigonometric basises are ordered as <code>m=0,1,-1,2,-2,...</code> and <code>1,cos(p),sin(p),cos(2p),...</code> respectively</li>
+ in matrices, complex and trigonometric basises are ordered as <code>m=0,1,-1,2,-2,...</code> and <code>1,cos(p),sin(p),cos(2p),...</code> respectively
+ (see <a href="idx.html">idI</a> indexing)</li>
 <li><code>complex::boolean:=complexTrigBasis</code> if true then the <code>exp(I*m*phi)</code> basis is used,
  otherwise the real trigonometric basis is used: <code>cos(m*phi)</code> for nonnegative <code>m</code> and <code>sin(m*phi)</code> for negative <code>m</code>.
  The <code>complexTrigBasis</code> can be changed by <a href="Setup.html">Setup</a> command.</li>

@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Calculus</title>
+</head>
+<body>
+<h1>Calculus</h1>
+
+<p>See examples in <code>Calculus.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>fZero(f,r,/iniguess,{relerror,abserror,maxiter,output::name:=undefined},$)</code>
+ robust numerical procedure for finding zero of a function
+ when <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=fsolve">fsolve</a> command fails,
+ where
+ <ul>
+ <li><code>f::procedure</code> continuous function;</li>
+ <li><code>r::range(realcons)</code> search range <code>x1..x2</code>;</li>
+ <li><code>iniguess::realcons:=infinity</code> initial guess;</li>
+ <li><code>relerror,abserror::nonnegative:=0</code> relative or absolute error,
+     if <code>abserror=0</code> then <code>abserror=max(relerror,10^(2-Digits))</code>;</li>
+ <li><code>maxiter::posint:=100</code> maximum number of iterations;</li>
+ <li><code>output::name:=undefined</code> name of variable to which will be assigned output of <code>FZERO</code> function.</li>
+ </ul>
+ Note that, in the range <code>r</code> the function <<code>f</code> should have a single zero where the function changes its sign.
+ The algorithm uses bisection and linear interpolation and extrapolation until <code>|x1-x2|&lt;abserror</code>.</li>
+
+<li><code>fDblZero(f,r,{relerror,abserror,maxiter,rootnumber,noerror},$)</code>
+ find two close zeros, where <code>rootnumber::posint:=0</code> is interpreted as follows:
+ if 1 then the left root is returned, if 2 then the right root is returned, otherwise both of them.</li>
+
+<li><code>fZeros(f,r,/n,GridF,{relerror,abserror,maxiter},$)</code>
+ find all zeros within specified range by dividing it into <code>n::posint:=20</code> subintervals.
+ Here <code>GridF::procedure:=(x->x)</code> is a grid function (see <a href="../Grid.html">Grid</a>).</li>
+
+<li><code>FZERO(f,x1,x2,iniguess,relerror,abserror,maxiter)::[flag,x0,x2,iter]</code>
+ core routine based on FORTRAN subroutine of SLATEC package.
+ Here <code>x0</code> is the location of zero
+ and <code>x2</code> is the other boundary of interval after <code>iter</code> iterations.
+ The flag can take the following values:
+ <ul>
+ <li><code>1</code> success;</li>
+ <li><code>2</code> success, <code>f(x0)=0</code> "occasionally", though the interval <code>x0..x2</code> is large as in example below;</li>
+ <li><code>3</code> success, but the function seems to have singularity instead of zero;</li>
+ <li><code>4</code> fail, either function has no zero or its zero has even multiplicity
+     (nevertheless in the last case the routine can sometimes find zero as illustrated in example);</li>
+ <li><code>5</code> fail, the number of iterations exceeded the maximum allowed.</li>
+ </ul></li>
+
+<hr>
+<li><code>NLPSolve2(n,f,/g,dx,{onesidegradient},_rest)</code>
+ patch to <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=Optimization/NLPSolve">NLPSolve</a> with gradient,
+ where
+ <ul>
+ <li><code>n::posint</code> number of variables;</li>
+ <li><code>f::procedure</code> function to minimize;</li>
+ <li><code>g::{0,procedure}:=0</code> gradient;</li>
+ <li><code>dx::positive:=10^(-iquo(Digits,2))</code> if the gradient is not provided it is calculated as <code>(f(x+e_i*dx)-f(x-e_i*dx))/2/dx</code>;</li>
+ <li><code>onesidegradient::boolean:=false</code> if true the gradient is calculated as <code>(f(x+e_i*dx)-f(x))/dx</code>;</li>
+ <li><code>_rest</code> passed to matrix NLPSolve command
+    (see <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=Optimization%2fGeneral%2fMethods">Optimization/Methods</a>).</li>
+ </ul>
+ Standard NLPSolve has two problems: it cannot compute numerical gradient and requires too complicated input for the gradient.</li>
+
+<hr>
+<li><code>HessianByGradient(n,g,x,/dx,{printout},$)::Matrix</code>
+ compute Hessian numerically by known gradient, where
+ <ul>
+ <li><code>n::posint</code> number of variables;</li>
+ <li><code>g::procedure</code> gradient, it takes an indexable object as its input and returns an indexable object as its output;</li>
+ <li><code>x::indexable</code> point at which Hessian will be calculated;</li>
+ <li><code>dx::positive:=10^(-iquo(Digits,3))</code> grid spacing.</li>
+ </ul></li>
+
+<hr>
+<li><code>PolynomialInterpolation1der(xydata,x,k,ypk)</code>
+ interpolating polynomial with fixed derivatives at one point, where
+ <code>xydata::list</code> of points <code>[xi,yi]</code> to be interpolated,
+ <code>x</code> is the polynom variable,
+ and <code>k::nonnegint</code> is the index of the point at which derivative <code>ypk</code> is given.
+ See also <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=PolynomialInterpolation">PolynomialInterpolation</a>.</li>
+
+<hr>
+<li><code>BezierControlPoints(x1,y1,p1,q1,k1,x4,y4,p4,q4,k4::realcons)</code>
+ find control points of a cubic Bezier curve, where
+ <code>x,y</code> is the endpoint,
+ <code>p,q</code> is the unit vector of velocity direction at endpoint (a velocity is <code>[xp,yp]=v*[p,q]</code>),
+ <code>k</code> is the curvature at endpoint <code>k=(xp*ypp-yp*xpp)/v^3</code>.
+ If the equation for absolute value of velocities at endpoints can not be solved,
+ then the "1/3" rule is applied: distance from endpoint to the nearest control point is set to 1/3 of distance between endpoints.</li>
+
+<li><code>BezierNodes(points,/B)::nodes</code>
+ interpolate derivative and curvature at <code>points::list</code> of <code>[x,y]</code>
+ with left and right boundary conditions <code>B::list:=[0,0]</code> encoded as follows:
+ <ul>
+ <li><code>0</code> end point is interpolated by polynomial of order 3 and its neighbor – by order 4;</li>
+ <li><code>1</code> one boundary point is removed from nodes;</li>
+ <li><code>2</code> two boundary points are removed from nodes;</li>
+ <li><code>3</code> derivative is provided as <code>args[3]</code>, end point is interpolated by polynomial of order 4;</li>
+ <li><code>4</code> derivative and curvature are provided as <code>args[3]</code> and <code>args[4]</code>.</li>
+ </ul>
+ The output <code>nodes</code> is the list of <code>[x,y,p,q,k]</code> as defined in <code>BezierControlPoints</code>.
+ Currently only curves defined by a single-valued function <code>y(x)</code> are implemented.
+ General parametric curves are not supported.
+ Internal points are interpolated by the fifth-order polynomial.
+ Thus two points at the left end and two points at the right end are boundaries.
+ To resolve boundary problem completely use either two extra points (code 2) or provide the derivative and curvature (code 4).
+ See also <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=CurveFitting/General/SplineConditions">Spline Continuity and End Conditions</a>.</li>
+
+<hr>
+<li><code>ExtrapolateMPE(X,$)::Vector</code>
+ minimal polynomial extrapolation of vector sequence given as columns of <code>X::Matrix</code>,
+ the output is the estimated limit of the sequence,
+ see [<a href="https://doi.org/10.1093/imanum/19.4.549">K Jbilou, H Sadok, IMA J Numer Anal 19, 549 (1999)</a>] and references therein.
+
+<hr>
+<li><code>Pearson4approx(mu,sigma,gamma,delta,output::string:="f",$)</code>
+ <a href="https://en.wikipedia.org/wiki/Pearson_distribution#The_Pearson_type_IV_distribution">Pearson type IV distribution</a>
+ defined by the four moments: mean value <code>mu</code>,
+ variance <code>sigma^2</code>, skewness <code>gamma</code>, and excess kurtosis <code>delta</code>.
+ The output is either distribution function or its parameters.</li>
+
+</ul>
+
+</body>
+</html>

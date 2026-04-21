@@ -10,11 +10,21 @@
 
 <p>See examples in <code>Express.mw</code></p>
 
+<h2>Notations</h2>
+<ul>
+<li><code>e</code> algebraic expression</li>
+<li><code>z::name</code> indeterminate</li>
+</ul>
+
 <h2>Procedures</h2>
 <ul>
 
 <li><code>simplifyradical=e->if(has(e,I),applytoRe/Im,signum(e)*sqrt(expand(rationalize((radnormal(e)^2)))))</code>
- a patch for standard simplify command.</li>
+ a patch for standard <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=simplify">simplify</a> command.</li>
+
+<hr>
+<li><code>fullparfrac2(e,z::name,$)</code>
+ a patch for standard <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=convert%2Ffullparfrac">fullparfrac</a> command.</li>
 
 <hr>
 <li><code>coeffs2(e,vars::list,$)::list([p1,...,pN,c])</code>
