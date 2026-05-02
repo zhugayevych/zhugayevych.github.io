@@ -8,20 +8,20 @@
 </head>
 <body>
 
-<h1>Maple 14-17 bugs and problems</h1>
-
-<h2 style="color: red">Major problems</h2>
-<ul>
-<li>If mserver crashes (<em style="color: red">it always crashes upon an external call crash</em>), Maple application cannot be closed normally.
- Maple allows you to save your worksheet but in fact <em style="color: red">does not save it</em>!
+<p><em style="color: red">Severe problem of all versions</em>:
+ If "Interrupt the current operation" does not work (that is usual for long computations)
+ or mserver crashes (that is usual upon an external call crash),
+ Maple application cannot be closed normally.
+ Maple allows you to save your worksheet but in fact <em style="color: red">does not save it</em>.
  Fortunately, Maple saves the current version of the worksheet as .sav file, but unfortunately <em style="color: red">that file is incomplete</em> (the last section is missing)!
  The solution is as follows:
  1) Make sure that .sav file is generated;
  2) Kill all Maple programs;
  3) Rename .sav and _MAS files otherwise they will be overwritten next time you open your worksheet in Maple.
  4) Use the last saved version of the worksheet or _MAS file as your restore point.
- 5) Use .sav file to copy the last-minute changes if any.</li>
-</ul>
+ 5) Use .sav file to copy the last-minute changes if any.</p>
+
+<h1>Maple 14-17 bugs and problems</h1>
 
 <h2>List of detected problems</h2>
 <ul>
