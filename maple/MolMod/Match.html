@@ -24,7 +24,7 @@
 <h2>Procedures</h2>
 <ul>
 
-<li><code>Superimpose(A1,A2,/perm2,{massweighted,isotopes,weights, det,axis,cellonly,translateonly,unorderedtvs, raiseerror,output,printout},$)</code>
+<li><code>Superimpose(A1,A2,/perm2,{massweighted,isotopes,weights, det,axis,cellonly,translateonly,addtmap,unorderedtvs, raiseerror,output,printout},$)</code>
  superimpose two chemically identical molecules (or list of points) to minimize the mean square distance between them,
  <ul>
  <li><code>perm2::list(posint):=[$1..nops(A2)]</code> actually <code>A2[perm2]</code> is used to determine the required linear transformation;</li>
@@ -33,8 +33,9 @@
  <li><code>weights::Vector:=Vector(nops(A1),1)</code> self-explanatory;</li>
  <li><code>det::{-1,0,1}:=0</code> the sign of the determinant of the rotation matrix, if 0 the best matching transformation is returned;</li>
  <li><code>axis::{undefined,Vector(3)}:=undefined</code> fixed rotation axis;</li>
- <li><code>cellonly::boolean</code> transform cell only including retranslation of atoms;</li>
- <li><code>translateonly::boolean</code> self-explanatory;</li>
+ <li><code>cellonly::boolean</code> only rotate cell and retranslate atoms;</li>
+ <li><code>translateonly::boolean</code> only retranslate atoms;</li>
+ <li><code>addtmap::list:=[]</code> provides tmap in case if atoms are given in lattice coordinates;</li>
  <li><code>unorderedtvs::boolean</code> use <code>SuperimposeM</code> to align translation vectors,
   otherwise are rotated in such a way that the first vectors are fully aligned and the second vectors are aligned "in plane";</li>
  <li><code>raiseerror::boolean</code> raise error instead of warning.</li>
