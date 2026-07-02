@@ -5,8 +5,8 @@
 #SBATCH -N 1
 #SBATCH --cpus-per-task=1     ## number of OMP threads per MPI task = 1 for VASP
 #SBATCH --ntasks-per-core=1   ## no hyperthreading
-#SBATCH --ntasks-per-node=72  ## number of MPI processes = number of cores in VASP
-#SBATCH --mem=200G
+#SBATCH --ntasks-per-node=128 ## number of MPI processes = number of cores in VASP
+#SBATCH --mem=480G
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK  ## must be 1 for VASP to accept user-provided NCORE
 
@@ -29,7 +29,7 @@ hostname
 date
 
 module purge
-module load vasp/6.4.2
+module load vasp/6.5.1
 
 mkdir -p $RUNDIR
 cp $JOBDIR/* $RUNDIR/

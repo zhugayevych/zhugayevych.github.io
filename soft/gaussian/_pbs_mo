@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH -o %x.e%j
 #SBATCH -e %x.e%j.err
+#SBATCH -t 24:00:00
 #SBATCH -N 1        ## --nodes=
-#SBATCH -c 32       ## --cpus-per-task=
-#SBATCH -t 36:00:00
+#SBATCH -c 64       ## --cpus-per-task=
 #SBATCH --ntasks-per-node=1
-#SBATCH -p CPU_Std32
+#SBATCH --mem=0     ## max 770000 MB
 
-ulimit -s unlimited
-ulimit -t unlimited
+#ulimit -s unlimited
+#ulimit -t unlimited
 
 echo 'JOB_NAME' $SLURM_JOB_NAME
 echo 'JOB_ID' $SLURM_JOB_ID
@@ -16,12 +16,11 @@ echo 'JOB_CPUS_PER_NODE' $SLURM_JOB_CPUS_PER_NODE
 hostname
 date
 
-#module load gaussian/g16
-export g16root=/sw/linux/gaussian/g16
-. $g16root/g16/bsd/g16.profile
+export g16root=/otter/u/dsa/bin/gaussian
+source $g16root/g16/bsd/g16.profile
 
 export GAUSS_PDEF=${SLURM_CPUS_PER_TASK}
-export GAUSS_SCRDIR=/usr/scratch/$SLURM_JOB_USER/$SLURM_JOB_ID
+export GAUSS_SCRDIR=/otter/ptmp/$SLURM_JOB_USER/$SLURM_JOB_ID
 echo 'GAUSS_PDEF' $GAUSS_PDEF
 echo 'GAUSS_SCRDIR' $GAUSS_SCRDIR
 
@@ -36,18 +35,12 @@ g16 < $SLURM_JOB_NAME.gau >> $SLURM_JOB_NAME.out
 
 ./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.evl evl
 ./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.evc evc
-./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.514 514
-./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.733 733
-./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.745 745
-./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.746 746
+./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.s1e s1e
 
 rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.out $LOCAL_DIR
 rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evl $LOCAL_DIR
 rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evc $LOCAL_DIR
-rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.514 $LOCAL_DIR
-rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.733 $LOCAL_DIR
-rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.745 $LOCAL_DIR
-rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.746 $LOCAL_DIR
+rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.s1e $LOCAL_DIR
 rm -rf $GAUSS_SCRDIR
 date
 if [[ ! -s ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err ]]; then rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err; fi

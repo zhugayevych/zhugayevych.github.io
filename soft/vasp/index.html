@@ -13,7 +13,7 @@
  <a class="h" href="../../../Sys/Software/vasp/">R</a></span>
  &nbsp;
  <a href="http://www.vasp.at">website</a>,
- discussed version: 5.4.4 and 6.3.1</p>
+ discussed version: 6.5.1</p>
 
 <p class="si">Credits: Sergey Matveev and Victor Vysotskiy (installation, scripts), Dmitry Aksenov (guidelines, scripts)</p>
 
@@ -23,10 +23,9 @@
 <li>To generate input files locally unzip pseudopotentials to a desired program folder, I use <code>C:/Sci/vasp</code>.
  Note that individual files may be compressed &ndash; decompress them.</li>
 <li>Job submission scripts:
- <a href="_pbs_raven">Raven cluster</a>,
- <a href="_pbs_magnus">Magnus cluster</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub vasp/_pbs -N test1</code></li>
+ <a href="_pbs">SLURM</a></li>
 <li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -c 16 -t 24:00:00 vasp/_pbs</code>
+<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub vasp/_pbs -N test1</code></li>
 <br>or: <code>sbatch -J test1 --ntasks-per-node=16 --mem=32gb vasp/_pbs</code></li>
 <li>Sample input files: <a href="test1.zip">zip</a></li>
 </ul>

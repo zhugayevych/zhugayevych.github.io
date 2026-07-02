@@ -13,19 +13,18 @@
  </span>
  &nbsp;
  <a href="http://www.gaussian.com">website</a>,
- discussed version: G16 A.03</p>
+ discussed version: G16 B.01</p>
 
-<p class="note">Credits: Sergey Matveev and Victor Vysotskiy (installation, scripts)</p>
+<p class="note">Credits: Sergey Matveev, Victor Vysotskiy, and Denis Andrienko (installation, scripts)</p>
 
 <h2>Installation: Linux</h2>
 <ul>
 <li>Locate executables, edit your user initialization file, create <code>gaussian</code> directory, and learn how to submit a job.</li>
 <li>Job submission scripts:
- <a href="_pbs_thinc">thinc cluster</a> (<a href="_pbs_mo_thinc">MO</a>, <a href="_pbs_mo2_thinc">MO2</a>, <a href="_pbs_no_thinc">NO</a>, <a href="_pbs_mopbc_thinc">MOPBC</a>, <a href="_pbs_fmo_thinc">FMO</a>),
- <a href="_pbs_magnus">Magnus cluster</a>,
- <a href="_pbs_arkuda">MOAB example</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub gaussian/_pbs -N test1 -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
+ <a href="_pbs">SLURM</a> (<a href="_pbs_mo">MO</a>, <a href="_pbs_mo2">MO2</a>, <a href="_pbs_no">NO</a>, <a href="_pbs_mopbc">MOPBC</a>, <a href="_pbs_fmo">FMO</a>),
+ <a href="_pbs_MOAB">MOAB</a></li>
 <li><a href="http://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> submission command: <code>sbatch -J test1 -c 8 -t 12:00:00 gaussian/_pbs</code></li>
+<li><a href="http://en.wikipedia.org/wiki/Portable_Batch_System">PBS</a> submission command: <code>qsub gaussian/_pbs -N test1 -l nodes=1:ppn=4,mem=13gb,ddisk=40gb,walltime=25:00:00,feature=avx,epilogue=$HOME/bin/epilogue.sh -q batch</code></li>
 <li>Example of Gaussian run script without PBS: <a href="_run">example</a></li>
 <li>Sample input file: <a href="test1.gau">test1.gau</a></li>
 </ul>
