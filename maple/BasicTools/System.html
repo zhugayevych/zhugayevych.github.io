@@ -61,12 +61,13 @@
  is to create multiple copies of a module, that is not supported in Maple.</li>
 
 <hr>
-<li><code>ProcessSetupArgs(lsargs,variables,/constants,suffix,$)</code>
+<li><code>ProcessSetupArgs(lsargs,variables,/constants,assignedvars,suffix,$)</code>
  process Setup arguments, where
  <ul>
  <li><code>lsargs::list</code> of keywords or initializing equations for them exactly as in <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=interface">interface</a> command;</li>
  <li><code>variables::list(name)</code> known variables;</li>
  <li><code>constants::list(name):=[]</code> known constants (cannot be changed);</li>
+ <li><code>assignedvars::name:=undefined</code> to output list of assigned variables;</li>
  <li><code>suffix::string:=""</code> to avoid name conflicts, see examples.</li>
  </ul>
  Note that keywords values are not checked!</li>
