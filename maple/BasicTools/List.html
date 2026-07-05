@@ -55,6 +55,12 @@
  In contrast to <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=ListTools/LengthSplit">ListTools[LengthSplit]</a>
  the rest of <code>L</code> is ignored.</li>
 
+<hr>
+<li><code>GetBox(L,/R,$)::x1,x2,y1,y2,z1,z2,...</code>
+ get boundaries of <code>L::list(list)</code> of vectors or lists,
+ where <code>R::{numeric,list(numeric)}:=0</code> are relative extensions of the box,
+ so that e.g. <code>x1:=x1-R[1]*(x2-x1)</code></li>
+
 </ul>
 
 </body>
