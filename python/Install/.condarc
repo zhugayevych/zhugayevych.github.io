@@ -1,2 +1,0 @@
-proxy_servers:
-   http: http://proxyout.lanl.gov:8080

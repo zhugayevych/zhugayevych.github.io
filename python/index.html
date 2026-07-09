@@ -9,59 +9,58 @@
 <p><span class="h">
  <a class="h" href="./">F</a>
  <a class="h" href="../../Lib/Math/CompMath/Python/index.html">L</a>
- <a class="h" href="file:///C:/Sci/Anaconda3/">P</a>
+ <a class="h" href="../../AppData/Local/Python/">P</a>
  <a class="h" href="../../Sci/Math/CompMath/Python/index.html">S</a></span>
  &nbsp;
- <a href="http://www.python.org">www</a>
- <var>ver:</var>3
+ <a href="https://www.python.org">www</a>
+ <var>ver:</var>3.12.10
  </p>
 
-
-<h2>Installation of <a href="https://www.anaconda.com/distribution/">Anaconda</a> distribution</h2>
+<h2>Installation on Windows 11</h2>
 <ul>
-<li>Add Anaconda root and scripts folders to system PATH.</li>
-<li>To launch IPython use one of these methods:
- <ul>
- <li>For Windows create and run ipystart.bat using three templates:
-  <a href="Install/ipystart_C.bat">ipystart_C.bat</a>, <a href="Install/ipystart_home.bat">ipystart_home.bat</a>, <a href="Install/ipystart_cdir.bat">ipystart_cdir.bat</a>
- (remove "no-browser" option if needed).</li>
- <li>Use Anaconda Launcher.</li>
- <li>Run <code>jupyter notebook</code> from command line.</li>
- </ul>
- Keep Jupyter running.</li>
-<li>To open a notebook use one of these methods:
- <ul>
- <li>Open a browser at <a href="http://localhost:8888/tree">localhost:8888/tree</a> and locate your notebook there.</li>
- <li>To enable double-click opening, edit and run <a href="Install/FileAssoc.reg">FileAssoc.reg</a>,
-  edit and compile <a href="Install/ipy.f90">ipy.f90</a>.</li>
- </ul></li>
-<li>Periodically run <code>conda clean --all</code></li>
-<li>Sometimes root folder (C:) is not readable by Jupyter browser. In this case start IPython from readable folder and modify ipy.f90 appropriately.</li>
-<li>Add <code>conda-forge</code> channel</li>
-<li>To update Anaconda see <a href="https://docs.anaconda.com/anaconda/install/update-version/">these instructions</a>, i.e. in Anaconda Prompt run:
- <ul>
- <li><code>conda update conda</code></li>
- <li><code>conda update anaconda</code></li>
- <li><code>conda update -n nameofenvironment --all</code></li>
- </ul></li>
-</ul>
-
-<h2>Packages</h2>
-<ul>
-<li><a href="http://github.com/amatgroup/MolMod">MolMod</a> &ndash; molecular and crystal modeling (you can download it also <a href="MolMod.zip">here</a>)</li>
-<li><a href="http://github.com/dimonaks/siman">Siman</a> by Dmitry Aksenov &ndash; supports calculations in VASP and Abinit</li>
-</ul>
-
-<h2>Notebooks</h2>
-<ul>
-<li><a href="MolModApp.zip">MolModApp</a> &ndash; sample scripts for geometry optimization and single point calculations in Gaussian on a remote machine using MolMod package</li>
+<li>Install from <a href="https://www.python.org/downloads/windows/">python.org</a></li>
+<li>Python automatically adds the launcher <code>py.exe</code> to PATH.
+ To run installed scripts, ensure the following directory is on PATH:<br>
+<code>C:\Users\username\AppData\Local\Python\pythoncore-3.12-64\Scripts</code></li>
+<li>Check installation by running <code>py --version</code> from command line.
+ List installed Python interpreters by <code>py -0p</code></li>
+<li>Package management:<code>
+<br>py -m pip show packagename
+<br>py -m pip install packagename
+<br>py -m pip uninstall packagename
+<br>py -m pip install --upgrade packagename
+<br>py -m pip install --no-deps --force-reinstall packagename</code>
+<br>where packagename is either full name or "." from project root.
+ Packages are kept <a href="../../AppData/Local/Python/pythoncore-3.12-64/Lib/site-packages/">here</a>.
+ Verify import by: <code>py -c "import packagename; print(packagename.__file__)"</code></li>
+<li>To install packages requiring compilation (phonopy, spglib, symfc)
+ install Visual Studio Build Tools (not full VS) with the workload "Desktop development with C++",
+ critically important components are CMake, MSVC v143 build tools, Windows 11 SDK.
+ Make sure CMake and MVSC system folders are added to PATH.
+ Check by <code>cmake --version</code></li>
+<li>To launch <a href="https://jupyter.org">JupyterLab</a> in Edge
+ at <a href="http://localhost:8888/tree">localhost:8888/tree</a> run <code>py -m jupyterlab</code>.
+ Check available kernels by <code>py -m jupyter kernelspec list</code> (should match the installed Python).</li>
+<li>Outdated instructions: For Windows create and run ipystart.bat using three templates:
+ <a href="Install/ipystart_C.bat">ipystart_C.bat</a>, <a href="Install/ipystart_home.bat">ipystart_home.bat</a>,
+ <a href="Install/ipystart_cdir.bat">ipystart_cdir.bat</a> (remove "no-browser" option if needed).
+ To enable double-click opening, edit and run <a href="Install/FileAssoc.reg">FileAssoc.reg</a>,
+ edit and compile <a href="Install/ipy.f90">ipy.f90</a>.</li>
 </ul>
 
 <h2>Tips and tricks</h2>
 <ul>
-<li>To use a package <code>XXX</code> without installing it, create <code>XXX.pth</code> file with path to that package in <code>Anaconda3/Lib/site-packages</code> folder</li>
-<li>Package installation from terminal: <code>conda install --channel matsci pymatgen</code></li>
-<li>Linters: <a href="https://nbqa.readthedocs.io">nbQA</a></li>
+<li><a href="scipacks.html">Short list of packages useful for a computational materials scientist</a></li>
+<li>To use a package <code>XXX</code> without installing it, create <code>XXX.pth</code> in <code>.../Lib/site-packages</code> containing the path to the package.</li>
+<li>Linters for IPython: <a href="https://nbqa.readthedocs.io">nbQA</a></li>
+<li>Maintain your own packages using <code>pyproject.toml</code> instead of <code>setup.py</code>.</li>
+<li>Consider <a href="https://marimo.io">marimo</a> as Python notebooks environment.</li>
+</ul>
+
+<h2>My personal packages and notebooks</h2>
+<ul>
+<li><a href="MolMod.zip">MolMod</a> &ndash; molecular and crystal modeling.</li>
+<li><a href="MolModApp.zip">MolModApp</a> &ndash; sample scripts for geometry optimization and single point calculations in Gaussian on a remote machine using MolMod package.</li>
 </ul>
 
 </body>
