@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Geometry: Symmetry</title>
+</head>
+<body>
+<h1>Geometry: Symmetry</h1>
+
+<p>See examples in <code>Symmetry.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>A::list</code> list of atoms</li>
+<li><code>C::list</code> list of unit cell parameters (<code>SG=C[7]</code>)</li>
+<li><code>GSG::{string,list}</code> symmetry group name or list of group elements</li>
+<li><code>tvzero::numeric:=tvzero9</code> passed to 'M2cryst'</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>SymmetrizeCell(A,C,/axes,symdev,{base,printout},$)::A,C</code>
+ symmetrize lattice parameters and unit cell,
+ <ul>
+ <li><code>axes::{12,21,13,31,23,32}:=12</code> see 'DecodeAxes';</li>
+ <li><code>symdev::[numeric,numeric,numeric]:=[1e-4,1e-3,1e-4]</code> max deviations for cell lengths (relative), angles, and lattice coordinates (absolute);</li>
+ <li><code>base::integer:=0</code> atomic positions are rounded to this base, zero means automatic determination of base, negative value forbids rounding.</li>
+ </ul></li>
+
+<hr>
+<li><code>SymmetrizeAtoms(A,GSG,/PorA,axes,maxdev,{output,offset,scale, cellsymmetry,cellaxes,symdev,
+ axesaxes,originalcell,tvzero,addtmap,zeroM,codM,opt4ReshapeCell,opt4Atoms2Cell,cryst2Mpars,
+ digits,dmax,ref,monomers,nowarning,printout,linewidth,xyzfile},$)</code>
+ symmetrize set of atoms,
+ <ul>
+ <li><code>addtmap::list:=[]</code> add tmap in case if atoms are given in lattice coordinates;</li>
+ <li><code>axes::{123,231,321,132,312,213,Matrix}:=123</code> transformation of atoms to a coordinate system of the symmetry group, e.g. 231 means that [0,0,1] will be transformed into [0,1,0];</li>
+ <li><code>axesaxes::integer:=1212</code> used in <code>cryst2M@SymmetrizeCell@M2cryst</code> chain of operations;</li>
+ <li><code>cellsymmetry::string:=`if`(type(symmetry,string),symmetry,""),cellaxes,symdev</code> passed to <code>SymmetrizeCell</code>;</li>
+ <li><code>codM::nonnegint:=0,zeroM::numeric:=-1</code> shortcuts for special <code>opt4ReshapeCell</code>;</li>
+ <li><code>cryst2Mpars::list:=[]</code> passed as additional cell parameters to 'M2cryst';</li>
+ <li><code>dmax::numeric:=0.1</code> only the largest and all larger than <code>dmax</code> deviations are printed;</li>
+ <li><code>linewidth::posint:=80</code> for printing;</li>
+ <li><code>maxdev::numeric:=0.2</code> maximum allowed deviation of the transformed atoms from the original;</li>
+ <li><code>monomers::{integer,list(list(posint))}:=[]</code> treat monomers with 'FG_apl' instead of 'FG_app', a <code>posint</code> means number of atoms in the monomer, a <code>negint</code> means order of the monomer's stabilizator;</li>
+ <li><code>nowarning::boolean:=evalb(output="b")</code> concerns <code>maxdev</code>;</li>
+ <li><code>offset::list:=[]</code> for 'FG_app' including augmented dimensions (offset for 'Atoms2Cell' is be provided in <code>opt4Atoms2Cell</code>);</li>
+ <li><code>opt4Atoms2Cell::list:=[]</code> passed to 'Atoms2Cell';</li>
+ <li><code>opt4ReshapeCell::list:=`if`(zeroM>=0,['zero'=zeroM],`if`(codM>0,[codM],[]))</code> passed to 'ReshapeCell' during 'Atoms2Cell' conversion;</li>
+ <li><code>originalcell::boolean</code> do not transform original cell (otherwise it is symmetrized and canonized);</li>
+ <li><code>PorA::list:=[]</code> list of permutations in full correspondence with symmetry operations or etalon system from which the correct permutations can be derived;</li>
+ <li><code>ref::list:=[]</code> reference fundamental domain;</li>
+ <li><code>scale::numeric:=0</code> scale atomic coordinates for <code>maxdev</code>, <code>dmax</code>, and <code>xyzfile</code>, the deafult value for space groups is 5;</li>
+ <li><code>xyzfile::string:=cat(tmpfld,"_tmp.xyz")</code> name of file to which all the transformers are written if printout.</li>
+ </ul>
+ The <code>output::string:="a"</code> is a string of characters:
+ <ul>
+ <li><code>1</code> unfolded fundamental domain with coordinates of 1st replica;</li>
+ <li><code>a</code> symmetrized atoms;</li>
+ <li><code>b</code> true/false if the list "f" is empty/nonempty;</li>
+ <li><code>d</code> fundamental domain;</li>
+ <li><code>f</code> list of <code>[i,maxdev,MSD]</code> for every symmetry operator <code>g[i]</code> for which <code>maxdev</code> test fails;</li>
+ <li><code>g</code> generators as list, such that <code>g[i]</code> gives symmetry group member generating i-th atom from 1st replica;</li>
+ <li><code>m</code> RMSD between average and input geometries;</li>
+ <li><code>o</code> orbits (indexes);</li>
+ <li><code>p</code> list of permutations <code>P</code> such that <code>G[i].A[P[i]]=A</code>.</li>
+ </ul>
+ Note that this command does not detect orbits, therefore to increase efficiency, label atoms from different orbits differently.</li>
+
+<hr>
+<li><code>UnfoldBySymmetry(A,GSGorC,/maxdev,offset,{fd1st,primitive},$)::A, opt M</code>
+ unfold full set of atoms from fundamental domain (asymmetric unit),
+ <ul>
+ <li><code>GSGorC::{string,list}</code> symmetry group name, or list of group elements, or Cell;</li>
+ <li><code>maxdev::numeric:=1.1e-4</code> from ideal symmetry transformation;</li>
+ <li><code>offset::list({numeric,undefined}):=[]</code> for unit cell;</li>
+ <li><code>fd1st::boolean</code> alternative atom ordering in which fundamental domain goes first;</li>
+ <li><code>primitive::boolean</code> unfold to primitive cell.</li>
+ </ul>
+ Note that if domain is not fundamental, atoms will be multiplied without a notice.</li>
+
+<hr>
+<li><code>UnfoldBySymmetryMol(mols,points,GSG,/mol2p,maxdev,offset,{printout},$)::mols2,FDm,ex</code>
+ unfold full set of molecules from fundamental domain,
+ <ul>
+ <li><code>mols::list(list)</code> list of molecules in fundamental domain;</li>
+ <li><code>points::list</code> unfolded list of reference points in unit cell;</li>
+ <li><code>mol2p::procedure:=Centroid</code> mapping of molecules to reference points, e.g. <code>A->A[3][2]</code>;</li>
+ <li><code>maxdev::numeric:=1e-4</code> for 'FGS_p2s';</li>
+ <li><code>offset::list(numeric):=[]</code> for 'FGS_init';</li>
+ <li><code>FDm::list(posint)</code> fundamental domain in the form of list of <code>mols</code> indexes;</li>
+ <li><code>ex::list(posint)</code> list of <code>mols</code> indexes for which no reference point were found in <code>points</code>.</li>
+ </ul></li>
+
+</ul>
+
+</body>
+</html>

@@ -42,9 +42,9 @@
  </ul>
  The <code>output::string:="a"</code> is a string of characters:
  <ul>
- <li><code>a</code> superimposed atoms <code>A2a=R.(A2-r2)+r1</code>;</li>
- <li><code>r</code> rotation matrix <code>R</code>;</li>
- <li><code>1,2</code> center of mass of the first <code>r1</code> and second <code>r2</code> molecule;</li>
+ <li><code>a</code> superimposed atoms <code>A2a=R.A2+t</code>;</li>
+ <li><code>r,t</code> rotation matrix and translation vector <code>R,t</code>;</li>
+ <li><code>1,2</code> center of mass of the first <code>r1</code> and second <code>r2</code> molecule (<code>t=r1-R.r2</code>);</li>
  <li><code>d,D</code> RMSD and RMSD*sqrt(W);</li>
  <li><code>e,f</code> largest deviation and vector of all deviations;</li>
  <li><code>m,v</code> matrix <code>M</code> (see the code) and its eigenvalues;</li>

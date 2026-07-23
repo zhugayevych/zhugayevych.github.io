@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Geometry: Modify</title>
+</head>
+<body>
+<h1>Geometry: Modify</h1>
+
+<p>See examples in <code>Modify.mw</code></p>
+
+<h2>Notations</h2>
+<ul>
+<li><code>A::list</code> geometry to modify</li>
+<li><code>tA::list</code> transformed geometry</li>
+<li><code>Co::list:=[]</code> conectivity</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>TransformAtoms(A,R,/t,J,$)::tA</code>
+ transforms atoms as <code>R.A+t</code>,
+ <ul>
+ <li><code>R::{Matrix,numeric,list}</code> transformation matrix or scalar, a list is considered as the matrix diagonal;</li>
+ <li><code>t::Vector:=&lt;0,0,0&gt;</code> translation, if Tvs are present in <code>A</code> then <code>t</code> is transformed to Cartesians by those Tvs;</li>
+ <li><code>J::list:=[0]</code> list of atoms to transform.</li>
+ </ul>
+ Note that <code>R</code> is applied to Tvs whereas <code>t</code> is not.</li>
+
+<hr>
+<li><code>ChangeDihedral(A,lsi,val,/Co,{opt4CA,frags},$)::tA</code>
+ change dihedral or improper, where
+ <ul>
+ <li><code>lsi::[posint,posint,posint,posint]</code> defines the dihedral;</li>
+ <li><code>val::numeric</code> value of the dihedral to set;</li>
+ <li><code>Co::Vector:=`if`(nops(A[1])>3,map2(op,4,A),ConnectAtoms(A,op(opt4CA)))</code> connectivity;</li>
+ <li><code>opt4CA::list:=[]</code> options for generating <code>Co</code>;</li>
+ <li><code>frags::[list(posint),list(posint)]:=[[],[]]</code> explicitly provide fragments (e.g. if dihedral is locked), set <code>Co=[]</code> to speed up.</li>
+ </ul>
+ The dihedral is assumed to be defined across the bond whose removal divide the molecules in two diconnected fragments at least.
+ The same connectivity rule applies to impropers.</li>
+
+<hr>
+<li><code>JoinMol(mols,joints,/dets,rcov,{output,printout},$)</code>
+ join molecules, where
+ <ul>
+ <li><code>mols::list(list)</code> list of list of atoms;</li>
+ <li><code>joints::list([m1,[i1,j1,k1],[i2,j2,k2],d,b])</code> list of joints, where
+  <ul>
+  <li><code>m1::integer</code> index of molecule to which the current molecule <code>m2</code> is to be attached (negative values are counted from <code>m2</code>),</li>
+  <li><code>i1::integer</code> index of atom from molecule <code>m1</code> to which the attachment is to be made,</li>
+  <li><code>j1::integer</code> additional atom from molecule <code>m1</code> to define the connecting dihedral,</li>
+  <li><code>k1::integer</code> terminal atom from molecule <code>m1</code> to be removed,</li>
+  <li><code>i2,j2,k2::integer</code> the same for molecule <code>m2</code>,</li>
+  <li><code>d::numeric</code> value of the dihedral <code>(j1,i1,i2,j2)</code> to set,</li>
+  <li><code>b::numeric</code> bond length <code>(i1,i2)</code> to set (if omitted then covalent bond length is used);</li>
+  </ul></li>
+ <li><code>dets::list({1,-1}):=[1$nops(molecules)]</code> if -1 then the corresponding molecule is inverted;</li>
+ <li><code>rcov::list(string=numeric):=[]</code> supersedes tb_rcov for overlapping entries;</li>
+ <li><code>output::string:="a"</code> "a" for transformed atoms, "j" for the formed joints.</li>
+ </ul>
+ Only tree-like growth is allowed (no loops).</li>
+
+<hr>
+<li><code>AttachPoints(P,b,n,{a34},$)::newpoints</code>
+ attach <code>n=1..3</code> new points to the first point of <code>P::list(Vector(3))</code>
+ at the bond length <code>b</code> in such a way as to maximize distance between points in the first coordination shell.
+ Minimum 2 points are required in <code>P</code>.
+ If the coordination shell is complete (e.g. 4 atoms in tetrahedron or 6 atoms in octahedron),
+ the new atom is added at the location of the first point.
+ Here <code>a34::realcons:=0</code> is the angle between 3rd and 4th points if different from the perfect tetrahedron.</li>
+
+<hr>
+<li><code>AliphaticDihedrals(A,/T,{atoms14,printout,printxyz,overwrite},$)::list([posint$4])</code>
+ determine all aliphatic dihedrals, where
+ <ul>
+ <li><code>T::list:=["CC2H2"]</code> which atoms types are allowed for the two central atoms of the dihedral, see <code>ClassifyAtoms</code> command;</li>
+ <li><code>atoms14::list:=["C"]</code> which elements are allowed for the two terminal atoms of the dihedral;</li>
+ <li><code>printxyz::string:=""</code> aliphatic chains will be saved to this file.</li>
+ </ul>
+ If multiple definitions of the same dihedral are found an error is raised.</li>
+
+<li><code>Alkane(n,{CC:=1.527,CCC:=113.46,CH:=1.099,HCH:=105.98,CCH:=111.55},$)::Atoms</code>
+ generate linear alkane of <code>n</code> carbons.
+ Default values of geometrical parameters correspond to CAM-B3LYPp2p.</li>
+
+<li><code>SortAlkane(A,i0,/convention,Co,{printout},$)::permutation</code>
+ sort alkane atoms using <code>A[i0]</code> as the root hydrogen.
+ Three conventions are supported <code>convention::{"line","loop","zigzag"}:="loop"</code>, see examples.</li>
+
+</body>
+</html>
