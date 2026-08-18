@@ -1,38 +1,43 @@
 #!/bin/bash
-#SBATCH -o %x.e%j
-#SBATCH -e %x.e%j.err
+#SBATCH -o %x.o%j
+#SBATCH -e %x.e%j
 #SBATCH -t 24:00:00
-#SBATCH -N 1        ## --nodes=
-#SBATCH -c 64       ## --cpus-per-task=
-#SBATCH --ntasks-per-node=1
-#SBATCH --mem=0     ## max 770000 MB
+#SBATCH -N 1       # nodes
+#SBATCH --ntasks-per-node=1  # or maybe --ntasks=1
+#SBATCH -c 64      # cpus-per-task, physical cores, min 8 to occupy 1 full NUMA CCD, max 64 for g16
+#SBATCH --mem=360  # max 750000MB>720GB, i.e. 45GB per 8 physical cores
+# Choose sharing constant n={1,2,4,8} and submit -c (64/n) --mem=(360/n)gb
+#  with Gaussian input file containing %nprocshared=(64/n) and %mem=(320/n)GB
+# Submit to s.otter except for heavy calculations which might require p.otter
+# Test (SP DFT 3000 cart basis fun) shows perfect scaling of g16 B01 to 64 cores
 
-#ulimit -s unlimited
-#ulimit -t unlimited
+ulimit -s unlimited      # Prevent stack overflow in deep Fortran/OpenMP calls
+ulimit -t unlimited      # Prevent shell-level CPU time limits
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK  # Should be 1 OpenMP thread per physical core
+export OMP_STACKSIZE=1G  # OpenMP per-thread stack headroom (min 16MB)
 
 echo 'JOB_NAME' $SLURM_JOB_NAME
 echo 'JOB_ID' $SLURM_JOB_ID
 echo 'JOB_CPUS_PER_NODE' $SLURM_JOB_CPUS_PER_NODE
+echo 'SLURM_CPUS_PER_TASK' $SLURM_CPUS_PER_TASK
+echo 'OMP_NUM_THREADS' $OMP_NUM_THREADS
 hostname
 date
 
 export g16root=/otter/u/dsa/bin/gaussian
 source $g16root/g16/bsd/g16.profile
 
-export GAUSS_PDEF=${SLURM_CPUS_PER_TASK}
-export GAUSS_SCRDIR=/otter/ptmp/$SLURM_JOB_USER/$SLURM_JOB_ID
-echo 'GAUSS_PDEF' $GAUSS_PDEF
-echo 'GAUSS_SCRDIR' $GAUSS_SCRDIR
-
 export LOCAL_DIR=~/gaussian
 
+export GAUSS_SCRDIR=/otter/ptmp/$SLURM_JOB_USER/$SLURM_JOB_ID
+echo 'GAUSS_SCRDIR' $GAUSS_SCRDIR
 mkdir -p $GAUSS_SCRDIR
 rsync -a $LOCAL_DIR/$SLURM_JOB_NAME.* $GAUSS_SCRDIR
-cd $GAUSS_SCRDIR
+cd $GAUSS_SCRDIR || exit 1
 
-g16 < $SLURM_JOB_NAME.gau >> $SLURM_JOB_NAME.out
+g16 $SLURM_JOB_NAME.gau $SLURM_JOB_NAME.out
 
 rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.* $LOCAL_DIR
 rm -rf $GAUSS_SCRDIR
 date
-if [[ ! -s ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err ]]; then rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err; fi
+if [[ ! -s ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID ]]; then rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID; fi

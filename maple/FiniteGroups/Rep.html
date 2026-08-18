@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Group representations</title>
+</head>
+<body>
+<h1>Group representations</h1>
+
+<p>See examples in <code>Rep.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>FG_orbit(G,p,/output,origin2::list:=origin,iszero,$)::list(p)</code>
+ returns orbit of point <code>p</code>,
+ where <code>iszero::procedure:=(x->evalb(FG_simplify(x)=0)</code> is 0-test function
+ and <code>output::string:="p"</code> is a string of single-character keys:
+ <ul>
+ <li><code>p</code> list of points;</li>
+ <li><code>i</code> list of indexes of elements of <code>G</code> which by acting on <code>p</code> reproduce the orbit;</li>
+ <li><code>M</code> matrix such that <code>G[M[j,k]].p=G[M[j,1]].p</code>,
+  so that <code>j</code> indexes orbit and <code>k</code> indexes stabilizer;</li>
+ <li><code>V</code> vector of integers mapping <code>G</code> to orbital index,
+  so that <code>V[M[j,k]]=j</code>;</li>
+ <li><code>g</code> orbit generators in the form <code>[i,t[1],...,t[nd]]</code>
+  where <code>i</code> is as defined above and <code>t</code>
+  is the additional translation moving the point to the unit cell;</li>
+ <li><code>h</code> stabilizer in the same format.</li>
+ </ul></li>
+
+<hr>
+<li><code>FG_RegRep(G,/p,iszero::procedure:=(x->evalb(FG_simplify(x)=0),$)::G'</code>
+ returns regular representation of group <code>G</code>, where
+ <code>p::{undefined,Vector,list(Vector)}:=undefined</code> is either an orbit or its seeding point.
+ This command has low efficiency and limited capability, use Sites and dimers subpackage instead.</li>
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Setup and auxilliary routines</title>
+</head>
+<body>
+<h1>Setup and auxilliary routines</h1>
+
+<p>See examples in <code>FiniteGroups.mw</code></p>
+
+<h2>Global variables</h2>
+<ul>
+<li><code>FG_simplify</code>
+ core procedure for all the simplifications of atomic objects.
+ If no radicals use <code>x->x</code>,
+ in the most cases <code>simplify@evalc</code> works well,
+ for complicated radicals try <a href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=radnormal">radnormal</a>.
+ It is applied to non-atomic objects by <code>FGS</code> command.</li>
+<li><code>FG_floor</code>
+ floor-procedure used for reduction of lattice coordinates to unit cell;
+ can be set directly or by <code>setfloordef()</code>, <code>setfloorfast()</code>, <code>setfloorback()</code>.</li>
+</ul>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>FiniteGroups[Setup]({printout})</code>
+ package setup similar to <a href="../BasicTools/Setup.html">BasicTools[Setup]</a>.</li>
+
+<hr>
+<li><code>FG_g2q(g,/pole,sf,$)::[det,axisorder,axis(3),translation(3)]</code>
+ encode symmetry operation, where '(3)' means sequence of three numbers,
+ <code>pole::Vector:=&lt;4,1,16&gt;</code> is used to orient <code>axis</code>,
+ and <code>sf::procedure:=(x->x)</code> is the simplification function
+ applied elementwise to <code>axis</code> before appyling <code>FGS</code>.</li>
+
+<hr>
+<li><code>FG_GFE(n,a,b,$)::G</code>
+ generating function of exceptional groups,
+ where <code>n::{2,3,5}</code> is the order and <code>a,b</code> are generators,
+ see Eq.(5.6) in <a href="../../handbooks.html">Handbook on Point Groups</a>.
+ Tested in <code>PointGroups.mw</code>.</li>
+
+</ul>
+
+</body>
+</html>

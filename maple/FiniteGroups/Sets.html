@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Manipulations with sets</title>
+</head>
+<body>
+<h1>Manipulations with sets</h1>
+
+<p>See examples in <code>Sets.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>FG_member(g,S,$)::nonnegint</code> returns the order number of element <code>g</code>
+ in <code>S</code> or zero if <code>S</code> does not contain <code>g</code>.</li>
+
+<li><code>FG_in(SS,S,$)::boolean</code> determine if <code>SS</code> is subset of <code>S</code>.</li>
+
+<li><code>FG_equal(S1,S2)::boolean</code> evaluate if <code>S1=S2</code>.</li>
+
+<li><code>FG_set(preS,$)::S</code> removes identical elements from <code>preS</code>.</li>
+
+<li><code>FG_prod(S1,S2,$)::preS</code> returns the elementwise product of two sets.</li>
+
+<li><code>FG_transform(S,T,$)::S</code>
+ transform each element of <code>S</code> by <code>g->Ti*g*T</code>.</li>
+
+</ul>
+
+</body>
+</html>

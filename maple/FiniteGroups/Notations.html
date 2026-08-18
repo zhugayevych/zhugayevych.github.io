@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Notations and notes</title>
+</head>
+<body>
+<h1>Notations and notes</h1>
+
+<h2>Package-wise notations</h2>
+<ul>
+<li><code>g,h::{Matrix,[Matrix,Vector]}</code> group element, <code>g*h</code> is group multiplication, <code>gi</code> is inverse.</li>
+<li><code>p::Vector</code> point of a linear space where the group acts, <code>g*p</code> is group action.</li>
+<li><code>nd=Dim2(g)[1]=Dim2(p)</code> matrix size or spatial dimension.</li>
+<li><code>nt::nonnegint</code> number of translation vectors.</li>
+<li><code>T::{Matrix,[Matrix,Vector],Vector}</code> transformation defined as <code>g'=Ti*g*T</code> and <code>p'=Ti*p</code> and <code>M'=M.T</code>.</li>
+<li><code>SG,PG,RG,LG::string</code> symmetry/space, point, rod, layer group name.</li>
+<li><code>G,H::list(g)</code> group.</li>
+<li><code>S::list(g)</code> any set of elements.</li>
+<li><code>preS::list(g)</code> repeating elements are allowed.</li>
+</ul>
+
+<h2>Notes</h2>
+<ul>
+<li>See sections Conventions and Frequently used code in <code>FiniteGroups.mw</code>.</li>
+<li>Currently implemented is matrix algebra only, other algebras can be added
+ by expanding <a href="GroupAlgebra.html">FG_GroupAlgebra</a> command.</li>
+<li>In many package commands it is assumed that <code>G[1]</code> is the unit element.</li>
+</ul>
+
+</body>
+</html>

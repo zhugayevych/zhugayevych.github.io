@@ -1,37 +1,38 @@
 #!/bin/bash
-#SBATCH -o %x.e%j
-#SBATCH -e %x.e%j.err
+#SBATCH -o %x.o%j
+#SBATCH -e %x.e%j
 #SBATCH -t 24:00:00
-#SBATCH -N 1        ## --nodes=
-#SBATCH -c 64       ## --cpus-per-task=
-#SBATCH --ntasks-per-node=1
-#SBATCH --mem=0     ## max 770000 MB
+#SBATCH -N 1       # nodes
+#SBATCH --ntasks-per-node=1  # or maybe --ntasks=1
+#SBATCH -c 64      # cpus-per-task, physical cores, min 8 to occupy 1 full NUMA CCD, max 64 for g16
+#SBATCH --mem=360  # max 750000MB>720GB, i.e. 45GB per 8 physical cores
 
-#ulimit -s unlimited
-#ulimit -t unlimited
+ulimit -s unlimited      # Prevent stack overflow in deep Fortran/OpenMP calls
+ulimit -t unlimited      # Prevent shell-level CPU time limits
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK  # Should be 1 OpenMP thread per physical core
+export OMP_STACKSIZE=512M  # OpenMP per-thread stack headroom (128/1024MB for light/heavy calculations)
 
 echo 'JOB_NAME' $SLURM_JOB_NAME
 echo 'JOB_ID' $SLURM_JOB_ID
 echo 'JOB_CPUS_PER_NODE' $SLURM_JOB_CPUS_PER_NODE
+echo 'SLURM_CPUS_PER_TASK' $SLURM_CPUS_PER_TASK
+echo 'OMP_NUM_THREADS' $OMP_NUM_THREADS
 hostname
 date
 
 export g16root=/otter/u/dsa/bin/gaussian
 source $g16root/g16/bsd/g16.profile
 
-export GAUSS_PDEF=${SLURM_CPUS_PER_TASK}
-export GAUSS_SCRDIR=/otter/ptmp/$SLURM_JOB_USER/$SLURM_JOB_ID
-echo 'GAUSS_PDEF' $GAUSS_PDEF
-echo 'GAUSS_SCRDIR' $GAUSS_SCRDIR
-
 export LOCAL_DIR=~/gaussian
 
+export GAUSS_SCRDIR=/otter/ptmp/$SLURM_JOB_USER/$SLURM_JOB_ID
+echo 'GAUSS_SCRDIR' $GAUSS_SCRDIR
 mkdir -p $GAUSS_SCRDIR
 rsync -a $LOCAL_DIR/$SLURM_JOB_NAME.* $GAUSS_SCRDIR
 rsync -a ~/bin/readdump $GAUSS_SCRDIR
 cd $GAUSS_SCRDIR
 
-g16 < $SLURM_JOB_NAME.gau >> $SLURM_JOB_NAME.out
+g16 $SLURM_JOB_NAME.gau $SLURM_JOB_NAME.out
 
 ./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.evla evla
 ./readdump $SLURM_JOB_NAME.rwf $SLURM_JOB_NAME.evlb evlb
@@ -47,4 +48,4 @@ rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.evcb $LOCAL_DIR
 rsync -a $GAUSS_SCRDIR/$SLURM_JOB_NAME.s1e $LOCAL_DIR
 rm -rf $GAUSS_SCRDIR
 date
-if [[ ! -s ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err ]]; then rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID.err; fi
+if [[ ! -s ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID ]]; then rm -f ~/$SLURM_JOB_NAME.e$SLURM_JOB_ID; fi

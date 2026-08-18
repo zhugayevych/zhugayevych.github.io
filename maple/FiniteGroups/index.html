@@ -3,15 +3,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../../soft.css">
-<title>Description of FiniteGroups package</title>
+<title>FiniteGroups package</title>
 </head>
 <body>
-<h2>Description of FiniteGroups package</h2>
-
-<p>by <a href="https://zhugayevych.me">Andriy Zhugayevych</a></p>
-<p>FiniteGroups is a package for manipulating discrete groups whose elements are represented as affine transformations.</p>
-<p>If you have comments, suggestions, or have found a bug, please <a href="mailto:azh@ukr.net">email me</a>.</p>
-<p>Tested for Maple 17 on Windows 7 and 10.</p>
+<h1>FiniteGroups package</h1>
+<p>FiniteGroups is a package for manipulating discrete groups such as space groups.</p>
+<p>Download
+ <a href="FiniteGroups.zip">source</a> or
+ <a href="FiniteGroups.zip">library</a> or
+ <a href="FiniteGroups.ini">ini-file</a>. Tested for Maple 2025.</p>
 
 <h2>Highlighted features</h2>
 <ul>
@@ -22,23 +22,67 @@
 <li>Sites and dimers: black-box construction of a <a href="https://cmsos.github.io/cmsos/TBH.html">tight-binding Hamiltonian</a>.</li>
 </ul>
 
-<h2>Installation</h2>
+<h2>Documentation</h2>
 <ul>
-<li>Download source files <a href="FiniteGroups.zip">FiniteGroups.zip</a>, unzip to any location, open <code>install.mw</code> and follow the instructions.</li>
-<li>Windows users: If failed to install or you don't need the source, download <a href="FiniteGroups_lib.zip">FiniteGroups_lib.zip</a> and unzip to Maple library folder <code>MapleXX/lib</code>.</li>
-<li>Experienced users: the package can be initialized by reading <a href="FiniteGroups.ini">FiniteGroups.ini</a> with Maple "read" command.</li>
-<li>The documentation is built into the Maple Help system. Individual help pages are also available as individual mw-files.</li>
+
+<li><a href="Notations.html">Notations and notes</a></li>
+
+<li><a href="Setup.html">Setup and auxiliary routines</a>
+(including <code>FG_simplify</code> and <code>FG_floor</code>)<code>
+<br>Setup,setfloordef,setfloorfast,setfloorback,FG_g2q,FG_GFE</code></li>
+
+<li><a href="GroupAlgebra.html">Group algebra</a><code>
+<br>FG_GroupAlgebra,FGS,FG_unit,FG_ident,FG_inv,FG_mul,FG_app,FG_appt,FG_apl,
+<br>unitcellon,unitcelloff,unitcellback</code></li>
+
+<li><a href="Sets.html">Manipulations with sets</a><code>
+<br>FG_member,FG_in,FG_equal,FG_set,FG_prod,FG_transform</code></li>
+
+<li><a href="Groups.html">Manipulations with groups</a><code>
+<br>FG_test,FG_testnumeric,FG_group,FG_mulTable,FG_invTable,FG_mulinvTable,
+<br>FG_cyclic,FG_orbitC,FG_factor,FG_testInvSG,FG_testSDP,FG_testDP</code></li>
+
+<li><a href="Rep.html">Group representations</a><code>
+<br>FG_orbit,FG_RegRep</code></li>
+
+<li><a href="FGR.html">Representations of predefined groups</a><code>
+<br>FGR_ChTb,FGR_RepU,FGR_RepU2,FGR_RepDec,FGR_Ch,FGR_RepDecCh,FGR_indexC,FGR_dimR</code></li>
+
+<li><a href="FGS.html">Sites and dimers</a><code>
+<br>FGS_init,FGS_get,FGS_correctit,FGS_correctost,FGS_it2g,FGS_g2it,FGS_inv,FGS_mul,
+<br>FGS_s2it,FGS_app,FGS_s2p,FGS_p2s,FGS_s2m,FGS_m2s,FGS_m2p,FGS_spick,
+<br>FGS_d2oost,FGS_d2oost1,FGS_d2oost2,FGS_dorb,FGS_dorb2,FGS_dpick,
+<br>FGS_dimersR,FGS_dimersR2,Encodesoost,Decodesoost</code></li>
+
+<li><a href="Tables.html">Group tables</a><code>
+<br>SymmetryGroup,PrintSymmetryElement,xyz2MV,SymmetryElement,
+<br>TransformationTable,FG_gens,FG_generate,kPoints,
+<br>HM2Scho,Scho2HM,PointGroupName,SpaceGroupName,LayerGroupName,RodGroupName,OtherGroupName,
+<br>SpaceGroupNumber,LayerGroupNumber,RodGroupNumber,ArithmeticClass,GeometricClass</code></li>
+
 </ul>
 
-<h2>Credits</h2>
+<h2>Notebooks of examples and gray-box solutions</h2>
 <ul>
-<li><a href="https://www.cryst.ehu.es">Bilbao Crystallographic Server</a> &ndash; group tables</li>
+<li><code>exam_PG.mw</code> &ndash; point groups.</li>
+<li><code>exam_SG.mw</code> &ndash; space groups.</li>
+</ul>
+
+<h2>References</h2>
+<ul>
+<li><a href="../../handbooks.html">Handbooks on Point Groups and Space Groups</a></li>
+<li><a href="https://www.cryst.ehu.es">Bilbao Crystallographic Server</a></li>
+<li>See also <a href="../../Lib/Math/AbsMath/Symmetry/index.html">Symmetry</a> in Library</li>
+</ul>
+
+<h2>Acknowledgements</h2>
+<ul>
 <li>Artem Naumov &ndash; rod groups</li>
 </ul>
 
 <h2>Requires implementation</h2>
 <ul>
-<li>Custom rememember table for SymmetryGroup because currently it regenerates groups instead of saving it to tbG table.</li>
+<li>Custom remember table for SymmetryGroup because currently it regenerates groups instead of saving it to tbG table.</li>
 <li>Symmetry groups in all ITA settings.</li>
 <li>Support of nonscalar objects such as multiple degenerate orbitals per site.</li>
 </ul>

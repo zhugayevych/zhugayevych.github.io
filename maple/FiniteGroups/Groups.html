@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Manipulations with groups</title>
+</head>
+<body>
+<h1>Manipulations with groups</h1>
+
+<p>See examples in <code>Groups.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>FG_test(S,{timing},$)::boolean</code> test if <code>S</code> is group.</li>
+
+<li><code>FG_testnumeric(S,p,$)::boolean</code> numerically test if <code>S</code> is group.</li>
+
+<li><code>FG_group(S,nmax,$)::G</code> generate matrix group from a given set
+ (unit element in <code>S</code> is not required), where <code>nmax::posint:=2*|S|</code>
+ is the maximun number of elements (technical limitation).</li>
+
+<li><code>FG_mulTable(G,$)::Matrix</code> calculate the multiplication table.</li>
+
+<li><code>FG_invTable(G,$)::Vector</code> calculate the inversion table.</li>
+
+<li><code>FG_mulinvTable(G,$)::Matrix,Vector</code>  calculate the multiplication and inversion tables
+ by faster algorithm; works only for rational elements (space groups).</li>
+
+<li><code>FG_cyclic(g,n,$)::preS</code> returns the set <code>g^i,i=0..n-1</code>.</li>
+
+<li><code>FG_orbitC(G,h,$)::S</code> returns the orbit of matrix <code>h</code>
+ by <code>g*h*gi</code> action for all <code>g</code> in <code>G</code> (conjugacy class).</li>
+
+<li><code>FG_factor(G,H,$)::S</code> is suppossed to return the right factor <code>G/H</code>,
+ but current implementation uses incorrect algorithm (a possible workaround is to use generators).</li>
+
+<li><code>FG_testInvSG(S,G,$)::boolean</code> test if <code>S</code> is invariant subgroup of <code>G</code>.</li>
+
+<li><code>FG_testSDP(G,G1,G0,$)::boolean</code> test if <code>G</code> is semidirect product
+ of <code>G1</code> and <code>G0</code> with <code>G0</code> being the invariant subgroup.</li>
+
+<li><code>FG_testDP(G,G1,G0,$)::boolean</code> test if <code>G</code> is direct product of <code>G1</code> and <code>G0</code>.</li>
+
+</ul>
+
+</body>
+</html>

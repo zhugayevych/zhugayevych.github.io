@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../soft.css">
+<title>Group algebra</title>
+</head>
+<body>
+<h1>Group algebra</h1>
+
+<p>See examples in <code>GroupAlgebra.mw</code></p>
+
+<h2>Procedures</h2>
+<ul>
+
+<li><code>FG_GroupAlgebra(setting)</code>
+ initializes group algebra including all commands listed below.
+ Currently implemented <code>setting::string</code> is
+ either "matrix" for matrix groups or "affine" for space groups.
+ Can be executed also by <code>Setup('setting'=setting)</code>.
+ Package-wise parameters influencing algebra for affine groups are
+ <ul>
+ <li><code>Setup('orthogonal'::boolean)</code> if true then matrix inversions are replaced by transpositions;</li>
+ <li><code>Setup('unitcell'::boolean)</code>
+  if true then all coordinates are reduced to unit cell with origin at origin;
+  can be set also by <code>unitcellon()</code>, <code>unitcelloff()</code>, <code>unitcellback()</code> commands;
+</li>
+ <li><code>Setup('origin'::[numeric$nt])</code> left boundary for lattice coordinate
+  for periodic dimensions or <code>onpd</code> constant for nonperiodic ones;
+  it does not influence improper translations in group elements which are always reduced to 0..1 interval.</li>
+ </ul></li>
+
+<hr>
+<li><code>FGS(g)::g</code> simplification procedure (relies on <a href="Setup.html">FG_simplify</a>).</li>
+
+<li><code>FG_unit(g)::g</code> returns the unit element.</li>
+
+<li><code>FG_ident(g1,g2:=0)::boolean</code> evaluate if <code>g1=g2</code>.</li>
+
+<li><code>FG_inv(g)::g</code> invert.</li>
+
+<li><code>FG_mul(g1,g2)::g</code> multiply.</li>
+
+<li><code>FG_app(g,p,origin2:=origin,unitcell2:=unitcell)::p</code> apply <code>g</code> to <code>p</code>.</li>
+
+<li><code>FG_appt(g,p,origin2:=origin)::p</code> translation vector moving <code>p</code> to unit cell, i.e. <code>FG_app(g,p,true)-FG_app(g,p,false)</code>.</li>
+
+<li><code>FG_apl(g,lsp,origin2:=origin,unitcell2:=unitcell)::lsp</code> apply the same translation vector to the list of points.</li>
+
+</ul>
+
+</body>
+</html>

@@ -12,9 +12,14 @@
 
 <h2>Procedures</h2>
 <ul>
-<li><code>BasicTools[Setup]({printout})</code> package setup taking <code>_rest</code>
- as sequence of keywords or initializing equations for them exactly as in
- <a href="https://www.maplesoft.com/support/help/view.aspx?path=interface">interface</a> command.
+<li><code>BasicTools[Setup]({InitTextFiles,printout})</code>
+ package setup taking <code>_rest</code> as sequence of keywords
+ or initializing equations for them exactly as in Maple
+ <a href="https://www.maplesoft.com/support/help/view.aspx?path=interface">interface</a> command
+ employing <a href="System.html">ProcessSetupArgs</a> command.
+ The list of recognized keywords (variables and constants) can be printed with <code>printout</code> option.
+ These keywords are explained in the description of their corresponding commands.
+ There is one special keyword-constant <code>version</code> common for all packages.
  Note that keyword values are not checked.
  Also, because many packages have their own Setup command, always use long name.</li>
 </ul>
