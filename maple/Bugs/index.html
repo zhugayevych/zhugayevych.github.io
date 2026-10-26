@@ -8,13 +8,15 @@
 </head>
 <body>
 
-<p><em style="color: red">Severe problem of all versions</em>:
- If "Interrupt the current operation" does not work (that is usual for long computations)
- or mserver crashes (that is usual upon an external call crash),
- Maple application cannot be closed normally.
- Maple allows you to save your worksheet but in fact <em style="color: red">does not save it</em>.
- Fortunately, Maple saves the current version of the worksheet as .sav file, but unfortunately <em style="color: red">that file is incomplete</em> (the last section is missing)!
- The solution is as follows:
+<p><em style="color: red">Severe problem of all versions</em>
+ is inability to save the worksheet during non-stopable computations
+ (including mserver crashes which are usual upon an external call crash).
+ In this case Maple application cannot be closed normally.
+ The "save" button is clickable but the worksheet is not saved.
+ Fortunately, some versions of Maple save the current version of the worksheet as .sav file,
+ but unfortunately that file is incomplete (the last section is missing).
+ There are two solutions. The first is to backup every couple of minutes.
+ The second is as follows:
  1) Make sure that .sav file is generated;
  2) Kill all Maple programs;
  3) Rename .sav and _MAS files otherwise they will be overwritten next time you open your worksheet in Maple.
@@ -42,6 +44,11 @@
 <li>Tickmarks settings are ignored sometimes [<a href="tickmarks.mw">example</a>].</li>
 <li>KernelDensity estimators crash if the variable 'x' is initialized [<a href="KernelDensity.mw">example</a>].</li>
 <li>Erroneous multiplication with Hermitian matrix [<a href="HermitianMatrix.mw">example</a>].</li>
+</ul>
+
+<h2>List of bugs for Maple 2025</h2>
+<ul>
+<li>Wrong graph traversal [<a href="breadthfirst.mw">example</a>].</li>
 </ul>
 
 <h2 style="margin-bottom: 0">Limitations</h2>

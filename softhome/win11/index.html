@@ -3,36 +3,54 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../../soft.css">
-<title>Windows 10</title>
+<title>Windows 11</title>
 </head>
 <body>
 <p><span class="h">
  <a class="h" href="./">F</a>
- <a class="h" href="../../../Sys/Software/win10/">R</a>
+ <a class="h" href="../../../Sys/Software/win11/">R</a>
  </span>
  &nbsp;<a href="http://windows.microsoft.com/en-US/windows">www</a>
- <var>ver:</var>Home 64bit
+ <var>ver:</var>Home and Pro 64bit 25H2
  </p>
+
+<h2>Before re-installation on a used computer</h2>
+<ul>
+<li>Make sure that the license is bound to the computer.</li>
+<li>Save valuable information from local drive to an external storage.</li>
+<li>Update and reconfigure BIOS.</li>
+<li>Download ISO page to flash Windows installer onto 8GB+ USB drive
+ via <a href="https://rufus.ie">Rufus</a>.</li>
+<li>Download critical drivers (network, chipset) and utilities to that USB drive.</li>
+<li>Boot from this USB drive (one time) and start Windows installation.</li>
+<li>When asked for location, delete all partitions and install Windows to unallocated space.</li>
+</ul>
 
 <h2>Setup</h2>
 <ul>
-<li>Install Windows 10 offline, skip name/email/phone identification, decline personal info collection</li>
-<li>Turn off Device encryption (Security group)</li>
-<li>Deinstall spam offline (McAfee, MSOffice, MSOneDrive, Dropbox)</li>
-<li>Deinstall built-in applications: login to a desired account, lunch Windows Power Shell,
- run <code>Get-AppxPackage > C:/tmp/new.txt</code> to get list of application names,
- then run <code>Get-AppxPackage *name* | Remove-AppxPackage</code> to delete them</li>
+<li>Install Windows offline if Internet connection cannot be set.</li>
+<li>Skip personal identification and decline personal info collection.</li>
+<li>Check Windows activation status.</li>
+<li>Install Windows updates (ignore hardware-related updates).</li>
+<li>Install missing drivers using computer's manufacturer utility or website,
+ check by Device Manager.</li>
+<li>Turn off Device encryption (Security group).</li>
+</ul>
+
+<h2>Apps and utilities</h2>
+<ul>
+<li>Deinstall spam Apps offline (McAfee, MSOffice, MSOneDrive, Dropbox)</li>
+<li>Deinstall built-in spam: login to a desired account
+ and run in PS <code>Get-AppxPackage > C:/tmp/new.txt</code> to get list of application names,
+ then run <code>Get-AppxPackage *name* | Remove-AppxPackage</code> to delete them.</li>
 <li>.NET Framework 3.5 (includes 2.0) is required for older apps</li>
 </ul>
 
 <h2>Control Panel</h2>
 <ul>
-<li>About: name the computer</li>
-<li>Apps and features: remove garbage</li>
 <li>Background: set Desktop background color to (43,85,128)=#2B5580</li>
 <li>Date and time: set time zone</li>
-<li>Default apps: set your favorite file associations by manually patching Windows Registry, see my code <a href="../../../Sys/Software/win10/FileAssoc/">here</a></li>
-<li>Device Manager: check for malfunctioning devices</li>
+<li>Default apps: skip here, set your favorite file associations via Windows Registry</li>
 <li>Desktop Icon Settings: remove everything, but Pin to Start Recycle Bin</li>
 <li>Display: native resolution, 125% font size</li>
 <li>Indexing Options: check</li>
@@ -45,8 +63,9 @@
  power button hibernates, closing the lid turns into sleep;
  low/critical battery level 6/2% (by Dell)</li>
 <li>Printers and scanners: install printers including print-to-file printers</li>
-<li>Region: change system locale to Russian if needed</li>
-<li>System Properties:
+<li>Region: change system locale to Ukrainian if needed</li>
+<li>System:
+ name the computer (in addition run in PS <code>Rename-Computer -NewName "new_name"</code>),
  disable Remote Assistance;
  Environment Variables: add "C:\Sys" to <code>PATH</code>;
  Visual Effects: Show thumbnails, Show window contents, Smooth edges, Smooth-scroll</li>
@@ -150,6 +169,14 @@ Microsoft e<strong>X</strong>cel</td>
 <li>Trun off Delivery Optimization in Services and Windows Update</li>
 <li>Turn off Microsoft Store in Services</li>
 <li>Web Account Manager (TokenBroker) service can be stopped if Windows Update is not needed</li>
+<li>Set Control Panel/Power Plan/Processor Power Management/Maximum processor state to 90% in hot conditions and in battery mode</li></ul>
+</ul>
+
+<h2>Security</h2>
+<ul>
+<li>To prevent accidental Bluetooth pairing on insecure adapters such as Killer Wi-Fi 6 AX1650x,
+ set <code>HKLM\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\DisablePairing=1</code> (DWORD),
+ because DisableDiscovery,DisableScan,DisableLEAdvertising,DisableLEPeripheralRole do not help.</li>
 </ul>
 
 <h2>Custom system settings</h2>

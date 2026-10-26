@@ -26,8 +26,8 @@ set bondTolerance -0.1; connect delete; connect auto
 {_K}.bondingRadius=0.1; connect delete; connect auto
 
 load "" {445 665 0}
-hide @3,@6,@12
 hide atomno<=10 or atomno>100 or hydrogens
+display @3,@6,@12
 
 select (*)[2][17]; label %i; color labels black; set labelFront on
 
