@@ -8,14 +8,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.aux]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.aux\DefaultIcon]
-@="C:\\Sys\\ico\\_aux.ico"
+@="C:\\sys\\ico\\_aux.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.aux\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.aux\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.aux\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -25,14 +25,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.bib]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.bib\DefaultIcon]
-@="C:\\Sys\\ico\\bib.ico"
+@="C:\\sys\\ico\\bib.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.bib\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.bib\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.bib\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -42,14 +42,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.css]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.css\DefaultIcon]
-@="C:\\Sys\\ico\\css.ico"
+@="C:\\sys\\ico\\css.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.css\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.css\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.css\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -59,14 +59,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.dat]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.dat\DefaultIcon]
-@="C:\\Sys\\ico\\dat.ico"
+@="C:\\sys\\ico\\dat.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.dat\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.dat\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.dat\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -76,14 +76,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.f90]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.f90\DefaultIcon]
-@="C:\\Sys\\ico\\fortran.ico"
+@="C:\\sys\\ico\\fortran.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.f90\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.f90\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.f90\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -93,14 +93,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.f]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.f\DefaultIcon]
-@="C:\\Sys\\ico\\f.ico"
+@="C:\\sys\\ico\\f.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.f\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.f\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.f\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -110,14 +110,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.ini]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.ini\DefaultIcon]
-@="C:\\Sys\\ico\\ini.ico"
+@="C:\\sys\\ico\\ini.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.ini\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.ini\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.ini\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -127,14 +127,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.log]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.log\DefaultIcon]
-@="C:\\Sys\\ico\\log.ico"
+@="C:\\sys\\ico\\log.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.log\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.log\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.log\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -144,14 +144,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.out]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.out\DefaultIcon]
-@="C:\\Sys\\ico\\out.ico"
+@="C:\\sys\\ico\\out.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.out\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.out\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.out\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -161,14 +161,14 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\azh.prm]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.prm\DefaultIcon]
-@="C:\\Sys\\ico\\prm.ico"
+@="C:\\sys\\ico\\prm.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.prm\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.prm\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.prm\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
 
 
@@ -179,12 +179,12 @@ Windows Registry Editor Version 5.00
 "AlwaysShowEXT"=""
 
 [HKEY_CURRENT_USER\Software\Classes\azh.bash\DefaultIcon]
-@="C:\\Sys\\ico\\bash.ico"
+@="C:\\sys\\ico\\bash.ico"
 
 [HKEY_CURRENT_USER\Software\Classes\azh.bash\shell]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.bash\shell\open]
 
 [HKEY_CURRENT_USER\Software\Classes\azh.bash\shell\open\command]
-@="C:\\Sci\\PSPad\\PSPad.exe %1"
+@="C:\\sys\\PSPad\\PSPad.exe %1"
 
